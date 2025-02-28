@@ -7,7 +7,7 @@ const Navbar = () => {
     const navigate = useNavigate()
   return (
     <div className='flex items-center justify-between text-sm text-gray-600 py-4 mb-5 border-b border-b-gray-200'>
-        <img className='w-44 cursor-pointer' src={assets.logo} />
+        <img onClick={()=> navigate('/')} className='w-44 cursor-pointer' src={assets.logo} />
         <ul className='hidden md:flex items-start gap-5 font-medium'>
             <NavLink to={'/'}>
                 <li className='py-1'>HOME</li>
@@ -27,7 +27,7 @@ const Navbar = () => {
             </NavLink>
         </ul>
         <div className='flex items-center gap-5'>
-            <button className='bg-[#0D6EFD] text-white px-8 py-3 rounded-full font-medium hidden cursor-pointer md:block'>Create account</button>
+            <button onClick={() => navigate('/login')} className='bg-[#0D6EFD] text-white px-8 py-3 rounded-full font-medium hidden cursor-pointer md:block'>Create account</button>
         </div>
     </div>
   )
