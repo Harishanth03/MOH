@@ -1,1 +1,8 @@
 @import "tailwindcss";
+.active hr{
+    @apply block
+}
+
+.active li{
+    @apply text-[#002164]
+}
