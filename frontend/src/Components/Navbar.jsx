@@ -8,7 +8,7 @@ const Navbar = () => {
 
     const [showMenu  , setShowMenu] = useState(false);
     const [token , setToken] = useState(true);
-    
+
   return (
     <div className='flex items-center justify-between text-sm text-gray-600 py-4 mb-5 border-b border-b-gray-200'>
         <img onClick={()=> navigate('/')} className='w-44 cursor-pointer' src={assets.logo} />
@@ -31,7 +31,20 @@ const Navbar = () => {
             </NavLink>
         </ul>
         <div className='flex items-center gap-5'>
-            <button onClick={() => navigate('/login')} className='bg-[#0D6EFD] text-white px-8 py-3 rounded-full font-medium hidden cursor-pointer md:block'>Create account</button>
+            {
+                token ? 
+                <div className='flex items-center gap-2 cursor-pointer group relative'>
+                    <img src={assets.user} alt="User Icon" className="w-10 rounded-full" />
+                    <img src={assets.dropdown_icon} alt="" />
+                    <div className='absolute top-0 right-0 pt-15 text-balance font-medium text-gray-600 z-20 hidden group-hover:block'>
+                        <div className='min-w-48 bg-gray-100 rounded flex flex-col gap-4 p-4'>
+                            <p onClick={() => navigate('/my-profile')} className='hover:text-black cursor-pointer'>My Profile</p>
+                            <p onClick={() => navigate('/my-appointment')} className='hover:text-black cursor-pointer'>My Appointment</p>
+                            <p onClick={() => setToken(false)} className='hover:text-black cursor-pointer'>Logout</p>
+                        </div>
+                    </div>
+                </div> : <button onClick={() => navigate('/login')} className='bg-[#0D6EFD] text-white px-8 py-3 rounded-full font-medium hidden cursor-pointer md:block'>Create account</button>
+            }
         </div>
     </div>
   )

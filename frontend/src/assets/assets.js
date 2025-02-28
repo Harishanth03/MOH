@@ -1,7 +1,7 @@
 import appointment_img from './appointment_img.png'
 import header_img from './header_img.png'
 import group_profiles from './group_profiles.png'
-import profile_pic from './profile_pic.png'
+import userIcon from './User_icon.svg'
 import contact_image from './contact_image.png'
 import about_image from './about_image.png'
 import logo from './logo.svg'
@@ -37,6 +37,7 @@ import Gynecologist from './Gynecologist.svg'
 import Neurologist from './Neurologist.svg'
 import Pediatricians from './Pediatricians.svg'
 import HomeImage from './Home Image.svg'
+import user from './user-286.svg'
 
 
 export const assets = {
@@ -47,7 +48,7 @@ export const assets = {
     chats_icon,
     verified_icon,
     info_icon,
-    profile_pic,
+    user,
     arrow_icon,
     contact_image,
     about_image,
