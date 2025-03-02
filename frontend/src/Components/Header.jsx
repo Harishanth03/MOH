@@ -23,7 +23,7 @@ const Header = () => {
             <div  className="w-full min-h-[100vw] sm:min-h-[34vw] items-end my-8 bg-no-repeat md:bg-right bg-cover md:bg-contain relative" style={{ backgroundImage: `url(${assets.HomeImage})` }}>
             </div>
         </div>
-
+        
     </section>
   )
 }
