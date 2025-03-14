@@ -16,9 +16,11 @@ const Header = () => {
                 </div>
                 <h1 className="py-6 text-2xl font-bold text-start text-[#023170] sm:text-4xl">From Ministry Of Health</h1>
                 <p className='text-gray-700 font-semibold'>Empowering lives with personalized, innovative healthcare solutions that prioritize well-being, enhance recovery, and redefine patient care through compassion, cutting-edge technology, and a commitment to excellence in every step of the journey.</p>
-                <div>
-                    <button onClick={() => navigate('/doctors')} className='px-[18px] cursor-pointer py-[10px] mt-4 bg-[#0D6EFD] text-white rounded font-medium'>make an Appointment</button>
-                </div>
+                <a href="#speciality">
+                    <div>
+                        <button onClick={() => navigate('/doctors')} className='px-[18px] cursor-pointer py-[15px] mt-4 bg-[#0D6EFD] text-white rounded font-medium'>make an Appointment</button>
+                    </div>
+                </a>
             </div>
             <div  className="w-full min-h-[60vh] sm:min-h-[34vw] items-end my-8 bg-no-repeat md:bg-right bg-cover md:bg-contain relative" style={{ backgroundImage: `url(${assets.HomeImage})` }}>
             </div>
