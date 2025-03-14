@@ -20,7 +20,7 @@ const Header = () => {
                     <button onClick={() => navigate('/doctors')} className='px-[18px] cursor-pointer py-[10px] mt-4 bg-[#0D6EFD] text-white rounded font-medium'>make an Appointment</button>
                 </div>
             </div>
-            <div  className="w-full min-h-[100vw] sm:min-h-[34vw] items-end my-8 bg-no-repeat md:bg-right bg-cover md:bg-contain relative" style={{ backgroundImage: `url(${assets.HomeImage})` }}>
+            <div  className="w-full min-h-[60vh] sm:min-h-[34vw] items-end my-8 bg-no-repeat md:bg-right bg-cover md:bg-contain relative" style={{ backgroundImage: `url(${assets.HomeImage})` }}>
             </div>
         </div>
 

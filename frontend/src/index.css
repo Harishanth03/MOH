@@ -6,3 +6,12 @@
 .active li{
     @apply text-[#002164]
 }
+
+/* Hide scrollbar for all elements */
+::-webkit-scrollbar {
+    display: none;
+  }
+  
+
+  
+  
