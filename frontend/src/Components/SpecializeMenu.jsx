@@ -11,7 +11,7 @@ const SpecializeMenu = () => {
             <div className='flex flex-wrap justify-center gap-4 my-2 overflow-hidden'>
             {
                 specialityData.map((item  , index) => (
-                    <Link className='w-40 p-4 my-5 bg-gray-100 rounded-md text-center cursor-pointer' key={index} to={`/doctors/${item.speciality}`}>
+                    <Link onClick={() => scrollTo(0,0)} className='w-40 p-4 my-5 bg-gray-100 rounded-md text-center cursor-pointer' key={index} to={`/doctors/${item.speciality}`}>
                         <img className='h-[120px] object-cover' src={item.image} alt="" />
                         <p className='text-base mt-2 font-normal'>{item.speciality}</p>
                     </Link>
