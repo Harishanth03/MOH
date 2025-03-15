@@ -39,9 +39,9 @@ const Footer = () => {
             {/* ======================================= Right Section of Footer ================================== */}
             <div>
 
-                <p>Get In Touch</p>
+                <p className='text-xl font-medium mb-5'>Get In Touch</p>
 
-                <ul>
+                <ul className='flex flex-col gap-2 text-gray-600'>
 
                     <li>0262224714</li>
                     <li>MOHTrincomalee@gmail.com</li>
@@ -58,7 +58,7 @@ const Footer = () => {
 
             <hr />
 
-            <p>Copyright 2025@ Ministory Of health - All Right Reserved</p>
+            <p className='py-5 text-sm text-center '>Copyright 2025@ Ministory Of health - All Right Reserved</p>
 
         </div>
 
