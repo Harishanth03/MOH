@@ -9,9 +9,9 @@ const Banner = () => {
 
         {/* ========================================= Left Side Banner =========================================== */}
 
-        <div className='flex-1 py-8'>
+        <div className='flex-1 py-8 sm:py-10 md:py-16 lg:py-24 lg:pl-5'>
 
-            <div>
+            <div className='text-xl sm:text-2xl md:text-3xl lg:text-4xl'>
 
                 <p>Check Doctor</p>
                 <p>With 200+ Goverment Healthcare professionals</p>
