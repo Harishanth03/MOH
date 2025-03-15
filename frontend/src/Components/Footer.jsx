@@ -12,7 +12,7 @@ const Footer = () => {
             <div>
 
                 <img className='mb-5 w-40' src={assets.logo} alt="" />
-                <p> 
+                <p className='w-full  text-gray-600 leading-6'> 
                     GetWell, launched by the Ministry of Health, Trincomalee, is your trusted digital healthcare companion. Our platform makes it easier than ever to book doctor appointments, access essential medical services, and stay informed about your health. With GetWell, 
                     we are committed to providing seamless, 
                     patient-centered care at your fingertips. Your health, our priority
