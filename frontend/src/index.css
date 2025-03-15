@@ -27,3 +27,8 @@ li {
     display: none;
 }
 
+li:hover
+{
+    color: #0D6EFD;
+}
+
