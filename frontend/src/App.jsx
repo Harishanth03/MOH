@@ -27,7 +27,7 @@ const App = () => {
         <Route path='/my-appointment/:docId' element = {<MyAppointment/>}/>
       </Routes>
 
-      <footer/>
+      
       
     </div>
   )
