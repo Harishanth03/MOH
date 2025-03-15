@@ -3,14 +3,15 @@ import { assets } from '../assets/assets'
 
 const Footer = () => {
   return (
-    <div>
+
+    <div className='md:mx-10'>
         
-        <div>
+        <div className='flex flex-col sm:grid grid-cols-[3fr_1fr_1fr] gap-14 my-10 mt-40 text-sm'>
 
             {/* ======================================= Left Section of Footer ================================== */}
             <div>
 
-                <img src={assets.logo} alt="" />
+                <img className='mb-5 w-40' src={assets.logo} alt="" />
                 <p> 
                     GetWell, launched by the Ministry of Health, Trincomalee, is your trusted digital healthcare companion. Our platform makes it easier than ever to book doctor appointments, access essential medical services, and stay informed about your health. With GetWell, 
                     we are committed to providing seamless, 
