@@ -10,12 +10,15 @@ import MyAppointment from './Pages/MyAppointment'
 import Navbar from './Components/Navbar'
 import Footer from './Components/Footer'
 import Appointment from './Pages/Appointment'
+import VoiceCommand from './Components/VoiceCommand'
 
 const App = () => {
   return (
     <div className='mx-4 sm:mx-[10%]'>
 
       <Navbar/>
+
+      <VoiceCommand/>
 
       <Routes>
         <Route path='/' element = {<Home/>}/>

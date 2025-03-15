@@ -1,0 +1,6960 @@
+[
+  {
+    "command": "Book an appointment",
+    "endpoint": "/appointment",
+    "tokens": [
+      "book",
+      "an",
+      "appointment"
+    ]
+  },
+  {
+    "command": "Schedule an appointment",
+    "endpoint": "/appointment",
+    "tokens": [
+      "schedule",
+      "an",
+      "appointment"
+    ]
+  },
+  {
+    "command": "Set an appointment with a doctor",
+    "endpoint": "/appointment",
+    "tokens": [
+      "set",
+      "an",
+      "appointment",
+      "with",
+      "a",
+      "doctor"
+    ]
+  },
+  {
+    "command": "I want to book an appointment",
+    "endpoint": "/appointment",
+    "tokens": [
+      "i",
+      "want",
+      "to",
+      "book",
+      "an",
+      "appointment"
+    ]
+  },
+  {
+    "command": "Make an appointment",
+    "endpoint": "/appointment",
+    "tokens": [
+      "make",
+      "an",
+      "appointment"
+    ]
+  },
+  {
+    "command": "Book my appointment now",
+    "endpoint": "/appointment",
+    "tokens": [
+      "book",
+      "my",
+      "appointment",
+      "now"
+    ]
+  },
+  {
+    "command": "Schedule a doctor's visit",
+    "endpoint": "/appointment",
+    "tokens": [
+      "schedule",
+      "a",
+      "doctors",
+      "visit"
+    ]
+  },
+  {
+    "command": "I need an appointment",
+    "endpoint": "/appointment",
+    "tokens": [
+      "i",
+      "need",
+      "an",
+      "appointment"
+    ]
+  },
+  {
+    "command": "Can I book an appointment?",
+    "endpoint": "/appointment",
+    "tokens": [
+      "can",
+      "i",
+      "book",
+      "an",
+      "appointment"
+    ]
+  },
+  {
+    "command": "Please book an appointment for me",
+    "endpoint": "/appointment",
+    "tokens": [
+      "please",
+      "book",
+      "an",
+      "appointment",
+      "for",
+      "me"
+    ]
+  },
+  {
+    "command": "Reserve an appointment",
+    "endpoint": "/appointment",
+    "tokens": [
+      "reserve",
+      "an",
+      "appointment"
+    ]
+  },
+  {
+    "command": "I need to see a doctor",
+    "endpoint": "/appointment",
+    "tokens": [
+      "i",
+      "need",
+      "to",
+      "see",
+      "a",
+      "doctor"
+    ]
+  },
+  {
+    "command": "Can you schedule an appointment?",
+    "endpoint": "/appointment",
+    "tokens": [
+      "can",
+      "you",
+      "schedule",
+      "an",
+      "appointment"
+    ]
+  },
+  {
+    "command": "Find me an available doctor",
+    "endpoint": "/appointment",
+    "tokens": [
+      "find",
+      "me",
+      "an",
+      "available",
+      "doctor"
+    ]
+  },
+  {
+    "command": "I would like to meet a doctor",
+    "endpoint": "/appointment",
+    "tokens": [
+      "i",
+      "would",
+      "like",
+      "to",
+      "meet",
+      "a",
+      "doctor"
+    ]
+  },
+  {
+    "command": "Help me book an appointment",
+    "endpoint": "/appointment",
+    "tokens": [
+      "help",
+      "me",
+      "book",
+      "an",
+      "appointment"
+    ]
+  },
+  {
+    "command": "Arrange a consultation",
+    "endpoint": "/appointment",
+    "tokens": [
+      "arrange",
+      "a",
+      "consultation"
+    ]
+  },
+  {
+    "command": "I need to consult a doctor",
+    "endpoint": "/appointment",
+    "tokens": [
+      "i",
+      "need",
+      "to",
+      "consult",
+      "a",
+      "doctor"
+    ]
+  },
+  {
+    "command": "Please schedule my appointment",
+    "endpoint": "/appointment",
+    "tokens": [
+      "please",
+      "schedule",
+      "my",
+      "appointment"
+    ]
+  },
+  {
+    "command": "Set up an appointment for me",
+    "endpoint": "/appointment",
+    "tokens": [
+      "set",
+      "up",
+      "an",
+      "appointment",
+      "for",
+      "me"
+    ]
+  },
+  {
+    "command": "Book a check-up",
+    "endpoint": "/appointment",
+    "tokens": [
+      "book",
+      "a",
+      "checkup"
+    ]
+  },
+  {
+    "command": "Can you arrange a doctor’s visit?",
+    "endpoint": "/appointment",
+    "tokens": [
+      "can",
+      "you",
+      "arrange",
+      "a",
+      "doctors",
+      "visit"
+    ]
+  },
+  {
+    "command": "I need to see a specialist",
+    "endpoint": "/appointment",
+    "tokens": [
+      "i",
+      "need",
+      "to",
+      "see",
+      "a",
+      "specialist"
+    ]
+  },
+  {
+    "command": "Book a consultation with a doctor",
+    "endpoint": "/appointment",
+    "tokens": [
+      "book",
+      "a",
+      "consultation",
+      "with",
+      "a",
+      "doctor"
+    ]
+  },
+  {
+    "command": "Help me make an appointment",
+    "endpoint": "/appointment",
+    "tokens": [
+      "help",
+      "me",
+      "make",
+      "an",
+      "appointment"
+    ]
+  },
+  {
+    "command": "Check doctor availability",
+    "endpoint": "/appointment",
+    "tokens": [
+      "check",
+      "doctor",
+      "availability"
+    ]
+  },
+  {
+    "command": "Can I see a doctor today?",
+    "endpoint": "/appointment",
+    "tokens": [
+      "can",
+      "i",
+      "see",
+      "a",
+      "doctor",
+      "today"
+    ]
+  },
+  {
+    "command": "Find the next available appointment",
+    "endpoint": "/appointment",
+    "tokens": [
+      "find",
+      "the",
+      "next",
+      "available",
+      "appointment"
+    ]
+  },
+  {
+    "command": "Schedule a visit to the hospital",
+    "endpoint": "/appointment",
+    "tokens": [
+      "schedule",
+      "a",
+      "visit",
+      "to",
+      "the",
+      "hospital"
+    ]
+  },
+  {
+    "command": "Make a doctor’s appointment",
+    "endpoint": "/appointment",
+    "tokens": [
+      "make",
+      "a",
+      "doctors",
+      "appointment"
+    ]
+  },
+  {
+    "command": "Get me an appointment as soon as possible",
+    "endpoint": "/appointment",
+    "tokens": [
+      "get",
+      "me",
+      "an",
+      "appointment",
+      "as",
+      "soon",
+      "as",
+      "possible"
+    ]
+  },
+  {
+    "command": "I need medical advice, book a session",
+    "endpoint": "/appointment",
+    "tokens": [
+      "i",
+      "need",
+      "medical",
+      "advice",
+      "book",
+      "a",
+      "session"
+    ]
+  },
+  {
+    "command": "Arrange a visit to the clinic",
+    "endpoint": "/appointment",
+    "tokens": [
+      "arrange",
+      "a",
+      "visit",
+      "to",
+      "the",
+      "clinic"
+    ]
+  },
+  {
+    "command": "Schedule a health consultation",
+    "endpoint": "/appointment",
+    "tokens": [
+      "schedule",
+      "a",
+      "health",
+      "consultation"
+    ]
+  },
+  {
+    "command": "I need to visit the hospital",
+    "endpoint": "/appointment",
+    "tokens": [
+      "i",
+      "need",
+      "to",
+      "visit",
+      "the",
+      "hospital"
+    ]
+  },
+  {
+    "command": "Can I get an appointment for tomorrow?",
+    "endpoint": "/appointment",
+    "tokens": [
+      "can",
+      "i",
+      "get",
+      "an",
+      "appointment",
+      "for",
+      "tomorrow"
+    ]
+  },
+  {
+    "command": "Check availability for doctor appointments",
+    "endpoint": "/appointment",
+    "tokens": [
+      "check",
+      "availability",
+      "for",
+      "doctor",
+      "appointments"
+    ]
+  },
+  {
+    "command": "Schedule a check-up for me",
+    "endpoint": "/appointment",
+    "tokens": [
+      "schedule",
+      "a",
+      "checkup",
+      "for",
+      "me"
+    ]
+  },
+  {
+    "command": "Help me book a doctor's visit",
+    "endpoint": "/appointment",
+    "tokens": [
+      "help",
+      "me",
+      "book",
+      "a",
+      "doctors",
+      "visit"
+    ]
+  },
+  {
+    "command": "I need to talk to a doctor",
+    "endpoint": "/appointment",
+    "tokens": [
+      "i",
+      "need",
+      "to",
+      "talk",
+      "to",
+      "a",
+      "doctor"
+    ]
+  },
+  {
+    "command": "Schedule a follow-up appointment",
+    "endpoint": "/appointment",
+    "tokens": [
+      "schedule",
+      "a",
+      "followup",
+      "appointment"
+    ]
+  },
+  {
+    "command": "I would like to make an appointment for a check-up",
+    "endpoint": "/appointment",
+    "tokens": [
+      "i",
+      "would",
+      "like",
+      "to",
+      "make",
+      "an",
+      "appointment",
+      "for",
+      "a",
+      "checkup"
+    ]
+  },
+  {
+    "command": "Please confirm my appointment",
+    "endpoint": "/appointment",
+    "tokens": [
+      "please",
+      "confirm",
+      "my",
+      "appointment"
+    ]
+  },
+  {
+    "command": "Book an appointment for a general check-up",
+    "endpoint": "/appointment",
+    "tokens": [
+      "book",
+      "an",
+      "appointment",
+      "for",
+      "a",
+      "general",
+      "checkup"
+    ]
+  },
+  {
+    "command": "I need to book an appointment for my child",
+    "endpoint": "/appointment",
+    "tokens": [
+      "i",
+      "need",
+      "to",
+      "book",
+      "an",
+      "appointment",
+      "for",
+      "my",
+      "child"
+    ]
+  },
+  {
+    "command": "Can you arrange a medical appointment?",
+    "endpoint": "/appointment",
+    "tokens": [
+      "can",
+      "you",
+      "arrange",
+      "a",
+      "medical",
+      "appointment"
+    ]
+  },
+  {
+    "command": "Schedule a doctors visit for next week",
+    "endpoint": "/appointment",
+    "tokens": [
+      "schedule",
+      "a",
+      "doctors",
+      "visit",
+      "for",
+      "next",
+      "week"
+    ]
+  },
+  {
+    "command": "Find me an available slot for an appointment",
+    "endpoint": "/appointment",
+    "tokens": [
+      "find",
+      "me",
+      "an",
+      "available",
+      "slot",
+      "for",
+      "an",
+      "appointment"
+    ]
+  },
+  {
+    "command": "Can I visit the doctor today?",
+    "endpoint": "/appointment",
+    "tokens": [
+      "can",
+      "i",
+      "visit",
+      "the",
+      "doctor",
+      "today"
+    ]
+  },
+  {
+    "command": "Find the next available slot for a consultation",
+    "endpoint": "/appointment",
+    "tokens": [
+      "find",
+      "the",
+      "next",
+      "available",
+      "slot",
+      "for",
+      "a",
+      "consultation"
+    ]
+  },
+  {
+    "command": "Schedule a routine health check-up",
+    "endpoint": "/appointment",
+    "tokens": [
+      "schedule",
+      "a",
+      "routine",
+      "health",
+      "checkup"
+    ]
+  },
+  {
+    "command": "Book a slot with a doctor",
+    "endpoint": "/appointment",
+    "tokens": [
+      "book",
+      "a",
+      "slot",
+      "with",
+      "a",
+      "doctor"
+    ]
+  },
+  {
+    "command": "Arrange an appointment with a specialist",
+    "endpoint": "/appointment",
+    "tokens": [
+      "arrange",
+      "an",
+      "appointment",
+      "with",
+      "a",
+      "specialist"
+    ]
+  },
+  {
+    "command": "Can you book me a consultation?",
+    "endpoint": "/appointment",
+    "tokens": [
+      "can",
+      "you",
+      "book",
+      "me",
+      "a",
+      "consultation"
+    ]
+  },
+  {
+    "command": "Schedule an emergency appointment",
+    "endpoint": "/appointment",
+    "tokens": [
+      "schedule",
+      "an",
+      "emergency",
+      "appointment"
+    ]
+  },
+  {
+    "command": "I want to see my doctor",
+    "endpoint": "/appointment",
+    "tokens": [
+      "i",
+      "want",
+      "to",
+      "see",
+      "my",
+      "doctor"
+    ]
+  },
+  {
+    "command": "Please book me a session with the doctor",
+    "endpoint": "/appointment",
+    "tokens": [
+      "please",
+      "book",
+      "me",
+      "a",
+      "session",
+      "with",
+      "the",
+      "doctor"
+    ]
+  },
+  {
+    "command": "Find an open slot for a check-up",
+    "endpoint": "/appointment",
+    "tokens": [
+      "find",
+      "an",
+      "open",
+      "slot",
+      "for",
+      "a",
+      "checkup"
+    ]
+  },
+  {
+    "command": "Reserve a doctor consultation for me",
+    "endpoint": "/appointment",
+    "tokens": [
+      "reserve",
+      "a",
+      "doctor",
+      "consultation",
+      "for",
+      "me"
+    ]
+  },
+  {
+    "command": "Schedule a same-day appointment",
+    "endpoint": "/appointment",
+    "tokens": [
+      "schedule",
+      "a",
+      "sameday",
+      "appointment"
+    ]
+  },
+  {
+    "command": "Can I get an early morning appointment?",
+    "endpoint": "/appointment",
+    "tokens": [
+      "can",
+      "i",
+      "get",
+      "an",
+      "early",
+      "morning",
+      "appointment"
+    ]
+  },
+  {
+    "command": "Book a weekend appointment",
+    "endpoint": "/appointment",
+    "tokens": [
+      "book",
+      "a",
+      "weekend",
+      "appointment"
+    ]
+  },
+  {
+    "command": "Find a doctor available this afternoon",
+    "endpoint": "/appointment",
+    "tokens": [
+      "find",
+      "a",
+      "doctor",
+      "available",
+      "this",
+      "afternoon"
+    ]
+  },
+  {
+    "command": "Schedule a virtual consultation",
+    "endpoint": "/appointment",
+    "tokens": [
+      "schedule",
+      "a",
+      "virtual",
+      "consultation"
+    ]
+  },
+  {
+    "command": "Arrange a telehealth appointment",
+    "endpoint": "/appointment",
+    "tokens": [
+      "arrange",
+      "a",
+      "telehealth",
+      "appointment"
+    ]
+  },
+  {
+    "command": "Can you book me a check-up for this week?",
+    "endpoint": "/appointment",
+    "tokens": [
+      "can",
+      "you",
+      "book",
+      "me",
+      "a",
+      "checkup",
+      "for",
+      "this",
+      "week"
+    ]
+  },
+  {
+    "command": "I need a health consultation today",
+    "endpoint": "/appointment",
+    "tokens": [
+      "i",
+      "need",
+      "a",
+      "health",
+      "consultation",
+      "today"
+    ]
+  },
+  {
+    "command": "Get me a quick doctors visit",
+    "endpoint": "/appointment",
+    "tokens": [
+      "get",
+      "me",
+      "a",
+      "quick",
+      "doctors",
+      "visit"
+    ]
+  },
+  {
+    "command": "Help me set up a doctors consultation",
+    "endpoint": "/appointment",
+    "tokens": [
+      "help",
+      "me",
+      "set",
+      "up",
+      "a",
+      "doctors",
+      "consultation"
+    ]
+  },
+  {
+    "command": "Book an urgent consultation",
+    "endpoint": "/appointment",
+    "tokens": [
+      "book",
+      "an",
+      "urgent",
+      "consultation"
+    ]
+  },
+  {
+    "command": "Please schedule my health check",
+    "endpoint": "/appointment",
+    "tokens": [
+      "please",
+      "schedule",
+      "my",
+      "health",
+      "check"
+    ]
+  },
+  {
+    "command": "Find me an appointment slot for next month",
+    "endpoint": "/appointment",
+    "tokens": [
+      "find",
+      "me",
+      "an",
+      "appointment",
+      "slot",
+      "for",
+      "next",
+      "month"
+    ]
+  },
+  {
+    "command": "Check if there are any cancellations available",
+    "endpoint": "/appointment",
+    "tokens": [
+      "check",
+      "if",
+      "there",
+      "are",
+      "any",
+      "cancellations",
+      "available"
+    ]
+  },
+  {
+    "command": "I need to consult a physician",
+    "endpoint": "/appointment",
+    "tokens": [
+      "i",
+      "need",
+      "to",
+      "consult",
+      "a",
+      "physician"
+    ]
+  },
+  {
+    "command": "Can I schedule a hospital visit?",
+    "endpoint": "/appointment",
+    "tokens": [
+      "can",
+      "i",
+      "schedule",
+      "a",
+      "hospital",
+      "visit"
+    ]
+  },
+  {
+    "command": "Help me find the best available appointment time",
+    "endpoint": "/appointment",
+    "tokens": [
+      "help",
+      "me",
+      "find",
+      "the",
+      "best",
+      "available",
+      "appointment",
+      "time"
+    ]
+  },
+  {
+    "command": "I want to set up a check-up appointment",
+    "endpoint": "/appointment",
+    "tokens": [
+      "i",
+      "want",
+      "to",
+      "set",
+      "up",
+      "a",
+      "checkup",
+      "appointment"
+    ]
+  },
+  {
+    "command": "Please book my regular check-up",
+    "endpoint": "/appointment",
+    "tokens": [
+      "please",
+      "book",
+      "my",
+      "regular",
+      "checkup"
+    ]
+  },
+  {
+    "command": "Make a medical appointment for me",
+    "endpoint": "/appointment",
+    "tokens": [
+      "make",
+      "a",
+      "medical",
+      "appointment",
+      "for",
+      "me"
+    ]
+  },
+  {
+    "command": "Help me arrange a hospital consultation",
+    "endpoint": "/appointment",
+    "tokens": [
+      "help",
+      "me",
+      "arrange",
+      "a",
+      "hospital",
+      "consultation"
+    ]
+  },
+  {
+    "command": "Go to home",
+    "endpoint": "/",
+    "tokens": [
+      "go",
+      "to",
+      "home"
+    ]
+  },
+  {
+    "command": "Take me home",
+    "endpoint": "/",
+    "tokens": [
+      "take",
+      "me",
+      "home"
+    ]
+  },
+  {
+    "command": "Go back to home",
+    "endpoint": "/",
+    "tokens": [
+      "go",
+      "back",
+      "to",
+      "home"
+    ]
+  },
+  {
+    "command": "Return to home",
+    "endpoint": "/",
+    "tokens": [
+      "return",
+      "to",
+      "home"
+    ]
+  },
+  {
+    "command": "Back to home",
+    "endpoint": "/",
+    "tokens": [
+      "back",
+      "to",
+      "home"
+    ]
+  },
+  {
+    "command": "Navigate to home",
+    "endpoint": "/",
+    "tokens": [
+      "navigate",
+      "to",
+      "home"
+    ]
+  },
+  {
+    "command": "Take me to the main page",
+    "endpoint": "/",
+    "tokens": [
+      "take",
+      "me",
+      "to",
+      "the",
+      "main",
+      "page"
+    ]
+  },
+  {
+    "command": "Return to the main page",
+    "endpoint": "/",
+    "tokens": [
+      "return",
+      "to",
+      "the",
+      "main",
+      "page"
+    ]
+  },
+  {
+    "command": "Show me the home screen",
+    "endpoint": "/",
+    "tokens": [
+      "show",
+      "me",
+      "the",
+      "home",
+      "screen"
+    ]
+  },
+  {
+    "command": "Go back to the main screen",
+    "endpoint": "/",
+    "tokens": [
+      "go",
+      "back",
+      "to",
+      "the",
+      "main",
+      "screen"
+    ]
+  },
+  {
+    "command": "Home screen please",
+    "endpoint": "/",
+    "tokens": [
+      "home",
+      "screen",
+      "please"
+    ]
+  },
+  {
+    "command": "Go back to the homepage",
+    "endpoint": "/",
+    "tokens": [
+      "go",
+      "back",
+      "to",
+      "the",
+      "homepage"
+    ]
+  },
+  {
+    "command": "Take me to the home page",
+    "endpoint": "/",
+    "tokens": [
+      "take",
+      "me",
+      "to",
+      "the",
+      "home",
+      "page"
+    ]
+  },
+  {
+    "command": "Can you take me home?",
+    "endpoint": "/",
+    "tokens": [
+      "can",
+      "you",
+      "take",
+      "me",
+      "home"
+    ]
+  },
+  {
+    "command": "Return to the main menu",
+    "endpoint": "/",
+    "tokens": [
+      "return",
+      "to",
+      "the",
+      "main",
+      "menu"
+    ]
+  },
+  {
+    "command": "Take me back to the main menu",
+    "endpoint": "/",
+    "tokens": [
+      "take",
+      "me",
+      "back",
+      "to",
+      "the",
+      "main",
+      "menu"
+    ]
+  },
+  {
+    "command": "Open the home page",
+    "endpoint": "/",
+    "tokens": [
+      "open",
+      "the",
+      "home",
+      "page"
+    ]
+  },
+  {
+    "command": "Navigate to the home page",
+    "endpoint": "/",
+    "tokens": [
+      "navigate",
+      "to",
+      "the",
+      "home",
+      "page"
+    ]
+  },
+  {
+    "command": "Back to main screen",
+    "endpoint": "/",
+    "tokens": [
+      "back",
+      "to",
+      "main",
+      "screen"
+    ]
+  },
+  {
+    "command": "Can you show me the home page?",
+    "endpoint": "/",
+    "tokens": [
+      "can",
+      "you",
+      "show",
+      "me",
+      "the",
+      "home",
+      "page"
+    ]
+  },
+  {
+    "command": "I want to go home",
+    "endpoint": "/",
+    "tokens": [
+      "i",
+      "want",
+      "to",
+      "go",
+      "home"
+    ]
+  },
+  {
+    "command": "I need to return to home",
+    "endpoint": "/",
+    "tokens": [
+      "i",
+      "need",
+      "to",
+      "return",
+      "to",
+      "home"
+    ]
+  },
+  {
+    "command": "Move to the home page",
+    "endpoint": "/",
+    "tokens": [
+      "move",
+      "to",
+      "the",
+      "home",
+      "page"
+    ]
+  },
+  {
+    "command": "Send me to the home page",
+    "endpoint": "/",
+    "tokens": [
+      "send",
+      "me",
+      "to",
+      "the",
+      "home",
+      "page"
+    ]
+  },
+  {
+    "command": "Can you take me to the home screen?",
+    "endpoint": "/",
+    "tokens": [
+      "can",
+      "you",
+      "take",
+      "me",
+      "to",
+      "the",
+      "home",
+      "screen"
+    ]
+  },
+  {
+    "command": "I'd like to go home",
+    "endpoint": "/",
+    "tokens": [
+      "id",
+      "like",
+      "to",
+      "go",
+      "home"
+    ]
+  },
+  {
+    "command": "Take me back to where I started",
+    "endpoint": "/",
+    "tokens": [
+      "take",
+      "me",
+      "back",
+      "to",
+      "where",
+      "i",
+      "started"
+    ]
+  },
+  {
+    "command": "Let's go back to the home page",
+    "endpoint": "/",
+    "tokens": [
+      "lets",
+      "go",
+      "back",
+      "to",
+      "the",
+      "home",
+      "page"
+    ]
+  },
+  {
+    "command": "Take me to the start page",
+    "endpoint": "/",
+    "tokens": [
+      "take",
+      "me",
+      "to",
+      "the",
+      "start",
+      "page"
+    ]
+  },
+  {
+    "command": "Main page please",
+    "endpoint": "/",
+    "tokens": [
+      "main",
+      "page",
+      "please"
+    ]
+  },
+  {
+    "command": "Where is the home page?",
+    "endpoint": "/",
+    "tokens": [
+      "where",
+      "is",
+      "the",
+      "home",
+      "page"
+    ]
+  },
+  {
+    "command": "Send me back to the beginning",
+    "endpoint": "/",
+    "tokens": [
+      "send",
+      "me",
+      "back",
+      "to",
+      "the",
+      "beginning"
+    ]
+  },
+  {
+    "command": "I need to go back home",
+    "endpoint": "/",
+    "tokens": [
+      "i",
+      "need",
+      "to",
+      "go",
+      "back",
+      "home"
+    ]
+  },
+  {
+    "command": "Start over and take me home",
+    "endpoint": "/",
+    "tokens": [
+      "start",
+      "over",
+      "and",
+      "take",
+      "me",
+      "home"
+    ]
+  },
+  {
+    "command": "Show the main dashboard",
+    "endpoint": "/",
+    "tokens": [
+      "show",
+      "the",
+      "main",
+      "dashboard"
+    ]
+  },
+  {
+    "command": "Jump to the main page",
+    "endpoint": "/",
+    "tokens": [
+      "jump",
+      "to",
+      "the",
+      "main",
+      "page"
+    ]
+  },
+  {
+    "command": "Please open the home page",
+    "endpoint": "/",
+    "tokens": [
+      "please",
+      "open",
+      "the",
+      "home",
+      "page"
+    ]
+  },
+  {
+    "command": "Switch to the home screen",
+    "endpoint": "/",
+    "tokens": [
+      "switch",
+      "to",
+      "the",
+      "home",
+      "screen"
+    ]
+  },
+  {
+    "command": "Move back to the main page",
+    "endpoint": "/",
+    "tokens": [
+      "move",
+      "back",
+      "to",
+      "the",
+      "main",
+      "page"
+    ]
+  },
+  {
+    "command": "Home button please",
+    "endpoint": "/",
+    "tokens": [
+      "home",
+      "button",
+      "please"
+    ]
+  },
+  {
+    "command": "Return to the start screen",
+    "endpoint": "/",
+    "tokens": [
+      "return",
+      "to",
+      "the",
+      "start",
+      "screen"
+    ]
+  },
+  {
+    "command": "I want to go to the homepage",
+    "endpoint": "/",
+    "tokens": [
+      "i",
+      "want",
+      "to",
+      "go",
+      "to",
+      "the",
+      "homepage"
+    ]
+  },
+  {
+    "command": "Load the home page",
+    "endpoint": "/",
+    "tokens": [
+      "load",
+      "the",
+      "home",
+      "page"
+    ]
+  },
+  {
+    "command": "Can I go back home?",
+    "endpoint": "/",
+    "tokens": [
+      "can",
+      "i",
+      "go",
+      "back",
+      "home"
+    ]
+  },
+  {
+    "command": "Navigate back to home",
+    "endpoint": "/",
+    "tokens": [
+      "navigate",
+      "back",
+      "to",
+      "home"
+    ]
+  },
+  {
+    "command": "Where is the main page?",
+    "endpoint": "/",
+    "tokens": [
+      "where",
+      "is",
+      "the",
+      "main",
+      "page"
+    ]
+  },
+  {
+    "command": "Bring me back to the homepage",
+    "endpoint": "/",
+    "tokens": [
+      "bring",
+      "me",
+      "back",
+      "to",
+      "the",
+      "homepage"
+    ]
+  },
+  {
+    "command": "Take me back to home please",
+    "endpoint": "/",
+    "tokens": [
+      "take",
+      "me",
+      "back",
+      "to",
+      "home",
+      "please"
+    ]
+  },
+  {
+    "command": "I need to see the home page",
+    "endpoint": "/",
+    "tokens": [
+      "i",
+      "need",
+      "to",
+      "see",
+      "the",
+      "home",
+      "page"
+    ]
+  },
+  {
+    "command": "Restart and go to home",
+    "endpoint": "/",
+    "tokens": [
+      "restart",
+      "and",
+      "go",
+      "to",
+      "home"
+    ]
+  },
+  {
+    "command": "Go to doctors",
+    "endpoint": "/doctors",
+    "tokens": [
+      "go",
+      "to",
+      "doctors"
+    ]
+  },
+  {
+    "command": "Show me the doctors",
+    "endpoint": "/doctors",
+    "tokens": [
+      "show",
+      "me",
+      "the",
+      "doctors"
+    ]
+  },
+  {
+    "command": "Take me to the doctors page",
+    "endpoint": "/doctors",
+    "tokens": [
+      "take",
+      "me",
+      "to",
+      "the",
+      "doctors",
+      "page"
+    ]
+  },
+  {
+    "command": "Find available doctors",
+    "endpoint": "/doctors",
+    "tokens": [
+      "find",
+      "available",
+      "doctors"
+    ]
+  },
+  {
+    "command": "Doctor list please",
+    "endpoint": "/doctors",
+    "tokens": [
+      "doctor",
+      "list",
+      "please"
+    ]
+  },
+  {
+    "command": "Where are the doctors?",
+    "endpoint": "/doctors",
+    "tokens": [
+      "where",
+      "are",
+      "the",
+      "doctors"
+    ]
+  },
+  {
+    "command": "Navigate to the doctors section",
+    "endpoint": "/doctors",
+    "tokens": [
+      "navigate",
+      "to",
+      "the",
+      "doctors",
+      "section"
+    ]
+  },
+  {
+    "command": "Show all doctors",
+    "endpoint": "/doctors",
+    "tokens": [
+      "show",
+      "all",
+      "doctors"
+    ]
+  },
+  {
+    "command": "Take me to the doctor list",
+    "endpoint": "/doctors",
+    "tokens": [
+      "take",
+      "me",
+      "to",
+      "the",
+      "doctor",
+      "list"
+    ]
+  },
+  {
+    "command": "I need to see the doctors",
+    "endpoint": "/doctors",
+    "tokens": [
+      "i",
+      "need",
+      "to",
+      "see",
+      "the",
+      "doctors"
+    ]
+  },
+  {
+    "command": "Find me a doctor",
+    "endpoint": "/doctors",
+    "tokens": [
+      "find",
+      "me",
+      "a",
+      "doctor"
+    ]
+  },
+  {
+    "command": "Browse doctors",
+    "endpoint": "/doctors",
+    "tokens": [
+      "browse",
+      "doctors"
+    ]
+  },
+  {
+    "command": "Which doctors are available?",
+    "endpoint": "/doctors",
+    "tokens": [
+      "which",
+      "doctors",
+      "are",
+      "available"
+    ]
+  },
+  {
+    "command": "Doctor directory",
+    "endpoint": "/doctors",
+    "tokens": [
+      "doctor",
+      "directory"
+    ]
+  },
+  {
+    "command": "Check doctor availability",
+    "endpoint": "/doctors",
+    "tokens": [
+      "check",
+      "doctor",
+      "availability"
+    ]
+  },
+  {
+    "command": "List of doctors please",
+    "endpoint": "/doctors",
+    "tokens": [
+      "list",
+      "of",
+      "doctors",
+      "please"
+    ]
+  },
+  {
+    "command": "Can you show me the doctors?",
+    "endpoint": "/doctors",
+    "tokens": [
+      "can",
+      "you",
+      "show",
+      "me",
+      "the",
+      "doctors"
+    ]
+  },
+  {
+    "command": "Search for a doctor",
+    "endpoint": "/doctors",
+    "tokens": [
+      "search",
+      "for",
+      "a",
+      "doctor"
+    ]
+  },
+  {
+    "command": "Doctor profiles",
+    "endpoint": "/doctors",
+    "tokens": [
+      "doctor",
+      "profiles"
+    ]
+  },
+  {
+    "command": "Medical professionals list",
+    "endpoint": "/doctors",
+    "tokens": [
+      "medical",
+      "professionals",
+      "list"
+    ]
+  },
+  {
+    "command": "View doctors",
+    "endpoint": "/doctors",
+    "tokens": [
+      "view",
+      "doctors"
+    ]
+  },
+  {
+    "command": "I want to see the doctors",
+    "endpoint": "/doctors",
+    "tokens": [
+      "i",
+      "want",
+      "to",
+      "see",
+      "the",
+      "doctors"
+    ]
+  },
+  {
+    "command": "Can I get a list of doctors?",
+    "endpoint": "/doctors",
+    "tokens": [
+      "can",
+      "i",
+      "get",
+      "a",
+      "list",
+      "of",
+      "doctors"
+    ]
+  },
+  {
+    "command": "Doctors section please",
+    "endpoint": "/doctors",
+    "tokens": [
+      "doctors",
+      "section",
+      "please"
+    ]
+  },
+  {
+    "command": "I need a doctor, show me options",
+    "endpoint": "/doctors",
+    "tokens": [
+      "i",
+      "need",
+      "a",
+      "doctor",
+      "show",
+      "me",
+      "options"
+    ]
+  },
+  {
+    "command": "Doctor search",
+    "endpoint": "/doctors",
+    "tokens": [
+      "doctor",
+      "search"
+    ]
+  },
+  {
+    "command": "Navigate to doctor profiles",
+    "endpoint": "/doctors",
+    "tokens": [
+      "navigate",
+      "to",
+      "doctor",
+      "profiles"
+    ]
+  },
+  {
+    "command": "Find specialists",
+    "endpoint": "/doctors",
+    "tokens": [
+      "find",
+      "specialists"
+    ]
+  },
+  {
+    "command": "Look for a physician",
+    "endpoint": "/doctors",
+    "tokens": [
+      "look",
+      "for",
+      "a",
+      "physician"
+    ]
+  },
+  {
+    "command": "Take me to the healthcare professionals",
+    "endpoint": "/doctors",
+    "tokens": [
+      "take",
+      "me",
+      "to",
+      "the",
+      "healthcare",
+      "professionals"
+    ]
+  },
+  {
+    "command": "Show the doctor listing",
+    "endpoint": "/doctors",
+    "tokens": [
+      "show",
+      "the",
+      "doctor",
+      "listing"
+    ]
+  },
+  {
+    "command": "List of medical experts",
+    "endpoint": "/doctors",
+    "tokens": [
+      "list",
+      "of",
+      "medical",
+      "experts"
+    ]
+  },
+  {
+    "command": "Where can I find a doctor?",
+    "endpoint": "/doctors",
+    "tokens": [
+      "where",
+      "can",
+      "i",
+      "find",
+      "a",
+      "doctor"
+    ]
+  },
+  {
+    "command": "Doctors available now",
+    "endpoint": "/doctors",
+    "tokens": [
+      "doctors",
+      "available",
+      "now"
+    ]
+  },
+  {
+    "command": "Get me a doctor",
+    "endpoint": "/doctors",
+    "tokens": [
+      "get",
+      "me",
+      "a",
+      "doctor"
+    ]
+  },
+  {
+    "command": "Which doctors are online?",
+    "endpoint": "/doctors",
+    "tokens": [
+      "which",
+      "doctors",
+      "are",
+      "online"
+    ]
+  },
+  {
+    "command": "Show doctor availability",
+    "endpoint": "/doctors",
+    "tokens": [
+      "show",
+      "doctor",
+      "availability"
+    ]
+  },
+  {
+    "command": "Take me to the specialist list",
+    "endpoint": "/doctors",
+    "tokens": [
+      "take",
+      "me",
+      "to",
+      "the",
+      "specialist",
+      "list"
+    ]
+  },
+  {
+    "command": "I need to consult a doctor",
+    "endpoint": "/doctors",
+    "tokens": [
+      "i",
+      "need",
+      "to",
+      "consult",
+      "a",
+      "doctor"
+    ]
+  },
+  {
+    "command": "Find me a health professional",
+    "endpoint": "/doctors",
+    "tokens": [
+      "find",
+      "me",
+      "a",
+      "health",
+      "professional"
+    ]
+  },
+  {
+    "command": "Show doctors by specialty",
+    "endpoint": "/doctors",
+    "tokens": [
+      "show",
+      "doctors",
+      "by",
+      "specialty"
+    ]
+  },
+  {
+    "command": "Find a physician for me",
+    "endpoint": "/doctors",
+    "tokens": [
+      "find",
+      "a",
+      "physician",
+      "for",
+      "me"
+    ]
+  },
+  {
+    "command": "Take me to the doctors directory",
+    "endpoint": "/doctors",
+    "tokens": [
+      "take",
+      "me",
+      "to",
+      "the",
+      "doctors",
+      "directory"
+    ]
+  },
+  {
+    "command": "Browse medical professionals",
+    "endpoint": "/doctors",
+    "tokens": [
+      "browse",
+      "medical",
+      "professionals"
+    ]
+  },
+  {
+    "command": "I want to see all doctors",
+    "endpoint": "/doctors",
+    "tokens": [
+      "i",
+      "want",
+      "to",
+      "see",
+      "all",
+      "doctors"
+    ]
+  },
+  {
+    "command": "Let’s check the doctor list",
+    "endpoint": "/doctors",
+    "tokens": [
+      "lets",
+      "check",
+      "the",
+      "doctor",
+      "list"
+    ]
+  },
+  {
+    "command": "Show me the available doctors",
+    "endpoint": "/doctors",
+    "tokens": [
+      "show",
+      "me",
+      "the",
+      "available",
+      "doctors"
+    ]
+  },
+  {
+    "command": "Doctor availability check",
+    "endpoint": "/doctors",
+    "tokens": [
+      "doctor",
+      "availability",
+      "check"
+    ]
+  },
+  {
+    "command": "Show doctor schedules",
+    "endpoint": "/doctors",
+    "tokens": [
+      "show",
+      "doctor",
+      "schedules"
+    ]
+  },
+  {
+    "command": "Find an expert for my problem",
+    "endpoint": "/doctors",
+    "tokens": [
+      "find",
+      "an",
+      "expert",
+      "for",
+      "my",
+      "problem"
+    ]
+  },
+  {
+    "command": "Can I get a specialist?",
+    "endpoint": "/doctors",
+    "tokens": [
+      "can",
+      "i",
+      "get",
+      "a",
+      "specialist"
+    ]
+  },
+  {
+    "command": "Search for available physicians",
+    "endpoint": "/doctors",
+    "tokens": [
+      "search",
+      "for",
+      "available",
+      "physicians"
+    ]
+  },
+  {
+    "command": "Take me to the medical team",
+    "endpoint": "/doctors",
+    "tokens": [
+      "take",
+      "me",
+      "to",
+      "the",
+      "medical",
+      "team"
+    ]
+  },
+  {
+    "command": "See all available doctors",
+    "endpoint": "/doctors",
+    "tokens": [
+      "see",
+      "all",
+      "available",
+      "doctors"
+    ]
+  },
+  {
+    "command": "Doctor information page",
+    "endpoint": "/doctors",
+    "tokens": [
+      "doctor",
+      "information",
+      "page"
+    ]
+  },
+  {
+    "command": "Guide me to the doctor profiles",
+    "endpoint": "/doctors",
+    "tokens": [
+      "guide",
+      "me",
+      "to",
+      "the",
+      "doctor",
+      "profiles"
+    ]
+  },
+  {
+    "command": "Show me the specialists",
+    "endpoint": "/doctors",
+    "tokens": [
+      "show",
+      "me",
+      "the",
+      "specialists"
+    ]
+  },
+  {
+    "command": "I need a specialist doctor",
+    "endpoint": "/doctors",
+    "tokens": [
+      "i",
+      "need",
+      "a",
+      "specialist",
+      "doctor"
+    ]
+  },
+  {
+    "command": "Show the hospital’s doctor list",
+    "endpoint": "/doctors",
+    "tokens": [
+      "show",
+      "the",
+      "hospitals",
+      "doctor",
+      "list"
+    ]
+  },
+  {
+    "command": "Let’s find the right doctor",
+    "endpoint": "/doctors",
+    "tokens": [
+      "lets",
+      "find",
+      "the",
+      "right",
+      "doctor"
+    ]
+  },
+  {
+    "command": "Search doctor availability for me",
+    "endpoint": "/doctors",
+    "tokens": [
+      "search",
+      "doctor",
+      "availability",
+      "for",
+      "me"
+    ]
+  },
+  {
+    "command": "Navigate to the doctor section",
+    "endpoint": "/doctors",
+    "tokens": [
+      "navigate",
+      "to",
+      "the",
+      "doctor",
+      "section"
+    ]
+  },
+  {
+    "command": "Which doctors are on duty?",
+    "endpoint": "/doctors",
+    "tokens": [
+      "which",
+      "doctors",
+      "are",
+      "on",
+      "duty"
+    ]
+  },
+  {
+    "command": "Take me to the doctor finder",
+    "endpoint": "/doctors",
+    "tokens": [
+      "take",
+      "me",
+      "to",
+      "the",
+      "doctor",
+      "finder"
+    ]
+  },
+  {
+    "command": "Get a doctor for consultation",
+    "endpoint": "/doctors",
+    "tokens": [
+      "get",
+      "a",
+      "doctor",
+      "for",
+      "consultation"
+    ]
+  },
+  {
+    "command": "Search the doctor database",
+    "endpoint": "/doctors",
+    "tokens": [
+      "search",
+      "the",
+      "doctor",
+      "database"
+    ]
+  },
+  {
+    "command": "Where can I consult a doctor?",
+    "endpoint": "/doctors",
+    "tokens": [
+      "where",
+      "can",
+      "i",
+      "consult",
+      "a",
+      "doctor"
+    ]
+  },
+  {
+    "command": "Find a doctor who specializes in my issue",
+    "endpoint": "/doctors",
+    "tokens": [
+      "find",
+      "a",
+      "doctor",
+      "who",
+      "specializes",
+      "in",
+      "my",
+      "issue"
+    ]
+  },
+  {
+    "command": "Show me doctors in my area",
+    "endpoint": "/doctors",
+    "tokens": [
+      "show",
+      "me",
+      "doctors",
+      "in",
+      "my",
+      "area"
+    ]
+  },
+  {
+    "command": "Search for doctors nearby",
+    "endpoint": "/doctors",
+    "tokens": [
+      "search",
+      "for",
+      "doctors",
+      "nearby"
+    ]
+  },
+  {
+    "command": "Find a hospital doctor",
+    "endpoint": "/doctors",
+    "tokens": [
+      "find",
+      "a",
+      "hospital",
+      "doctor"
+    ]
+  },
+  {
+    "command": "List of available health professionals",
+    "endpoint": "/doctors",
+    "tokens": [
+      "list",
+      "of",
+      "available",
+      "health",
+      "professionals"
+    ]
+  },
+  {
+    "command": "Browse through the doctor list",
+    "endpoint": "/doctors",
+    "tokens": [
+      "browse",
+      "through",
+      "the",
+      "doctor",
+      "list"
+    ]
+  },
+  {
+    "command": "Which doctors are currently available?",
+    "endpoint": "/doctors",
+    "tokens": [
+      "which",
+      "doctors",
+      "are",
+      "currently",
+      "available"
+    ]
+  },
+  {
+    "command": "Search for experienced doctors",
+    "endpoint": "/doctors",
+    "tokens": [
+      "search",
+      "for",
+      "experienced",
+      "doctors"
+    ]
+  },
+  {
+    "command": "Find the best doctor for me",
+    "endpoint": "/doctors",
+    "tokens": [
+      "find",
+      "the",
+      "best",
+      "doctor",
+      "for",
+      "me"
+    ]
+  },
+  {
+    "command": "Show me top-rated doctors",
+    "endpoint": "/doctors",
+    "tokens": [
+      "show",
+      "me",
+      "toprated",
+      "doctors"
+    ]
+  },
+  {
+    "command": "Take me to the best doctors",
+    "endpoint": "/doctors",
+    "tokens": [
+      "take",
+      "me",
+      "to",
+      "the",
+      "best",
+      "doctors"
+    ]
+  },
+  {
+    "command": "Give me options for available doctors",
+    "endpoint": "/doctors",
+    "tokens": [
+      "give",
+      "me",
+      "options",
+      "for",
+      "available",
+      "doctors"
+    ]
+  },
+  {
+    "command": "Let me see the doctor list now",
+    "endpoint": "/doctors",
+    "tokens": [
+      "let",
+      "me",
+      "see",
+      "the",
+      "doctor",
+      "list",
+      "now"
+    ]
+  },
+  {
+    "command": "Go to login",
+    "endpoint": "/login",
+    "tokens": [
+      "go",
+      "to",
+      "login"
+    ]
+  },
+  {
+    "command": "Take me to the login page",
+    "endpoint": "/login",
+    "tokens": [
+      "take",
+      "me",
+      "to",
+      "the",
+      "login",
+      "page"
+    ]
+  },
+  {
+    "command": "Log me in",
+    "endpoint": "/login",
+    "tokens": [
+      "log",
+      "me",
+      "in"
+    ]
+  },
+  {
+    "command": "I want to log in",
+    "endpoint": "/login",
+    "tokens": [
+      "i",
+      "want",
+      "to",
+      "log",
+      "in"
+    ]
+  },
+  {
+    "command": "Please log me in",
+    "endpoint": "/login",
+    "tokens": [
+      "please",
+      "log",
+      "me",
+      "in"
+    ]
+  },
+  {
+    "command": "Open login page",
+    "endpoint": "/login",
+    "tokens": [
+      "open",
+      "login",
+      "page"
+    ]
+  },
+  {
+    "command": "Navigate to login",
+    "endpoint": "/login",
+    "tokens": [
+      "navigate",
+      "to",
+      "login"
+    ]
+  },
+  {
+    "command": "Take me to sign in",
+    "endpoint": "/login",
+    "tokens": [
+      "take",
+      "me",
+      "to",
+      "sign",
+      "in"
+    ]
+  },
+  {
+    "command": "Go to the sign-in page",
+    "endpoint": "/login",
+    "tokens": [
+      "go",
+      "to",
+      "the",
+      "signin",
+      "page"
+    ]
+  },
+  {
+    "command": "Sign in now",
+    "endpoint": "/login",
+    "tokens": [
+      "sign",
+      "in",
+      "now"
+    ]
+  },
+  {
+    "command": "Show me the login screen",
+    "endpoint": "/login",
+    "tokens": [
+      "show",
+      "me",
+      "the",
+      "login",
+      "screen"
+    ]
+  },
+  {
+    "command": "Where is the login?",
+    "endpoint": "/login",
+    "tokens": [
+      "where",
+      "is",
+      "the",
+      "login"
+    ]
+  },
+  {
+    "command": "Can I log in?",
+    "endpoint": "/login",
+    "tokens": [
+      "can",
+      "i",
+      "log",
+      "in"
+    ]
+  },
+  {
+    "command": "I need to sign in",
+    "endpoint": "/login",
+    "tokens": [
+      "i",
+      "need",
+      "to",
+      "sign",
+      "in"
+    ]
+  },
+  {
+    "command": "Login screen please",
+    "endpoint": "/login",
+    "tokens": [
+      "login",
+      "screen",
+      "please"
+    ]
+  },
+  {
+    "command": "Help me log in",
+    "endpoint": "/login",
+    "tokens": [
+      "help",
+      "me",
+      "log",
+      "in"
+    ]
+  },
+  {
+    "command": "Can you log me in?",
+    "endpoint": "/login",
+    "tokens": [
+      "can",
+      "you",
+      "log",
+      "me",
+      "in"
+    ]
+  },
+  {
+    "command": "Log into my account",
+    "endpoint": "/login",
+    "tokens": [
+      "log",
+      "into",
+      "my",
+      "account"
+    ]
+  },
+  {
+    "command": "Take me to my login page",
+    "endpoint": "/login",
+    "tokens": [
+      "take",
+      "me",
+      "to",
+      "my",
+      "login",
+      "page"
+    ]
+  },
+  {
+    "command": "Where do I sign in?",
+    "endpoint": "/login",
+    "tokens": [
+      "where",
+      "do",
+      "i",
+      "sign",
+      "in"
+    ]
+  },
+  {
+    "command": "I need access, log me in",
+    "endpoint": "/login",
+    "tokens": [
+      "i",
+      "need",
+      "access",
+      "log",
+      "me",
+      "in"
+    ]
+  },
+  {
+    "command": "Please take me to login",
+    "endpoint": "/login",
+    "tokens": [
+      "please",
+      "take",
+      "me",
+      "to",
+      "login"
+    ]
+  },
+  {
+    "command": "Show the sign-in page",
+    "endpoint": "/login",
+    "tokens": [
+      "show",
+      "the",
+      "signin",
+      "page"
+    ]
+  },
+  {
+    "command": "Get me to the login screen",
+    "endpoint": "/login",
+    "tokens": [
+      "get",
+      "me",
+      "to",
+      "the",
+      "login",
+      "screen"
+    ]
+  },
+  {
+    "command": "I want to sign in now",
+    "endpoint": "/login",
+    "tokens": [
+      "i",
+      "want",
+      "to",
+      "sign",
+      "in",
+      "now"
+    ]
+  },
+  {
+    "command": "Login to my profile",
+    "endpoint": "/login",
+    "tokens": [
+      "login",
+      "to",
+      "my",
+      "profile"
+    ]
+  },
+  {
+    "command": "How do I log in?",
+    "endpoint": "/login",
+    "tokens": [
+      "how",
+      "do",
+      "i",
+      "log",
+      "in"
+    ]
+  },
+  {
+    "command": "I need to log in now",
+    "endpoint": "/login",
+    "tokens": [
+      "i",
+      "need",
+      "to",
+      "log",
+      "in",
+      "now"
+    ]
+  },
+  {
+    "command": "Can you take me to the login page?",
+    "endpoint": "/login",
+    "tokens": [
+      "can",
+      "you",
+      "take",
+      "me",
+      "to",
+      "the",
+      "login",
+      "page"
+    ]
+  },
+  {
+    "command": "Take me to my account login",
+    "endpoint": "/login",
+    "tokens": [
+      "take",
+      "me",
+      "to",
+      "my",
+      "account",
+      "login"
+    ]
+  },
+  {
+    "command": "Go back to login",
+    "endpoint": "/login",
+    "tokens": [
+      "go",
+      "back",
+      "to",
+      "login"
+    ]
+  },
+  {
+    "command": "Return to the login page",
+    "endpoint": "/login",
+    "tokens": [
+      "return",
+      "to",
+      "the",
+      "login",
+      "page"
+    ]
+  },
+  {
+    "command": "Go to account login",
+    "endpoint": "/login",
+    "tokens": [
+      "go",
+      "to",
+      "account",
+      "login"
+    ]
+  },
+  {
+    "command": "I need my login page",
+    "endpoint": "/login",
+    "tokens": [
+      "i",
+      "need",
+      "my",
+      "login",
+      "page"
+    ]
+  },
+  {
+    "command": "Redirect me to login",
+    "endpoint": "/login",
+    "tokens": [
+      "redirect",
+      "me",
+      "to",
+      "login"
+    ]
+  },
+  {
+    "command": "Show me the authentication page",
+    "endpoint": "/login",
+    "tokens": [
+      "show",
+      "me",
+      "the",
+      "authentication",
+      "page"
+    ]
+  },
+  {
+    "command": "Take me to authentication",
+    "endpoint": "/login",
+    "tokens": [
+      "take",
+      "me",
+      "to",
+      "authentication"
+    ]
+  },
+  {
+    "command": "Find my login",
+    "endpoint": "/login",
+    "tokens": [
+      "find",
+      "my",
+      "login"
+    ]
+  },
+  {
+    "command": "Open my sign-in page",
+    "endpoint": "/login",
+    "tokens": [
+      "open",
+      "my",
+      "signin",
+      "page"
+    ]
+  },
+  {
+    "command": "Give me access to login",
+    "endpoint": "/login",
+    "tokens": [
+      "give",
+      "me",
+      "access",
+      "to",
+      "login"
+    ]
+  },
+  {
+    "command": "Let’s log in",
+    "endpoint": "/login",
+    "tokens": [
+      "lets",
+      "log",
+      "in"
+    ]
+  },
+  {
+    "command": "Login please",
+    "endpoint": "/login",
+    "tokens": [
+      "login",
+      "please"
+    ]
+  },
+  {
+    "command": "Can I sign in now?",
+    "endpoint": "/login",
+    "tokens": [
+      "can",
+      "i",
+      "sign",
+      "in",
+      "now"
+    ]
+  },
+  {
+    "command": "I am ready to log in",
+    "endpoint": "/login",
+    "tokens": [
+      "i",
+      "am",
+      "ready",
+      "to",
+      "log",
+      "in"
+    ]
+  },
+  {
+    "command": "Where do I log in?",
+    "endpoint": "/login",
+    "tokens": [
+      "where",
+      "do",
+      "i",
+      "log",
+      "in"
+    ]
+  },
+  {
+    "command": "Please take me to sign in",
+    "endpoint": "/login",
+    "tokens": [
+      "please",
+      "take",
+      "me",
+      "to",
+      "sign",
+      "in"
+    ]
+  },
+  {
+    "command": "Show my login",
+    "endpoint": "/login",
+    "tokens": [
+      "show",
+      "my",
+      "login"
+    ]
+  },
+  {
+    "command": "Account login page",
+    "endpoint": "/login",
+    "tokens": [
+      "account",
+      "login",
+      "page"
+    ]
+  },
+  {
+    "command": "I want to access my account",
+    "endpoint": "/login",
+    "tokens": [
+      "i",
+      "want",
+      "to",
+      "access",
+      "my",
+      "account"
+    ]
+  },
+  {
+    "command": "Take me to user login",
+    "endpoint": "/login",
+    "tokens": [
+      "take",
+      "me",
+      "to",
+      "user",
+      "login"
+    ]
+  },
+  {
+    "command": "User authentication page",
+    "endpoint": "/login",
+    "tokens": [
+      "user",
+      "authentication",
+      "page"
+    ]
+  },
+  {
+    "command": "Take me back to login",
+    "endpoint": "/login",
+    "tokens": [
+      "take",
+      "me",
+      "back",
+      "to",
+      "login"
+    ]
+  },
+  {
+    "command": "I need login access",
+    "endpoint": "/login",
+    "tokens": [
+      "i",
+      "need",
+      "login",
+      "access"
+    ]
+  },
+  {
+    "command": "Go to the authentication screen",
+    "endpoint": "/login",
+    "tokens": [
+      "go",
+      "to",
+      "the",
+      "authentication",
+      "screen"
+    ]
+  },
+  {
+    "command": "Login to my dashboard",
+    "endpoint": "/login",
+    "tokens": [
+      "login",
+      "to",
+      "my",
+      "dashboard"
+    ]
+  },
+  {
+    "command": "Authenticate my account",
+    "endpoint": "/login",
+    "tokens": [
+      "authenticate",
+      "my",
+      "account"
+    ]
+  },
+  {
+    "command": "Take me to the user portal",
+    "endpoint": "/login",
+    "tokens": [
+      "take",
+      "me",
+      "to",
+      "the",
+      "user",
+      "portal"
+    ]
+  },
+  {
+    "command": "I want to log into my dashboard",
+    "endpoint": "/login",
+    "tokens": [
+      "i",
+      "want",
+      "to",
+      "log",
+      "into",
+      "my",
+      "dashboard"
+    ]
+  },
+  {
+    "command": "Take me to my account page",
+    "endpoint": "/login",
+    "tokens": [
+      "take",
+      "me",
+      "to",
+      "my",
+      "account",
+      "page"
+    ]
+  },
+  {
+    "command": "Access my user account",
+    "endpoint": "/login",
+    "tokens": [
+      "access",
+      "my",
+      "user",
+      "account"
+    ]
+  },
+  {
+    "command": "Sign in to my profile",
+    "endpoint": "/login",
+    "tokens": [
+      "sign",
+      "in",
+      "to",
+      "my",
+      "profile"
+    ]
+  },
+  {
+    "command": "Log me into my dashboard",
+    "endpoint": "/login",
+    "tokens": [
+      "log",
+      "me",
+      "into",
+      "my",
+      "dashboard"
+    ]
+  },
+  {
+    "command": "Take me to the secure login",
+    "endpoint": "/login",
+    "tokens": [
+      "take",
+      "me",
+      "to",
+      "the",
+      "secure",
+      "login"
+    ]
+  },
+  {
+    "command": "Secure authentication please",
+    "endpoint": "/login",
+    "tokens": [
+      "secure",
+      "authentication",
+      "please"
+    ]
+  },
+  {
+    "command": "Let’s go to login",
+    "endpoint": "/login",
+    "tokens": [
+      "lets",
+      "go",
+      "to",
+      "login"
+    ]
+  },
+  {
+    "command": "Help me sign in",
+    "endpoint": "/login",
+    "tokens": [
+      "help",
+      "me",
+      "sign",
+      "in"
+    ]
+  },
+  {
+    "command": "Direct me to login",
+    "endpoint": "/login",
+    "tokens": [
+      "direct",
+      "me",
+      "to",
+      "login"
+    ]
+  },
+  {
+    "command": "How do I sign in?",
+    "endpoint": "/login",
+    "tokens": [
+      "how",
+      "do",
+      "i",
+      "sign",
+      "in"
+    ]
+  },
+  {
+    "command": "Go to the login portal",
+    "endpoint": "/login",
+    "tokens": [
+      "go",
+      "to",
+      "the",
+      "login",
+      "portal"
+    ]
+  },
+  {
+    "command": "I need to access my dashboard",
+    "endpoint": "/login",
+    "tokens": [
+      "i",
+      "need",
+      "to",
+      "access",
+      "my",
+      "dashboard"
+    ]
+  },
+  {
+    "command": "Where is the sign-in button?",
+    "endpoint": "/login",
+    "tokens": [
+      "where",
+      "is",
+      "the",
+      "signin",
+      "button"
+    ]
+  },
+  {
+    "command": "Show me how to log in",
+    "endpoint": "/login",
+    "tokens": [
+      "show",
+      "me",
+      "how",
+      "to",
+      "log",
+      "in"
+    ]
+  },
+  {
+    "command": "Open my sign-in portal",
+    "endpoint": "/login",
+    "tokens": [
+      "open",
+      "my",
+      "signin",
+      "portal"
+    ]
+  },
+  {
+    "command": "Go to the secure login page",
+    "endpoint": "/login",
+    "tokens": [
+      "go",
+      "to",
+      "the",
+      "secure",
+      "login",
+      "page"
+    ]
+  },
+  {
+    "command": "Take me to my profile login",
+    "endpoint": "/login",
+    "tokens": [
+      "take",
+      "me",
+      "to",
+      "my",
+      "profile",
+      "login"
+    ]
+  },
+  {
+    "command": "Account authentication page",
+    "endpoint": "/login",
+    "tokens": [
+      "account",
+      "authentication",
+      "page"
+    ]
+  },
+  {
+    "command": "Let’s get to login",
+    "endpoint": "/login",
+    "tokens": [
+      "lets",
+      "get",
+      "to",
+      "login"
+    ]
+  },
+  {
+    "command": "Sign me in now",
+    "endpoint": "/login",
+    "tokens": [
+      "sign",
+      "me",
+      "in",
+      "now"
+    ]
+  },
+  {
+    "command": "Where can I log in?",
+    "endpoint": "/login",
+    "tokens": [
+      "where",
+      "can",
+      "i",
+      "log",
+      "in"
+    ]
+  },
+  {
+    "command": "Help me get to the login screen",
+    "endpoint": "/login",
+    "tokens": [
+      "help",
+      "me",
+      "get",
+      "to",
+      "the",
+      "login",
+      "screen"
+    ]
+  },
+  {
+    "command": "I want to enter my account",
+    "endpoint": "/login",
+    "tokens": [
+      "i",
+      "want",
+      "to",
+      "enter",
+      "my",
+      "account"
+    ]
+  },
+  {
+    "command": "Log me into my profile",
+    "endpoint": "/login",
+    "tokens": [
+      "log",
+      "me",
+      "into",
+      "my",
+      "profile"
+    ]
+  },
+  {
+    "command": "Navigate to my account login",
+    "endpoint": "/login",
+    "tokens": [
+      "navigate",
+      "to",
+      "my",
+      "account",
+      "login"
+    ]
+  },
+  {
+    "command": "Show my account authentication page",
+    "endpoint": "/login",
+    "tokens": [
+      "show",
+      "my",
+      "account",
+      "authentication",
+      "page"
+    ]
+  },
+  {
+    "command": "Please authenticate my access",
+    "endpoint": "/login",
+    "tokens": [
+      "please",
+      "authenticate",
+      "my",
+      "access"
+    ]
+  },
+  {
+    "command": "Redirect me to the login section",
+    "endpoint": "/login",
+    "tokens": [
+      "redirect",
+      "me",
+      "to",
+      "the",
+      "login",
+      "section"
+    ]
+  },
+  {
+    "command": "Guide me to the login page",
+    "endpoint": "/login",
+    "tokens": [
+      "guide",
+      "me",
+      "to",
+      "the",
+      "login",
+      "page"
+    ]
+  },
+  {
+    "command": "Go to about",
+    "endpoint": "/about",
+    "tokens": [
+      "go",
+      "to",
+      "about"
+    ]
+  },
+  {
+    "command": "Take me to the about page",
+    "endpoint": "/about",
+    "tokens": [
+      "take",
+      "me",
+      "to",
+      "the",
+      "about",
+      "page"
+    ]
+  },
+  {
+    "command": "Show me the about page",
+    "endpoint": "/about",
+    "tokens": [
+      "show",
+      "me",
+      "the",
+      "about",
+      "page"
+    ]
+  },
+  {
+    "command": "Navigate to about",
+    "endpoint": "/about",
+    "tokens": [
+      "navigate",
+      "to",
+      "about"
+    ]
+  },
+  {
+    "command": "Tell me about this",
+    "endpoint": "/about",
+    "tokens": [
+      "tell",
+      "me",
+      "about",
+      "this"
+    ]
+  },
+  {
+    "command": "I want to know about this site",
+    "endpoint": "/about",
+    "tokens": [
+      "i",
+      "want",
+      "to",
+      "know",
+      "about",
+      "this",
+      "site"
+    ]
+  },
+  {
+    "command": "What is this about?",
+    "endpoint": "/about",
+    "tokens": [
+      "what",
+      "is",
+      "this",
+      "about"
+    ]
+  },
+  {
+    "command": "Where is the about page?",
+    "endpoint": "/about",
+    "tokens": [
+      "where",
+      "is",
+      "the",
+      "about",
+      "page"
+    ]
+  },
+  {
+    "command": "Give me details about this platform",
+    "endpoint": "/about",
+    "tokens": [
+      "give",
+      "me",
+      "details",
+      "about",
+      "this",
+      "platform"
+    ]
+  },
+  {
+    "command": "Show me the information page",
+    "endpoint": "/about",
+    "tokens": [
+      "show",
+      "me",
+      "the",
+      "information",
+      "page"
+    ]
+  },
+  {
+    "command": "Take me to the information page",
+    "endpoint": "/about",
+    "tokens": [
+      "take",
+      "me",
+      "to",
+      "the",
+      "information",
+      "page"
+    ]
+  },
+  {
+    "command": "Learn more about this",
+    "endpoint": "/about",
+    "tokens": [
+      "learn",
+      "more",
+      "about",
+      "this"
+    ]
+  },
+  {
+    "command": "I want to read about this system",
+    "endpoint": "/about",
+    "tokens": [
+      "i",
+      "want",
+      "to",
+      "read",
+      "about",
+      "this",
+      "system"
+    ]
+  },
+  {
+    "command": "Tell me more about this hospital",
+    "endpoint": "/about",
+    "tokens": [
+      "tell",
+      "me",
+      "more",
+      "about",
+      "this",
+      "hospital"
+    ]
+  },
+  {
+    "command": "Find the about section",
+    "endpoint": "/about",
+    "tokens": [
+      "find",
+      "the",
+      "about",
+      "section"
+    ]
+  },
+  {
+    "command": "Open the about us page",
+    "endpoint": "/about",
+    "tokens": [
+      "open",
+      "the",
+      "about",
+      "us",
+      "page"
+    ]
+  },
+  {
+    "command": "What is this hospital about?",
+    "endpoint": "/about",
+    "tokens": [
+      "what",
+      "is",
+      "this",
+      "hospital",
+      "about"
+    ]
+  },
+  {
+    "command": "Show me more details about this platform",
+    "endpoint": "/about",
+    "tokens": [
+      "show",
+      "me",
+      "more",
+      "details",
+      "about",
+      "this",
+      "platform"
+    ]
+  },
+  {
+    "command": "Give me an overview of this system",
+    "endpoint": "/about",
+    "tokens": [
+      "give",
+      "me",
+      "an",
+      "overview",
+      "of",
+      "this",
+      "system"
+    ]
+  },
+  {
+    "command": "How does this system work?",
+    "endpoint": "/about",
+    "tokens": [
+      "how",
+      "does",
+      "this",
+      "system",
+      "work"
+    ]
+  },
+  {
+    "command": "Take me to the details page",
+    "endpoint": "/about",
+    "tokens": [
+      "take",
+      "me",
+      "to",
+      "the",
+      "details",
+      "page"
+    ]
+  },
+  {
+    "command": "Show me what this is about",
+    "endpoint": "/about",
+    "tokens": [
+      "show",
+      "me",
+      "what",
+      "this",
+      "is",
+      "about"
+    ]
+  },
+  {
+    "command": "Give me information about this",
+    "endpoint": "/about",
+    "tokens": [
+      "give",
+      "me",
+      "information",
+      "about",
+      "this"
+    ]
+  },
+  {
+    "command": "Explain this system to me",
+    "endpoint": "/about",
+    "tokens": [
+      "explain",
+      "this",
+      "system",
+      "to",
+      "me"
+    ]
+  },
+  {
+    "command": "I want to explore the about page",
+    "endpoint": "/about",
+    "tokens": [
+      "i",
+      "want",
+      "to",
+      "explore",
+      "the",
+      "about",
+      "page"
+    ]
+  },
+  {
+    "command": "Can you take me to about?",
+    "endpoint": "/about",
+    "tokens": [
+      "can",
+      "you",
+      "take",
+      "me",
+      "to",
+      "about"
+    ]
+  },
+  {
+    "command": "Show me the platform details",
+    "endpoint": "/about",
+    "tokens": [
+      "show",
+      "me",
+      "the",
+      "platform",
+      "details"
+    ]
+  },
+  {
+    "command": "Go to the about us section",
+    "endpoint": "/about",
+    "tokens": [
+      "go",
+      "to",
+      "the",
+      "about",
+      "us",
+      "section"
+    ]
+  },
+  {
+    "command": "Where can I read about this?",
+    "endpoint": "/about",
+    "tokens": [
+      "where",
+      "can",
+      "i",
+      "read",
+      "about",
+      "this"
+    ]
+  },
+  {
+    "command": "What is this platform used for?",
+    "endpoint": "/about",
+    "tokens": [
+      "what",
+      "is",
+      "this",
+      "platform",
+      "used",
+      "for"
+    ]
+  },
+  {
+    "command": "Tell me the purpose of this app",
+    "endpoint": "/about",
+    "tokens": [
+      "tell",
+      "me",
+      "the",
+      "purpose",
+      "of",
+      "this",
+      "app"
+    ]
+  },
+  {
+    "command": "Take me to the system overview",
+    "endpoint": "/about",
+    "tokens": [
+      "take",
+      "me",
+      "to",
+      "the",
+      "system",
+      "overview"
+    ]
+  },
+  {
+    "command": "Navigate me to the about section",
+    "endpoint": "/about",
+    "tokens": [
+      "navigate",
+      "me",
+      "to",
+      "the",
+      "about",
+      "section"
+    ]
+  },
+  {
+    "command": "What’s the purpose of this application?",
+    "endpoint": "/about",
+    "tokens": [
+      "whats",
+      "the",
+      "purpose",
+      "of",
+      "this",
+      "application"
+    ]
+  },
+  {
+    "command": "Help me understand this system",
+    "endpoint": "/about",
+    "tokens": [
+      "help",
+      "me",
+      "understand",
+      "this",
+      "system"
+    ]
+  },
+  {
+    "command": "I need more information about this",
+    "endpoint": "/about",
+    "tokens": [
+      "i",
+      "need",
+      "more",
+      "information",
+      "about",
+      "this"
+    ]
+  },
+  {
+    "command": "Read about this system",
+    "endpoint": "/about",
+    "tokens": [
+      "read",
+      "about",
+      "this",
+      "system"
+    ]
+  },
+  {
+    "command": "Show me the introduction page",
+    "endpoint": "/about",
+    "tokens": [
+      "show",
+      "me",
+      "the",
+      "introduction",
+      "page"
+    ]
+  },
+  {
+    "command": "Take me to learn more",
+    "endpoint": "/about",
+    "tokens": [
+      "take",
+      "me",
+      "to",
+      "learn",
+      "more"
+    ]
+  },
+  {
+    "command": "Find the about section for me",
+    "endpoint": "/about",
+    "tokens": [
+      "find",
+      "the",
+      "about",
+      "section",
+      "for",
+      "me"
+    ]
+  },
+  {
+    "command": "Discover what this system is for",
+    "endpoint": "/about",
+    "tokens": [
+      "discover",
+      "what",
+      "this",
+      "system",
+      "is",
+      "for"
+    ]
+  },
+  {
+    "command": "Explain what this system does",
+    "endpoint": "/about",
+    "tokens": [
+      "explain",
+      "what",
+      "this",
+      "system",
+      "does"
+    ]
+  },
+  {
+    "command": "Tell me about this service",
+    "endpoint": "/about",
+    "tokens": [
+      "tell",
+      "me",
+      "about",
+      "this",
+      "service"
+    ]
+  },
+  {
+    "command": "I need details about this hospital",
+    "endpoint": "/about",
+    "tokens": [
+      "i",
+      "need",
+      "details",
+      "about",
+      "this",
+      "hospital"
+    ]
+  },
+  {
+    "command": "Show me how this hospital system works",
+    "endpoint": "/about",
+    "tokens": [
+      "show",
+      "me",
+      "how",
+      "this",
+      "hospital",
+      "system",
+      "works"
+    ]
+  },
+  {
+    "command": "Explain the functionality of this system",
+    "endpoint": "/about",
+    "tokens": [
+      "explain",
+      "the",
+      "functionality",
+      "of",
+      "this",
+      "system"
+    ]
+  },
+  {
+    "command": "Where can I read about this hospital?",
+    "endpoint": "/about",
+    "tokens": [
+      "where",
+      "can",
+      "i",
+      "read",
+      "about",
+      "this",
+      "hospital"
+    ]
+  },
+  {
+    "command": "Tell me about this platform’s features",
+    "endpoint": "/about",
+    "tokens": [
+      "tell",
+      "me",
+      "about",
+      "this",
+      "platforms",
+      "features"
+    ]
+  },
+  {
+    "command": "Show the about page of this application",
+    "endpoint": "/about",
+    "tokens": [
+      "show",
+      "the",
+      "about",
+      "page",
+      "of",
+      "this",
+      "application"
+    ]
+  },
+  {
+    "command": "Learn more about this hospital management system",
+    "endpoint": "/about",
+    "tokens": [
+      "learn",
+      "more",
+      "about",
+      "this",
+      "hospital",
+      "management",
+      "system"
+    ]
+  },
+  {
+    "command": "Take me to the hospital’s about page",
+    "endpoint": "/about",
+    "tokens": [
+      "take",
+      "me",
+      "to",
+      "the",
+      "hospitals",
+      "about",
+      "page"
+    ]
+  },
+  {
+    "command": "I want to know more about this service",
+    "endpoint": "/about",
+    "tokens": [
+      "i",
+      "want",
+      "to",
+      "know",
+      "more",
+      "about",
+      "this",
+      "service"
+    ]
+  },
+  {
+    "command": "What is this site’s purpose?",
+    "endpoint": "/about",
+    "tokens": [
+      "what",
+      "is",
+      "this",
+      "sites",
+      "purpose"
+    ]
+  },
+  {
+    "command": "How does this system help patients?",
+    "endpoint": "/about",
+    "tokens": [
+      "how",
+      "does",
+      "this",
+      "system",
+      "help",
+      "patients"
+    ]
+  },
+  {
+    "command": "What does this website do?",
+    "endpoint": "/about",
+    "tokens": [
+      "what",
+      "does",
+      "this",
+      "website",
+      "do"
+    ]
+  },
+  {
+    "command": "Can you explain this application to me?",
+    "endpoint": "/about",
+    "tokens": [
+      "can",
+      "you",
+      "explain",
+      "this",
+      "application",
+      "to",
+      "me"
+    ]
+  },
+  {
+    "command": "Show me the mission and vision of this hospital",
+    "endpoint": "/about",
+    "tokens": [
+      "show",
+      "me",
+      "the",
+      "mission",
+      "and",
+      "vision",
+      "of",
+      "this",
+      "hospital"
+    ]
+  },
+  {
+    "command": "Tell me about the goals of this platform",
+    "endpoint": "/about",
+    "tokens": [
+      "tell",
+      "me",
+      "about",
+      "the",
+      "goals",
+      "of",
+      "this",
+      "platform"
+    ]
+  },
+  {
+    "command": "Explain the features of this app",
+    "endpoint": "/about",
+    "tokens": [
+      "explain",
+      "the",
+      "features",
+      "of",
+      "this",
+      "app"
+    ]
+  },
+  {
+    "command": "Help me understand the purpose of this site",
+    "endpoint": "/about",
+    "tokens": [
+      "help",
+      "me",
+      "understand",
+      "the",
+      "purpose",
+      "of",
+      "this",
+      "site"
+    ]
+  },
+  {
+    "command": "Navigate to learn more about this",
+    "endpoint": "/about",
+    "tokens": [
+      "navigate",
+      "to",
+      "learn",
+      "more",
+      "about",
+      "this"
+    ]
+  },
+  {
+    "command": "Give me insights into this hospital system",
+    "endpoint": "/about",
+    "tokens": [
+      "give",
+      "me",
+      "insights",
+      "into",
+      "this",
+      "hospital",
+      "system"
+    ]
+  },
+  {
+    "command": "Where can I learn about this healthcare service?",
+    "endpoint": "/about",
+    "tokens": [
+      "where",
+      "can",
+      "i",
+      "learn",
+      "about",
+      "this",
+      "healthcare",
+      "service"
+    ]
+  },
+  {
+    "command": "Read more about this project",
+    "endpoint": "/about",
+    "tokens": [
+      "read",
+      "more",
+      "about",
+      "this",
+      "project"
+    ]
+  },
+  {
+    "command": "What does this software offer?",
+    "endpoint": "/about",
+    "tokens": [
+      "what",
+      "does",
+      "this",
+      "software",
+      "offer"
+    ]
+  },
+  {
+    "command": "I need details about how this works",
+    "endpoint": "/about",
+    "tokens": [
+      "i",
+      "need",
+      "details",
+      "about",
+      "how",
+      "this",
+      "works"
+    ]
+  },
+  {
+    "command": "Take me to the page that explains this",
+    "endpoint": "/about",
+    "tokens": [
+      "take",
+      "me",
+      "to",
+      "the",
+      "page",
+      "that",
+      "explains",
+      "this"
+    ]
+  },
+  {
+    "command": "Get information about this hospital system",
+    "endpoint": "/about",
+    "tokens": [
+      "get",
+      "information",
+      "about",
+      "this",
+      "hospital",
+      "system"
+    ]
+  },
+  {
+    "command": "Show me the description of this platform",
+    "endpoint": "/about",
+    "tokens": [
+      "show",
+      "me",
+      "the",
+      "description",
+      "of",
+      "this",
+      "platform"
+    ]
+  },
+  {
+    "command": "Open the page that describes this system",
+    "endpoint": "/about",
+    "tokens": [
+      "open",
+      "the",
+      "page",
+      "that",
+      "describes",
+      "this",
+      "system"
+    ]
+  },
+  {
+    "command": "I want to read about this online service",
+    "endpoint": "/about",
+    "tokens": [
+      "i",
+      "want",
+      "to",
+      "read",
+      "about",
+      "this",
+      "online",
+      "service"
+    ]
+  },
+  {
+    "command": "Tell me how this healthcare platform works",
+    "endpoint": "/about",
+    "tokens": [
+      "tell",
+      "me",
+      "how",
+      "this",
+      "healthcare",
+      "platform",
+      "works"
+    ]
+  },
+  {
+    "command": "Find out what this app is for",
+    "endpoint": "/about",
+    "tokens": [
+      "find",
+      "out",
+      "what",
+      "this",
+      "app",
+      "is",
+      "for"
+    ]
+  },
+  {
+    "command": "Where can I see the details of this hospital?",
+    "endpoint": "/about",
+    "tokens": [
+      "where",
+      "can",
+      "i",
+      "see",
+      "the",
+      "details",
+      "of",
+      "this",
+      "hospital"
+    ]
+  },
+  {
+    "command": "What are the main functions of this system?",
+    "endpoint": "/about",
+    "tokens": [
+      "what",
+      "are",
+      "the",
+      "main",
+      "functions",
+      "of",
+      "this",
+      "system"
+    ]
+  },
+  {
+    "command": "Navigate to the introduction section",
+    "endpoint": "/about",
+    "tokens": [
+      "navigate",
+      "to",
+      "the",
+      "introduction",
+      "section"
+    ]
+  },
+  {
+    "command": "Show me what this software does",
+    "endpoint": "/about",
+    "tokens": [
+      "show",
+      "me",
+      "what",
+      "this",
+      "software",
+      "does"
+    ]
+  },
+  {
+    "command": "Give me an overview of the services",
+    "endpoint": "/about",
+    "tokens": [
+      "give",
+      "me",
+      "an",
+      "overview",
+      "of",
+      "the",
+      "services"
+    ]
+  },
+  {
+    "command": "Take me to the information portal",
+    "endpoint": "/about",
+    "tokens": [
+      "take",
+      "me",
+      "to",
+      "the",
+      "information",
+      "portal"
+    ]
+  },
+  {
+    "command": "How does this system support patients?",
+    "endpoint": "/about",
+    "tokens": [
+      "how",
+      "does",
+      "this",
+      "system",
+      "support",
+      "patients"
+    ]
+  },
+  {
+    "command": "Help me learn about this medical platform",
+    "endpoint": "/about",
+    "tokens": [
+      "help",
+      "me",
+      "learn",
+      "about",
+      "this",
+      "medical",
+      "platform"
+    ]
+  },
+  {
+    "command": "Guide me to the about section",
+    "endpoint": "/about",
+    "tokens": [
+      "guide",
+      "me",
+      "to",
+      "the",
+      "about",
+      "section"
+    ]
+  },
+  {
+    "command": "Find details about this medical system",
+    "endpoint": "/about",
+    "tokens": [
+      "find",
+      "details",
+      "about",
+      "this",
+      "medical",
+      "system"
+    ]
+  },
+  {
+    "command": "Let’s check the about page",
+    "endpoint": "/about",
+    "tokens": [
+      "lets",
+      "check",
+      "the",
+      "about",
+      "page"
+    ]
+  },
+  {
+    "command": "What is the purpose of this system?",
+    "endpoint": "/about",
+    "tokens": [
+      "what",
+      "is",
+      "the",
+      "purpose",
+      "of",
+      "this",
+      "system"
+    ]
+  },
+  {
+    "command": "Go to contact",
+    "endpoint": "/contact",
+    "tokens": [
+      "go",
+      "to",
+      "contact"
+    ]
+  },
+  {
+    "command": "Take me to the contact page",
+    "endpoint": "/contact",
+    "tokens": [
+      "take",
+      "me",
+      "to",
+      "the",
+      "contact",
+      "page"
+    ]
+  },
+  {
+    "command": "Show me the contact page",
+    "endpoint": "/contact",
+    "tokens": [
+      "show",
+      "me",
+      "the",
+      "contact",
+      "page"
+    ]
+  },
+  {
+    "command": "Navigate to contact",
+    "endpoint": "/contact",
+    "tokens": [
+      "navigate",
+      "to",
+      "contact"
+    ]
+  },
+  {
+    "command": "Where is the contact page?",
+    "endpoint": "/contact",
+    "tokens": [
+      "where",
+      "is",
+      "the",
+      "contact",
+      "page"
+    ]
+  },
+  {
+    "command": "How do I contact support?",
+    "endpoint": "/contact",
+    "tokens": [
+      "how",
+      "do",
+      "i",
+      "contact",
+      "support"
+    ]
+  },
+  {
+    "command": "Take me to the contact section",
+    "endpoint": "/contact",
+    "tokens": [
+      "take",
+      "me",
+      "to",
+      "the",
+      "contact",
+      "section"
+    ]
+  },
+  {
+    "command": "Contact page please",
+    "endpoint": "/contact",
+    "tokens": [
+      "contact",
+      "page",
+      "please"
+    ]
+  },
+  {
+    "command": "I need to contact someone",
+    "endpoint": "/contact",
+    "tokens": [
+      "i",
+      "need",
+      "to",
+      "contact",
+      "someone"
+    ]
+  },
+  {
+    "command": "Can you show me the contact details?",
+    "endpoint": "/contact",
+    "tokens": [
+      "can",
+      "you",
+      "show",
+      "me",
+      "the",
+      "contact",
+      "details"
+    ]
+  },
+  {
+    "command": "Where can I find contact information?",
+    "endpoint": "/contact",
+    "tokens": [
+      "where",
+      "can",
+      "i",
+      "find",
+      "contact",
+      "information"
+    ]
+  },
+  {
+    "command": "Help me find the contact page",
+    "endpoint": "/contact",
+    "tokens": [
+      "help",
+      "me",
+      "find",
+      "the",
+      "contact",
+      "page"
+    ]
+  },
+  {
+    "command": "How do I get in touch?",
+    "endpoint": "/contact",
+    "tokens": [
+      "how",
+      "do",
+      "i",
+      "get",
+      "in",
+      "touch"
+    ]
+  },
+  {
+    "command": "Give me the contact information",
+    "endpoint": "/contact",
+    "tokens": [
+      "give",
+      "me",
+      "the",
+      "contact",
+      "information"
+    ]
+  },
+  {
+    "command": "I need customer support",
+    "endpoint": "/contact",
+    "tokens": [
+      "i",
+      "need",
+      "customer",
+      "support"
+    ]
+  },
+  {
+    "command": "Support page please",
+    "endpoint": "/contact",
+    "tokens": [
+      "support",
+      "page",
+      "please"
+    ]
+  },
+  {
+    "command": "Take me to support",
+    "endpoint": "/contact",
+    "tokens": [
+      "take",
+      "me",
+      "to",
+      "support"
+    ]
+  },
+  {
+    "command": "Find me the contact section",
+    "endpoint": "/contact",
+    "tokens": [
+      "find",
+      "me",
+      "the",
+      "contact",
+      "section"
+    ]
+  },
+  {
+    "command": "Show me how to contact the hospital",
+    "endpoint": "/contact",
+    "tokens": [
+      "show",
+      "me",
+      "how",
+      "to",
+      "contact",
+      "the",
+      "hospital"
+    ]
+  },
+  {
+    "command": "Where can I send a message?",
+    "endpoint": "/contact",
+    "tokens": [
+      "where",
+      "can",
+      "i",
+      "send",
+      "a",
+      "message"
+    ]
+  },
+  {
+    "command": "I want to send an inquiry",
+    "endpoint": "/contact",
+    "tokens": [
+      "i",
+      "want",
+      "to",
+      "send",
+      "an",
+      "inquiry"
+    ]
+  },
+  {
+    "command": "Contact hospital management",
+    "endpoint": "/contact",
+    "tokens": [
+      "contact",
+      "hospital",
+      "management"
+    ]
+  },
+  {
+    "command": "Find the contact form",
+    "endpoint": "/contact",
+    "tokens": [
+      "find",
+      "the",
+      "contact",
+      "form"
+    ]
+  },
+  {
+    "command": "I need assistance, show me the contact page",
+    "endpoint": "/contact",
+    "tokens": [
+      "i",
+      "need",
+      "assistance",
+      "show",
+      "me",
+      "the",
+      "contact",
+      "page"
+    ]
+  },
+  {
+    "command": "Support section please",
+    "endpoint": "/contact",
+    "tokens": [
+      "support",
+      "section",
+      "please"
+    ]
+  },
+  {
+    "command": "Give me a way to contact you",
+    "endpoint": "/contact",
+    "tokens": [
+      "give",
+      "me",
+      "a",
+      "way",
+      "to",
+      "contact",
+      "you"
+    ]
+  },
+  {
+    "command": "Where can I find the customer service page?",
+    "endpoint": "/contact",
+    "tokens": [
+      "where",
+      "can",
+      "i",
+      "find",
+      "the",
+      "customer",
+      "service",
+      "page"
+    ]
+  },
+  {
+    "command": "I need help, take me to contact",
+    "endpoint": "/contact",
+    "tokens": [
+      "i",
+      "need",
+      "help",
+      "take",
+      "me",
+      "to",
+      "contact"
+    ]
+  },
+  {
+    "command": "Navigate to customer support",
+    "endpoint": "/contact",
+    "tokens": [
+      "navigate",
+      "to",
+      "customer",
+      "support"
+    ]
+  },
+  {
+    "command": "Who do I contact for help?",
+    "endpoint": "/contact",
+    "tokens": [
+      "who",
+      "do",
+      "i",
+      "contact",
+      "for",
+      "help"
+    ]
+  },
+  {
+    "command": "I need to ask a question",
+    "endpoint": "/contact",
+    "tokens": [
+      "i",
+      "need",
+      "to",
+      "ask",
+      "a",
+      "question"
+    ]
+  },
+  {
+    "command": "Where can I find the help center?",
+    "endpoint": "/contact",
+    "tokens": [
+      "where",
+      "can",
+      "i",
+      "find",
+      "the",
+      "help",
+      "center"
+    ]
+  },
+  {
+    "command": "Find me the hospital contact details",
+    "endpoint": "/contact",
+    "tokens": [
+      "find",
+      "me",
+      "the",
+      "hospital",
+      "contact",
+      "details"
+    ]
+  },
+  {
+    "command": "Help me get in touch with the hospital",
+    "endpoint": "/contact",
+    "tokens": [
+      "help",
+      "me",
+      "get",
+      "in",
+      "touch",
+      "with",
+      "the",
+      "hospital"
+    ]
+  },
+  {
+    "command": "Take me to the inquiries section",
+    "endpoint": "/contact",
+    "tokens": [
+      "take",
+      "me",
+      "to",
+      "the",
+      "inquiries",
+      "section"
+    ]
+  },
+  {
+    "command": "Can I speak to a representative?",
+    "endpoint": "/contact",
+    "tokens": [
+      "can",
+      "i",
+      "speak",
+      "to",
+      "a",
+      "representative"
+    ]
+  },
+  {
+    "command": "Guide me to the support page",
+    "endpoint": "/contact",
+    "tokens": [
+      "guide",
+      "me",
+      "to",
+      "the",
+      "support",
+      "page"
+    ]
+  },
+  {
+    "command": "Open the contact section",
+    "endpoint": "/contact",
+    "tokens": [
+      "open",
+      "the",
+      "contact",
+      "section"
+    ]
+  },
+  {
+    "command": "How can I send a message?",
+    "endpoint": "/contact",
+    "tokens": [
+      "how",
+      "can",
+      "i",
+      "send",
+      "a",
+      "message"
+    ]
+  },
+  {
+    "command": "Where can I leave feedback?",
+    "endpoint": "/contact",
+    "tokens": [
+      "where",
+      "can",
+      "i",
+      "leave",
+      "feedback"
+    ]
+  },
+  {
+    "command": "Find the hospital’s contact details",
+    "endpoint": "/contact",
+    "tokens": [
+      "find",
+      "the",
+      "hospitals",
+      "contact",
+      "details"
+    ]
+  },
+  {
+    "command": "I want to email the hospital",
+    "endpoint": "/contact",
+    "tokens": [
+      "i",
+      "want",
+      "to",
+      "email",
+      "the",
+      "hospital"
+    ]
+  },
+  {
+    "command": "How do I call the hospital?",
+    "endpoint": "/contact",
+    "tokens": [
+      "how",
+      "do",
+      "i",
+      "call",
+      "the",
+      "hospital"
+    ]
+  },
+  {
+    "command": "Support center, please",
+    "endpoint": "/contact",
+    "tokens": [
+      "support",
+      "center",
+      "please"
+    ]
+  },
+  {
+    "command": "Contact the hospital",
+    "endpoint": "/contact",
+    "tokens": [
+      "contact",
+      "the",
+      "hospital"
+    ]
+  },
+  {
+    "command": "How do I reach out for help?",
+    "endpoint": "/contact",
+    "tokens": [
+      "how",
+      "do",
+      "i",
+      "reach",
+      "out",
+      "for",
+      "help"
+    ]
+  },
+  {
+    "command": "Help desk page",
+    "endpoint": "/contact",
+    "tokens": [
+      "help",
+      "desk",
+      "page"
+    ]
+  },
+  {
+    "command": "Find help and support",
+    "endpoint": "/contact",
+    "tokens": [
+      "find",
+      "help",
+      "and",
+      "support"
+    ]
+  },
+  {
+    "command": "Hospital contact page",
+    "endpoint": "/contact",
+    "tokens": [
+      "hospital",
+      "contact",
+      "page"
+    ]
+  },
+  {
+    "command": "Where is the customer support?",
+    "endpoint": "/contact",
+    "tokens": [
+      "where",
+      "is",
+      "the",
+      "customer",
+      "support"
+    ]
+  },
+  {
+    "command": "I need to make an inquiry",
+    "endpoint": "/contact",
+    "tokens": [
+      "i",
+      "need",
+      "to",
+      "make",
+      "an",
+      "inquiry"
+    ]
+  },
+  {
+    "command": "How do I submit a request?",
+    "endpoint": "/contact",
+    "tokens": [
+      "how",
+      "do",
+      "i",
+      "submit",
+      "a",
+      "request"
+    ]
+  },
+  {
+    "command": "Where do I send my concerns?",
+    "endpoint": "/contact",
+    "tokens": [
+      "where",
+      "do",
+      "i",
+      "send",
+      "my",
+      "concerns"
+    ]
+  },
+  {
+    "command": "Contact service department",
+    "endpoint": "/contact",
+    "tokens": [
+      "contact",
+      "service",
+      "department"
+    ]
+  },
+  {
+    "command": "Who can I talk to for help?",
+    "endpoint": "/contact",
+    "tokens": [
+      "who",
+      "can",
+      "i",
+      "talk",
+      "to",
+      "for",
+      "help"
+    ]
+  },
+  {
+    "command": "Can I get the contact email?",
+    "endpoint": "/contact",
+    "tokens": [
+      "can",
+      "i",
+      "get",
+      "the",
+      "contact",
+      "email"
+    ]
+  },
+  {
+    "command": "I need to report an issue",
+    "endpoint": "/contact",
+    "tokens": [
+      "i",
+      "need",
+      "to",
+      "report",
+      "an",
+      "issue"
+    ]
+  },
+  {
+    "command": "How do I talk to customer service?",
+    "endpoint": "/contact",
+    "tokens": [
+      "how",
+      "do",
+      "i",
+      "talk",
+      "to",
+      "customer",
+      "service"
+    ]
+  },
+  {
+    "command": "Where can I call for help?",
+    "endpoint": "/contact",
+    "tokens": [
+      "where",
+      "can",
+      "i",
+      "call",
+      "for",
+      "help"
+    ]
+  },
+  {
+    "command": "Find the feedback section",
+    "endpoint": "/contact",
+    "tokens": [
+      "find",
+      "the",
+      "feedback",
+      "section"
+    ]
+  },
+  {
+    "command": "I need to speak to someone",
+    "endpoint": "/contact",
+    "tokens": [
+      "i",
+      "need",
+      "to",
+      "speak",
+      "to",
+      "someone"
+    ]
+  },
+  {
+    "command": "Who do I contact for information?",
+    "endpoint": "/contact",
+    "tokens": [
+      "who",
+      "do",
+      "i",
+      "contact",
+      "for",
+      "information"
+    ]
+  },
+  {
+    "command": "Show me the help desk",
+    "endpoint": "/contact",
+    "tokens": [
+      "show",
+      "me",
+      "the",
+      "help",
+      "desk"
+    ]
+  },
+  {
+    "command": "Let me access the support page",
+    "endpoint": "/contact",
+    "tokens": [
+      "let",
+      "me",
+      "access",
+      "the",
+      "support",
+      "page"
+    ]
+  },
+  {
+    "command": "I have a question, where do I ask?",
+    "endpoint": "/contact",
+    "tokens": [
+      "i",
+      "have",
+      "a",
+      "question",
+      "where",
+      "do",
+      "i",
+      "ask"
+    ]
+  },
+  {
+    "command": "Navigate to the complaints section",
+    "endpoint": "/contact",
+    "tokens": [
+      "navigate",
+      "to",
+      "the",
+      "complaints",
+      "section"
+    ]
+  },
+  {
+    "command": "How do I report a problem?",
+    "endpoint": "/contact",
+    "tokens": [
+      "how",
+      "do",
+      "i",
+      "report",
+      "a",
+      "problem"
+    ]
+  },
+  {
+    "command": "I need to send a message to support",
+    "endpoint": "/contact",
+    "tokens": [
+      "i",
+      "need",
+      "to",
+      "send",
+      "a",
+      "message",
+      "to",
+      "support"
+    ]
+  },
+  {
+    "command": "Give me the help section",
+    "endpoint": "/contact",
+    "tokens": [
+      "give",
+      "me",
+      "the",
+      "help",
+      "section"
+    ]
+  },
+  {
+    "command": "Find the hospital’s phone number",
+    "endpoint": "/contact",
+    "tokens": [
+      "find",
+      "the",
+      "hospitals",
+      "phone",
+      "number"
+    ]
+  },
+  {
+    "command": "Where can I send a complaint?",
+    "endpoint": "/contact",
+    "tokens": [
+      "where",
+      "can",
+      "i",
+      "send",
+      "a",
+      "complaint"
+    ]
+  },
+  {
+    "command": "I need urgent support",
+    "endpoint": "/contact",
+    "tokens": [
+      "i",
+      "need",
+      "urgent",
+      "support"
+    ]
+  },
+  {
+    "command": "Please take me to the contact page",
+    "endpoint": "/contact",
+    "tokens": [
+      "please",
+      "take",
+      "me",
+      "to",
+      "the",
+      "contact",
+      "page"
+    ]
+  },
+  {
+    "command": "How do I reach out for assistance?",
+    "endpoint": "/contact",
+    "tokens": [
+      "how",
+      "do",
+      "i",
+      "reach",
+      "out",
+      "for",
+      "assistance"
+    ]
+  },
+  {
+    "command": "Support request page",
+    "endpoint": "/contact",
+    "tokens": [
+      "support",
+      "request",
+      "page"
+    ]
+  },
+  {
+    "command": "Find the help information",
+    "endpoint": "/contact",
+    "tokens": [
+      "find",
+      "the",
+      "help",
+      "information"
+    ]
+  },
+  {
+    "command": "Take me to the service desk",
+    "endpoint": "/contact",
+    "tokens": [
+      "take",
+      "me",
+      "to",
+      "the",
+      "service",
+      "desk"
+    ]
+  },
+  {
+    "command": "Open the help and support page",
+    "endpoint": "/contact",
+    "tokens": [
+      "open",
+      "the",
+      "help",
+      "and",
+      "support",
+      "page"
+    ]
+  },
+  {
+    "command": "Take me to the patient support page",
+    "endpoint": "/contact",
+    "tokens": [
+      "take",
+      "me",
+      "to",
+      "the",
+      "patient",
+      "support",
+      "page"
+    ]
+  },
+  {
+    "command": "How do I contact the administrator?",
+    "endpoint": "/contact",
+    "tokens": [
+      "how",
+      "do",
+      "i",
+      "contact",
+      "the",
+      "administrator"
+    ]
+  },
+  {
+    "command": "Find the technical support page",
+    "endpoint": "/contact",
+    "tokens": [
+      "find",
+      "the",
+      "technical",
+      "support",
+      "page"
+    ]
+  },
+  {
+    "command": "Find assistance for my issue",
+    "endpoint": "/contact",
+    "tokens": [
+      "find",
+      "assistance",
+      "for",
+      "my",
+      "issue"
+    ]
+  },
+  {
+    "command": "Let me speak to customer service",
+    "endpoint": "/contact",
+    "tokens": [
+      "let",
+      "me",
+      "speak",
+      "to",
+      "customer",
+      "service"
+    ]
+  },
+  {
+    "command": "Go to my profile",
+    "endpoint": "/my-profile",
+    "tokens": [
+      "go",
+      "to",
+      "my",
+      "profile"
+    ]
+  },
+  {
+    "command": "Take me to my profile page",
+    "endpoint": "/my-profile",
+    "tokens": [
+      "take",
+      "me",
+      "to",
+      "my",
+      "profile",
+      "page"
+    ]
+  },
+  {
+    "command": "Show my profile",
+    "endpoint": "/my-profile",
+    "tokens": [
+      "show",
+      "my",
+      "profile"
+    ]
+  },
+  {
+    "command": "Navigate to my profile",
+    "endpoint": "/my-profile",
+    "tokens": [
+      "navigate",
+      "to",
+      "my",
+      "profile"
+    ]
+  },
+  {
+    "command": "I want to see my profile",
+    "endpoint": "/my-profile",
+    "tokens": [
+      "i",
+      "want",
+      "to",
+      "see",
+      "my",
+      "profile"
+    ]
+  },
+  {
+    "command": "Open my profile",
+    "endpoint": "/my-profile",
+    "tokens": [
+      "open",
+      "my",
+      "profile"
+    ]
+  },
+  {
+    "command": "View my profile details",
+    "endpoint": "/my-profile",
+    "tokens": [
+      "view",
+      "my",
+      "profile",
+      "details"
+    ]
+  },
+  {
+    "command": "Where is my profile?",
+    "endpoint": "/my-profile",
+    "tokens": [
+      "where",
+      "is",
+      "my",
+      "profile"
+    ]
+  },
+  {
+    "command": "Take me to my account details",
+    "endpoint": "/my-profile",
+    "tokens": [
+      "take",
+      "me",
+      "to",
+      "my",
+      "account",
+      "details"
+    ]
+  },
+  {
+    "command": "Show my personal information",
+    "endpoint": "/my-profile",
+    "tokens": [
+      "show",
+      "my",
+      "personal",
+      "information"
+    ]
+  },
+  {
+    "command": "Go to my account",
+    "endpoint": "/my-profile",
+    "tokens": [
+      "go",
+      "to",
+      "my",
+      "account"
+    ]
+  },
+  {
+    "command": "I need to update my profile",
+    "endpoint": "/my-profile",
+    "tokens": [
+      "i",
+      "need",
+      "to",
+      "update",
+      "my",
+      "profile"
+    ]
+  },
+  {
+    "command": "How do I access my profile?",
+    "endpoint": "/my-profile",
+    "tokens": [
+      "how",
+      "do",
+      "i",
+      "access",
+      "my",
+      "profile"
+    ]
+  },
+  {
+    "command": "Can you show me my profile page?",
+    "endpoint": "/my-profile",
+    "tokens": [
+      "can",
+      "you",
+      "show",
+      "me",
+      "my",
+      "profile",
+      "page"
+    ]
+  },
+  {
+    "command": "Where can I edit my profile?",
+    "endpoint": "/my-profile",
+    "tokens": [
+      "where",
+      "can",
+      "i",
+      "edit",
+      "my",
+      "profile"
+    ]
+  },
+  {
+    "command": "I need to check my profile",
+    "endpoint": "/my-profile",
+    "tokens": [
+      "i",
+      "need",
+      "to",
+      "check",
+      "my",
+      "profile"
+    ]
+  },
+  {
+    "command": "Navigate to my account settings",
+    "endpoint": "/my-profile",
+    "tokens": [
+      "navigate",
+      "to",
+      "my",
+      "account",
+      "settings"
+    ]
+  },
+  {
+    "command": "Find my profile",
+    "endpoint": "/my-profile",
+    "tokens": [
+      "find",
+      "my",
+      "profile"
+    ]
+  },
+  {
+    "command": "Help me access my profile",
+    "endpoint": "/my-profile",
+    "tokens": [
+      "help",
+      "me",
+      "access",
+      "my",
+      "profile"
+    ]
+  },
+  {
+    "command": "Can I view my profile?",
+    "endpoint": "/my-profile",
+    "tokens": [
+      "can",
+      "i",
+      "view",
+      "my",
+      "profile"
+    ]
+  },
+  {
+    "command": "I need to see my account information",
+    "endpoint": "/my-profile",
+    "tokens": [
+      "i",
+      "need",
+      "to",
+      "see",
+      "my",
+      "account",
+      "information"
+    ]
+  },
+  {
+    "command": "Take me to my user profile",
+    "endpoint": "/my-profile",
+    "tokens": [
+      "take",
+      "me",
+      "to",
+      "my",
+      "user",
+      "profile"
+    ]
+  },
+  {
+    "command": "Profile page please",
+    "endpoint": "/my-profile",
+    "tokens": [
+      "profile",
+      "page",
+      "please"
+    ]
+  },
+  {
+    "command": "Show me my user account",
+    "endpoint": "/my-profile",
+    "tokens": [
+      "show",
+      "me",
+      "my",
+      "user",
+      "account"
+    ]
+  },
+  {
+    "command": "Go to my account settings",
+    "endpoint": "/my-profile",
+    "tokens": [
+      "go",
+      "to",
+      "my",
+      "account",
+      "settings"
+    ]
+  },
+  {
+    "command": "Check my profile information",
+    "endpoint": "/my-profile",
+    "tokens": [
+      "check",
+      "my",
+      "profile",
+      "information"
+    ]
+  },
+  {
+    "command": "Open my personal details",
+    "endpoint": "/my-profile",
+    "tokens": [
+      "open",
+      "my",
+      "personal",
+      "details"
+    ]
+  },
+  {
+    "command": "I want to see my user details",
+    "endpoint": "/my-profile",
+    "tokens": [
+      "i",
+      "want",
+      "to",
+      "see",
+      "my",
+      "user",
+      "details"
+    ]
+  },
+  {
+    "command": "Profile settings page",
+    "endpoint": "/my-profile",
+    "tokens": [
+      "profile",
+      "settings",
+      "page"
+    ]
+  },
+  {
+    "command": "Show me my saved details",
+    "endpoint": "/my-profile",
+    "tokens": [
+      "show",
+      "me",
+      "my",
+      "saved",
+      "details"
+    ]
+  },
+  {
+    "command": "Access my account profile",
+    "endpoint": "/my-profile",
+    "tokens": [
+      "access",
+      "my",
+      "account",
+      "profile"
+    ]
+  },
+  {
+    "command": "Where can I find my profile?",
+    "endpoint": "/my-profile",
+    "tokens": [
+      "where",
+      "can",
+      "i",
+      "find",
+      "my",
+      "profile"
+    ]
+  },
+  {
+    "command": "Take me to my saved profile",
+    "endpoint": "/my-profile",
+    "tokens": [
+      "take",
+      "me",
+      "to",
+      "my",
+      "saved",
+      "profile"
+    ]
+  },
+  {
+    "command": "Let me check my profile details",
+    "endpoint": "/my-profile",
+    "tokens": [
+      "let",
+      "me",
+      "check",
+      "my",
+      "profile",
+      "details"
+    ]
+  },
+  {
+    "command": "My profile section",
+    "endpoint": "/my-profile",
+    "tokens": [
+      "my",
+      "profile",
+      "section"
+    ]
+  },
+  {
+    "command": "Take me to my profile settings",
+    "endpoint": "/my-profile",
+    "tokens": [
+      "take",
+      "me",
+      "to",
+      "my",
+      "profile",
+      "settings"
+    ]
+  },
+  {
+    "command": "Find my account profile",
+    "endpoint": "/my-profile",
+    "tokens": [
+      "find",
+      "my",
+      "account",
+      "profile"
+    ]
+  },
+  {
+    "command": "Navigate to my user information",
+    "endpoint": "/my-profile",
+    "tokens": [
+      "navigate",
+      "to",
+      "my",
+      "user",
+      "information"
+    ]
+  },
+  {
+    "command": "Where is my profile section?",
+    "endpoint": "/my-profile",
+    "tokens": [
+      "where",
+      "is",
+      "my",
+      "profile",
+      "section"
+    ]
+  },
+  {
+    "command": "How do I go to my profile?",
+    "endpoint": "/my-profile",
+    "tokens": [
+      "how",
+      "do",
+      "i",
+      "go",
+      "to",
+      "my",
+      "profile"
+    ]
+  },
+  {
+    "command": "Find my user profile",
+    "endpoint": "/my-profile",
+    "tokens": [
+      "find",
+      "my",
+      "user",
+      "profile"
+    ]
+  },
+  {
+    "command": "Can I access my account details?",
+    "endpoint": "/my-profile",
+    "tokens": [
+      "can",
+      "i",
+      "access",
+      "my",
+      "account",
+      "details"
+    ]
+  },
+  {
+    "command": "Show me where I can edit my profile",
+    "endpoint": "/my-profile",
+    "tokens": [
+      "show",
+      "me",
+      "where",
+      "i",
+      "can",
+      "edit",
+      "my",
+      "profile"
+    ]
+  },
+  {
+    "command": "I need to go to my personal settings",
+    "endpoint": "/my-profile",
+    "tokens": [
+      "i",
+      "need",
+      "to",
+      "go",
+      "to",
+      "my",
+      "personal",
+      "settings"
+    ]
+  },
+  {
+    "command": "Navigate to my personal page",
+    "endpoint": "/my-profile",
+    "tokens": [
+      "navigate",
+      "to",
+      "my",
+      "personal",
+      "page"
+    ]
+  },
+  {
+    "command": "Let me open my profile",
+    "endpoint": "/my-profile",
+    "tokens": [
+      "let",
+      "me",
+      "open",
+      "my",
+      "profile"
+    ]
+  },
+  {
+    "command": "Go to my user account",
+    "endpoint": "/my-profile",
+    "tokens": [
+      "go",
+      "to",
+      "my",
+      "user",
+      "account"
+    ]
+  },
+  {
+    "command": "View my personal details",
+    "endpoint": "/my-profile",
+    "tokens": [
+      "view",
+      "my",
+      "personal",
+      "details"
+    ]
+  },
+  {
+    "command": "I want to change my profile information",
+    "endpoint": "/my-profile",
+    "tokens": [
+      "i",
+      "want",
+      "to",
+      "change",
+      "my",
+      "profile",
+      "information"
+    ]
+  },
+  {
+    "command": "How do I update my user profile?",
+    "endpoint": "/my-profile",
+    "tokens": [
+      "how",
+      "do",
+      "i",
+      "update",
+      "my",
+      "user",
+      "profile"
+    ]
+  },
+  {
+    "command": "Give me access to my profile",
+    "endpoint": "/my-profile",
+    "tokens": [
+      "give",
+      "me",
+      "access",
+      "to",
+      "my",
+      "profile"
+    ]
+  },
+  {
+    "command": "Show my saved account settings",
+    "endpoint": "/my-profile",
+    "tokens": [
+      "show",
+      "my",
+      "saved",
+      "account",
+      "settings"
+    ]
+  },
+  {
+    "command": "Take me back to my profile",
+    "endpoint": "/my-profile",
+    "tokens": [
+      "take",
+      "me",
+      "back",
+      "to",
+      "my",
+      "profile"
+    ]
+  },
+  {
+    "command": "Can you direct me to my profile?",
+    "endpoint": "/my-profile",
+    "tokens": [
+      "can",
+      "you",
+      "direct",
+      "me",
+      "to",
+      "my",
+      "profile"
+    ]
+  },
+  {
+    "command": "Take me to my user details",
+    "endpoint": "/my-profile",
+    "tokens": [
+      "take",
+      "me",
+      "to",
+      "my",
+      "user",
+      "details"
+    ]
+  },
+  {
+    "command": "Where do I manage my profile?",
+    "endpoint": "/my-profile",
+    "tokens": [
+      "where",
+      "do",
+      "i",
+      "manage",
+      "my",
+      "profile"
+    ]
+  },
+  {
+    "command": "Find the user profile section",
+    "endpoint": "/my-profile",
+    "tokens": [
+      "find",
+      "the",
+      "user",
+      "profile",
+      "section"
+    ]
+  },
+  {
+    "command": "Go to my information page",
+    "endpoint": "/my-profile",
+    "tokens": [
+      "go",
+      "to",
+      "my",
+      "information",
+      "page"
+    ]
+  },
+  {
+    "command": "Open my settings page",
+    "endpoint": "/my-profile",
+    "tokens": [
+      "open",
+      "my",
+      "settings",
+      "page"
+    ]
+  },
+  {
+    "command": "Check my account settings",
+    "endpoint": "/my-profile",
+    "tokens": [
+      "check",
+      "my",
+      "account",
+      "settings"
+    ]
+  },
+  {
+    "command": "How do I check my profile?",
+    "endpoint": "/my-profile",
+    "tokens": [
+      "how",
+      "do",
+      "i",
+      "check",
+      "my",
+      "profile"
+    ]
+  },
+  {
+    "command": "Where is my saved account information?",
+    "endpoint": "/my-profile",
+    "tokens": [
+      "where",
+      "is",
+      "my",
+      "saved",
+      "account",
+      "information"
+    ]
+  },
+  {
+    "command": "Can I view my account profile?",
+    "endpoint": "/my-profile",
+    "tokens": [
+      "can",
+      "i",
+      "view",
+      "my",
+      "account",
+      "profile"
+    ]
+  },
+  {
+    "command": "Access my saved user information",
+    "endpoint": "/my-profile",
+    "tokens": [
+      "access",
+      "my",
+      "saved",
+      "user",
+      "information"
+    ]
+  },
+  {
+    "command": "Where can I update my profile?",
+    "endpoint": "/my-profile",
+    "tokens": [
+      "where",
+      "can",
+      "i",
+      "update",
+      "my",
+      "profile"
+    ]
+  },
+  {
+    "command": "Take me to my profile and settings",
+    "endpoint": "/my-profile",
+    "tokens": [
+      "take",
+      "me",
+      "to",
+      "my",
+      "profile",
+      "and",
+      "settings"
+    ]
+  },
+  {
+    "command": "How do I edit my personal information?",
+    "endpoint": "/my-profile",
+    "tokens": [
+      "how",
+      "do",
+      "i",
+      "edit",
+      "my",
+      "personal",
+      "information"
+    ]
+  },
+  {
+    "command": "Show my stored account data",
+    "endpoint": "/my-profile",
+    "tokens": [
+      "show",
+      "my",
+      "stored",
+      "account",
+      "data"
+    ]
+  },
+  {
+    "command": "Navigate to my personal information page",
+    "endpoint": "/my-profile",
+    "tokens": [
+      "navigate",
+      "to",
+      "my",
+      "personal",
+      "information",
+      "page"
+    ]
+  },
+  {
+    "command": "Take me to my personal details page",
+    "endpoint": "/my-profile",
+    "tokens": [
+      "take",
+      "me",
+      "to",
+      "my",
+      "personal",
+      "details",
+      "page"
+    ]
+  },
+  {
+    "command": "I need to manage my profile",
+    "endpoint": "/my-profile",
+    "tokens": [
+      "i",
+      "need",
+      "to",
+      "manage",
+      "my",
+      "profile"
+    ]
+  },
+  {
+    "command": "Can I check my account settings?",
+    "endpoint": "/my-profile",
+    "tokens": [
+      "can",
+      "i",
+      "check",
+      "my",
+      "account",
+      "settings"
+    ]
+  },
+  {
+    "command": "Find my personal account details",
+    "endpoint": "/my-profile",
+    "tokens": [
+      "find",
+      "my",
+      "personal",
+      "account",
+      "details"
+    ]
+  },
+  {
+    "command": "Show my latest profile updates",
+    "endpoint": "/my-profile",
+    "tokens": [
+      "show",
+      "my",
+      "latest",
+      "profile",
+      "updates"
+    ]
+  },
+  {
+    "command": "Let’s check my user profile",
+    "endpoint": "/my-profile",
+    "tokens": [
+      "lets",
+      "check",
+      "my",
+      "user",
+      "profile"
+    ]
+  },
+  {
+    "command": "Go to my appointment",
+    "endpoint": "/my-appointment",
+    "tokens": [
+      "go",
+      "to",
+      "my",
+      "appointment"
+    ]
+  },
+  {
+    "command": "Take me to my appointment page",
+    "endpoint": "/my-appointment",
+    "tokens": [
+      "take",
+      "me",
+      "to",
+      "my",
+      "appointment",
+      "page"
+    ]
+  },
+  {
+    "command": "Show my appointments",
+    "endpoint": "/my-appointment",
+    "tokens": [
+      "show",
+      "my",
+      "appointments"
+    ]
+  },
+  {
+    "command": "Navigate to my appointments",
+    "endpoint": "/my-appointment",
+    "tokens": [
+      "navigate",
+      "to",
+      "my",
+      "appointments"
+    ]
+  },
+  {
+    "command": "I want to see my appointments",
+    "endpoint": "/my-appointment",
+    "tokens": [
+      "i",
+      "want",
+      "to",
+      "see",
+      "my",
+      "appointments"
+    ]
+  },
+  {
+    "command": "Open my appointments",
+    "endpoint": "/my-appointment",
+    "tokens": [
+      "open",
+      "my",
+      "appointments"
+    ]
+  },
+  {
+    "command": "View my scheduled appointments",
+    "endpoint": "/my-appointment",
+    "tokens": [
+      "view",
+      "my",
+      "scheduled",
+      "appointments"
+    ]
+  },
+  {
+    "command": "Where is my appointment?",
+    "endpoint": "/my-appointment",
+    "tokens": [
+      "where",
+      "is",
+      "my",
+      "appointment"
+    ]
+  },
+  {
+    "command": "Take me to my scheduled appointments",
+    "endpoint": "/my-appointment",
+    "tokens": [
+      "take",
+      "me",
+      "to",
+      "my",
+      "scheduled",
+      "appointments"
+    ]
+  },
+  {
+    "command": "Show my appointment details",
+    "endpoint": "/my-appointment",
+    "tokens": [
+      "show",
+      "my",
+      "appointment",
+      "details"
+    ]
+  },
+  {
+    "command": "Go to my booking history",
+    "endpoint": "/my-appointment",
+    "tokens": [
+      "go",
+      "to",
+      "my",
+      "booking",
+      "history"
+    ]
+  },
+  {
+    "command": "I need to check my appointments",
+    "endpoint": "/my-appointment",
+    "tokens": [
+      "i",
+      "need",
+      "to",
+      "check",
+      "my",
+      "appointments"
+    ]
+  },
+  {
+    "command": "How do I access my appointments?",
+    "endpoint": "/my-appointment",
+    "tokens": [
+      "how",
+      "do",
+      "i",
+      "access",
+      "my",
+      "appointments"
+    ]
+  },
+  {
+    "command": "Can you show me my appointment page?",
+    "endpoint": "/my-appointment",
+    "tokens": [
+      "can",
+      "you",
+      "show",
+      "me",
+      "my",
+      "appointment",
+      "page"
+    ]
+  },
+  {
+    "command": "Where can I view my appointments?",
+    "endpoint": "/my-appointment",
+    "tokens": [
+      "where",
+      "can",
+      "i",
+      "view",
+      "my",
+      "appointments"
+    ]
+  },
+  {
+    "command": "I need to check my upcoming appointments",
+    "endpoint": "/my-appointment",
+    "tokens": [
+      "i",
+      "need",
+      "to",
+      "check",
+      "my",
+      "upcoming",
+      "appointments"
+    ]
+  },
+  {
+    "command": "Navigate to my appointment schedule",
+    "endpoint": "/my-appointment",
+    "tokens": [
+      "navigate",
+      "to",
+      "my",
+      "appointment",
+      "schedule"
+    ]
+  },
+  {
+    "command": "Find my appointment list",
+    "endpoint": "/my-appointment",
+    "tokens": [
+      "find",
+      "my",
+      "appointment",
+      "list"
+    ]
+  },
+  {
+    "command": "Help me access my appointment page",
+    "endpoint": "/my-appointment",
+    "tokens": [
+      "help",
+      "me",
+      "access",
+      "my",
+      "appointment",
+      "page"
+    ]
+  },
+  {
+    "command": "Can I view my upcoming visits?",
+    "endpoint": "/my-appointment",
+    "tokens": [
+      "can",
+      "i",
+      "view",
+      "my",
+      "upcoming",
+      "visits"
+    ]
+  },
+  {
+    "command": "I need to see my consultation bookings",
+    "endpoint": "/my-appointment",
+    "tokens": [
+      "i",
+      "need",
+      "to",
+      "see",
+      "my",
+      "consultation",
+      "bookings"
+    ]
+  },
+  {
+    "command": "Take me to my doctor appointments",
+    "endpoint": "/my-appointment",
+    "tokens": [
+      "take",
+      "me",
+      "to",
+      "my",
+      "doctor",
+      "appointments"
+    ]
+  },
+  {
+    "command": "Appointment page please",
+    "endpoint": "/my-appointment",
+    "tokens": [
+      "appointment",
+      "page",
+      "please"
+    ]
+  },
+  {
+    "command": "Show me my scheduled visits",
+    "endpoint": "/my-appointment",
+    "tokens": [
+      "show",
+      "me",
+      "my",
+      "scheduled",
+      "visits"
+    ]
+  },
+  {
+    "command": "Go to my recent appointments",
+    "endpoint": "/my-appointment",
+    "tokens": [
+      "go",
+      "to",
+      "my",
+      "recent",
+      "appointments"
+    ]
+  },
+  {
+    "command": "Check my upcoming medical visits",
+    "endpoint": "/my-appointment",
+    "tokens": [
+      "check",
+      "my",
+      "upcoming",
+      "medical",
+      "visits"
+    ]
+  },
+  {
+    "command": "Open my health appointment details",
+    "endpoint": "/my-appointment",
+    "tokens": [
+      "open",
+      "my",
+      "health",
+      "appointment",
+      "details"
+    ]
+  },
+  {
+    "command": "I want to see my doctor visits",
+    "endpoint": "/my-appointment",
+    "tokens": [
+      "i",
+      "want",
+      "to",
+      "see",
+      "my",
+      "doctor",
+      "visits"
+    ]
+  },
+  {
+    "command": "Appointment schedule page",
+    "endpoint": "/my-appointment",
+    "tokens": [
+      "appointment",
+      "schedule",
+      "page"
+    ]
+  },
+  {
+    "command": "Show me my confirmed appointments",
+    "endpoint": "/my-appointment",
+    "tokens": [
+      "show",
+      "me",
+      "my",
+      "confirmed",
+      "appointments"
+    ]
+  },
+  {
+    "command": "Access my appointment history",
+    "endpoint": "/my-appointment",
+    "tokens": [
+      "access",
+      "my",
+      "appointment",
+      "history"
+    ]
+  },
+  {
+    "command": "Where can I find my scheduled check-ups?",
+    "endpoint": "/my-appointment",
+    "tokens": [
+      "where",
+      "can",
+      "i",
+      "find",
+      "my",
+      "scheduled",
+      "checkups"
+    ]
+  },
+  {
+    "command": "Take me to my medical bookings",
+    "endpoint": "/my-appointment",
+    "tokens": [
+      "take",
+      "me",
+      "to",
+      "my",
+      "medical",
+      "bookings"
+    ]
+  },
+  {
+    "command": "Let me check my upcoming consultations",
+    "endpoint": "/my-appointment",
+    "tokens": [
+      "let",
+      "me",
+      "check",
+      "my",
+      "upcoming",
+      "consultations"
+    ]
+  },
+  {
+    "command": "My appointment section",
+    "endpoint": "/my-appointment",
+    "tokens": [
+      "my",
+      "appointment",
+      "section"
+    ]
+  },
+  {
+    "command": "Take me to my upcoming visits",
+    "endpoint": "/my-appointment",
+    "tokens": [
+      "take",
+      "me",
+      "to",
+      "my",
+      "upcoming",
+      "visits"
+    ]
+  },
+  {
+    "command": "Find my upcoming doctor visits",
+    "endpoint": "/my-appointment",
+    "tokens": [
+      "find",
+      "my",
+      "upcoming",
+      "doctor",
+      "visits"
+    ]
+  },
+  {
+    "command": "Navigate to my hospital appointments",
+    "endpoint": "/my-appointment",
+    "tokens": [
+      "navigate",
+      "to",
+      "my",
+      "hospital",
+      "appointments"
+    ]
+  },
+  {
+    "command": "Where is my scheduled visit?",
+    "endpoint": "/my-appointment",
+    "tokens": [
+      "where",
+      "is",
+      "my",
+      "scheduled",
+      "visit"
+    ]
+  },
+  {
+    "command": "How do I go to my appointment?",
+    "endpoint": "/my-appointment",
+    "tokens": [
+      "how",
+      "do",
+      "i",
+      "go",
+      "to",
+      "my",
+      "appointment"
+    ]
+  },
+  {
+    "command": "Find my medical check-ups",
+    "endpoint": "/my-appointment",
+    "tokens": [
+      "find",
+      "my",
+      "medical",
+      "checkups"
+    ]
+  },
+  {
+    "command": "Can I access my scheduled hospital visits?",
+    "endpoint": "/my-appointment",
+    "tokens": [
+      "can",
+      "i",
+      "access",
+      "my",
+      "scheduled",
+      "hospital",
+      "visits"
+    ]
+  },
+  {
+    "command": "Show me where I can check my appointment",
+    "endpoint": "/my-appointment",
+    "tokens": [
+      "show",
+      "me",
+      "where",
+      "i",
+      "can",
+      "check",
+      "my",
+      "appointment"
+    ]
+  },
+  {
+    "command": "I need to go to my appointment schedule",
+    "endpoint": "/my-appointment",
+    "tokens": [
+      "i",
+      "need",
+      "to",
+      "go",
+      "to",
+      "my",
+      "appointment",
+      "schedule"
+    ]
+  },
+  {
+    "command": "Navigate to my personal appointment page",
+    "endpoint": "/my-appointment",
+    "tokens": [
+      "navigate",
+      "to",
+      "my",
+      "personal",
+      "appointment",
+      "page"
+    ]
+  },
+  {
+    "command": "Let me open my scheduled visits",
+    "endpoint": "/my-appointment",
+    "tokens": [
+      "let",
+      "me",
+      "open",
+      "my",
+      "scheduled",
+      "visits"
+    ]
+  },
+  {
+    "command": "Go to my doctor appointment list",
+    "endpoint": "/my-appointment",
+    "tokens": [
+      "go",
+      "to",
+      "my",
+      "doctor",
+      "appointment",
+      "list"
+    ]
+  },
+  {
+    "command": "View my medical consultation details",
+    "endpoint": "/my-appointment",
+    "tokens": [
+      "view",
+      "my",
+      "medical",
+      "consultation",
+      "details"
+    ]
+  },
+  {
+    "command": "I want to see my upcoming hospital visits",
+    "endpoint": "/my-appointment",
+    "tokens": [
+      "i",
+      "want",
+      "to",
+      "see",
+      "my",
+      "upcoming",
+      "hospital",
+      "visits"
+    ]
+  },
+  {
+    "command": "How do I update my appointment details?",
+    "endpoint": "/my-appointment",
+    "tokens": [
+      "how",
+      "do",
+      "i",
+      "update",
+      "my",
+      "appointment",
+      "details"
+    ]
+  },
+  {
+    "command": "Give me access to my appointment page",
+    "endpoint": "/my-appointment",
+    "tokens": [
+      "give",
+      "me",
+      "access",
+      "to",
+      "my",
+      "appointment",
+      "page"
+    ]
+  },
+  {
+    "command": "Show my appointment history",
+    "endpoint": "/my-appointment",
+    "tokens": [
+      "show",
+      "my",
+      "appointment",
+      "history"
+    ]
+  },
+  {
+    "command": "Take me back to my upcoming check-ups",
+    "endpoint": "/my-appointment",
+    "tokens": [
+      "take",
+      "me",
+      "back",
+      "to",
+      "my",
+      "upcoming",
+      "checkups"
+    ]
+  },
+  {
+    "command": "Can you direct me to my appointment?",
+    "endpoint": "/my-appointment",
+    "tokens": [
+      "can",
+      "you",
+      "direct",
+      "me",
+      "to",
+      "my",
+      "appointment"
+    ]
+  },
+  {
+    "command": "Take me to my scheduled medical consultations",
+    "endpoint": "/my-appointment",
+    "tokens": [
+      "take",
+      "me",
+      "to",
+      "my",
+      "scheduled",
+      "medical",
+      "consultations"
+    ]
+  },
+  {
+    "command": "Where do I manage my doctor appointments?",
+    "endpoint": "/my-appointment",
+    "tokens": [
+      "where",
+      "do",
+      "i",
+      "manage",
+      "my",
+      "doctor",
+      "appointments"
+    ]
+  },
+  {
+    "command": "Find the patient appointment section",
+    "endpoint": "/my-appointment",
+    "tokens": [
+      "find",
+      "the",
+      "patient",
+      "appointment",
+      "section"
+    ]
+  },
+  {
+    "command": "Go to my consultation history",
+    "endpoint": "/my-appointment",
+    "tokens": [
+      "go",
+      "to",
+      "my",
+      "consultation",
+      "history"
+    ]
+  },
+  {
+    "command": "Open my future medical visits",
+    "endpoint": "/my-appointment",
+    "tokens": [
+      "open",
+      "my",
+      "future",
+      "medical",
+      "visits"
+    ]
+  },
+  {
+    "command": "Check my patient records for upcoming visits",
+    "endpoint": "/my-appointment",
+    "tokens": [
+      "check",
+      "my",
+      "patient",
+      "records",
+      "for",
+      "upcoming",
+      "visits"
+    ]
+  },
+  {
+    "command": "How do I check my consultation appointments?",
+    "endpoint": "/my-appointment",
+    "tokens": [
+      "how",
+      "do",
+      "i",
+      "check",
+      "my",
+      "consultation",
+      "appointments"
+    ]
+  },
+  {
+    "command": "Where is my scheduled treatment?",
+    "endpoint": "/my-appointment",
+    "tokens": [
+      "where",
+      "is",
+      "my",
+      "scheduled",
+      "treatment"
+    ]
+  },
+  {
+    "command": "Can I view my booked medical appointments?",
+    "endpoint": "/my-appointment",
+    "tokens": [
+      "can",
+      "i",
+      "view",
+      "my",
+      "booked",
+      "medical",
+      "appointments"
+    ]
+  },
+  {
+    "command": "Access my scheduled therapy sessions",
+    "endpoint": "/my-appointment",
+    "tokens": [
+      "access",
+      "my",
+      "scheduled",
+      "therapy",
+      "sessions"
+    ]
+  },
+  {
+    "command": "Where can I update my hospital visits?",
+    "endpoint": "/my-appointment",
+    "tokens": [
+      "where",
+      "can",
+      "i",
+      "update",
+      "my",
+      "hospital",
+      "visits"
+    ]
+  },
+  {
+    "command": "Take me to my consultation records",
+    "endpoint": "/my-appointment",
+    "tokens": [
+      "take",
+      "me",
+      "to",
+      "my",
+      "consultation",
+      "records"
+    ]
+  },
+  {
+    "command": "How do I edit my medical bookings?",
+    "endpoint": "/my-appointment",
+    "tokens": [
+      "how",
+      "do",
+      "i",
+      "edit",
+      "my",
+      "medical",
+      "bookings"
+    ]
+  },
+  {
+    "command": "Show my upcoming therapy sessions",
+    "endpoint": "/my-appointment",
+    "tokens": [
+      "show",
+      "my",
+      "upcoming",
+      "therapy",
+      "sessions"
+    ]
+  },
+  {
+    "command": "Navigate to my personal medical history",
+    "endpoint": "/my-appointment",
+    "tokens": [
+      "navigate",
+      "to",
+      "my",
+      "personal",
+      "medical",
+      "history"
+    ]
+  },
+  {
+    "command": "Take me to my appointment log",
+    "endpoint": "/my-appointment",
+    "tokens": [
+      "take",
+      "me",
+      "to",
+      "my",
+      "appointment",
+      "log"
+    ]
+  },
+  {
+    "command": "I need to manage my scheduled visits",
+    "endpoint": "/my-appointment",
+    "tokens": [
+      "i",
+      "need",
+      "to",
+      "manage",
+      "my",
+      "scheduled",
+      "visits"
+    ]
+  },
+  {
+    "command": "Can I check my medical visits?",
+    "endpoint": "/my-appointment",
+    "tokens": [
+      "can",
+      "i",
+      "check",
+      "my",
+      "medical",
+      "visits"
+    ]
+  },
+  {
+    "command": "Find my personal appointment history",
+    "endpoint": "/my-appointment",
+    "tokens": [
+      "find",
+      "my",
+      "personal",
+      "appointment",
+      "history"
+    ]
+  },
+  {
+    "command": "Show my latest appointment updates",
+    "endpoint": "/my-appointment",
+    "tokens": [
+      "show",
+      "my",
+      "latest",
+      "appointment",
+      "updates"
+    ]
+  },
+  {
+    "command": "Let’s check my appointment details",
+    "endpoint": "/my-appointment",
+    "tokens": [
+      "lets",
+      "check",
+      "my",
+      "appointment",
+      "details"
+    ]
+  }
+]
