@@ -1,4 +1,5 @@
 import React from 'react'
+import { assets } from '../assets/assets'
 
 const Footer = () => {
   return (
@@ -9,7 +10,7 @@ const Footer = () => {
             {/* ======================================= Left Section of Footer ================================== */}
             <div>
 
-                
+                <img src={assets.logo} alt="" />
 
             </div>
 
