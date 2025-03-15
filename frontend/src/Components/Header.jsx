@@ -16,9 +16,9 @@ const Header = () => {
                 </div>
                 <h1 className="py-6 text-2xl font-bold text-start text-[#023170] sm:text-4xl">From Ministry Of Health</h1>
                 <p className='text-gray-700 font-semibold'>Empowering lives with personalized, innovative healthcare solutions that prioritize well-being, enhance recovery, and redefine patient care through compassion, cutting-edge technology, and a commitment to excellence in every step of the journey.</p>
-                <a href="#speciality">
+                <a href="#specialitys">
                     <div>
-                        <button onClick={() => navigate('/doctors')} className='px-[18px] cursor-pointer py-[15px] mt-4 bg-[#0D6EFD] text-white rounded font-medium'>make an Appointment</button>
+                        <button className='px-[18px] cursor-pointer py-[15px] mt-4 bg-[#0D6EFD] text-white rounded font-medium'>make an Appointment</button>
                     </div>
                 </a>
             </div>
