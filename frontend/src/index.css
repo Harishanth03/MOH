@@ -1,17 +1,29 @@
+/* ✅ Move @import to the top */
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
 @import "tailwindcss";
-.active hr{
-    @apply block
+
+/* Now define styles */
+* {
+    font-family: 'Outfit', sans-serif; /* Ensure Outfit is correctly used */
 }
 
-.active li{
-    @apply text-[#002164]
+li {
+    cursor: pointer;
+    list-style: none; /* Remove bullet points */
+    
 }
 
-/* Hide scrollbar for all elements */
+/* Tailwind @apply styles */
+.active hr {
+    @apply block;
+}
+
+.active li {
+    @apply text-[#002164];
+}
+
+/* Hide scrollbar */
 ::-webkit-scrollbar {
     display: none;
-  }
-  
+}
 
-  
-  
