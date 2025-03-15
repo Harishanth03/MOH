@@ -1,26 +1,71 @@
-import React, { useContext } from 'react'
-import { useParams } from 'react-router-dom'
+import React, { useContext, useEffect, useState } from 'react'
+import { useNavigate, useParams } from 'react-router-dom'
 import { AppContext } from '../Context/AppContext';
 
 const Doctors = () => {
 
-  const { speciality} = useParams();
-  const {doctors} = useContext(AppContext)
+  const { speciality} = useParams(); //get the doctor speciality by the parameter of URL
+
+  const {doctors} = useContext(AppContext); //fetch the doctors Data from AppContext
+
+  const [filterDoc , setFilterDoc] = useState([]); // set the UseState for filter the Doctors
+
+  const navigate = useNavigate();
+
+  //creat a function for apply the speciality when click
+  const applyFilter = () => {
+
+    if(speciality)
+    {
+      setFilterDoc(doctors.filter(doc => doc.speciality === speciality))
+    }
+    else
+    {
+      setFilterDoc(doctors);
+    }
+
+  }
+
+  useEffect(() => {
+
+    applyFilter();
+
+  }, [doctors , speciality])
 
   return (
+
     <div>
 
-      <p>Browse Using Doctors Speciality</p>
+      <p className='text-gray-600 '>Browse Using Doctors Speciality</p>
 
-      <div>
+      <div className='flex flex-col sm:flex-row items-start gap-5 mt-5'>
 
-        <div>
-          <p>General Physician</p>
-          <p>Gynecologist</p>
-          <p>Neurologist</p>
-          <p>Dermatologist</p>
-          <p>Pediatrician</p>
-          <p>Gastroenterologist</p>
+        <div className=' flex flex-col gap-4  text-sm text-gray-600'>
+          <p onClick={() => speciality === 'General physician' ? navigate('/doctors') : navigate('/doctors/General physician')} className={`w-[94vw] sm:w-auto pl-3 py-3 pr-16  border border-gray-300 rounded transition-all cursor-pointer hover:border-blue-200`}>General physician</p>
+          <p onClick={() => speciality === 'Gynecologist' ? navigate('/doctors') : navigate('/doctors/Gynecologist')} className={`w-[94vw] sm:w-auto pl-3 py-3 pr-16  border border-gray-300 rounded transition-all cursor-pointer hover:border-blue-200`}>Gynecologist</p>
+          <p onClick={() => speciality === 'Neurologist' ? navigate('/doctors') : navigate('/doctors/Neurologist')} className={`w-[94vw] sm:w-auto pl-3 py-3 pr-16  border border-gray-300 rounded transition-all cursor-pointer hover:border-blue-200`}>Neurologist</p>
+          <p onClick={() => speciality === 'Dermatologist' ? navigate('/doctors') : navigate('/doctors/Dermatologist')} className={`w-[94vw] sm:w-auto pl-3 py-3 pr-16  border border-gray-300 rounded transition-all cursor-pointer hover:border-blue-200`}>Dermatologist</p>
+          <p onClick={() => speciality === 'Pediatricians' ? navigate('/doctors') : navigate('/doctors/Pediatricians')} className={`w-[94vw] sm:w-auto pl-3 py-3 pr-16  border border-gray-300 rounded transition-all cursor-pointer hover:border-blue-200`}>Pediatrician</p>
+          <p onClick={() => speciality === 'Gastroenterologist' ? navigate('/doctors') : navigate('/doctors/Gastroenterologist')} className={`w-[94vw] sm:w-auto pl-3 py-3 pr-16  border border-gray-300 rounded transition-all cursor-pointer hover:border-blue-200`}>Gastroenterologist</p>
+        </div>
+
+        <div className='w-full grid grid-cols-[repeat(auto-fill,minmax(200px,1fr))] gap-4 gap-y-6'>
+
+          {
+            filterDoc.map((item , index) => (
+              <div onClick={() => navigate(`/appointment/${item._id}`)} className='border border-blue-200 rounded-xl overflow-hidden cursor-pointer hover:translate-y-[-10px] transition-all duration-500' key={index}>
+                  <img className='' src={item.image} alt="" />
+                  <div className='p-4'>
+                    <div className='flex items-center gap-2 text-sm text-center text-green-500'>
+                          <p className='w-2 h-2 bg-green-500 rounded-full'></p>
+                          <p>Available</p>
+                    </div>
+                      <p className='text-gray-900 text-md font-medium'>{item.name}</p>
+                      <p className='text-gray-600 text-sm '>{item.speciality}</p>
+                  </div>
+              </div>
+          ))}
+
         </div>
 
       </div>
