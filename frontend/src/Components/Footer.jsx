@@ -23,9 +23,9 @@ const Footer = () => {
             {/* ======================================= Center Section of Footer ================================== */}
             <div>
 
-                <p>MOH Trincomalee</p>
+                <p className='text-xl font-medium mb-5'>MOH Trincomalee</p>
 
-                <ul>
+                <ul className='flex flex-col gap-2 text-gray-600'>
 
                     <li>Home</li>
                     <li>About Us</li>
