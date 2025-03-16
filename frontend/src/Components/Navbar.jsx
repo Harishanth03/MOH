@@ -58,6 +58,18 @@ const Navbar = () => {
                   My Appointment
                 </p>
                 <p
+                  onClick={() => navigate("/report")}
+                  className="hover:text-black cursor-pointer"
+                >
+                  My Medical Report
+                </p>
+                <p
+                  onClick={() => navigate("/bed-allocation")}
+                  className="hover:text-black cursor-pointer"
+                >
+                  Bed Allocation
+                </p>
+                <p
                   onClick={() => setToken(false)}
                   className="hover:text-black cursor-pointer"
                 >

@@ -3,7 +3,7 @@ import { assets } from '../assets/assets'
 
 const Contact = () => {
   return (
-    <div>
+    <section className='min-h-[100vh]'>
 
       <div className='w-full flex flex-col sm:grid grid-cols-2 my-6 gap-4'>
 
@@ -63,7 +63,7 @@ const Contact = () => {
 
       </div>
 
-    </div>
+    </section>
   )
 }
 

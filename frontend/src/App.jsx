@@ -11,6 +11,8 @@ import Navbar from './Components/Navbar'
 import Footer from './Components/Footer'
 import Appointment from './Pages/Appointment'
 import VoiceCommand from './Components/VoiceCommand'
+import MedicalReport from './Pages/MedicalReport'
+import BedAllocation from './Pages/BedAllocation'
 
 const App = () => {
   return (
@@ -26,6 +28,8 @@ const App = () => {
         <Route path='/doctors/:speciality' element = {<Doctors/>}/>
         <Route path='/login' element = {<Login/>}/>
         <Route path='/about' element = {<About/>}/>
+        <Route path='/report' element = {<MedicalReport/>}/>
+        <Route path='/bed' element = {<BedAllocation/>}/>
         <Route path='/contact' element = {<Contact/>}/>
         <Route path='/my-profile' element = {<MyProfile/>}/>
         <Route path='/my-appointment' element = {<MyAppointment/>}/>
