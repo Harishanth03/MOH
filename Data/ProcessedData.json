@@ -4,7 +4,6 @@
     "endpoint": "/appointment",
     "tokens": [
       "book",
-      "an",
       "appointment"
     ]
   },
@@ -13,7 +12,6 @@
     "endpoint": "/appointment",
     "tokens": [
       "schedule",
-      "an",
       "appointment"
     ]
   },
@@ -21,23 +19,17 @@
     "command": "Set an appointment with a doctor",
     "endpoint": "/appointment",
     "tokens": [
-      "set",
-      "an",
+      "fit(p)",
       "appointment",
-      "with",
-      "a",
-      "doctor"
+      "sophisticate"
     ]
   },
   {
     "command": "I want to book an appointment",
     "endpoint": "/appointment",
     "tokens": [
-      "i",
-      "want",
-      "to",
+      "privation",
       "book",
-      "an",
       "appointment"
     ]
   },
@@ -45,8 +37,7 @@
     "command": "Make an appointment",
     "endpoint": "/appointment",
     "tokens": [
-      "make",
-      "an",
+      "brand",
       "appointment"
     ]
   },
@@ -55,7 +46,6 @@
     "endpoint": "/appointment",
     "tokens": [
       "book",
-      "my",
       "appointment",
       "now"
     ]
@@ -65,7 +55,6 @@
     "endpoint": "/appointment",
     "tokens": [
       "schedule",
-      "a",
       "doctors",
       "visit"
     ]
@@ -74,9 +63,7 @@
     "command": "I need an appointment",
     "endpoint": "/appointment",
     "tokens": [
-      "i",
-      "need",
-      "an",
+      "necessitate",
       "appointment"
     ]
   },
@@ -84,10 +71,7 @@
     "command": "Can I book an appointment?",
     "endpoint": "/appointment",
     "tokens": [
-      "can",
-      "i",
       "book",
-      "an",
       "appointment"
     ]
   },
@@ -95,12 +79,8 @@
     "command": "Please book an appointment for me",
     "endpoint": "/appointment",
     "tokens": [
-      "please",
       "book",
-      "an",
-      "appointment",
-      "for",
-      "me"
+      "appointment"
     ]
   },
   {
@@ -108,7 +88,6 @@
     "endpoint": "/appointment",
     "tokens": [
       "reserve",
-      "an",
       "appointment"
     ]
   },
@@ -116,22 +95,16 @@
     "command": "I need to see a doctor",
     "endpoint": "/appointment",
     "tokens": [
-      "i",
-      "need",
-      "to",
+      "necessitate",
       "see",
-      "a",
-      "doctor"
+      "sophisticate"
     ]
   },
   {
     "command": "Can you schedule an appointment?",
     "endpoint": "/appointment",
     "tokens": [
-      "can",
-      "you",
       "schedule",
-      "an",
       "appointment"
     ]
   },
@@ -139,34 +112,27 @@
     "command": "Find me an available doctor",
     "endpoint": "/appointment",
     "tokens": [
-      "find",
-      "me",
-      "an",
+      "discovery",
       "available",
-      "doctor"
+      "sophisticate"
     ]
   },
   {
     "command": "I would like to meet a doctor",
     "endpoint": "/appointment",
     "tokens": [
-      "i",
       "would",
       "like",
-      "to",
       "meet",
-      "a",
-      "doctor"
+      "sophisticate"
     ]
   },
   {
     "command": "Help me book an appointment",
     "endpoint": "/appointment",
     "tokens": [
-      "help",
-      "me",
+      "aid",
       "book",
-      "an",
       "appointment"
     ]
   },
@@ -175,7 +141,6 @@
     "endpoint": "/appointment",
     "tokens": [
       "arrange",
-      "a",
       "consultation"
     ]
   },
@@ -183,21 +148,16 @@
     "command": "I need to consult a doctor",
     "endpoint": "/appointment",
     "tokens": [
-      "i",
-      "need",
-      "to",
+      "necessitate",
       "consult",
-      "a",
-      "doctor"
+      "sophisticate"
     ]
   },
   {
     "command": "Please schedule my appointment",
     "endpoint": "/appointment",
     "tokens": [
-      "please",
       "schedule",
-      "my",
       "appointment"
     ]
   },
@@ -205,12 +165,9 @@
     "command": "Set up an appointment for me",
     "endpoint": "/appointment",
     "tokens": [
-      "set",
+      "fit(p)",
       "up",
-      "an",
-      "appointment",
-      "for",
-      "me"
+      "appointment"
     ]
   },
   {
@@ -218,7 +175,6 @@
     "endpoint": "/appointment",
     "tokens": [
       "book",
-      "a",
       "checkup"
     ]
   },
@@ -226,10 +182,7 @@
     "command": "Can you arrange a doctor’s visit?",
     "endpoint": "/appointment",
     "tokens": [
-      "can",
-      "you",
       "arrange",
-      "a",
       "doctors",
       "visit"
     ]
@@ -238,11 +191,8 @@
     "command": "I need to see a specialist",
     "endpoint": "/appointment",
     "tokens": [
-      "i",
-      "need",
-      "to",
+      "necessitate",
       "see",
-      "a",
       "specialist"
     ]
   },
@@ -251,21 +201,16 @@
     "endpoint": "/appointment",
     "tokens": [
       "book",
-      "a",
       "consultation",
-      "with",
-      "a",
-      "doctor"
+      "sophisticate"
     ]
   },
   {
     "command": "Help me make an appointment",
     "endpoint": "/appointment",
     "tokens": [
-      "help",
-      "me",
-      "make",
-      "an",
+      "aid",
+      "brand",
       "appointment"
     ]
   },
@@ -274,28 +219,24 @@
     "endpoint": "/appointment",
     "tokens": [
       "check",
-      "doctor",
-      "availability"
+      "sophisticate",
+      "handiness"
     ]
   },
   {
     "command": "Can I see a doctor today?",
     "endpoint": "/appointment",
     "tokens": [
-      "can",
-      "i",
       "see",
-      "a",
-      "doctor",
-      "today"
+      "sophisticate",
+      "nowadays"
     ]
   },
   {
     "command": "Find the next available appointment",
     "endpoint": "/appointment",
     "tokens": [
-      "find",
-      "the",
+      "discovery",
       "next",
       "available",
       "appointment"
@@ -306,10 +247,7 @@
     "endpoint": "/appointment",
     "tokens": [
       "schedule",
-      "a",
       "visit",
-      "to",
-      "the",
       "hospital"
     ]
   },
@@ -317,8 +255,7 @@
     "command": "Make a doctor’s appointment",
     "endpoint": "/appointment",
     "tokens": [
-      "make",
-      "a",
+      "brand",
       "doctors",
       "appointment"
     ]
@@ -328,12 +265,10 @@
     "endpoint": "/appointment",
     "tokens": [
       "get",
-      "me",
-      "an",
       "appointment",
-      "as",
+      "equally",
       "soon",
-      "as",
+      "equally",
       "possible"
     ]
   },
@@ -341,12 +276,10 @@
     "command": "I need medical advice, book a session",
     "endpoint": "/appointment",
     "tokens": [
-      "i",
-      "need",
-      "medical",
+      "necessitate",
+      "checkup",
       "advice",
       "book",
-      "a",
       "session"
     ]
   },
@@ -355,10 +288,7 @@
     "endpoint": "/appointment",
     "tokens": [
       "arrange",
-      "a",
       "visit",
-      "to",
-      "the",
       "clinic"
     ]
   },
@@ -367,7 +297,6 @@
     "endpoint": "/appointment",
     "tokens": [
       "schedule",
-      "a",
       "health",
       "consultation"
     ]
@@ -376,11 +305,8 @@
     "command": "I need to visit the hospital",
     "endpoint": "/appointment",
     "tokens": [
-      "i",
-      "need",
-      "to",
+      "necessitate",
       "visit",
-      "the",
       "hospital"
     ]
   },
@@ -388,12 +314,8 @@
     "command": "Can I get an appointment for tomorrow?",
     "endpoint": "/appointment",
     "tokens": [
-      "can",
-      "i",
       "get",
-      "an",
       "appointment",
-      "for",
       "tomorrow"
     ]
   },
@@ -402,9 +324,8 @@
     "endpoint": "/appointment",
     "tokens": [
       "check",
-      "availability",
-      "for",
-      "doctor",
+      "handiness",
+      "sophisticate",
       "appointments"
     ]
   },
@@ -413,20 +334,15 @@
     "endpoint": "/appointment",
     "tokens": [
       "schedule",
-      "a",
-      "checkup",
-      "for",
-      "me"
+      "checkup"
     ]
   },
   {
     "command": "Help me book a doctor's visit",
     "endpoint": "/appointment",
     "tokens": [
-      "help",
-      "me",
+      "aid",
       "book",
-      "a",
       "doctors",
       "visit"
     ]
@@ -435,13 +351,9 @@
     "command": "I need to talk to a doctor",
     "endpoint": "/appointment",
     "tokens": [
-      "i",
-      "need",
-      "to",
+      "necessitate",
       "talk",
-      "to",
-      "a",
-      "doctor"
+      "sophisticate"
     ]
   },
   {
@@ -449,8 +361,7 @@
     "endpoint": "/appointment",
     "tokens": [
       "schedule",
-      "a",
-      "followup",
+      "follow-up",
       "appointment"
     ]
   },
@@ -458,15 +369,10 @@
     "command": "I would like to make an appointment for a check-up",
     "endpoint": "/appointment",
     "tokens": [
-      "i",
       "would",
       "like",
-      "to",
-      "make",
-      "an",
+      "brand",
       "appointment",
-      "for",
-      "a",
       "checkup"
     ]
   },
@@ -474,9 +380,7 @@
     "command": "Please confirm my appointment",
     "endpoint": "/appointment",
     "tokens": [
-      "please",
       "confirm",
-      "my",
       "appointment"
     ]
   },
@@ -485,10 +389,7 @@
     "endpoint": "/appointment",
     "tokens": [
       "book",
-      "an",
       "appointment",
-      "for",
-      "a",
       "general",
       "checkup"
     ]
@@ -497,14 +398,9 @@
     "command": "I need to book an appointment for my child",
     "endpoint": "/appointment",
     "tokens": [
-      "i",
-      "need",
-      "to",
+      "necessitate",
       "book",
-      "an",
       "appointment",
-      "for",
-      "my",
       "child"
     ]
   },
@@ -512,11 +408,8 @@
     "command": "Can you arrange a medical appointment?",
     "endpoint": "/appointment",
     "tokens": [
-      "can",
-      "you",
       "arrange",
-      "a",
-      "medical",
+      "checkup",
       "appointment"
     ]
   },
@@ -525,10 +418,8 @@
     "endpoint": "/appointment",
     "tokens": [
       "schedule",
-      "a",
       "doctors",
       "visit",
-      "for",
       "next",
       "week"
     ]
@@ -537,13 +428,9 @@
     "command": "Find me an available slot for an appointment",
     "endpoint": "/appointment",
     "tokens": [
-      "find",
-      "me",
-      "an",
+      "discovery",
       "available",
       "slot",
-      "for",
-      "an",
       "appointment"
     ]
   },
@@ -551,25 +438,19 @@
     "command": "Can I visit the doctor today?",
     "endpoint": "/appointment",
     "tokens": [
-      "can",
-      "i",
       "visit",
-      "the",
-      "doctor",
-      "today"
+      "sophisticate",
+      "nowadays"
     ]
   },
   {
     "command": "Find the next available slot for a consultation",
     "endpoint": "/appointment",
     "tokens": [
-      "find",
-      "the",
+      "discovery",
       "next",
       "available",
       "slot",
-      "for",
-      "a",
       "consultation"
     ]
   },
@@ -578,8 +459,7 @@
     "endpoint": "/appointment",
     "tokens": [
       "schedule",
-      "a",
-      "routine",
+      "everyday",
       "health",
       "checkup"
     ]
@@ -589,11 +469,8 @@
     "endpoint": "/appointment",
     "tokens": [
       "book",
-      "a",
       "slot",
-      "with",
-      "a",
-      "doctor"
+      "sophisticate"
     ]
   },
   {
@@ -601,10 +478,7 @@
     "endpoint": "/appointment",
     "tokens": [
       "arrange",
-      "an",
       "appointment",
-      "with",
-      "a",
       "specialist"
     ]
   },
@@ -612,11 +486,7 @@
     "command": "Can you book me a consultation?",
     "endpoint": "/appointment",
     "tokens": [
-      "can",
-      "you",
       "book",
-      "me",
-      "a",
       "consultation"
     ]
   },
@@ -625,7 +495,6 @@
     "endpoint": "/appointment",
     "tokens": [
       "schedule",
-      "an",
       "emergency",
       "appointment"
     ]
@@ -634,38 +503,27 @@
     "command": "I want to see my doctor",
     "endpoint": "/appointment",
     "tokens": [
-      "i",
-      "want",
-      "to",
+      "privation",
       "see",
-      "my",
-      "doctor"
+      "sophisticate"
     ]
   },
   {
     "command": "Please book me a session with the doctor",
     "endpoint": "/appointment",
     "tokens": [
-      "please",
       "book",
-      "me",
-      "a",
       "session",
-      "with",
-      "the",
-      "doctor"
+      "sophisticate"
     ]
   },
   {
     "command": "Find an open slot for a check-up",
     "endpoint": "/appointment",
     "tokens": [
-      "find",
-      "an",
+      "discovery",
       "open",
       "slot",
-      "for",
-      "a",
       "checkup"
     ]
   },
@@ -674,11 +532,8 @@
     "endpoint": "/appointment",
     "tokens": [
       "reserve",
-      "a",
-      "doctor",
-      "consultation",
-      "for",
-      "me"
+      "sophisticate",
+      "consultation"
     ]
   },
   {
@@ -686,7 +541,6 @@
     "endpoint": "/appointment",
     "tokens": [
       "schedule",
-      "a",
       "sameday",
       "appointment"
     ]
@@ -695,11 +549,8 @@
     "command": "Can I get an early morning appointment?",
     "endpoint": "/appointment",
     "tokens": [
-      "can",
-      "i",
       "get",
-      "an",
-      "early",
+      "early_on",
       "morning",
       "appointment"
     ]
@@ -709,7 +560,6 @@
     "endpoint": "/appointment",
     "tokens": [
       "book",
-      "a",
       "weekend",
       "appointment"
     ]
@@ -718,9 +568,8 @@
     "command": "Find a doctor available this afternoon",
     "endpoint": "/appointment",
     "tokens": [
-      "find",
-      "a",
-      "doctor",
+      "discovery",
+      "sophisticate",
       "available",
       "this",
       "afternoon"
@@ -731,8 +580,7 @@
     "endpoint": "/appointment",
     "tokens": [
       "schedule",
-      "a",
-      "virtual",
+      "virtual(a)",
       "consultation"
     ]
   },
@@ -741,7 +589,6 @@
     "endpoint": "/appointment",
     "tokens": [
       "arrange",
-      "a",
       "telehealth",
       "appointment"
     ]
@@ -750,13 +597,8 @@
     "command": "Can you book me a check-up for this week?",
     "endpoint": "/appointment",
     "tokens": [
-      "can",
-      "you",
       "book",
-      "me",
-      "a",
       "checkup",
-      "for",
       "this",
       "week"
     ]
@@ -765,12 +607,10 @@
     "command": "I need a health consultation today",
     "endpoint": "/appointment",
     "tokens": [
-      "i",
-      "need",
-      "a",
+      "necessitate",
       "health",
       "consultation",
-      "today"
+      "nowadays"
     ]
   },
   {
@@ -778,9 +618,7 @@
     "endpoint": "/appointment",
     "tokens": [
       "get",
-      "me",
-      "a",
-      "quick",
+      "promptly",
       "doctors",
       "visit"
     ]
@@ -789,11 +627,9 @@
     "command": "Help me set up a doctors consultation",
     "endpoint": "/appointment",
     "tokens": [
-      "help",
-      "me",
-      "set",
+      "aid",
+      "fit(p)",
       "up",
-      "a",
       "doctors",
       "consultation"
     ]
@@ -803,8 +639,7 @@
     "endpoint": "/appointment",
     "tokens": [
       "book",
-      "an",
-      "urgent",
+      "pressing",
       "consultation"
     ]
   },
@@ -812,9 +647,7 @@
     "command": "Please schedule my health check",
     "endpoint": "/appointment",
     "tokens": [
-      "please",
       "schedule",
-      "my",
       "health",
       "check"
     ]
@@ -823,14 +656,11 @@
     "command": "Find me an appointment slot for next month",
     "endpoint": "/appointment",
     "tokens": [
-      "find",
-      "me",
-      "an",
+      "discovery",
       "appointment",
       "slot",
-      "for",
       "next",
-      "month"
+      "calendar_month"
     ]
   },
   {
@@ -850,22 +680,16 @@
     "command": "I need to consult a physician",
     "endpoint": "/appointment",
     "tokens": [
-      "i",
-      "need",
-      "to",
+      "necessitate",
       "consult",
-      "a",
-      "physician"
+      "doctor"
     ]
   },
   {
     "command": "Can I schedule a hospital visit?",
     "endpoint": "/appointment",
     "tokens": [
-      "can",
-      "i",
       "schedule",
-      "a",
       "hospital",
       "visit"
     ]
@@ -874,26 +698,21 @@
     "command": "Help me find the best available appointment time",
     "endpoint": "/appointment",
     "tokens": [
-      "help",
-      "me",
-      "find",
-      "the",
-      "best",
+      "aid",
+      "discovery",
+      "outdo",
       "available",
       "appointment",
-      "time"
+      "clock"
     ]
   },
   {
     "command": "I want to set up a check-up appointment",
     "endpoint": "/appointment",
     "tokens": [
-      "i",
-      "want",
-      "to",
-      "set",
+      "privation",
+      "fit(p)",
       "up",
-      "a",
       "checkup",
       "appointment"
     ]
@@ -902,9 +721,7 @@
     "command": "Please book my regular check-up",
     "endpoint": "/appointment",
     "tokens": [
-      "please",
       "book",
-      "my",
       "regular",
       "checkup"
     ]
@@ -913,22 +730,17 @@
     "command": "Make a medical appointment for me",
     "endpoint": "/appointment",
     "tokens": [
-      "make",
-      "a",
-      "medical",
-      "appointment",
-      "for",
-      "me"
+      "brand",
+      "checkup",
+      "appointment"
     ]
   },
   {
     "command": "Help me arrange a hospital consultation",
     "endpoint": "/appointment",
     "tokens": [
-      "help",
-      "me",
+      "aid",
       "arrange",
-      "a",
       "hospital",
       "consultation"
     ]
@@ -938,7 +750,6 @@
     "endpoint": "/",
     "tokens": [
       "go",
-      "to",
       "home"
     ]
   },
@@ -946,8 +757,7 @@
     "command": "Take me home",
     "endpoint": "/",
     "tokens": [
-      "take",
-      "me",
+      "return",
       "home"
     ]
   },
@@ -956,8 +766,7 @@
     "endpoint": "/",
     "tokens": [
       "go",
-      "back",
-      "to",
+      "back(a)",
       "home"
     ]
   },
@@ -965,8 +774,7 @@
     "command": "Return to home",
     "endpoint": "/",
     "tokens": [
-      "return",
-      "to",
+      "tax_return",
       "home"
     ]
   },
@@ -974,8 +782,7 @@
     "command": "Back to home",
     "endpoint": "/",
     "tokens": [
-      "back",
-      "to",
+      "back(a)",
       "home"
     ]
   },
@@ -983,8 +790,7 @@
     "command": "Navigate to home",
     "endpoint": "/",
     "tokens": [
-      "navigate",
-      "to",
+      "voyage",
       "home"
     ]
   },
@@ -992,10 +798,7 @@
     "command": "Take me to the main page",
     "endpoint": "/",
     "tokens": [
-      "take",
-      "me",
-      "to",
-      "the",
+      "return",
       "main",
       "page"
     ]
@@ -1004,9 +807,7 @@
     "command": "Return to the main page",
     "endpoint": "/",
     "tokens": [
-      "return",
-      "to",
-      "the",
+      "tax_return",
       "main",
       "page"
     ]
@@ -1016,8 +817,6 @@
     "endpoint": "/",
     "tokens": [
       "show",
-      "me",
-      "the",
       "home",
       "screen"
     ]
@@ -1027,9 +826,7 @@
     "endpoint": "/",
     "tokens": [
       "go",
-      "back",
-      "to",
-      "the",
+      "back(a)",
       "main",
       "screen"
     ]
@@ -1039,8 +836,7 @@
     "endpoint": "/",
     "tokens": [
       "home",
-      "screen",
-      "please"
+      "screen"
     ]
   },
   {
@@ -1048,20 +844,15 @@
     "endpoint": "/",
     "tokens": [
       "go",
-      "back",
-      "to",
-      "the",
-      "homepage"
+      "back(a)",
+      "home_page"
     ]
   },
   {
     "command": "Take me to the home page",
     "endpoint": "/",
     "tokens": [
-      "take",
-      "me",
-      "to",
-      "the",
+      "return",
       "home",
       "page"
     ]
@@ -1070,10 +861,7 @@
     "command": "Can you take me home?",
     "endpoint": "/",
     "tokens": [
-      "can",
-      "you",
-      "take",
-      "me",
+      "return",
       "home"
     ]
   },
@@ -1081,9 +869,7 @@
     "command": "Return to the main menu",
     "endpoint": "/",
     "tokens": [
-      "return",
-      "to",
-      "the",
+      "tax_return",
       "main",
       "menu"
     ]
@@ -1092,11 +878,8 @@
     "command": "Take me back to the main menu",
     "endpoint": "/",
     "tokens": [
-      "take",
-      "me",
-      "back",
-      "to",
-      "the",
+      "return",
+      "back(a)",
       "main",
       "menu"
     ]
@@ -1106,7 +889,6 @@
     "endpoint": "/",
     "tokens": [
       "open",
-      "the",
       "home",
       "page"
     ]
@@ -1115,9 +897,7 @@
     "command": "Navigate to the home page",
     "endpoint": "/",
     "tokens": [
-      "navigate",
-      "to",
-      "the",
+      "voyage",
       "home",
       "page"
     ]
@@ -1126,8 +906,7 @@
     "command": "Back to main screen",
     "endpoint": "/",
     "tokens": [
-      "back",
-      "to",
+      "back(a)",
       "main",
       "screen"
     ]
@@ -1136,11 +915,7 @@
     "command": "Can you show me the home page?",
     "endpoint": "/",
     "tokens": [
-      "can",
-      "you",
       "show",
-      "me",
-      "the",
       "home",
       "page"
     ]
@@ -1149,9 +924,7 @@
     "command": "I want to go home",
     "endpoint": "/",
     "tokens": [
-      "i",
-      "want",
-      "to",
+      "privation",
       "go",
       "home"
     ]
@@ -1160,11 +933,8 @@
     "command": "I need to return to home",
     "endpoint": "/",
     "tokens": [
-      "i",
-      "need",
-      "to",
-      "return",
-      "to",
+      "necessitate",
+      "tax_return",
       "home"
     ]
   },
@@ -1173,8 +943,6 @@
     "endpoint": "/",
     "tokens": [
       "move",
-      "to",
-      "the",
       "home",
       "page"
     ]
@@ -1184,9 +952,6 @@
     "endpoint": "/",
     "tokens": [
       "send",
-      "me",
-      "to",
-      "the",
       "home",
       "page"
     ]
@@ -1195,12 +960,7 @@
     "command": "Can you take me to the home screen?",
     "endpoint": "/",
     "tokens": [
-      "can",
-      "you",
-      "take",
-      "me",
-      "to",
-      "the",
+      "return",
       "home",
       "screen"
     ]
@@ -1209,9 +969,8 @@
     "command": "I'd like to go home",
     "endpoint": "/",
     "tokens": [
-      "id",
+      "Idaho",
       "like",
-      "to",
       "go",
       "home"
     ]
@@ -1220,12 +979,9 @@
     "command": "Take me back to where I started",
     "endpoint": "/",
     "tokens": [
-      "take",
-      "me",
-      "back",
-      "to",
+      "return",
+      "back(a)",
       "where",
-      "i",
       "started"
     ]
   },
@@ -1235,9 +991,7 @@
     "tokens": [
       "lets",
       "go",
-      "back",
-      "to",
-      "the",
+      "back(a)",
       "home",
       "page"
     ]
@@ -1246,10 +1000,7 @@
     "command": "Take me to the start page",
     "endpoint": "/",
     "tokens": [
-      "take",
-      "me",
-      "to",
-      "the",
+      "return",
       "start",
       "page"
     ]
@@ -1259,8 +1010,7 @@
     "endpoint": "/",
     "tokens": [
       "main",
-      "page",
-      "please"
+      "page"
     ]
   },
   {
@@ -1268,8 +1018,6 @@
     "endpoint": "/",
     "tokens": [
       "where",
-      "is",
-      "the",
       "home",
       "page"
     ]
@@ -1279,22 +1027,17 @@
     "endpoint": "/",
     "tokens": [
       "send",
-      "me",
-      "back",
-      "to",
-      "the",
-      "beginning"
+      "back(a)",
+      "beginning(a)"
     ]
   },
   {
     "command": "I need to go back home",
     "endpoint": "/",
     "tokens": [
-      "i",
-      "need",
-      "to",
+      "necessitate",
       "go",
-      "back",
+      "back(a)",
       "home"
     ]
   },
@@ -1303,10 +1046,8 @@
     "endpoint": "/",
     "tokens": [
       "start",
-      "over",
-      "and",
-      "take",
-      "me",
+      "complete",
+      "return",
       "home"
     ]
   },
@@ -1315,9 +1056,8 @@
     "endpoint": "/",
     "tokens": [
       "show",
-      "the",
       "main",
-      "dashboard"
+      "splashboard"
     ]
   },
   {
@@ -1325,8 +1065,6 @@
     "endpoint": "/",
     "tokens": [
       "jump",
-      "to",
-      "the",
       "main",
       "page"
     ]
@@ -1335,9 +1073,7 @@
     "command": "Please open the home page",
     "endpoint": "/",
     "tokens": [
-      "please",
       "open",
-      "the",
       "home",
       "page"
     ]
@@ -1347,8 +1083,6 @@
     "endpoint": "/",
     "tokens": [
       "switch",
-      "to",
-      "the",
       "home",
       "screen"
     ]
@@ -1358,9 +1092,7 @@
     "endpoint": "/",
     "tokens": [
       "move",
-      "back",
-      "to",
-      "the",
+      "back(a)",
       "main",
       "page"
     ]
@@ -1370,17 +1102,14 @@
     "endpoint": "/",
     "tokens": [
       "home",
-      "button",
-      "please"
+      "button"
     ]
   },
   {
     "command": "Return to the start screen",
     "endpoint": "/",
     "tokens": [
-      "return",
-      "to",
-      "the",
+      "tax_return",
       "start",
       "screen"
     ]
@@ -1389,13 +1118,9 @@
     "command": "I want to go to the homepage",
     "endpoint": "/",
     "tokens": [
-      "i",
-      "want",
-      "to",
+      "privation",
       "go",
-      "to",
-      "the",
-      "homepage"
+      "home_page"
     ]
   },
   {
@@ -1403,7 +1128,6 @@
     "endpoint": "/",
     "tokens": [
       "load",
-      "the",
       "home",
       "page"
     ]
@@ -1412,10 +1136,8 @@
     "command": "Can I go back home?",
     "endpoint": "/",
     "tokens": [
-      "can",
-      "i",
       "go",
-      "back",
+      "back(a)",
       "home"
     ]
   },
@@ -1423,9 +1145,8 @@
     "command": "Navigate back to home",
     "endpoint": "/",
     "tokens": [
-      "navigate",
-      "back",
-      "to",
+      "voyage",
+      "back(a)",
       "home"
     ]
   },
@@ -1434,8 +1155,6 @@
     "endpoint": "/",
     "tokens": [
       "where",
-      "is",
-      "the",
       "main",
       "page"
     ]
@@ -1445,34 +1164,25 @@
     "endpoint": "/",
     "tokens": [
       "bring",
-      "me",
-      "back",
-      "to",
-      "the",
-      "homepage"
+      "back(a)",
+      "home_page"
     ]
   },
   {
     "command": "Take me back to home please",
     "endpoint": "/",
     "tokens": [
-      "take",
-      "me",
-      "back",
-      "to",
-      "home",
-      "please"
+      "return",
+      "back(a)",
+      "home"
     ]
   },
   {
     "command": "I need to see the home page",
     "endpoint": "/",
     "tokens": [
-      "i",
-      "need",
-      "to",
+      "necessitate",
       "see",
-      "the",
       "home",
       "page"
     ]
@@ -1482,9 +1192,7 @@
     "endpoint": "/",
     "tokens": [
       "restart",
-      "and",
       "go",
-      "to",
       "home"
     ]
   },
@@ -1493,7 +1201,6 @@
     "endpoint": "/doctors",
     "tokens": [
       "go",
-      "to",
       "doctors"
     ]
   },
@@ -1502,8 +1209,6 @@
     "endpoint": "/doctors",
     "tokens": [
       "show",
-      "me",
-      "the",
       "doctors"
     ]
   },
@@ -1511,10 +1216,7 @@
     "command": "Take me to the doctors page",
     "endpoint": "/doctors",
     "tokens": [
-      "take",
-      "me",
-      "to",
-      "the",
+      "return",
       "doctors",
       "page"
     ]
@@ -1523,7 +1225,7 @@
     "command": "Find available doctors",
     "endpoint": "/doctors",
     "tokens": [
-      "find",
+      "discovery",
       "available",
       "doctors"
     ]
@@ -1532,9 +1234,8 @@
     "command": "Doctor list please",
     "endpoint": "/doctors",
     "tokens": [
-      "doctor",
-      "list",
-      "please"
+      "sophisticate",
+      "list"
     ]
   },
   {
@@ -1543,7 +1244,6 @@
     "tokens": [
       "where",
       "are",
-      "the",
       "doctors"
     ]
   },
@@ -1551,11 +1251,9 @@
     "command": "Navigate to the doctors section",
     "endpoint": "/doctors",
     "tokens": [
-      "navigate",
-      "to",
-      "the",
+      "voyage",
       "doctors",
-      "section"
+      "segment"
     ]
   },
   {
@@ -1563,7 +1261,7 @@
     "endpoint": "/doctors",
     "tokens": [
       "show",
-      "all",
+      "wholly",
       "doctors"
     ]
   },
@@ -1571,11 +1269,8 @@
     "command": "Take me to the doctor list",
     "endpoint": "/doctors",
     "tokens": [
-      "take",
-      "me",
-      "to",
-      "the",
-      "doctor",
+      "return",
+      "sophisticate",
       "list"
     ]
   },
@@ -1583,11 +1278,8 @@
     "command": "I need to see the doctors",
     "endpoint": "/doctors",
     "tokens": [
-      "i",
-      "need",
-      "to",
+      "necessitate",
       "see",
-      "the",
       "doctors"
     ]
   },
@@ -1595,10 +1287,8 @@
     "command": "Find me a doctor",
     "endpoint": "/doctors",
     "tokens": [
-      "find",
-      "me",
-      "a",
-      "doctor"
+      "discovery",
+      "sophisticate"
     ]
   },
   {
@@ -1623,7 +1313,7 @@
     "command": "Doctor directory",
     "endpoint": "/doctors",
     "tokens": [
-      "doctor",
+      "sophisticate",
       "directory"
     ]
   },
@@ -1632,8 +1322,8 @@
     "endpoint": "/doctors",
     "tokens": [
       "check",
-      "doctor",
-      "availability"
+      "sophisticate",
+      "handiness"
     ]
   },
   {
@@ -1642,19 +1332,14 @@
     "tokens": [
       "list",
       "of",
-      "doctors",
-      "please"
+      "doctors"
     ]
   },
   {
     "command": "Can you show me the doctors?",
     "endpoint": "/doctors",
     "tokens": [
-      "can",
-      "you",
       "show",
-      "me",
-      "the",
       "doctors"
     ]
   },
@@ -1663,16 +1348,14 @@
     "endpoint": "/doctors",
     "tokens": [
       "search",
-      "for",
-      "a",
-      "doctor"
+      "sophisticate"
     ]
   },
   {
     "command": "Doctor profiles",
     "endpoint": "/doctors",
     "tokens": [
-      "doctor",
+      "sophisticate",
       "profiles"
     ]
   },
@@ -1680,7 +1363,7 @@
     "command": "Medical professionals list",
     "endpoint": "/doctors",
     "tokens": [
-      "medical",
+      "checkup",
       "professionals",
       "list"
     ]
@@ -1689,7 +1372,7 @@
     "command": "View doctors",
     "endpoint": "/doctors",
     "tokens": [
-      "view",
+      "see",
       "doctors"
     ]
   },
@@ -1697,11 +1380,8 @@
     "command": "I want to see the doctors",
     "endpoint": "/doctors",
     "tokens": [
-      "i",
-      "want",
-      "to",
+      "privation",
       "see",
-      "the",
       "doctors"
     ]
   },
@@ -1709,10 +1389,7 @@
     "command": "Can I get a list of doctors?",
     "endpoint": "/doctors",
     "tokens": [
-      "can",
-      "i",
       "get",
-      "a",
       "list",
       "of",
       "doctors"
@@ -1723,20 +1400,16 @@
     "endpoint": "/doctors",
     "tokens": [
       "doctors",
-      "section",
-      "please"
+      "segment"
     ]
   },
   {
     "command": "I need a doctor, show me options",
     "endpoint": "/doctors",
     "tokens": [
-      "i",
-      "need",
-      "a",
-      "doctor",
+      "necessitate",
+      "sophisticate",
       "show",
-      "me",
       "options"
     ]
   },
@@ -1744,7 +1417,7 @@
     "command": "Doctor search",
     "endpoint": "/doctors",
     "tokens": [
-      "doctor",
+      "sophisticate",
       "search"
     ]
   },
@@ -1752,9 +1425,8 @@
     "command": "Navigate to doctor profiles",
     "endpoint": "/doctors",
     "tokens": [
-      "navigate",
-      "to",
-      "doctor",
+      "voyage",
+      "sophisticate",
       "profiles"
     ]
   },
@@ -1762,7 +1434,7 @@
     "command": "Find specialists",
     "endpoint": "/doctors",
     "tokens": [
-      "find",
+      "discovery",
       "specialists"
     ]
   },
@@ -1770,20 +1442,15 @@
     "command": "Look for a physician",
     "endpoint": "/doctors",
     "tokens": [
-      "look",
-      "for",
-      "a",
-      "physician"
+      "expression",
+      "doctor"
     ]
   },
   {
     "command": "Take me to the healthcare professionals",
     "endpoint": "/doctors",
     "tokens": [
-      "take",
-      "me",
-      "to",
-      "the",
+      "return",
       "healthcare",
       "professionals"
     ]
@@ -1793,9 +1460,8 @@
     "endpoint": "/doctors",
     "tokens": [
       "show",
-      "the",
-      "doctor",
-      "listing"
+      "sophisticate",
+      "list"
     ]
   },
   {
@@ -1804,7 +1470,7 @@
     "tokens": [
       "list",
       "of",
-      "medical",
+      "checkup",
       "experts"
     ]
   },
@@ -1813,11 +1479,8 @@
     "endpoint": "/doctors",
     "tokens": [
       "where",
-      "can",
-      "i",
-      "find",
-      "a",
-      "doctor"
+      "discovery",
+      "sophisticate"
     ]
   },
   {
@@ -1834,9 +1497,7 @@
     "endpoint": "/doctors",
     "tokens": [
       "get",
-      "me",
-      "a",
-      "doctor"
+      "sophisticate"
     ]
   },
   {
@@ -1846,7 +1507,7 @@
       "which",
       "doctors",
       "are",
-      "online"
+      "on-line"
     ]
   },
   {
@@ -1854,18 +1515,15 @@
     "endpoint": "/doctors",
     "tokens": [
       "show",
-      "doctor",
-      "availability"
+      "sophisticate",
+      "handiness"
     ]
   },
   {
     "command": "Take me to the specialist list",
     "endpoint": "/doctors",
     "tokens": [
-      "take",
-      "me",
-      "to",
-      "the",
+      "return",
       "specialist",
       "list"
     ]
@@ -1874,21 +1532,16 @@
     "command": "I need to consult a doctor",
     "endpoint": "/doctors",
     "tokens": [
-      "i",
-      "need",
-      "to",
+      "necessitate",
       "consult",
-      "a",
-      "doctor"
+      "sophisticate"
     ]
   },
   {
     "command": "Find me a health professional",
     "endpoint": "/doctors",
     "tokens": [
-      "find",
-      "me",
-      "a",
+      "discovery",
       "health",
       "professional"
     ]
@@ -1900,28 +1553,22 @@
       "show",
       "doctors",
       "by",
-      "specialty"
+      "forte"
     ]
   },
   {
     "command": "Find a physician for me",
     "endpoint": "/doctors",
     "tokens": [
-      "find",
-      "a",
-      "physician",
-      "for",
-      "me"
+      "discovery",
+      "doctor"
     ]
   },
   {
     "command": "Take me to the doctors directory",
     "endpoint": "/doctors",
     "tokens": [
-      "take",
-      "me",
-      "to",
-      "the",
+      "return",
       "doctors",
       "directory"
     ]
@@ -1931,7 +1578,7 @@
     "endpoint": "/doctors",
     "tokens": [
       "browse",
-      "medical",
+      "checkup",
       "professionals"
     ]
   },
@@ -1939,11 +1586,9 @@
     "command": "I want to see all doctors",
     "endpoint": "/doctors",
     "tokens": [
-      "i",
-      "want",
-      "to",
+      "privation",
       "see",
-      "all",
+      "wholly",
       "doctors"
     ]
   },
@@ -1953,8 +1598,7 @@
     "tokens": [
       "lets",
       "check",
-      "the",
-      "doctor",
+      "sophisticate",
       "list"
     ]
   },
@@ -1963,8 +1607,6 @@
     "endpoint": "/doctors",
     "tokens": [
       "show",
-      "me",
-      "the",
       "available",
       "doctors"
     ]
@@ -1973,8 +1615,8 @@
     "command": "Doctor availability check",
     "endpoint": "/doctors",
     "tokens": [
-      "doctor",
-      "availability",
+      "sophisticate",
+      "handiness",
       "check"
     ]
   },
@@ -1983,7 +1625,7 @@
     "endpoint": "/doctors",
     "tokens": [
       "show",
-      "doctor",
+      "sophisticate",
       "schedules"
     ]
   },
@@ -1991,11 +1633,8 @@
     "command": "Find an expert for my problem",
     "endpoint": "/doctors",
     "tokens": [
-      "find",
-      "an",
-      "expert",
-      "for",
-      "my",
+      "discovery",
+      "adept",
       "problem"
     ]
   },
@@ -2003,10 +1642,7 @@
     "command": "Can I get a specialist?",
     "endpoint": "/doctors",
     "tokens": [
-      "can",
-      "i",
       "get",
-      "a",
       "specialist"
     ]
   },
@@ -2015,7 +1651,6 @@
     "endpoint": "/doctors",
     "tokens": [
       "search",
-      "for",
       "available",
       "physicians"
     ]
@@ -2024,11 +1659,8 @@
     "command": "Take me to the medical team",
     "endpoint": "/doctors",
     "tokens": [
-      "take",
-      "me",
-      "to",
-      "the",
-      "medical",
+      "return",
+      "checkup",
       "team"
     ]
   },
@@ -2037,7 +1669,7 @@
     "endpoint": "/doctors",
     "tokens": [
       "see",
-      "all",
+      "wholly",
       "available",
       "doctors"
     ]
@@ -2046,7 +1678,7 @@
     "command": "Doctor information page",
     "endpoint": "/doctors",
     "tokens": [
-      "doctor",
+      "sophisticate",
       "information",
       "page"
     ]
@@ -2055,11 +1687,8 @@
     "command": "Guide me to the doctor profiles",
     "endpoint": "/doctors",
     "tokens": [
-      "guide",
-      "me",
-      "to",
-      "the",
-      "doctor",
+      "steer",
+      "sophisticate",
       "profiles"
     ]
   },
@@ -2068,8 +1697,6 @@
     "endpoint": "/doctors",
     "tokens": [
       "show",
-      "me",
-      "the",
       "specialists"
     ]
   },
@@ -2077,11 +1704,9 @@
     "command": "I need a specialist doctor",
     "endpoint": "/doctors",
     "tokens": [
-      "i",
-      "need",
-      "a",
+      "necessitate",
       "specialist",
-      "doctor"
+      "sophisticate"
     ]
   },
   {
@@ -2089,9 +1714,8 @@
     "endpoint": "/doctors",
     "tokens": [
       "show",
-      "the",
       "hospitals",
-      "doctor",
+      "sophisticate",
       "list"
     ]
   },
@@ -2100,10 +1724,9 @@
     "endpoint": "/doctors",
     "tokens": [
       "lets",
-      "find",
-      "the",
+      "discovery",
       "right",
-      "doctor"
+      "sophisticate"
     ]
   },
   {
@@ -2111,21 +1734,17 @@
     "endpoint": "/doctors",
     "tokens": [
       "search",
-      "doctor",
-      "availability",
-      "for",
-      "me"
+      "sophisticate",
+      "handiness"
     ]
   },
   {
     "command": "Navigate to the doctor section",
     "endpoint": "/doctors",
     "tokens": [
-      "navigate",
-      "to",
-      "the",
-      "doctor",
-      "section"
+      "voyage",
+      "sophisticate",
+      "segment"
     ]
   },
   {
@@ -2135,7 +1754,6 @@
       "which",
       "doctors",
       "are",
-      "on",
       "duty"
     ]
   },
@@ -2143,11 +1761,8 @@
     "command": "Take me to the doctor finder",
     "endpoint": "/doctors",
     "tokens": [
-      "take",
-      "me",
-      "to",
-      "the",
-      "doctor",
+      "return",
+      "sophisticate",
       "finder"
     ]
   },
@@ -2156,9 +1771,7 @@
     "endpoint": "/doctors",
     "tokens": [
       "get",
-      "a",
-      "doctor",
-      "for",
+      "sophisticate",
       "consultation"
     ]
   },
@@ -2167,8 +1780,7 @@
     "endpoint": "/doctors",
     "tokens": [
       "search",
-      "the",
-      "doctor",
+      "sophisticate",
       "database"
     ]
   },
@@ -2177,25 +1789,19 @@
     "endpoint": "/doctors",
     "tokens": [
       "where",
-      "can",
-      "i",
       "consult",
-      "a",
-      "doctor"
+      "sophisticate"
     ]
   },
   {
     "command": "Find a doctor who specializes in my issue",
     "endpoint": "/doctors",
     "tokens": [
-      "find",
-      "a",
-      "doctor",
-      "who",
+      "discovery",
+      "sophisticate",
+      "World_Health_Organization",
       "specializes",
-      "in",
-      "my",
-      "issue"
+      "publish"
     ]
   },
   {
@@ -2203,10 +1809,7 @@
     "endpoint": "/doctors",
     "tokens": [
       "show",
-      "me",
       "doctors",
-      "in",
-      "my",
       "area"
     ]
   },
@@ -2215,7 +1818,6 @@
     "endpoint": "/doctors",
     "tokens": [
       "search",
-      "for",
       "doctors",
       "nearby"
     ]
@@ -2224,10 +1826,9 @@
     "command": "Find a hospital doctor",
     "endpoint": "/doctors",
     "tokens": [
-      "find",
-      "a",
+      "discovery",
       "hospital",
-      "doctor"
+      "sophisticate"
     ]
   },
   {
@@ -2246,9 +1847,8 @@
     "endpoint": "/doctors",
     "tokens": [
       "browse",
-      "through",
-      "the",
-      "doctor",
+      "done",
+      "sophisticate",
       "list"
     ]
   },
@@ -2259,7 +1859,7 @@
       "which",
       "doctors",
       "are",
-      "currently",
+      "presently",
       "available"
     ]
   },
@@ -2268,7 +1868,6 @@
     "endpoint": "/doctors",
     "tokens": [
       "search",
-      "for",
       "experienced",
       "doctors"
     ]
@@ -2277,12 +1876,9 @@
     "command": "Find the best doctor for me",
     "endpoint": "/doctors",
     "tokens": [
-      "find",
-      "the",
-      "best",
-      "doctor",
-      "for",
-      "me"
+      "discovery",
+      "outdo",
+      "sophisticate"
     ]
   },
   {
@@ -2290,7 +1886,6 @@
     "endpoint": "/doctors",
     "tokens": [
       "show",
-      "me",
       "toprated",
       "doctors"
     ]
@@ -2299,11 +1894,8 @@
     "command": "Take me to the best doctors",
     "endpoint": "/doctors",
     "tokens": [
-      "take",
-      "me",
-      "to",
-      "the",
-      "best",
+      "return",
+      "outdo",
       "doctors"
     ]
   },
@@ -2312,9 +1904,7 @@
     "endpoint": "/doctors",
     "tokens": [
       "give",
-      "me",
       "options",
-      "for",
       "available",
       "doctors"
     ]
@@ -2323,11 +1913,9 @@
     "command": "Let me see the doctor list now",
     "endpoint": "/doctors",
     "tokens": [
-      "let",
-      "me",
+      "Lashkar-e-Taiba",
       "see",
-      "the",
-      "doctor",
+      "sophisticate",
       "list",
       "now"
     ]
@@ -2337,7 +1925,6 @@
     "endpoint": "/login",
     "tokens": [
       "go",
-      "to",
       "login"
     ]
   },
@@ -2345,10 +1932,7 @@
     "command": "Take me to the login page",
     "endpoint": "/login",
     "tokens": [
-      "take",
-      "me",
-      "to",
-      "the",
+      "return",
       "login",
       "page"
     ]
@@ -2357,30 +1941,22 @@
     "command": "Log me in",
     "endpoint": "/login",
     "tokens": [
-      "log",
-      "me",
-      "in"
+      "log"
     ]
   },
   {
     "command": "I want to log in",
     "endpoint": "/login",
     "tokens": [
-      "i",
-      "want",
-      "to",
-      "log",
-      "in"
+      "privation",
+      "log"
     ]
   },
   {
     "command": "Please log me in",
     "endpoint": "/login",
     "tokens": [
-      "please",
-      "log",
-      "me",
-      "in"
+      "log"
     ]
   },
   {
@@ -2396,8 +1972,7 @@
     "command": "Navigate to login",
     "endpoint": "/login",
     "tokens": [
-      "navigate",
-      "to",
+      "voyage",
       "login"
     ]
   },
@@ -2405,11 +1980,8 @@
     "command": "Take me to sign in",
     "endpoint": "/login",
     "tokens": [
-      "take",
-      "me",
-      "to",
-      "sign",
-      "in"
+      "return",
+      "gestural"
     ]
   },
   {
@@ -2417,8 +1989,6 @@
     "endpoint": "/login",
     "tokens": [
       "go",
-      "to",
-      "the",
       "signin",
       "page"
     ]
@@ -2427,8 +1997,7 @@
     "command": "Sign in now",
     "endpoint": "/login",
     "tokens": [
-      "sign",
-      "in",
+      "gestural",
       "now"
     ]
   },
@@ -2437,8 +2006,6 @@
     "endpoint": "/login",
     "tokens": [
       "show",
-      "me",
-      "the",
       "login",
       "screen"
     ]
@@ -2448,8 +2015,6 @@
     "endpoint": "/login",
     "tokens": [
       "where",
-      "is",
-      "the",
       "login"
     ]
   },
@@ -2457,21 +2022,15 @@
     "command": "Can I log in?",
     "endpoint": "/login",
     "tokens": [
-      "can",
-      "i",
-      "log",
-      "in"
+      "log"
     ]
   },
   {
     "command": "I need to sign in",
     "endpoint": "/login",
     "tokens": [
-      "i",
-      "need",
-      "to",
-      "sign",
-      "in"
+      "necessitate",
+      "gestural"
     ]
   },
   {
@@ -2479,29 +2038,22 @@
     "endpoint": "/login",
     "tokens": [
       "login",
-      "screen",
-      "please"
+      "screen"
     ]
   },
   {
     "command": "Help me log in",
     "endpoint": "/login",
     "tokens": [
-      "help",
-      "me",
-      "log",
-      "in"
+      "aid",
+      "log"
     ]
   },
   {
     "command": "Can you log me in?",
     "endpoint": "/login",
     "tokens": [
-      "can",
-      "you",
-      "log",
-      "me",
-      "in"
+      "log"
     ]
   },
   {
@@ -2510,7 +2062,6 @@
     "tokens": [
       "log",
       "into",
-      "my",
       "account"
     ]
   },
@@ -2518,10 +2069,7 @@
     "command": "Take me to my login page",
     "endpoint": "/login",
     "tokens": [
-      "take",
-      "me",
-      "to",
-      "my",
+      "return",
       "login",
       "page"
     ]
@@ -2531,32 +2079,24 @@
     "endpoint": "/login",
     "tokens": [
       "where",
-      "do",
-      "i",
-      "sign",
-      "in"
+      "bash",
+      "gestural"
     ]
   },
   {
     "command": "I need access, log me in",
     "endpoint": "/login",
     "tokens": [
-      "i",
-      "need",
+      "necessitate",
       "access",
-      "log",
-      "me",
-      "in"
+      "log"
     ]
   },
   {
     "command": "Please take me to login",
     "endpoint": "/login",
     "tokens": [
-      "please",
-      "take",
-      "me",
-      "to",
+      "return",
       "login"
     ]
   },
@@ -2565,7 +2105,6 @@
     "endpoint": "/login",
     "tokens": [
       "show",
-      "the",
       "signin",
       "page"
     ]
@@ -2575,9 +2114,6 @@
     "endpoint": "/login",
     "tokens": [
       "get",
-      "me",
-      "to",
-      "the",
       "login",
       "screen"
     ]
@@ -2586,11 +2122,8 @@
     "command": "I want to sign in now",
     "endpoint": "/login",
     "tokens": [
-      "i",
-      "want",
-      "to",
-      "sign",
-      "in",
+      "privation",
+      "gestural",
       "now"
     ]
   },
@@ -2599,8 +2132,6 @@
     "endpoint": "/login",
     "tokens": [
       "login",
-      "to",
-      "my",
       "profile"
     ]
   },
@@ -2609,21 +2140,16 @@
     "endpoint": "/login",
     "tokens": [
       "how",
-      "do",
-      "i",
-      "log",
-      "in"
+      "bash",
+      "log"
     ]
   },
   {
     "command": "I need to log in now",
     "endpoint": "/login",
     "tokens": [
-      "i",
-      "need",
-      "to",
+      "necessitate",
       "log",
-      "in",
       "now"
     ]
   },
@@ -2631,12 +2157,7 @@
     "command": "Can you take me to the login page?",
     "endpoint": "/login",
     "tokens": [
-      "can",
-      "you",
-      "take",
-      "me",
-      "to",
-      "the",
+      "return",
       "login",
       "page"
     ]
@@ -2645,10 +2166,7 @@
     "command": "Take me to my account login",
     "endpoint": "/login",
     "tokens": [
-      "take",
-      "me",
-      "to",
-      "my",
+      "return",
       "account",
       "login"
     ]
@@ -2658,8 +2176,7 @@
     "endpoint": "/login",
     "tokens": [
       "go",
-      "back",
-      "to",
+      "back(a)",
       "login"
     ]
   },
@@ -2667,9 +2184,7 @@
     "command": "Return to the login page",
     "endpoint": "/login",
     "tokens": [
-      "return",
-      "to",
-      "the",
+      "tax_return",
       "login",
       "page"
     ]
@@ -2679,7 +2194,6 @@
     "endpoint": "/login",
     "tokens": [
       "go",
-      "to",
       "account",
       "login"
     ]
@@ -2688,9 +2202,7 @@
     "command": "I need my login page",
     "endpoint": "/login",
     "tokens": [
-      "i",
-      "need",
-      "my",
+      "necessitate",
       "login",
       "page"
     ]
@@ -2700,8 +2212,6 @@
     "endpoint": "/login",
     "tokens": [
       "redirect",
-      "me",
-      "to",
       "login"
     ]
   },
@@ -2710,8 +2220,6 @@
     "endpoint": "/login",
     "tokens": [
       "show",
-      "me",
-      "the",
       "authentication",
       "page"
     ]
@@ -2720,9 +2228,7 @@
     "command": "Take me to authentication",
     "endpoint": "/login",
     "tokens": [
-      "take",
-      "me",
-      "to",
+      "return",
       "authentication"
     ]
   },
@@ -2730,8 +2236,7 @@
     "command": "Find my login",
     "endpoint": "/login",
     "tokens": [
-      "find",
-      "my",
+      "discovery",
       "login"
     ]
   },
@@ -2740,7 +2245,6 @@
     "endpoint": "/login",
     "tokens": [
       "open",
-      "my",
       "signin",
       "page"
     ]
@@ -2750,9 +2254,7 @@
     "endpoint": "/login",
     "tokens": [
       "give",
-      "me",
       "access",
-      "to",
       "login"
     ]
   },
@@ -2761,26 +2263,21 @@
     "endpoint": "/login",
     "tokens": [
       "lets",
-      "log",
-      "in"
+      "log"
     ]
   },
   {
     "command": "Login please",
     "endpoint": "/login",
     "tokens": [
-      "login",
-      "please"
+      "login"
     ]
   },
   {
     "command": "Can I sign in now?",
     "endpoint": "/login",
     "tokens": [
-      "can",
-      "i",
-      "sign",
-      "in",
+      "gestural",
       "now"
     ]
   },
@@ -2788,12 +2285,9 @@
     "command": "I am ready to log in",
     "endpoint": "/login",
     "tokens": [
-      "i",
-      "am",
+      "americium",
       "ready",
-      "to",
-      "log",
-      "in"
+      "log"
     ]
   },
   {
@@ -2801,22 +2295,16 @@
     "endpoint": "/login",
     "tokens": [
       "where",
-      "do",
-      "i",
-      "log",
-      "in"
+      "bash",
+      "log"
     ]
   },
   {
     "command": "Please take me to sign in",
     "endpoint": "/login",
     "tokens": [
-      "please",
-      "take",
-      "me",
-      "to",
-      "sign",
-      "in"
+      "return",
+      "gestural"
     ]
   },
   {
@@ -2824,7 +2312,6 @@
     "endpoint": "/login",
     "tokens": [
       "show",
-      "my",
       "login"
     ]
   },
@@ -2841,11 +2328,8 @@
     "command": "I want to access my account",
     "endpoint": "/login",
     "tokens": [
-      "i",
-      "want",
-      "to",
+      "privation",
       "access",
-      "my",
       "account"
     ]
   },
@@ -2853,9 +2337,7 @@
     "command": "Take me to user login",
     "endpoint": "/login",
     "tokens": [
-      "take",
-      "me",
-      "to",
+      "return",
       "user",
       "login"
     ]
@@ -2873,10 +2355,8 @@
     "command": "Take me back to login",
     "endpoint": "/login",
     "tokens": [
-      "take",
-      "me",
-      "back",
-      "to",
+      "return",
+      "back(a)",
       "login"
     ]
   },
@@ -2884,8 +2364,7 @@
     "command": "I need login access",
     "endpoint": "/login",
     "tokens": [
-      "i",
-      "need",
+      "necessitate",
       "login",
       "access"
     ]
@@ -2895,8 +2374,6 @@
     "endpoint": "/login",
     "tokens": [
       "go",
-      "to",
-      "the",
       "authentication",
       "screen"
     ]
@@ -2906,9 +2383,7 @@
     "endpoint": "/login",
     "tokens": [
       "login",
-      "to",
-      "my",
-      "dashboard"
+      "splashboard"
     ]
   },
   {
@@ -2916,7 +2391,6 @@
     "endpoint": "/login",
     "tokens": [
       "authenticate",
-      "my",
       "account"
     ]
   },
@@ -2924,10 +2398,7 @@
     "command": "Take me to the user portal",
     "endpoint": "/login",
     "tokens": [
-      "take",
-      "me",
-      "to",
-      "the",
+      "return",
       "user",
       "portal"
     ]
@@ -2936,23 +2407,17 @@
     "command": "I want to log into my dashboard",
     "endpoint": "/login",
     "tokens": [
-      "i",
-      "want",
-      "to",
+      "privation",
       "log",
       "into",
-      "my",
-      "dashboard"
+      "splashboard"
     ]
   },
   {
     "command": "Take me to my account page",
     "endpoint": "/login",
     "tokens": [
-      "take",
-      "me",
-      "to",
-      "my",
+      "return",
       "account",
       "page"
     ]
@@ -2962,7 +2427,6 @@
     "endpoint": "/login",
     "tokens": [
       "access",
-      "my",
       "user",
       "account"
     ]
@@ -2971,10 +2435,7 @@
     "command": "Sign in to my profile",
     "endpoint": "/login",
     "tokens": [
-      "sign",
-      "in",
-      "to",
-      "my",
+      "gestural",
       "profile"
     ]
   },
@@ -2983,20 +2444,15 @@
     "endpoint": "/login",
     "tokens": [
       "log",
-      "me",
       "into",
-      "my",
-      "dashboard"
+      "splashboard"
     ]
   },
   {
     "command": "Take me to the secure login",
     "endpoint": "/login",
     "tokens": [
-      "take",
-      "me",
-      "to",
-      "the",
+      "return",
       "secure",
       "login"
     ]
@@ -3006,8 +2462,7 @@
     "endpoint": "/login",
     "tokens": [
       "secure",
-      "authentication",
-      "please"
+      "authentication"
     ]
   },
   {
@@ -3016,7 +2471,6 @@
     "tokens": [
       "lets",
       "go",
-      "to",
       "login"
     ]
   },
@@ -3024,19 +2478,15 @@
     "command": "Help me sign in",
     "endpoint": "/login",
     "tokens": [
-      "help",
-      "me",
-      "sign",
-      "in"
+      "aid",
+      "gestural"
     ]
   },
   {
     "command": "Direct me to login",
     "endpoint": "/login",
     "tokens": [
-      "direct",
-      "me",
-      "to",
+      "directly",
       "login"
     ]
   },
@@ -3045,10 +2495,8 @@
     "endpoint": "/login",
     "tokens": [
       "how",
-      "do",
-      "i",
-      "sign",
-      "in"
+      "bash",
+      "gestural"
     ]
   },
   {
@@ -3056,8 +2504,6 @@
     "endpoint": "/login",
     "tokens": [
       "go",
-      "to",
-      "the",
       "login",
       "portal"
     ]
@@ -3066,12 +2512,9 @@
     "command": "I need to access my dashboard",
     "endpoint": "/login",
     "tokens": [
-      "i",
-      "need",
-      "to",
+      "necessitate",
       "access",
-      "my",
-      "dashboard"
+      "splashboard"
     ]
   },
   {
@@ -3079,8 +2522,6 @@
     "endpoint": "/login",
     "tokens": [
       "where",
-      "is",
-      "the",
       "signin",
       "button"
     ]
@@ -3090,11 +2531,8 @@
     "endpoint": "/login",
     "tokens": [
       "show",
-      "me",
       "how",
-      "to",
-      "log",
-      "in"
+      "log"
     ]
   },
   {
@@ -3102,7 +2540,6 @@
     "endpoint": "/login",
     "tokens": [
       "open",
-      "my",
       "signin",
       "portal"
     ]
@@ -3112,8 +2549,6 @@
     "endpoint": "/login",
     "tokens": [
       "go",
-      "to",
-      "the",
       "secure",
       "login",
       "page"
@@ -3123,10 +2558,7 @@
     "command": "Take me to my profile login",
     "endpoint": "/login",
     "tokens": [
-      "take",
-      "me",
-      "to",
-      "my",
+      "return",
       "profile",
       "login"
     ]
@@ -3146,7 +2578,6 @@
     "tokens": [
       "lets",
       "get",
-      "to",
       "login"
     ]
   },
@@ -3154,9 +2585,7 @@
     "command": "Sign me in now",
     "endpoint": "/login",
     "tokens": [
-      "sign",
-      "me",
-      "in",
+      "gestural",
       "now"
     ]
   },
@@ -3165,21 +2594,15 @@
     "endpoint": "/login",
     "tokens": [
       "where",
-      "can",
-      "i",
-      "log",
-      "in"
+      "log"
     ]
   },
   {
     "command": "Help me get to the login screen",
     "endpoint": "/login",
     "tokens": [
-      "help",
-      "me",
+      "aid",
       "get",
-      "to",
-      "the",
       "login",
       "screen"
     ]
@@ -3188,11 +2611,8 @@
     "command": "I want to enter my account",
     "endpoint": "/login",
     "tokens": [
-      "i",
-      "want",
-      "to",
+      "privation",
       "enter",
-      "my",
       "account"
     ]
   },
@@ -3201,9 +2621,7 @@
     "endpoint": "/login",
     "tokens": [
       "log",
-      "me",
       "into",
-      "my",
       "profile"
     ]
   },
@@ -3211,9 +2629,7 @@
     "command": "Navigate to my account login",
     "endpoint": "/login",
     "tokens": [
-      "navigate",
-      "to",
-      "my",
+      "voyage",
       "account",
       "login"
     ]
@@ -3223,7 +2639,6 @@
     "endpoint": "/login",
     "tokens": [
       "show",
-      "my",
       "account",
       "authentication",
       "page"
@@ -3233,9 +2648,7 @@
     "command": "Please authenticate my access",
     "endpoint": "/login",
     "tokens": [
-      "please",
       "authenticate",
-      "my",
       "access"
     ]
   },
@@ -3244,21 +2657,15 @@
     "endpoint": "/login",
     "tokens": [
       "redirect",
-      "me",
-      "to",
-      "the",
       "login",
-      "section"
+      "segment"
     ]
   },
   {
     "command": "Guide me to the login page",
     "endpoint": "/login",
     "tokens": [
-      "guide",
-      "me",
-      "to",
-      "the",
+      "steer",
       "login",
       "page"
     ]
@@ -3268,19 +2675,15 @@
     "endpoint": "/about",
     "tokens": [
       "go",
-      "to",
-      "about"
+      "about(p)"
     ]
   },
   {
     "command": "Take me to the about page",
     "endpoint": "/about",
     "tokens": [
-      "take",
-      "me",
-      "to",
-      "the",
-      "about",
+      "return",
+      "about(p)",
       "page"
     ]
   },
@@ -3289,9 +2692,7 @@
     "endpoint": "/about",
     "tokens": [
       "show",
-      "me",
-      "the",
-      "about",
+      "about(p)",
       "page"
     ]
   },
@@ -3299,18 +2700,16 @@
     "command": "Navigate to about",
     "endpoint": "/about",
     "tokens": [
-      "navigate",
-      "to",
-      "about"
+      "voyage",
+      "about(p)"
     ]
   },
   {
     "command": "Tell me about this",
     "endpoint": "/about",
     "tokens": [
-      "tell",
-      "me",
-      "about",
+      "Tell",
+      "about(p)",
       "this"
     ]
   },
@@ -3318,13 +2717,11 @@
     "command": "I want to know about this site",
     "endpoint": "/about",
     "tokens": [
-      "i",
-      "want",
-      "to",
+      "privation",
       "know",
-      "about",
+      "about(p)",
       "this",
-      "site"
+      "locate"
     ]
   },
   {
@@ -3332,9 +2729,8 @@
     "endpoint": "/about",
     "tokens": [
       "what",
-      "is",
       "this",
-      "about"
+      "about(p)"
     ]
   },
   {
@@ -3342,9 +2738,7 @@
     "endpoint": "/about",
     "tokens": [
       "where",
-      "is",
-      "the",
-      "about",
+      "about(p)",
       "page"
     ]
   },
@@ -3353,9 +2747,8 @@
     "endpoint": "/about",
     "tokens": [
       "give",
-      "me",
       "details",
-      "about",
+      "about(p)",
       "this",
       "platform"
     ]
@@ -3365,8 +2758,6 @@
     "endpoint": "/about",
     "tokens": [
       "show",
-      "me",
-      "the",
       "information",
       "page"
     ]
@@ -3375,10 +2766,7 @@
     "command": "Take me to the information page",
     "endpoint": "/about",
     "tokens": [
-      "take",
-      "me",
-      "to",
-      "the",
+      "return",
       "information",
       "page"
     ]
@@ -3388,8 +2776,8 @@
     "endpoint": "/about",
     "tokens": [
       "learn",
-      "more",
-      "about",
+      "More",
+      "about(p)",
       "this"
     ]
   },
@@ -3397,11 +2785,9 @@
     "command": "I want to read about this system",
     "endpoint": "/about",
     "tokens": [
-      "i",
-      "want",
-      "to",
+      "privation",
       "read",
-      "about",
+      "about(p)",
       "this",
       "system"
     ]
@@ -3410,10 +2796,9 @@
     "command": "Tell me more about this hospital",
     "endpoint": "/about",
     "tokens": [
-      "tell",
-      "me",
-      "more",
-      "about",
+      "Tell",
+      "More",
+      "about(p)",
       "this",
       "hospital"
     ]
@@ -3422,10 +2807,9 @@
     "command": "Find the about section",
     "endpoint": "/about",
     "tokens": [
-      "find",
-      "the",
-      "about",
-      "section"
+      "discovery",
+      "about(p)",
+      "segment"
     ]
   },
   {
@@ -3433,9 +2817,8 @@
     "endpoint": "/about",
     "tokens": [
       "open",
-      "the",
-      "about",
-      "us",
+      "about(p)",
+      "United_States",
       "page"
     ]
   },
@@ -3444,10 +2827,9 @@
     "endpoint": "/about",
     "tokens": [
       "what",
-      "is",
       "this",
       "hospital",
-      "about"
+      "about(p)"
     ]
   },
   {
@@ -3455,10 +2837,9 @@
     "endpoint": "/about",
     "tokens": [
       "show",
-      "me",
-      "more",
+      "More",
       "details",
-      "about",
+      "about(p)",
       "this",
       "platform"
     ]
@@ -3468,8 +2849,6 @@
     "endpoint": "/about",
     "tokens": [
       "give",
-      "me",
-      "an",
       "overview",
       "of",
       "this",
@@ -3491,10 +2870,7 @@
     "command": "Take me to the details page",
     "endpoint": "/about",
     "tokens": [
-      "take",
-      "me",
-      "to",
-      "the",
+      "return",
       "details",
       "page"
     ]
@@ -3504,11 +2880,9 @@
     "endpoint": "/about",
     "tokens": [
       "show",
-      "me",
       "what",
       "this",
-      "is",
-      "about"
+      "about(p)"
     ]
   },
   {
@@ -3516,9 +2890,8 @@
     "endpoint": "/about",
     "tokens": [
       "give",
-      "me",
       "information",
-      "about",
+      "about(p)",
       "this"
     ]
   },
@@ -3528,21 +2901,16 @@
     "tokens": [
       "explain",
       "this",
-      "system",
-      "to",
-      "me"
+      "system"
     ]
   },
   {
     "command": "I want to explore the about page",
     "endpoint": "/about",
     "tokens": [
-      "i",
-      "want",
-      "to",
-      "explore",
-      "the",
-      "about",
+      "privation",
+      "research",
+      "about(p)",
       "page"
     ]
   },
@@ -3550,12 +2918,8 @@
     "command": "Can you take me to about?",
     "endpoint": "/about",
     "tokens": [
-      "can",
-      "you",
-      "take",
-      "me",
-      "to",
-      "about"
+      "return",
+      "about(p)"
     ]
   },
   {
@@ -3563,8 +2927,6 @@
     "endpoint": "/about",
     "tokens": [
       "show",
-      "me",
-      "the",
       "platform",
       "details"
     ]
@@ -3574,11 +2936,9 @@
     "endpoint": "/about",
     "tokens": [
       "go",
-      "to",
-      "the",
-      "about",
-      "us",
-      "section"
+      "about(p)",
+      "United_States",
+      "segment"
     ]
   },
   {
@@ -3586,10 +2946,8 @@
     "endpoint": "/about",
     "tokens": [
       "where",
-      "can",
-      "i",
       "read",
-      "about",
+      "about(p)",
       "this"
     ]
   },
@@ -3598,21 +2956,17 @@
     "endpoint": "/about",
     "tokens": [
       "what",
-      "is",
       "this",
       "platform",
-      "used",
-      "for"
+      "used"
     ]
   },
   {
     "command": "Tell me the purpose of this app",
     "endpoint": "/about",
     "tokens": [
-      "tell",
-      "me",
-      "the",
-      "purpose",
+      "Tell",
+      "aim",
       "of",
       "this",
       "app"
@@ -3622,10 +2976,7 @@
     "command": "Take me to the system overview",
     "endpoint": "/about",
     "tokens": [
-      "take",
-      "me",
-      "to",
-      "the",
+      "return",
       "system",
       "overview"
     ]
@@ -3634,12 +2985,9 @@
     "command": "Navigate me to the about section",
     "endpoint": "/about",
     "tokens": [
-      "navigate",
-      "me",
-      "to",
-      "the",
-      "about",
-      "section"
+      "voyage",
+      "about(p)",
+      "segment"
     ]
   },
   {
@@ -3647,8 +2995,7 @@
     "endpoint": "/about",
     "tokens": [
       "whats",
-      "the",
-      "purpose",
+      "aim",
       "of",
       "this",
       "application"
@@ -3658,8 +3005,7 @@
     "command": "Help me understand this system",
     "endpoint": "/about",
     "tokens": [
-      "help",
-      "me",
+      "aid",
       "understand",
       "this",
       "system"
@@ -3669,11 +3015,10 @@
     "command": "I need more information about this",
     "endpoint": "/about",
     "tokens": [
-      "i",
-      "need",
-      "more",
+      "necessitate",
+      "More",
       "information",
-      "about",
+      "about(p)",
       "this"
     ]
   },
@@ -3682,7 +3027,7 @@
     "endpoint": "/about",
     "tokens": [
       "read",
-      "about",
+      "about(p)",
       "this",
       "system"
     ]
@@ -3692,8 +3037,6 @@
     "endpoint": "/about",
     "tokens": [
       "show",
-      "me",
-      "the",
       "introduction",
       "page"
     ]
@@ -3702,35 +3045,28 @@
     "command": "Take me to learn more",
     "endpoint": "/about",
     "tokens": [
-      "take",
-      "me",
-      "to",
+      "return",
       "learn",
-      "more"
+      "More"
     ]
   },
   {
     "command": "Find the about section for me",
     "endpoint": "/about",
     "tokens": [
-      "find",
-      "the",
-      "about",
-      "section",
-      "for",
-      "me"
+      "discovery",
+      "about(p)",
+      "segment"
     ]
   },
   {
     "command": "Discover what this system is for",
     "endpoint": "/about",
     "tokens": [
-      "discover",
+      "detect",
       "what",
       "this",
-      "system",
-      "is",
-      "for"
+      "system"
     ]
   },
   {
@@ -3748,9 +3084,8 @@
     "command": "Tell me about this service",
     "endpoint": "/about",
     "tokens": [
-      "tell",
-      "me",
-      "about",
+      "Tell",
+      "about(p)",
       "this",
       "service"
     ]
@@ -3759,10 +3094,9 @@
     "command": "I need details about this hospital",
     "endpoint": "/about",
     "tokens": [
-      "i",
-      "need",
+      "necessitate",
       "details",
-      "about",
+      "about(p)",
       "this",
       "hospital"
     ]
@@ -3772,12 +3106,11 @@
     "endpoint": "/about",
     "tokens": [
       "show",
-      "me",
       "how",
       "this",
       "hospital",
       "system",
-      "works"
+      "plant"
     ]
   },
   {
@@ -3785,7 +3118,6 @@
     "endpoint": "/about",
     "tokens": [
       "explain",
-      "the",
       "functionality",
       "of",
       "this",
@@ -3797,10 +3129,8 @@
     "endpoint": "/about",
     "tokens": [
       "where",
-      "can",
-      "i",
       "read",
-      "about",
+      "about(p)",
       "this",
       "hospital"
     ]
@@ -3809,9 +3139,8 @@
     "command": "Tell me about this platform’s features",
     "endpoint": "/about",
     "tokens": [
-      "tell",
-      "me",
-      "about",
+      "Tell",
+      "about(p)",
       "this",
       "platforms",
       "features"
@@ -3822,8 +3151,7 @@
     "endpoint": "/about",
     "tokens": [
       "show",
-      "the",
-      "about",
+      "about(p)",
       "page",
       "of",
       "this",
@@ -3835,8 +3163,8 @@
     "endpoint": "/about",
     "tokens": [
       "learn",
-      "more",
-      "about",
+      "More",
+      "about(p)",
       "this",
       "hospital",
       "management",
@@ -3847,12 +3175,9 @@
     "command": "Take me to the hospital’s about page",
     "endpoint": "/about",
     "tokens": [
-      "take",
-      "me",
-      "to",
-      "the",
+      "return",
       "hospitals",
-      "about",
+      "about(p)",
       "page"
     ]
   },
@@ -3860,12 +3185,10 @@
     "command": "I want to know more about this service",
     "endpoint": "/about",
     "tokens": [
-      "i",
-      "want",
-      "to",
+      "privation",
       "know",
-      "more",
-      "about",
+      "More",
+      "about(p)",
       "this",
       "service"
     ]
@@ -3875,10 +3198,9 @@
     "endpoint": "/about",
     "tokens": [
       "what",
-      "is",
       "this",
       "sites",
-      "purpose"
+      "aim"
     ]
   },
   {
@@ -3889,7 +3211,7 @@
       "does",
       "this",
       "system",
-      "help",
+      "aid",
       "patients"
     ]
   },
@@ -3900,21 +3222,17 @@
       "what",
       "does",
       "this",
-      "website",
-      "do"
+      "web_site",
+      "bash"
     ]
   },
   {
     "command": "Can you explain this application to me?",
     "endpoint": "/about",
     "tokens": [
-      "can",
-      "you",
       "explain",
       "this",
-      "application",
-      "to",
-      "me"
+      "application"
     ]
   },
   {
@@ -3922,10 +3240,7 @@
     "endpoint": "/about",
     "tokens": [
       "show",
-      "me",
-      "the",
       "mission",
-      "and",
       "vision",
       "of",
       "this",
@@ -3936,10 +3251,8 @@
     "command": "Tell me about the goals of this platform",
     "endpoint": "/about",
     "tokens": [
-      "tell",
-      "me",
-      "about",
-      "the",
+      "Tell",
+      "about(p)",
       "goals",
       "of",
       "this",
@@ -3951,7 +3264,6 @@
     "endpoint": "/about",
     "tokens": [
       "explain",
-      "the",
       "features",
       "of",
       "this",
@@ -3962,25 +3274,22 @@
     "command": "Help me understand the purpose of this site",
     "endpoint": "/about",
     "tokens": [
-      "help",
-      "me",
+      "aid",
       "understand",
-      "the",
-      "purpose",
+      "aim",
       "of",
       "this",
-      "site"
+      "locate"
     ]
   },
   {
     "command": "Navigate to learn more about this",
     "endpoint": "/about",
     "tokens": [
-      "navigate",
-      "to",
+      "voyage",
       "learn",
-      "more",
-      "about",
+      "More",
+      "about(p)",
       "this"
     ]
   },
@@ -3989,7 +3298,6 @@
     "endpoint": "/about",
     "tokens": [
       "give",
-      "me",
       "insights",
       "into",
       "this",
@@ -4002,10 +3310,8 @@
     "endpoint": "/about",
     "tokens": [
       "where",
-      "can",
-      "i",
       "learn",
-      "about",
+      "about(p)",
       "this",
       "healthcare",
       "service"
@@ -4016,10 +3322,10 @@
     "endpoint": "/about",
     "tokens": [
       "read",
-      "more",
-      "about",
+      "More",
+      "about(p)",
       "this",
-      "project"
+      "undertaking"
     ]
   },
   {
@@ -4037,23 +3343,19 @@
     "command": "I need details about how this works",
     "endpoint": "/about",
     "tokens": [
-      "i",
-      "need",
+      "necessitate",
       "details",
-      "about",
+      "about(p)",
       "how",
       "this",
-      "works"
+      "plant"
     ]
   },
   {
     "command": "Take me to the page that explains this",
     "endpoint": "/about",
     "tokens": [
-      "take",
-      "me",
-      "to",
-      "the",
+      "return",
       "page",
       "that",
       "explains",
@@ -4066,7 +3368,7 @@
     "tokens": [
       "get",
       "information",
-      "about",
+      "about(p)",
       "this",
       "hospital",
       "system"
@@ -4077,8 +3379,6 @@
     "endpoint": "/about",
     "tokens": [
       "show",
-      "me",
-      "the",
       "description",
       "of",
       "this",
@@ -4090,7 +3390,6 @@
     "endpoint": "/about",
     "tokens": [
       "open",
-      "the",
       "page",
       "that",
       "describes",
@@ -4102,13 +3401,11 @@
     "command": "I want to read about this online service",
     "endpoint": "/about",
     "tokens": [
-      "i",
-      "want",
-      "to",
+      "privation",
       "read",
-      "about",
+      "about(p)",
       "this",
-      "online",
+      "on-line",
       "service"
     ]
   },
@@ -4116,26 +3413,23 @@
     "command": "Tell me how this healthcare platform works",
     "endpoint": "/about",
     "tokens": [
-      "tell",
-      "me",
+      "Tell",
       "how",
       "this",
       "healthcare",
       "platform",
-      "works"
+      "plant"
     ]
   },
   {
     "command": "Find out what this app is for",
     "endpoint": "/about",
     "tokens": [
-      "find",
+      "discovery",
       "out",
       "what",
       "this",
-      "app",
-      "is",
-      "for"
+      "app"
     ]
   },
   {
@@ -4143,10 +3437,7 @@
     "endpoint": "/about",
     "tokens": [
       "where",
-      "can",
-      "i",
       "see",
-      "the",
       "details",
       "of",
       "this",
@@ -4159,7 +3450,6 @@
     "tokens": [
       "what",
       "are",
-      "the",
       "main",
       "functions",
       "of",
@@ -4171,11 +3461,9 @@
     "command": "Navigate to the introduction section",
     "endpoint": "/about",
     "tokens": [
-      "navigate",
-      "to",
-      "the",
+      "voyage",
       "introduction",
-      "section"
+      "segment"
     ]
   },
   {
@@ -4183,7 +3471,6 @@
     "endpoint": "/about",
     "tokens": [
       "show",
-      "me",
       "what",
       "this",
       "software",
@@ -4195,11 +3482,8 @@
     "endpoint": "/about",
     "tokens": [
       "give",
-      "me",
-      "an",
       "overview",
       "of",
-      "the",
       "services"
     ]
   },
@@ -4207,10 +3491,7 @@
     "command": "Take me to the information portal",
     "endpoint": "/about",
     "tokens": [
-      "take",
-      "me",
-      "to",
-      "the",
+      "return",
       "information",
       "portal"
     ]
@@ -4231,12 +3512,11 @@
     "command": "Help me learn about this medical platform",
     "endpoint": "/about",
     "tokens": [
-      "help",
-      "me",
+      "aid",
       "learn",
-      "about",
+      "about(p)",
       "this",
-      "medical",
+      "checkup",
       "platform"
     ]
   },
@@ -4244,23 +3524,20 @@
     "command": "Guide me to the about section",
     "endpoint": "/about",
     "tokens": [
-      "guide",
-      "me",
-      "to",
-      "the",
-      "about",
-      "section"
+      "steer",
+      "about(p)",
+      "segment"
     ]
   },
   {
     "command": "Find details about this medical system",
     "endpoint": "/about",
     "tokens": [
-      "find",
+      "discovery",
       "details",
-      "about",
+      "about(p)",
       "this",
-      "medical",
+      "checkup",
       "system"
     ]
   },
@@ -4270,8 +3547,7 @@
     "tokens": [
       "lets",
       "check",
-      "the",
-      "about",
+      "about(p)",
       "page"
     ]
   },
@@ -4280,9 +3556,7 @@
     "endpoint": "/about",
     "tokens": [
       "what",
-      "is",
-      "the",
-      "purpose",
+      "aim",
       "of",
       "this",
       "system"
@@ -4293,19 +3567,15 @@
     "endpoint": "/contact",
     "tokens": [
       "go",
-      "to",
-      "contact"
+      "reach"
     ]
   },
   {
     "command": "Take me to the contact page",
     "endpoint": "/contact",
     "tokens": [
-      "take",
-      "me",
-      "to",
-      "the",
-      "contact",
+      "return",
+      "reach",
       "page"
     ]
   },
@@ -4314,9 +3584,7 @@
     "endpoint": "/contact",
     "tokens": [
       "show",
-      "me",
-      "the",
-      "contact",
+      "reach",
       "page"
     ]
   },
@@ -4324,9 +3592,8 @@
     "command": "Navigate to contact",
     "endpoint": "/contact",
     "tokens": [
-      "navigate",
-      "to",
-      "contact"
+      "voyage",
+      "reach"
     ]
   },
   {
@@ -4334,9 +3601,7 @@
     "endpoint": "/contact",
     "tokens": [
       "where",
-      "is",
-      "the",
-      "contact",
+      "reach",
       "page"
     ]
   },
@@ -4345,9 +3610,8 @@
     "endpoint": "/contact",
     "tokens": [
       "how",
-      "do",
-      "i",
-      "contact",
+      "bash",
+      "reach",
       "support"
     ]
   },
@@ -4355,44 +3619,34 @@
     "command": "Take me to the contact section",
     "endpoint": "/contact",
     "tokens": [
-      "take",
-      "me",
-      "to",
-      "the",
-      "contact",
-      "section"
+      "return",
+      "reach",
+      "segment"
     ]
   },
   {
     "command": "Contact page please",
     "endpoint": "/contact",
     "tokens": [
-      "contact",
-      "page",
-      "please"
+      "reach",
+      "page"
     ]
   },
   {
     "command": "I need to contact someone",
     "endpoint": "/contact",
     "tokens": [
-      "i",
-      "need",
-      "to",
-      "contact",
-      "someone"
+      "necessitate",
+      "reach",
+      "person"
     ]
   },
   {
     "command": "Can you show me the contact details?",
     "endpoint": "/contact",
     "tokens": [
-      "can",
-      "you",
       "show",
-      "me",
-      "the",
-      "contact",
+      "reach",
       "details"
     ]
   },
@@ -4401,10 +3655,8 @@
     "endpoint": "/contact",
     "tokens": [
       "where",
-      "can",
-      "i",
-      "find",
-      "contact",
+      "discovery",
+      "reach",
       "information"
     ]
   },
@@ -4412,11 +3664,9 @@
     "command": "Help me find the contact page",
     "endpoint": "/contact",
     "tokens": [
-      "help",
-      "me",
-      "find",
-      "the",
-      "contact",
+      "aid",
+      "discovery",
+      "reach",
       "page"
     ]
   },
@@ -4425,10 +3675,8 @@
     "endpoint": "/contact",
     "tokens": [
       "how",
-      "do",
-      "i",
+      "bash",
       "get",
-      "in",
       "touch"
     ]
   },
@@ -4437,9 +3685,7 @@
     "endpoint": "/contact",
     "tokens": [
       "give",
-      "me",
-      "the",
-      "contact",
+      "reach",
       "information"
     ]
   },
@@ -4447,8 +3693,7 @@
     "command": "I need customer support",
     "endpoint": "/contact",
     "tokens": [
-      "i",
-      "need",
+      "necessitate",
       "customer",
       "support"
     ]
@@ -4458,17 +3703,14 @@
     "endpoint": "/contact",
     "tokens": [
       "support",
-      "page",
-      "please"
+      "page"
     ]
   },
   {
     "command": "Take me to support",
     "endpoint": "/contact",
     "tokens": [
-      "take",
-      "me",
-      "to",
+      "return",
       "support"
     ]
   },
@@ -4476,11 +3718,9 @@
     "command": "Find me the contact section",
     "endpoint": "/contact",
     "tokens": [
-      "find",
-      "me",
-      "the",
-      "contact",
-      "section"
+      "discovery",
+      "reach",
+      "segment"
     ]
   },
   {
@@ -4488,11 +3728,8 @@
     "endpoint": "/contact",
     "tokens": [
       "show",
-      "me",
       "how",
-      "to",
-      "contact",
-      "the",
+      "reach",
       "hospital"
     ]
   },
@@ -4501,10 +3738,7 @@
     "endpoint": "/contact",
     "tokens": [
       "where",
-      "can",
-      "i",
       "send",
-      "a",
       "message"
     ]
   },
@@ -4512,11 +3746,8 @@
     "command": "I want to send an inquiry",
     "endpoint": "/contact",
     "tokens": [
-      "i",
-      "want",
-      "to",
+      "privation",
       "send",
-      "an",
       "inquiry"
     ]
   },
@@ -4524,7 +3755,7 @@
     "command": "Contact hospital management",
     "endpoint": "/contact",
     "tokens": [
-      "contact",
+      "reach",
       "hospital",
       "management"
     ]
@@ -4533,9 +3764,8 @@
     "command": "Find the contact form",
     "endpoint": "/contact",
     "tokens": [
-      "find",
-      "the",
-      "contact",
+      "discovery",
+      "reach",
       "form"
     ]
   },
@@ -4543,13 +3773,10 @@
     "command": "I need assistance, show me the contact page",
     "endpoint": "/contact",
     "tokens": [
-      "i",
-      "need",
-      "assistance",
+      "necessitate",
+      "aid",
       "show",
-      "me",
-      "the",
-      "contact",
+      "reach",
       "page"
     ]
   },
@@ -4558,8 +3785,7 @@
     "endpoint": "/contact",
     "tokens": [
       "support",
-      "section",
-      "please"
+      "segment"
     ]
   },
   {
@@ -4567,12 +3793,8 @@
     "endpoint": "/contact",
     "tokens": [
       "give",
-      "me",
-      "a",
       "way",
-      "to",
-      "contact",
-      "you"
+      "reach"
     ]
   },
   {
@@ -4580,10 +3802,7 @@
     "endpoint": "/contact",
     "tokens": [
       "where",
-      "can",
-      "i",
-      "find",
-      "the",
+      "discovery",
       "customer",
       "service",
       "page"
@@ -4593,21 +3812,17 @@
     "command": "I need help, take me to contact",
     "endpoint": "/contact",
     "tokens": [
-      "i",
-      "need",
-      "help",
-      "take",
-      "me",
-      "to",
-      "contact"
+      "necessitate",
+      "aid",
+      "return",
+      "reach"
     ]
   },
   {
     "command": "Navigate to customer support",
     "endpoint": "/contact",
     "tokens": [
-      "navigate",
-      "to",
+      "voyage",
       "customer",
       "support"
     ]
@@ -4616,23 +3831,18 @@
     "command": "Who do I contact for help?",
     "endpoint": "/contact",
     "tokens": [
-      "who",
-      "do",
-      "i",
-      "contact",
-      "for",
-      "help"
+      "World_Health_Organization",
+      "bash",
+      "reach",
+      "aid"
     ]
   },
   {
     "command": "I need to ask a question",
     "endpoint": "/contact",
     "tokens": [
-      "i",
-      "need",
-      "to",
+      "necessitate",
       "ask",
-      "a",
       "question"
     ]
   },
@@ -4641,23 +3851,18 @@
     "endpoint": "/contact",
     "tokens": [
       "where",
-      "can",
-      "i",
-      "find",
-      "the",
-      "help",
-      "center"
+      "discovery",
+      "aid",
+      "center(a)"
     ]
   },
   {
     "command": "Find me the hospital contact details",
     "endpoint": "/contact",
     "tokens": [
-      "find",
-      "me",
-      "the",
+      "discovery",
       "hospital",
-      "contact",
+      "reach",
       "details"
     ]
   },
@@ -4665,13 +3870,9 @@
     "command": "Help me get in touch with the hospital",
     "endpoint": "/contact",
     "tokens": [
-      "help",
-      "me",
+      "aid",
       "get",
-      "in",
       "touch",
-      "with",
-      "the",
       "hospital"
     ]
   },
@@ -4679,23 +3880,16 @@
     "command": "Take me to the inquiries section",
     "endpoint": "/contact",
     "tokens": [
-      "take",
-      "me",
-      "to",
-      "the",
+      "return",
       "inquiries",
-      "section"
+      "segment"
     ]
   },
   {
     "command": "Can I speak to a representative?",
     "endpoint": "/contact",
     "tokens": [
-      "can",
-      "i",
-      "speak",
-      "to",
-      "a",
+      "talk",
       "representative"
     ]
   },
@@ -4703,10 +3897,7 @@
     "command": "Guide me to the support page",
     "endpoint": "/contact",
     "tokens": [
-      "guide",
-      "me",
-      "to",
-      "the",
+      "steer",
       "support",
       "page"
     ]
@@ -4716,9 +3907,8 @@
     "endpoint": "/contact",
     "tokens": [
       "open",
-      "the",
-      "contact",
-      "section"
+      "reach",
+      "segment"
     ]
   },
   {
@@ -4726,10 +3916,7 @@
     "endpoint": "/contact",
     "tokens": [
       "how",
-      "can",
-      "i",
       "send",
-      "a",
       "message"
     ]
   },
@@ -4738,8 +3925,6 @@
     "endpoint": "/contact",
     "tokens": [
       "where",
-      "can",
-      "i",
       "leave",
       "feedback"
     ]
@@ -4748,10 +3933,9 @@
     "command": "Find the hospital’s contact details",
     "endpoint": "/contact",
     "tokens": [
-      "find",
-      "the",
+      "discovery",
       "hospitals",
-      "contact",
+      "reach",
       "details"
     ]
   },
@@ -4759,11 +3943,8 @@
     "command": "I want to email the hospital",
     "endpoint": "/contact",
     "tokens": [
-      "i",
-      "want",
-      "to",
-      "email",
-      "the",
+      "privation",
+      "e-mail",
       "hospital"
     ]
   },
@@ -4772,10 +3953,8 @@
     "endpoint": "/contact",
     "tokens": [
       "how",
-      "do",
-      "i",
+      "bash",
       "call",
-      "the",
       "hospital"
     ]
   },
@@ -4784,16 +3963,14 @@
     "endpoint": "/contact",
     "tokens": [
       "support",
-      "center",
-      "please"
+      "center(a)"
     ]
   },
   {
     "command": "Contact the hospital",
     "endpoint": "/contact",
     "tokens": [
-      "contact",
-      "the",
+      "reach",
       "hospital"
     ]
   },
@@ -4802,19 +3979,17 @@
     "endpoint": "/contact",
     "tokens": [
       "how",
-      "do",
-      "i",
-      "reach",
+      "bash",
+      "range",
       "out",
-      "for",
-      "help"
+      "aid"
     ]
   },
   {
     "command": "Help desk page",
     "endpoint": "/contact",
     "tokens": [
-      "help",
+      "aid",
       "desk",
       "page"
     ]
@@ -4823,9 +3998,8 @@
     "command": "Find help and support",
     "endpoint": "/contact",
     "tokens": [
-      "find",
-      "help",
-      "and",
+      "discovery",
+      "aid",
       "support"
     ]
   },
@@ -4834,7 +4008,7 @@
     "endpoint": "/contact",
     "tokens": [
       "hospital",
-      "contact",
+      "reach",
       "page"
     ]
   },
@@ -4843,8 +4017,6 @@
     "endpoint": "/contact",
     "tokens": [
       "where",
-      "is",
-      "the",
       "customer",
       "support"
     ]
@@ -4853,11 +4025,8 @@
     "command": "I need to make an inquiry",
     "endpoint": "/contact",
     "tokens": [
-      "i",
-      "need",
-      "to",
-      "make",
-      "an",
+      "necessitate",
+      "brand",
       "inquiry"
     ]
   },
@@ -4866,10 +4035,8 @@
     "endpoint": "/contact",
     "tokens": [
       "how",
-      "do",
-      "i",
+      "bash",
       "submit",
-      "a",
       "request"
     ]
   },
@@ -4878,10 +4045,8 @@
     "endpoint": "/contact",
     "tokens": [
       "where",
-      "do",
-      "i",
+      "bash",
       "send",
-      "my",
       "concerns"
     ]
   },
@@ -4889,7 +4054,7 @@
     "command": "Contact service department",
     "endpoint": "/contact",
     "tokens": [
-      "contact",
+      "reach",
       "service",
       "department"
     ]
@@ -4898,37 +4063,27 @@
     "command": "Who can I talk to for help?",
     "endpoint": "/contact",
     "tokens": [
-      "who",
-      "can",
-      "i",
+      "World_Health_Organization",
       "talk",
-      "to",
-      "for",
-      "help"
+      "aid"
     ]
   },
   {
     "command": "Can I get the contact email?",
     "endpoint": "/contact",
     "tokens": [
-      "can",
-      "i",
       "get",
-      "the",
-      "contact",
-      "email"
+      "reach",
+      "e-mail"
     ]
   },
   {
     "command": "I need to report an issue",
     "endpoint": "/contact",
     "tokens": [
-      "i",
-      "need",
-      "to",
+      "necessitate",
       "report",
-      "an",
-      "issue"
+      "publish"
     ]
   },
   {
@@ -4936,10 +4091,8 @@
     "endpoint": "/contact",
     "tokens": [
       "how",
-      "do",
-      "i",
+      "bash",
       "talk",
-      "to",
       "customer",
       "service"
     ]
@@ -4949,44 +4102,35 @@
     "endpoint": "/contact",
     "tokens": [
       "where",
-      "can",
-      "i",
       "call",
-      "for",
-      "help"
+      "aid"
     ]
   },
   {
     "command": "Find the feedback section",
     "endpoint": "/contact",
     "tokens": [
-      "find",
-      "the",
+      "discovery",
       "feedback",
-      "section"
+      "segment"
     ]
   },
   {
     "command": "I need to speak to someone",
     "endpoint": "/contact",
     "tokens": [
-      "i",
-      "need",
-      "to",
-      "speak",
-      "to",
-      "someone"
+      "necessitate",
+      "talk",
+      "person"
     ]
   },
   {
     "command": "Who do I contact for information?",
     "endpoint": "/contact",
     "tokens": [
-      "who",
-      "do",
-      "i",
-      "contact",
-      "for",
+      "World_Health_Organization",
+      "bash",
+      "reach",
       "information"
     ]
   },
@@ -4995,9 +4139,7 @@
     "endpoint": "/contact",
     "tokens": [
       "show",
-      "me",
-      "the",
-      "help",
+      "aid",
       "desk"
     ]
   },
@@ -5005,10 +4147,8 @@
     "command": "Let me access the support page",
     "endpoint": "/contact",
     "tokens": [
-      "let",
-      "me",
+      "Lashkar-e-Taiba",
       "access",
-      "the",
       "support",
       "page"
     ]
@@ -5017,13 +4157,10 @@
     "command": "I have a question, where do I ask?",
     "endpoint": "/contact",
     "tokens": [
-      "i",
-      "have",
-      "a",
+      "rich_person",
       "question",
       "where",
-      "do",
-      "i",
+      "bash",
       "ask"
     ]
   },
@@ -5031,11 +4168,9 @@
     "command": "Navigate to the complaints section",
     "endpoint": "/contact",
     "tokens": [
-      "navigate",
-      "to",
-      "the",
+      "voyage",
       "complaints",
-      "section"
+      "segment"
     ]
   },
   {
@@ -5043,10 +4178,8 @@
     "endpoint": "/contact",
     "tokens": [
       "how",
-      "do",
-      "i",
+      "bash",
       "report",
-      "a",
       "problem"
     ]
   },
@@ -5054,13 +4187,9 @@
     "command": "I need to send a message to support",
     "endpoint": "/contact",
     "tokens": [
-      "i",
-      "need",
-      "to",
+      "necessitate",
       "send",
-      "a",
       "message",
-      "to",
       "support"
     ]
   },
@@ -5069,21 +4198,18 @@
     "endpoint": "/contact",
     "tokens": [
       "give",
-      "me",
-      "the",
-      "help",
-      "section"
+      "aid",
+      "segment"
     ]
   },
   {
     "command": "Find the hospital’s phone number",
     "endpoint": "/contact",
     "tokens": [
-      "find",
-      "the",
+      "discovery",
       "hospitals",
-      "phone",
-      "number"
+      "call",
+      "total"
     ]
   },
   {
@@ -5091,20 +4217,16 @@
     "endpoint": "/contact",
     "tokens": [
       "where",
-      "can",
-      "i",
       "send",
-      "a",
-      "complaint"
+      "ailment"
     ]
   },
   {
     "command": "I need urgent support",
     "endpoint": "/contact",
     "tokens": [
-      "i",
-      "need",
-      "urgent",
+      "necessitate",
+      "pressing",
       "support"
     ]
   },
@@ -5112,12 +4234,8 @@
     "command": "Please take me to the contact page",
     "endpoint": "/contact",
     "tokens": [
-      "please",
-      "take",
-      "me",
-      "to",
-      "the",
-      "contact",
+      "return",
+      "reach",
       "page"
     ]
   },
@@ -5126,12 +4244,10 @@
     "endpoint": "/contact",
     "tokens": [
       "how",
-      "do",
-      "i",
-      "reach",
+      "bash",
+      "range",
       "out",
-      "for",
-      "assistance"
+      "aid"
     ]
   },
   {
@@ -5147,9 +4263,8 @@
     "command": "Find the help information",
     "endpoint": "/contact",
     "tokens": [
-      "find",
-      "the",
-      "help",
+      "discovery",
+      "aid",
       "information"
     ]
   },
@@ -5157,10 +4272,7 @@
     "command": "Take me to the service desk",
     "endpoint": "/contact",
     "tokens": [
-      "take",
-      "me",
-      "to",
-      "the",
+      "return",
       "service",
       "desk"
     ]
@@ -5170,9 +4282,7 @@
     "endpoint": "/contact",
     "tokens": [
       "open",
-      "the",
-      "help",
-      "and",
+      "aid",
       "support",
       "page"
     ]
@@ -5181,10 +4291,7 @@
     "command": "Take me to the patient support page",
     "endpoint": "/contact",
     "tokens": [
-      "take",
-      "me",
-      "to",
-      "the",
+      "return",
       "patient",
       "support",
       "page"
@@ -5195,10 +4302,8 @@
     "endpoint": "/contact",
     "tokens": [
       "how",
-      "do",
-      "i",
-      "contact",
-      "the",
+      "bash",
+      "reach",
       "administrator"
     ]
   },
@@ -5206,8 +4311,7 @@
     "command": "Find the technical support page",
     "endpoint": "/contact",
     "tokens": [
-      "find",
-      "the",
+      "discovery",
       "technical",
       "support",
       "page"
@@ -5217,21 +4321,17 @@
     "command": "Find assistance for my issue",
     "endpoint": "/contact",
     "tokens": [
-      "find",
-      "assistance",
-      "for",
-      "my",
-      "issue"
+      "discovery",
+      "aid",
+      "publish"
     ]
   },
   {
     "command": "Let me speak to customer service",
     "endpoint": "/contact",
     "tokens": [
-      "let",
-      "me",
-      "speak",
-      "to",
+      "Lashkar-e-Taiba",
+      "talk",
       "customer",
       "service"
     ]
@@ -5241,8 +4341,6 @@
     "endpoint": "/my-profile",
     "tokens": [
       "go",
-      "to",
-      "my",
       "profile"
     ]
   },
@@ -5250,10 +4348,7 @@
     "command": "Take me to my profile page",
     "endpoint": "/my-profile",
     "tokens": [
-      "take",
-      "me",
-      "to",
-      "my",
+      "return",
       "profile",
       "page"
     ]
@@ -5263,7 +4358,6 @@
     "endpoint": "/my-profile",
     "tokens": [
       "show",
-      "my",
       "profile"
     ]
   },
@@ -5271,9 +4365,7 @@
     "command": "Navigate to my profile",
     "endpoint": "/my-profile",
     "tokens": [
-      "navigate",
-      "to",
-      "my",
+      "voyage",
       "profile"
     ]
   },
@@ -5281,11 +4373,8 @@
     "command": "I want to see my profile",
     "endpoint": "/my-profile",
     "tokens": [
-      "i",
-      "want",
-      "to",
+      "privation",
       "see",
-      "my",
       "profile"
     ]
   },
@@ -5294,7 +4383,6 @@
     "endpoint": "/my-profile",
     "tokens": [
       "open",
-      "my",
       "profile"
     ]
   },
@@ -5302,8 +4390,7 @@
     "command": "View my profile details",
     "endpoint": "/my-profile",
     "tokens": [
-      "view",
-      "my",
+      "see",
       "profile",
       "details"
     ]
@@ -5313,8 +4400,6 @@
     "endpoint": "/my-profile",
     "tokens": [
       "where",
-      "is",
-      "my",
       "profile"
     ]
   },
@@ -5322,10 +4407,7 @@
     "command": "Take me to my account details",
     "endpoint": "/my-profile",
     "tokens": [
-      "take",
-      "me",
-      "to",
-      "my",
+      "return",
       "account",
       "details"
     ]
@@ -5335,7 +4417,6 @@
     "endpoint": "/my-profile",
     "tokens": [
       "show",
-      "my",
       "personal",
       "information"
     ]
@@ -5345,8 +4426,6 @@
     "endpoint": "/my-profile",
     "tokens": [
       "go",
-      "to",
-      "my",
       "account"
     ]
   },
@@ -5354,11 +4433,8 @@
     "command": "I need to update my profile",
     "endpoint": "/my-profile",
     "tokens": [
-      "i",
-      "need",
-      "to",
+      "necessitate",
       "update",
-      "my",
       "profile"
     ]
   },
@@ -5367,10 +4443,8 @@
     "endpoint": "/my-profile",
     "tokens": [
       "how",
-      "do",
-      "i",
+      "bash",
       "access",
-      "my",
       "profile"
     ]
   },
@@ -5378,11 +4452,7 @@
     "command": "Can you show me my profile page?",
     "endpoint": "/my-profile",
     "tokens": [
-      "can",
-      "you",
       "show",
-      "me",
-      "my",
       "profile",
       "page"
     ]
@@ -5392,10 +4462,7 @@
     "endpoint": "/my-profile",
     "tokens": [
       "where",
-      "can",
-      "i",
       "edit",
-      "my",
       "profile"
     ]
   },
@@ -5403,11 +4470,8 @@
     "command": "I need to check my profile",
     "endpoint": "/my-profile",
     "tokens": [
-      "i",
-      "need",
-      "to",
+      "necessitate",
       "check",
-      "my",
       "profile"
     ]
   },
@@ -5415,9 +4479,7 @@
     "command": "Navigate to my account settings",
     "endpoint": "/my-profile",
     "tokens": [
-      "navigate",
-      "to",
-      "my",
+      "voyage",
       "account",
       "settings"
     ]
@@ -5426,8 +4488,7 @@
     "command": "Find my profile",
     "endpoint": "/my-profile",
     "tokens": [
-      "find",
-      "my",
+      "discovery",
       "profile"
     ]
   },
@@ -5435,10 +4496,8 @@
     "command": "Help me access my profile",
     "endpoint": "/my-profile",
     "tokens": [
-      "help",
-      "me",
+      "aid",
       "access",
-      "my",
       "profile"
     ]
   },
@@ -5446,10 +4505,7 @@
     "command": "Can I view my profile?",
     "endpoint": "/my-profile",
     "tokens": [
-      "can",
-      "i",
-      "view",
-      "my",
+      "see",
       "profile"
     ]
   },
@@ -5457,11 +4513,8 @@
     "command": "I need to see my account information",
     "endpoint": "/my-profile",
     "tokens": [
-      "i",
-      "need",
-      "to",
+      "necessitate",
       "see",
-      "my",
       "account",
       "information"
     ]
@@ -5470,10 +4523,7 @@
     "command": "Take me to my user profile",
     "endpoint": "/my-profile",
     "tokens": [
-      "take",
-      "me",
-      "to",
-      "my",
+      "return",
       "user",
       "profile"
     ]
@@ -5483,8 +4533,7 @@
     "endpoint": "/my-profile",
     "tokens": [
       "profile",
-      "page",
-      "please"
+      "page"
     ]
   },
   {
@@ -5492,8 +4541,6 @@
     "endpoint": "/my-profile",
     "tokens": [
       "show",
-      "me",
-      "my",
       "user",
       "account"
     ]
@@ -5503,8 +4550,6 @@
     "endpoint": "/my-profile",
     "tokens": [
       "go",
-      "to",
-      "my",
       "account",
       "settings"
     ]
@@ -5514,7 +4559,6 @@
     "endpoint": "/my-profile",
     "tokens": [
       "check",
-      "my",
       "profile",
       "information"
     ]
@@ -5524,7 +4568,6 @@
     "endpoint": "/my-profile",
     "tokens": [
       "open",
-      "my",
       "personal",
       "details"
     ]
@@ -5533,11 +4576,8 @@
     "command": "I want to see my user details",
     "endpoint": "/my-profile",
     "tokens": [
-      "i",
-      "want",
-      "to",
+      "privation",
       "see",
-      "my",
       "user",
       "details"
     ]
@@ -5556,8 +4596,6 @@
     "endpoint": "/my-profile",
     "tokens": [
       "show",
-      "me",
-      "my",
       "saved",
       "details"
     ]
@@ -5567,7 +4605,6 @@
     "endpoint": "/my-profile",
     "tokens": [
       "access",
-      "my",
       "account",
       "profile"
     ]
@@ -5577,10 +4614,7 @@
     "endpoint": "/my-profile",
     "tokens": [
       "where",
-      "can",
-      "i",
-      "find",
-      "my",
+      "discovery",
       "profile"
     ]
   },
@@ -5588,10 +4622,7 @@
     "command": "Take me to my saved profile",
     "endpoint": "/my-profile",
     "tokens": [
-      "take",
-      "me",
-      "to",
-      "my",
+      "return",
       "saved",
       "profile"
     ]
@@ -5600,10 +4631,8 @@
     "command": "Let me check my profile details",
     "endpoint": "/my-profile",
     "tokens": [
-      "let",
-      "me",
+      "Lashkar-e-Taiba",
       "check",
-      "my",
       "profile",
       "details"
     ]
@@ -5612,19 +4641,15 @@
     "command": "My profile section",
     "endpoint": "/my-profile",
     "tokens": [
-      "my",
       "profile",
-      "section"
+      "segment"
     ]
   },
   {
     "command": "Take me to my profile settings",
     "endpoint": "/my-profile",
     "tokens": [
-      "take",
-      "me",
-      "to",
-      "my",
+      "return",
       "profile",
       "settings"
     ]
@@ -5633,8 +4658,7 @@
     "command": "Find my account profile",
     "endpoint": "/my-profile",
     "tokens": [
-      "find",
-      "my",
+      "discovery",
       "account",
       "profile"
     ]
@@ -5643,9 +4667,7 @@
     "command": "Navigate to my user information",
     "endpoint": "/my-profile",
     "tokens": [
-      "navigate",
-      "to",
-      "my",
+      "voyage",
       "user",
       "information"
     ]
@@ -5655,10 +4677,8 @@
     "endpoint": "/my-profile",
     "tokens": [
       "where",
-      "is",
-      "my",
       "profile",
-      "section"
+      "segment"
     ]
   },
   {
@@ -5666,11 +4686,8 @@
     "endpoint": "/my-profile",
     "tokens": [
       "how",
-      "do",
-      "i",
+      "bash",
       "go",
-      "to",
-      "my",
       "profile"
     ]
   },
@@ -5678,8 +4695,7 @@
     "command": "Find my user profile",
     "endpoint": "/my-profile",
     "tokens": [
-      "find",
-      "my",
+      "discovery",
       "user",
       "profile"
     ]
@@ -5688,10 +4704,7 @@
     "command": "Can I access my account details?",
     "endpoint": "/my-profile",
     "tokens": [
-      "can",
-      "i",
       "access",
-      "my",
       "account",
       "details"
     ]
@@ -5701,12 +4714,8 @@
     "endpoint": "/my-profile",
     "tokens": [
       "show",
-      "me",
       "where",
-      "i",
-      "can",
       "edit",
-      "my",
       "profile"
     ]
   },
@@ -5714,12 +4723,8 @@
     "command": "I need to go to my personal settings",
     "endpoint": "/my-profile",
     "tokens": [
-      "i",
-      "need",
-      "to",
+      "necessitate",
       "go",
-      "to",
-      "my",
       "personal",
       "settings"
     ]
@@ -5728,9 +4733,7 @@
     "command": "Navigate to my personal page",
     "endpoint": "/my-profile",
     "tokens": [
-      "navigate",
-      "to",
-      "my",
+      "voyage",
       "personal",
       "page"
     ]
@@ -5739,10 +4742,8 @@
     "command": "Let me open my profile",
     "endpoint": "/my-profile",
     "tokens": [
-      "let",
-      "me",
+      "Lashkar-e-Taiba",
       "open",
-      "my",
       "profile"
     ]
   },
@@ -5751,8 +4752,6 @@
     "endpoint": "/my-profile",
     "tokens": [
       "go",
-      "to",
-      "my",
       "user",
       "account"
     ]
@@ -5761,8 +4760,7 @@
     "command": "View my personal details",
     "endpoint": "/my-profile",
     "tokens": [
-      "view",
-      "my",
+      "see",
       "personal",
       "details"
     ]
@@ -5771,11 +4769,8 @@
     "command": "I want to change my profile information",
     "endpoint": "/my-profile",
     "tokens": [
-      "i",
-      "want",
-      "to",
+      "privation",
       "change",
-      "my",
       "profile",
       "information"
     ]
@@ -5785,10 +4780,8 @@
     "endpoint": "/my-profile",
     "tokens": [
       "how",
-      "do",
-      "i",
+      "bash",
       "update",
-      "my",
       "user",
       "profile"
     ]
@@ -5798,10 +4791,7 @@
     "endpoint": "/my-profile",
     "tokens": [
       "give",
-      "me",
       "access",
-      "to",
-      "my",
       "profile"
     ]
   },
@@ -5810,7 +4800,6 @@
     "endpoint": "/my-profile",
     "tokens": [
       "show",
-      "my",
       "saved",
       "account",
       "settings"
@@ -5820,11 +4809,8 @@
     "command": "Take me back to my profile",
     "endpoint": "/my-profile",
     "tokens": [
-      "take",
-      "me",
-      "back",
-      "to",
-      "my",
+      "return",
+      "back(a)",
       "profile"
     ]
   },
@@ -5832,12 +4818,7 @@
     "command": "Can you direct me to my profile?",
     "endpoint": "/my-profile",
     "tokens": [
-      "can",
-      "you",
-      "direct",
-      "me",
-      "to",
-      "my",
+      "directly",
       "profile"
     ]
   },
@@ -5845,10 +4826,7 @@
     "command": "Take me to my user details",
     "endpoint": "/my-profile",
     "tokens": [
-      "take",
-      "me",
-      "to",
-      "my",
+      "return",
       "user",
       "details"
     ]
@@ -5858,10 +4836,8 @@
     "endpoint": "/my-profile",
     "tokens": [
       "where",
-      "do",
-      "i",
-      "manage",
-      "my",
+      "bash",
+      "pull_off",
       "profile"
     ]
   },
@@ -5869,11 +4845,10 @@
     "command": "Find the user profile section",
     "endpoint": "/my-profile",
     "tokens": [
-      "find",
-      "the",
+      "discovery",
       "user",
       "profile",
-      "section"
+      "segment"
     ]
   },
   {
@@ -5881,8 +4856,6 @@
     "endpoint": "/my-profile",
     "tokens": [
       "go",
-      "to",
-      "my",
       "information",
       "page"
     ]
@@ -5892,7 +4865,6 @@
     "endpoint": "/my-profile",
     "tokens": [
       "open",
-      "my",
       "settings",
       "page"
     ]
@@ -5902,7 +4874,6 @@
     "endpoint": "/my-profile",
     "tokens": [
       "check",
-      "my",
       "account",
       "settings"
     ]
@@ -5912,10 +4883,8 @@
     "endpoint": "/my-profile",
     "tokens": [
       "how",
-      "do",
-      "i",
+      "bash",
       "check",
-      "my",
       "profile"
     ]
   },
@@ -5924,8 +4893,6 @@
     "endpoint": "/my-profile",
     "tokens": [
       "where",
-      "is",
-      "my",
       "saved",
       "account",
       "information"
@@ -5935,10 +4902,7 @@
     "command": "Can I view my account profile?",
     "endpoint": "/my-profile",
     "tokens": [
-      "can",
-      "i",
-      "view",
-      "my",
+      "see",
       "account",
       "profile"
     ]
@@ -5948,7 +4912,6 @@
     "endpoint": "/my-profile",
     "tokens": [
       "access",
-      "my",
       "saved",
       "user",
       "information"
@@ -5959,10 +4922,7 @@
     "endpoint": "/my-profile",
     "tokens": [
       "where",
-      "can",
-      "i",
       "update",
-      "my",
       "profile"
     ]
   },
@@ -5970,12 +4930,8 @@
     "command": "Take me to my profile and settings",
     "endpoint": "/my-profile",
     "tokens": [
-      "take",
-      "me",
-      "to",
-      "my",
+      "return",
       "profile",
-      "and",
       "settings"
     ]
   },
@@ -5984,10 +4940,8 @@
     "endpoint": "/my-profile",
     "tokens": [
       "how",
-      "do",
-      "i",
+      "bash",
       "edit",
-      "my",
       "personal",
       "information"
     ]
@@ -5997,7 +4951,6 @@
     "endpoint": "/my-profile",
     "tokens": [
       "show",
-      "my",
       "stored",
       "account",
       "data"
@@ -6007,9 +4960,7 @@
     "command": "Navigate to my personal information page",
     "endpoint": "/my-profile",
     "tokens": [
-      "navigate",
-      "to",
-      "my",
+      "voyage",
       "personal",
       "information",
       "page"
@@ -6019,10 +4970,7 @@
     "command": "Take me to my personal details page",
     "endpoint": "/my-profile",
     "tokens": [
-      "take",
-      "me",
-      "to",
-      "my",
+      "return",
       "personal",
       "details",
       "page"
@@ -6032,11 +4980,8 @@
     "command": "I need to manage my profile",
     "endpoint": "/my-profile",
     "tokens": [
-      "i",
-      "need",
-      "to",
-      "manage",
-      "my",
+      "necessitate",
+      "pull_off",
       "profile"
     ]
   },
@@ -6044,10 +4989,7 @@
     "command": "Can I check my account settings?",
     "endpoint": "/my-profile",
     "tokens": [
-      "can",
-      "i",
       "check",
-      "my",
       "account",
       "settings"
     ]
@@ -6056,8 +4998,7 @@
     "command": "Find my personal account details",
     "endpoint": "/my-profile",
     "tokens": [
-      "find",
-      "my",
+      "discovery",
       "personal",
       "account",
       "details"
@@ -6068,7 +5009,6 @@
     "endpoint": "/my-profile",
     "tokens": [
       "show",
-      "my",
       "latest",
       "profile",
       "updates"
@@ -6080,7 +5020,6 @@
     "tokens": [
       "lets",
       "check",
-      "my",
       "user",
       "profile"
     ]
@@ -6090,8 +5029,6 @@
     "endpoint": "/my-appointment",
     "tokens": [
       "go",
-      "to",
-      "my",
       "appointment"
     ]
   },
@@ -6099,10 +5036,7 @@
     "command": "Take me to my appointment page",
     "endpoint": "/my-appointment",
     "tokens": [
-      "take",
-      "me",
-      "to",
-      "my",
+      "return",
       "appointment",
       "page"
     ]
@@ -6112,7 +5046,6 @@
     "endpoint": "/my-appointment",
     "tokens": [
       "show",
-      "my",
       "appointments"
     ]
   },
@@ -6120,9 +5053,7 @@
     "command": "Navigate to my appointments",
     "endpoint": "/my-appointment",
     "tokens": [
-      "navigate",
-      "to",
-      "my",
+      "voyage",
       "appointments"
     ]
   },
@@ -6130,11 +5061,8 @@
     "command": "I want to see my appointments",
     "endpoint": "/my-appointment",
     "tokens": [
-      "i",
-      "want",
-      "to",
+      "privation",
       "see",
-      "my",
       "appointments"
     ]
   },
@@ -6143,7 +5071,6 @@
     "endpoint": "/my-appointment",
     "tokens": [
       "open",
-      "my",
       "appointments"
     ]
   },
@@ -6151,8 +5078,7 @@
     "command": "View my scheduled appointments",
     "endpoint": "/my-appointment",
     "tokens": [
-      "view",
-      "my",
+      "see",
       "scheduled",
       "appointments"
     ]
@@ -6162,8 +5088,6 @@
     "endpoint": "/my-appointment",
     "tokens": [
       "where",
-      "is",
-      "my",
       "appointment"
     ]
   },
@@ -6171,10 +5095,7 @@
     "command": "Take me to my scheduled appointments",
     "endpoint": "/my-appointment",
     "tokens": [
-      "take",
-      "me",
-      "to",
-      "my",
+      "return",
       "scheduled",
       "appointments"
     ]
@@ -6184,7 +5105,6 @@
     "endpoint": "/my-appointment",
     "tokens": [
       "show",
-      "my",
       "appointment",
       "details"
     ]
@@ -6194,9 +5114,7 @@
     "endpoint": "/my-appointment",
     "tokens": [
       "go",
-      "to",
-      "my",
-      "booking",
+      "engagement",
       "history"
     ]
   },
@@ -6204,11 +5122,8 @@
     "command": "I need to check my appointments",
     "endpoint": "/my-appointment",
     "tokens": [
-      "i",
-      "need",
-      "to",
+      "necessitate",
       "check",
-      "my",
       "appointments"
     ]
   },
@@ -6217,10 +5132,8 @@
     "endpoint": "/my-appointment",
     "tokens": [
       "how",
-      "do",
-      "i",
+      "bash",
       "access",
-      "my",
       "appointments"
     ]
   },
@@ -6228,11 +5141,7 @@
     "command": "Can you show me my appointment page?",
     "endpoint": "/my-appointment",
     "tokens": [
-      "can",
-      "you",
       "show",
-      "me",
-      "my",
       "appointment",
       "page"
     ]
@@ -6242,10 +5151,7 @@
     "endpoint": "/my-appointment",
     "tokens": [
       "where",
-      "can",
-      "i",
-      "view",
-      "my",
+      "see",
       "appointments"
     ]
   },
@@ -6253,12 +5159,9 @@
     "command": "I need to check my upcoming appointments",
     "endpoint": "/my-appointment",
     "tokens": [
-      "i",
-      "need",
-      "to",
+      "necessitate",
       "check",
-      "my",
-      "upcoming",
+      "approaching",
       "appointments"
     ]
   },
@@ -6266,9 +5169,7 @@
     "command": "Navigate to my appointment schedule",
     "endpoint": "/my-appointment",
     "tokens": [
-      "navigate",
-      "to",
-      "my",
+      "voyage",
       "appointment",
       "schedule"
     ]
@@ -6277,8 +5178,7 @@
     "command": "Find my appointment list",
     "endpoint": "/my-appointment",
     "tokens": [
-      "find",
-      "my",
+      "discovery",
       "appointment",
       "list"
     ]
@@ -6287,10 +5187,8 @@
     "command": "Help me access my appointment page",
     "endpoint": "/my-appointment",
     "tokens": [
-      "help",
-      "me",
+      "aid",
       "access",
-      "my",
       "appointment",
       "page"
     ]
@@ -6299,11 +5197,8 @@
     "command": "Can I view my upcoming visits?",
     "endpoint": "/my-appointment",
     "tokens": [
-      "can",
-      "i",
-      "view",
-      "my",
-      "upcoming",
+      "see",
+      "approaching",
       "visits"
     ]
   },
@@ -6311,11 +5206,8 @@
     "command": "I need to see my consultation bookings",
     "endpoint": "/my-appointment",
     "tokens": [
-      "i",
-      "need",
-      "to",
+      "necessitate",
       "see",
-      "my",
       "consultation",
       "bookings"
     ]
@@ -6324,11 +5216,8 @@
     "command": "Take me to my doctor appointments",
     "endpoint": "/my-appointment",
     "tokens": [
-      "take",
-      "me",
-      "to",
-      "my",
-      "doctor",
+      "return",
+      "sophisticate",
       "appointments"
     ]
   },
@@ -6337,8 +5226,7 @@
     "endpoint": "/my-appointment",
     "tokens": [
       "appointment",
-      "page",
-      "please"
+      "page"
     ]
   },
   {
@@ -6346,8 +5234,6 @@
     "endpoint": "/my-appointment",
     "tokens": [
       "show",
-      "me",
-      "my",
       "scheduled",
       "visits"
     ]
@@ -6357,9 +5243,7 @@
     "endpoint": "/my-appointment",
     "tokens": [
       "go",
-      "to",
-      "my",
-      "recent",
+      "Holocene",
       "appointments"
     ]
   },
@@ -6368,9 +5252,8 @@
     "endpoint": "/my-appointment",
     "tokens": [
       "check",
-      "my",
-      "upcoming",
-      "medical",
+      "approaching",
+      "checkup",
       "visits"
     ]
   },
@@ -6379,7 +5262,6 @@
     "endpoint": "/my-appointment",
     "tokens": [
       "open",
-      "my",
       "health",
       "appointment",
       "details"
@@ -6389,12 +5271,9 @@
     "command": "I want to see my doctor visits",
     "endpoint": "/my-appointment",
     "tokens": [
-      "i",
-      "want",
-      "to",
+      "privation",
       "see",
-      "my",
-      "doctor",
+      "sophisticate",
       "visits"
     ]
   },
@@ -6412,8 +5291,6 @@
     "endpoint": "/my-appointment",
     "tokens": [
       "show",
-      "me",
-      "my",
       "confirmed",
       "appointments"
     ]
@@ -6423,7 +5300,6 @@
     "endpoint": "/my-appointment",
     "tokens": [
       "access",
-      "my",
       "appointment",
       "history"
     ]
@@ -6433,10 +5309,7 @@
     "endpoint": "/my-appointment",
     "tokens": [
       "where",
-      "can",
-      "i",
-      "find",
-      "my",
+      "discovery",
       "scheduled",
       "checkups"
     ]
@@ -6445,11 +5318,8 @@
     "command": "Take me to my medical bookings",
     "endpoint": "/my-appointment",
     "tokens": [
-      "take",
-      "me",
-      "to",
-      "my",
-      "medical",
+      "return",
+      "checkup",
       "bookings"
     ]
   },
@@ -6457,11 +5327,9 @@
     "command": "Let me check my upcoming consultations",
     "endpoint": "/my-appointment",
     "tokens": [
-      "let",
-      "me",
+      "Lashkar-e-Taiba",
       "check",
-      "my",
-      "upcoming",
+      "approaching",
       "consultations"
     ]
   },
@@ -6469,20 +5337,16 @@
     "command": "My appointment section",
     "endpoint": "/my-appointment",
     "tokens": [
-      "my",
       "appointment",
-      "section"
+      "segment"
     ]
   },
   {
     "command": "Take me to my upcoming visits",
     "endpoint": "/my-appointment",
     "tokens": [
-      "take",
-      "me",
-      "to",
-      "my",
-      "upcoming",
+      "return",
+      "approaching",
       "visits"
     ]
   },
@@ -6490,10 +5354,9 @@
     "command": "Find my upcoming doctor visits",
     "endpoint": "/my-appointment",
     "tokens": [
-      "find",
-      "my",
-      "upcoming",
-      "doctor",
+      "discovery",
+      "approaching",
+      "sophisticate",
       "visits"
     ]
   },
@@ -6501,9 +5364,7 @@
     "command": "Navigate to my hospital appointments",
     "endpoint": "/my-appointment",
     "tokens": [
-      "navigate",
-      "to",
-      "my",
+      "voyage",
       "hospital",
       "appointments"
     ]
@@ -6513,8 +5374,6 @@
     "endpoint": "/my-appointment",
     "tokens": [
       "where",
-      "is",
-      "my",
       "scheduled",
       "visit"
     ]
@@ -6524,11 +5383,8 @@
     "endpoint": "/my-appointment",
     "tokens": [
       "how",
-      "do",
-      "i",
+      "bash",
       "go",
-      "to",
-      "my",
       "appointment"
     ]
   },
@@ -6536,9 +5392,8 @@
     "command": "Find my medical check-ups",
     "endpoint": "/my-appointment",
     "tokens": [
-      "find",
-      "my",
-      "medical",
+      "discovery",
+      "checkup",
       "checkups"
     ]
   },
@@ -6546,10 +5401,7 @@
     "command": "Can I access my scheduled hospital visits?",
     "endpoint": "/my-appointment",
     "tokens": [
-      "can",
-      "i",
       "access",
-      "my",
       "scheduled",
       "hospital",
       "visits"
@@ -6560,12 +5412,8 @@
     "endpoint": "/my-appointment",
     "tokens": [
       "show",
-      "me",
       "where",
-      "i",
-      "can",
       "check",
-      "my",
       "appointment"
     ]
   },
@@ -6573,12 +5421,8 @@
     "command": "I need to go to my appointment schedule",
     "endpoint": "/my-appointment",
     "tokens": [
-      "i",
-      "need",
-      "to",
+      "necessitate",
       "go",
-      "to",
-      "my",
       "appointment",
       "schedule"
     ]
@@ -6587,9 +5431,7 @@
     "command": "Navigate to my personal appointment page",
     "endpoint": "/my-appointment",
     "tokens": [
-      "navigate",
-      "to",
-      "my",
+      "voyage",
       "personal",
       "appointment",
       "page"
@@ -6599,10 +5441,8 @@
     "command": "Let me open my scheduled visits",
     "endpoint": "/my-appointment",
     "tokens": [
-      "let",
-      "me",
+      "Lashkar-e-Taiba",
       "open",
-      "my",
       "scheduled",
       "visits"
     ]
@@ -6612,9 +5452,7 @@
     "endpoint": "/my-appointment",
     "tokens": [
       "go",
-      "to",
-      "my",
-      "doctor",
+      "sophisticate",
       "appointment",
       "list"
     ]
@@ -6623,9 +5461,8 @@
     "command": "View my medical consultation details",
     "endpoint": "/my-appointment",
     "tokens": [
-      "view",
-      "my",
-      "medical",
+      "see",
+      "checkup",
       "consultation",
       "details"
     ]
@@ -6634,12 +5471,9 @@
     "command": "I want to see my upcoming hospital visits",
     "endpoint": "/my-appointment",
     "tokens": [
-      "i",
-      "want",
-      "to",
+      "privation",
       "see",
-      "my",
-      "upcoming",
+      "approaching",
       "hospital",
       "visits"
     ]
@@ -6649,10 +5483,8 @@
     "endpoint": "/my-appointment",
     "tokens": [
       "how",
-      "do",
-      "i",
+      "bash",
       "update",
-      "my",
       "appointment",
       "details"
     ]
@@ -6662,10 +5494,7 @@
     "endpoint": "/my-appointment",
     "tokens": [
       "give",
-      "me",
       "access",
-      "to",
-      "my",
       "appointment",
       "page"
     ]
@@ -6675,7 +5504,6 @@
     "endpoint": "/my-appointment",
     "tokens": [
       "show",
-      "my",
       "appointment",
       "history"
     ]
@@ -6684,12 +5512,9 @@
     "command": "Take me back to my upcoming check-ups",
     "endpoint": "/my-appointment",
     "tokens": [
-      "take",
-      "me",
-      "back",
-      "to",
-      "my",
-      "upcoming",
+      "return",
+      "back(a)",
+      "approaching",
       "checkups"
     ]
   },
@@ -6697,12 +5522,7 @@
     "command": "Can you direct me to my appointment?",
     "endpoint": "/my-appointment",
     "tokens": [
-      "can",
-      "you",
-      "direct",
-      "me",
-      "to",
-      "my",
+      "directly",
       "appointment"
     ]
   },
@@ -6710,12 +5530,9 @@
     "command": "Take me to my scheduled medical consultations",
     "endpoint": "/my-appointment",
     "tokens": [
-      "take",
-      "me",
-      "to",
-      "my",
+      "return",
       "scheduled",
-      "medical",
+      "checkup",
       "consultations"
     ]
   },
@@ -6724,11 +5541,9 @@
     "endpoint": "/my-appointment",
     "tokens": [
       "where",
-      "do",
-      "i",
-      "manage",
-      "my",
-      "doctor",
+      "bash",
+      "pull_off",
+      "sophisticate",
       "appointments"
     ]
   },
@@ -6736,11 +5551,10 @@
     "command": "Find the patient appointment section",
     "endpoint": "/my-appointment",
     "tokens": [
-      "find",
-      "the",
+      "discovery",
       "patient",
       "appointment",
-      "section"
+      "segment"
     ]
   },
   {
@@ -6748,8 +5562,6 @@
     "endpoint": "/my-appointment",
     "tokens": [
       "go",
-      "to",
-      "my",
       "consultation",
       "history"
     ]
@@ -6759,9 +5571,8 @@
     "endpoint": "/my-appointment",
     "tokens": [
       "open",
-      "my",
       "future",
-      "medical",
+      "checkup",
       "visits"
     ]
   },
@@ -6770,11 +5581,9 @@
     "endpoint": "/my-appointment",
     "tokens": [
       "check",
-      "my",
       "patient",
       "records",
-      "for",
-      "upcoming",
+      "approaching",
       "visits"
     ]
   },
@@ -6783,10 +5592,8 @@
     "endpoint": "/my-appointment",
     "tokens": [
       "how",
-      "do",
-      "i",
+      "bash",
       "check",
-      "my",
       "consultation",
       "appointments"
     ]
@@ -6796,8 +5603,6 @@
     "endpoint": "/my-appointment",
     "tokens": [
       "where",
-      "is",
-      "my",
       "scheduled",
       "treatment"
     ]
@@ -6806,12 +5611,9 @@
     "command": "Can I view my booked medical appointments?",
     "endpoint": "/my-appointment",
     "tokens": [
-      "can",
-      "i",
-      "view",
-      "my",
+      "see",
       "booked",
-      "medical",
+      "checkup",
       "appointments"
     ]
   },
@@ -6820,10 +5622,9 @@
     "endpoint": "/my-appointment",
     "tokens": [
       "access",
-      "my",
       "scheduled",
       "therapy",
-      "sessions"
+      "Sessions"
     ]
   },
   {
@@ -6831,10 +5632,7 @@
     "endpoint": "/my-appointment",
     "tokens": [
       "where",
-      "can",
-      "i",
       "update",
-      "my",
       "hospital",
       "visits"
     ]
@@ -6843,10 +5641,7 @@
     "command": "Take me to my consultation records",
     "endpoint": "/my-appointment",
     "tokens": [
-      "take",
-      "me",
-      "to",
-      "my",
+      "return",
       "consultation",
       "records"
     ]
@@ -6856,11 +5651,9 @@
     "endpoint": "/my-appointment",
     "tokens": [
       "how",
-      "do",
-      "i",
+      "bash",
       "edit",
-      "my",
-      "medical",
+      "checkup",
       "bookings"
     ]
   },
@@ -6869,21 +5662,18 @@
     "endpoint": "/my-appointment",
     "tokens": [
       "show",
-      "my",
-      "upcoming",
+      "approaching",
       "therapy",
-      "sessions"
+      "Sessions"
     ]
   },
   {
     "command": "Navigate to my personal medical history",
     "endpoint": "/my-appointment",
     "tokens": [
-      "navigate",
-      "to",
-      "my",
+      "voyage",
       "personal",
-      "medical",
+      "checkup",
       "history"
     ]
   },
@@ -6891,10 +5681,7 @@
     "command": "Take me to my appointment log",
     "endpoint": "/my-appointment",
     "tokens": [
-      "take",
-      "me",
-      "to",
-      "my",
+      "return",
       "appointment",
       "log"
     ]
@@ -6903,11 +5690,8 @@
     "command": "I need to manage my scheduled visits",
     "endpoint": "/my-appointment",
     "tokens": [
-      "i",
-      "need",
-      "to",
-      "manage",
-      "my",
+      "necessitate",
+      "pull_off",
       "scheduled",
       "visits"
     ]
@@ -6916,11 +5700,8 @@
     "command": "Can I check my medical visits?",
     "endpoint": "/my-appointment",
     "tokens": [
-      "can",
-      "i",
       "check",
-      "my",
-      "medical",
+      "checkup",
       "visits"
     ]
   },
@@ -6928,8 +5709,7 @@
     "command": "Find my personal appointment history",
     "endpoint": "/my-appointment",
     "tokens": [
-      "find",
-      "my",
+      "discovery",
       "personal",
       "appointment",
       "history"
@@ -6940,7 +5720,6 @@
     "endpoint": "/my-appointment",
     "tokens": [
       "show",
-      "my",
       "latest",
       "appointment",
       "updates"
@@ -6952,7 +5731,6 @@
     "tokens": [
       "lets",
       "check",
-      "my",
       "appointment",
       "details"
     ]
