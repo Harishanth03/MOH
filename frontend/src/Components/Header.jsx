@@ -1,10 +1,17 @@
-import React from 'react'
+import React, { useRef } from 'react'
 import { assets } from '../assets/assets'
 import {useNavigate} from 'react-router-dom';
 
 const Header = () => {
 
     const navigate = useNavigate();
+
+    const appointmentRef = useRef();
+
+    const handleSubmit = (e) => {
+        e.preventDefault();
+        alert("Form Submitted!");
+      };
 
   return (
     <section id='home'>
@@ -18,7 +25,7 @@ const Header = () => {
                 <p className='text-gray-700 font-semibold'>Empowering lives with personalized, innovative healthcare solutions that prioritize well-being, enhance recovery, and redefine patient care through compassion, cutting-edge technology, and a commitment to excellence in every step of the journey.</p>
                 <a href="#doctors">
                     <div>
-                        <button className='px-[18px] cursor-pointer py-[15px] mt-4 bg-[#0D6EFD] text-white rounded font-medium'>make an Appointment</button>
+                        <button ref={appointmentRef} className='px-[18px] cursor-pointer py-[15px] mt-4 bg-[#0D6EFD] text-white rounded font-medium'>make an Appointment</button>
                     </div>
                 </a>
             </div>
