@@ -41,18 +41,21 @@ const Login = () => {
               <p className='text-base text-gray-400'>{state === 'Sign in' ? 'Sign in' : 'Create account'} to access...</p>
             </div>
 
-            <div className='flex text-gray-700 text-base flex-col gap-1 w-full'>
-              <label className='block' htmlFor="userName">User name</label>
-              <input onChange={(e) => setName(e.target.name)} value={name} className='w-full p-2 border border-gray-300 rounded-md focus:outline-none focus:border-[#0D6EFD]'  id='userName' type="text" />
-            </div>
+            {
+              state === "Sign up" ? 
+              <div className='flex text-gray-700 text-base flex-col gap-1 w-full'>
+                <label className='block text-gray-600' htmlFor="userName">User name</label>
+                <input onChange={(e) => setName(e.target.name)} value={name} className='w-full p-2 border border-gray-300 rounded-md focus:outline-none focus:border-[#0D6EFD]'  id='userName' type="text" />
+              </div> : ""
+            }
 
             <div className='flex flex-col gap-1 w-full'>
-              <label className='block' htmlFor="Email">Email</label>
+              <label className='block text-gray-600' htmlFor="Email">Email</label>
               <input onChange={(e) => setEmail(e.target.name)} className='w-full p-2 border border-gray-300 rounded-md focus:outline-none focus:border-[#0D6EFD]'  id='Email' type="email" />
             </div>
 
             <div className='flex flex-col gap-1 w-full'>
-              <label className='block' htmlFor="Password">Password</label>
+              <label className='block text-gray-600' htmlFor="Password">Password</label>
               <input onChange={(e) => setPassword(e.target.name)}  className='w-full p-2 border border-gray-300 rounded-md focus:outline-none focus:border-[#0D6EFD]' id='Password' type="password" />
             </div>
 
