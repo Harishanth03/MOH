@@ -1,8 +1,17 @@
-import React from 'react'
+import React, { useState } from 'react'
+import { assets } from '../assets/assets'
 
 const MyProfile = () => {
+
+  const [userData , setUserData] = useState({
+    name : "Harishanth",
+    image : assets.user,
+  })
   return (
-    <div>MyProfile</div>
+    <section className='w-full min-h-screen'>
+
+
+    </section>
   )
 }
 
