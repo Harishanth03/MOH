@@ -40,6 +40,7 @@ import HomeImage from './Home Image.svg'
 import user from './user-286.svg'
 import newAbout from './new.jpg'
 import contactImage from './Contact_Image1.png'
+import loginImage from './Login.svg'
 
 
 export const assets = {
@@ -62,7 +63,8 @@ export const assets = {
     razorpay_logo,
     HomeImage,
     newAbout,
-    contactImage
+    contactImage,
+    loginImage
 }
 
 export const specialityData = [
