@@ -9,7 +9,7 @@ const Login = () => {
 
   const [password , setPassword] = useState('');
 
-  const [state , setState] = useState('');
+  const [state , setState] = useState('Sign in');
 
   //====================== Onsubmit Handler ===============================
 
@@ -37,26 +37,30 @@ const Login = () => {
           <div className='flex w-full flex-col gap-6'>
 
             <div className='flex  flex-col gap-2'>
-              <h2 className='text-5xl font-medium text-gray-700'>Welcome!</h2>
-              <p className='text-base text-gray-400'>Sign in to access...</p>
+              <h2 className='text-5xl font-medium text-gray-700'>{state === "Sign in" ? 'Sign in' : 'Create account'}</h2>
+              <p className='text-base text-gray-400'>{state === 'Sign in' ? 'Sign in' : 'Create account'} to access...</p>
             </div>
 
             <div className='flex text-gray-700 text-base flex-col gap-1 w-full'>
               <label className='block' htmlFor="userName">User name</label>
-              <input className='w-full p-2 border border-gray-300 rounded-md focus:outline-none focus:border-[#0D6EFD]'  id='userName' type="text" />
+              <input onChange={(e) => setName(e.target.name)} value={name} className='w-full p-2 border border-gray-300 rounded-md focus:outline-none focus:border-[#0D6EFD]'  id='userName' type="text" />
             </div>
 
             <div className='flex flex-col gap-1 w-full'>
               <label className='block' htmlFor="Email">Email</label>
-              <input className='w-full p-2 border border-gray-300 rounded-md focus:outline-none focus:border-[#0D6EFD]'  id='Email' type="text" />
+              <input onChange={(e) => setEmail(e.target.name)} className='w-full p-2 border border-gray-300 rounded-md focus:outline-none focus:border-[#0D6EFD]'  id='Email' type="email" />
             </div>
 
             <div className='flex flex-col gap-1 w-full'>
               <label className='block' htmlFor="Password">Password</label>
-              <input  className='w-full p-2 border border-gray-300 rounded-md focus:outline-none focus:border-[#0D6EFD]' id='Password' type="text" />
+              <input onChange={(e) => setPassword(e.target.name)}  className='w-full p-2 border border-gray-300 rounded-md focus:outline-none focus:border-[#0D6EFD]' id='Password' type="password" />
             </div>
 
             <button className='bg-[#0D6EFD] p-3 font-medium rounded-md cursor-pointer text-white'>Create Account</button>
+
+            { 
+              state === 'Sign in' ? <p className='text-gray-500'>Create an new account? <a className='cursor-pointer text-[#0D6EFD] underline text-sm' onClick={() => setState("Sign up")}>Click Here</a></p> : <p className='text-gray-500'>Already have an account? <a className='cursor-pointer text-[#0D6EFD] underline text-sm' onClick={() => setState("Sign in")}>Click Here</a></p>
+            }
 
           </div>
 
