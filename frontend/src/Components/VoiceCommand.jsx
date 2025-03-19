@@ -1,8 +1,9 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useRef } from "react";
 import { useNavigate } from "react-router-dom";
 
 const VoiceCommand = () => {
   const navigate = useNavigate();
+  const submitButtonRef = useRef(null); // Reference to the submit button
 
   useEffect(() => {
     if (!("SpeechRecognition" in window || "webkitSpeechRecognition" in window)) {
@@ -21,20 +22,27 @@ const VoiceCommand = () => {
       const transcript = event.results[event.results.length - 1][0].transcript.toLowerCase().trim();
       console.log("Recognized:", transcript);
 
-      // Matching Commands to Your Routes
+      // Matching Commands to Routes
       const commands = {
-        "go to home": "/",
-        "go to doctors": "/doctors",
+        "home": "/",
+        "doctors": "/doctors",
         "go to login": "/login",
         "go to about": "/about",
         "go to contact": "/contact",
         "go to my profile": "/my-profile",
         "go to my appointment": "/my-appointment",
-        "book appointment": "/appointment/1", // Example docId, dynamically adjust if needed
+        "book appointment": "/appointment/doc2", 
       };
 
       if (commands[transcript]) {
-        navigate(commands[transcript]);
+        navigate(commands[transcript]); // Navigate to page
+      }
+
+      // Click the submit button if command is detected
+      if (transcript.includes("make an appointment")) {
+        if (appointmentRef.current) {
+          appointmentRef.current.click(); // Click the button programmatically
+        }
       }
     };
 
@@ -45,7 +53,11 @@ const VoiceCommand = () => {
     };
   }, [navigate]);
 
-  return <div>Listening for voice commands...</div>;
+  return (
+    <div>
+      <p>Listening for voice commands...</p>
+    </div>
+  );
 };
 
 export default VoiceCommand;

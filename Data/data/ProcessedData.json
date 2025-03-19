@@ -1082,7 +1082,7 @@
     "command": "Switch to the home screen",
     "endpoint": "/",
     "tokens": [
-      "switch",
+      "switch_over",
       "home",
       "screen"
     ]
@@ -1669,7 +1669,7 @@
     "endpoint": "/doctors",
     "tokens": [
       "see",
-      "wholly",
+      "all(a)",
       "available",
       "doctors"
     ]
