@@ -45,21 +45,21 @@ const Login = () => {
               state === "Sign up" ? 
               <div className='flex text-gray-700 text-base flex-col gap-1 w-full'>
                 <label className='block text-gray-600' htmlFor="userName">User name</label>
-                <input onChange={(e) => setName(e.target.name)} value={name} className='w-full p-2 border border-gray-300 rounded-md focus:outline-none focus:border-[#0D6EFD]'  id='userName' type="text" />
+                <input onChange={(e) => setName(e.target.value)} value={name} className='w-full p-2 border border-gray-300 rounded-md focus:outline-none focus:border-[#0D6EFD]'  id='userName' type="text" />
               </div> : ""
             }
 
             <div className='flex flex-col gap-1 w-full'>
               <label className='block text-gray-600' htmlFor="Email">Email</label>
-              <input onChange={(e) => setEmail(e.target.name)} className='w-full p-2 border border-gray-300 rounded-md focus:outline-none focus:border-[#0D6EFD]'  id='Email' type="email" />
+              <input onChange={(e) => setEmail(e.target.value)} value={email} className='w-full p-2 border border-gray-300 rounded-md focus:outline-none focus:border-[#0D6EFD]'  id='Email' type="email" />
             </div>
 
             <div className='flex flex-col gap-1 w-full'>
               <label className='block text-gray-600' htmlFor="Password">Password</label>
-              <input onChange={(e) => setPassword(e.target.name)}  className='w-full p-2 border border-gray-300 rounded-md focus:outline-none focus:border-[#0D6EFD]' id='Password' type="password" />
+              <input onChange={(e) => setPassword(e.target.value)} value={password}  className='w-full p-2 border border-gray-300 rounded-md focus:outline-none focus:border-[#0D6EFD]' id='Password' type="password" />
             </div>
 
-            <button className='bg-[#0D6EFD] p-3 font-medium rounded-md cursor-pointer text-white'>Create Account</button>
+            <button className='bg-[#0D6EFD] p-3 font-medium rounded-md cursor-pointer text-white'>{state === "Sign in" ? "Sign In" : "Create Account"}</button>
 
             { 
               state === 'Sign in' ? <p className='text-gray-500'>Create an new account? <a className='cursor-pointer text-[#0D6EFD] underline text-sm' onClick={() => setState("Sign up")}>Click Here</a></p> : <p className='text-gray-500'>Already have an account? <a className='cursor-pointer text-[#0D6EFD] underline text-sm' onClick={() => setState("Sign in")}>Click Here</a></p>
