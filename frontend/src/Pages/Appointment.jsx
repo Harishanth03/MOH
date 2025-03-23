@@ -24,59 +24,64 @@ const Appointment = () => {
 
     const getAvailableSlots = async() => {
 
-        setDocSlots([]);
-
-        //Get the current Date
-        let today = new Date();
-
-        for(let i = 0; i < 7; i++) // used the for Loop for Calculate the 7 days from current date
-        {
-            const currentDate = new Date(today); //get the today index
-
-            currentDate.setDate(today.getDate()+i);
-
-            // setting end time of the date 
-            let endTime = new Date();
-
-            endTime.setDate(today.getDate()+i)
-
-            endTime.setHours(21,0,0,0);
-
-            //setting Hours
-
-            if(today.getDate() === currentDate.getDate())
-            {
-                currentDate.setDate(currentDate.getHours() > 10 ? currentDate.getHours() + 1 : 10);
-
-                currentDate.setMinutes(currentDate.getMinutes() > 30 ? 30 : 0)
-            }
-            else
-            {
-                currentDate.setHours(10);
-                currentDate.setMinutes(0);
-            }
-
-            let timeSlots = []
-
-            while(currentDate < endTime)
-            {
-                let formattedTime = currentDate.toLocaleTimeString([] , {hour: '2-digit' , minute: '2-digit'});
-
-                //add slots into the timeSlot array
-                timeSlots.push({
-                    datetime: new Date(currentDate),
-                    time: formattedTime
-                })
-
-                //increase the current time by 30 Minutes
-                currentDate.setMinutes(currentDate.getMinutes() + 30)
-            }
-
-            setDocSlots(prev => ([...prev , timeSlots]))
-
+        setDocSlots([]); // Clear previous slots
+    
+        let today = new Date(); // Get the current date
+    
+        // Loop to calculate the next 7 days of slots
+        for (let i = 0; i < 7; i++) {
+    
+          let currentDate = new Date(today);
+    
+          currentDate.setDate(today.getDate() + i); // Increment the date
+    
+    
+          let endTime = new Date();
+    
+          endTime.setDate(today.getDate() + i);
+    
+          endTime.setHours(21, 0, 0, 0); // Set end time to 9:00 PM
+    
+    
+          if(today.getDate() === currentDate.getDate()) {
+    
+            currentDate.setHours(currentDate.getHours() > 10 ? currentDate.getHours() + 1 : 10);
+    
+            currentDate.setMinutes(currentDate.getMinutes() > 30 ? 30 : 0);
+    
+          } 
+          else 
+          {
+    
+            currentDate.setHours(10);
+    
+            currentDate.setMinutes(0);
+    
+          }
+    
+          let timeSlots = [];
+    
+          while (currentDate < endTime) 
+          {
+            let formattedTime = currentDate.toLocaleTimeString([], {hour: '2-digit', minute: '2-digit'});
+    
+            timeSlots.push({
+    
+              datetime: new Date(currentDate),
+    
+              time: formattedTime
+    
+            });
+    
+            currentDate.setMinutes(currentDate.getMinutes() + 30); // Add 30 minutes
+    
+          }
+    
+          setDocSlots(prev => ([...prev, timeSlots]));
+    
         }
-
-    }
+    
+      }
 
 
     const fetchDocInfo = () => {

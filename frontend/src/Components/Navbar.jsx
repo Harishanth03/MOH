@@ -86,6 +86,9 @@ const Navbar = () => {
             Create account
           </button>
         )}
+
+        <img src={assets.menu_icon} alt="" />
+
       </div>
     </div>
   );
