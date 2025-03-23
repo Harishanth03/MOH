@@ -69,7 +69,12 @@ const MyProfile = () => {
 
                 </div>
 
-                <button onClick={() => setEdit(prev => (!prev))} className='bg-[#0D6EFD] px-10 py-2.5 rounded-sm text-white cursor-pointer'>Edit</button>
+                {
+                  edit ? 
+                  <button onClick={() => setEdit(!edit)} className='bg-green-600 px-10 py-2.5 rounded-sm text-white cursor-pointer'>Save</button>
+                  :
+                  <button onClick={() => setEdit(!edit)} className='bg-[#0D6EFD] px-10 py-2.5 rounded-sm text-white cursor-pointer'>Edit</button>
+                }
 
               </div>
 
@@ -81,7 +86,7 @@ const MyProfile = () => {
 
                     <label className='block text-gray-600' htmlFor="userName">User name: </label>
                     {
-                      edit === true ? <input  className='w-full p-2 border border-gray-300 rounded-md focus:outline-none focus:border-[#0D6EFD]' type="text" /> : <p>{userData.name}</p>
+                      edit === true ? <input value={userData.name} onChange={(e) => setUserData(prev => ({...prev , name:e.target.value}))}  className='w-full p-2 border border-gray-300 rounded-md focus:outline-none focus:border-[#0D6EFD]' type="text" /> : <p>{userData.name}</p>
                     }
 
                   </div>
@@ -90,7 +95,7 @@ const MyProfile = () => {
 
                     <label className='block text-gray-600' htmlFor="userName">Email: </label>
                     {
-                      edit === true ? <input className='w-full p-2 border border-gray-300 rounded-md focus:outline-none focus:border-[#0D6EFD]' type="email" /> : <p>{userData.email}</p>
+                      edit === true ? <input value={userData.email} onChange={(e) => setUserData(prev => ({...prev , email:e.target.value}))} className='w-full p-2 border border-gray-300 rounded-md focus:outline-none focus:border-[#0D6EFD]' type="email" /> : <p>{userData.email}</p>
                     }
 
                   </div>
@@ -99,7 +104,7 @@ const MyProfile = () => {
 
                     <label className='block text-gray-600' htmlFor="userName">Phone: </label>
                     {
-                      edit === true ? <input className=' w-full p-2 border border-gray-300 rounded-md focus:outline-none focus:border-[#0D6EFD]' type="text" /> : <p>{userData.phone}</p>
+                      edit === true ? <input value={userData.phone} onChange={(e) => setUserData(prev => ({...prev , phone:e.target.value}))} className=' w-full p-2 border border-gray-300 rounded-md focus:outline-none focus:border-[#0D6EFD]' type="text" /> : <p>{userData.phone}</p>
                     }
 
                   </div>
@@ -109,7 +114,7 @@ const MyProfile = () => {
                     <label className='block text-gray-600' htmlFor="userName">Gender: </label>
                     {
                       edit === true ? 
-                      <select  className='w-full p-2 border border-gray-300 rounded-md focus:outline-none focus:border-[#0D6EFD]' name="" id="">
+                      <select value={userData.gender} onChange={(e) => setUserData(prev => ({...prev , gender:e.target.value}))}  className='w-full p-2 border border-gray-300 rounded-md focus:outline-none focus:border-[#0D6EFD]' name="" id="">
 
                         <option value="Male">Male</option>
                         <option value="Female">Female</option>
@@ -123,7 +128,7 @@ const MyProfile = () => {
 
                     <label className='block text-gray-600' htmlFor="userName">Date Of Birth: </label>
                     {
-                      edit === true ? <input className='w-full p-2 border border-gray-300 rounded-md focus:outline-none focus:border-[#0D6EFD]' type="date" /> : <p>{userData.dob}</p>
+                      edit === true ? <input value={userData.dob} onChange={(e) => setUserData(prev => ({...prev , dob:e.target.value}))} className='w-full p-2 border border-gray-300 rounded-md focus:outline-none focus:border-[#0D6EFD]' type="date" /> : <p>{userData.dob}</p>
                     }
 
                   </div>
