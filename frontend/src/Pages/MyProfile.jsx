@@ -56,8 +56,8 @@ const MyProfile = () => {
                 <div className='w-full flex justify-start items-center gap-2'>
 
                   {
-                    edit === true ? <input type="file" className='w-24'/> : 
-                    <img className='w-24' src={assets.user} alt="" />
+                    edit === true ? <input  type="file" className='w-24'/> : 
+                    <img  className='w-24' src={assets.user} alt="" />
                   }
 
                   <div className='text-gray-700'>
@@ -81,7 +81,7 @@ const MyProfile = () => {
 
                     <label className='block text-gray-600' htmlFor="userName">User name: </label>
                     {
-                      edit === true ? <input className='w-full p-2 border border-gray-300 rounded-md focus:outline-none focus:border-[#0D6EFD]' type="text" /> : <p>{userData.name}</p>
+                      edit === true ? <input  className='w-full p-2 border border-gray-300 rounded-md focus:outline-none focus:border-[#0D6EFD]' type="text" /> : <p>{userData.name}</p>
                     }
 
                   </div>
@@ -97,21 +97,56 @@ const MyProfile = () => {
 
                   <div className=' w-full flex flex-col md:col-span-2 gap-3'>
 
-                    <label className='block text-gray-600' htmlFor="userName">Email: </label>
+                    <label className='block text-gray-600' htmlFor="userName">Phone: </label>
                     {
-                      edit === true ? <input className='w-full p-2 border border-gray-300 rounded-md focus:outline-none focus:border-[#0D6EFD]' type="email" /> : <p>{userData.email}</p>
+                      edit === true ? <input className=' w-full p-2 border border-gray-300 rounded-md focus:outline-none focus:border-[#0D6EFD]' type="text" /> : <p>{userData.phone}</p>
                     }
 
                   </div>
 
                   <div className=' w-full flex flex-col md:col-span-2 gap-3'>
 
-                    <label className='block text-gray-600' htmlFor="userName">Email: </label>
+                    <label className='block text-gray-600' htmlFor="userName">Gender: </label>
                     {
-                      edit === true ? <input className='w-full p-2 border border-gray-300 rounded-md focus:outline-none focus:border-[#0D6EFD]' type="email" /> : <p>{userData.email}</p>
+                      edit === true ? 
+                      <select  className='w-full p-2 border border-gray-300 rounded-md focus:outline-none focus:border-[#0D6EFD]' name="" id="">
+
+                        <option value="Male">Male</option>
+                        <option value="Female">Female</option>
+
+                      </select> : <p>{userData.gender}</p>
                     }
 
                   </div>
+
+                  <div className=' w-full flex flex-col md:col-span-2 gap-3'>
+
+                    <label className='block text-gray-600' htmlFor="userName">Date Of Birth: </label>
+                    {
+                      edit === true ? <input className='w-full p-2 border border-gray-300 rounded-md focus:outline-none focus:border-[#0D6EFD]' type="date" /> : <p>{userData.dob}</p>
+                    }
+
+                  </div>
+
+                  <div className=' w-full flex flex-col md:col-span-2 gap-3'>
+
+                    <label className='block text-gray-600' htmlFor="userName">Address: </label>
+
+                    <div className='flex flex-col  md:flex-row w-full gap-2'>
+
+                      {
+                        edit === true ? <input value={userData.address.line1} onChange={(e) => setUserData(prev => ({...prev , address: {...prev.address , line1:e.target.value}}))} className='w-full p-2 border border-gray-300 rounded-md focus:outline-none focus:border-[#0D6EFD]' type="text" /> : <p>{userData.address.line1},</p>
+                      }
+
+                      {
+                        edit === true ? <input value={userData.address.line2} onChange={(e) => setUserData(prev => ({...prev , address: {...prev.address , line2:e.target.value}}))} className='w-full p-2 border border-gray-300 rounded-md focus:outline-none focus:border-[#0D6EFD]' type="text" /> : <p>{userData.address.line2}</p>
+                      }
+
+                    </div>
+
+                  </div>
+
+                  
 
                 </div>
                 
