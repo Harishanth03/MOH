@@ -55,7 +55,6 @@ const VoiceCommand = () => {
 
   return (
     <div>
-      <p>Listening for voice commands...</p>
     </div>
   );
 };
