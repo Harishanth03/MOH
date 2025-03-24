@@ -87,7 +87,7 @@ const Navbar = () => {
           </button>
         )}
 
-        <img src={assets.menu_icon} alt="" />
+        <img className="m-6 md:hidden" src={assets.menu_icon} alt="" />
 
       </div>
     </div>
