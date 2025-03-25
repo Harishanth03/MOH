@@ -18,7 +18,7 @@ const doctorSchema = new mongoose.Schema({
 
     about: {type:String , required:true},
 
-    available: {type:String , required:true},
+    available: {type:Boolean , required:true},
 
     address: {type:Object , required:true},
 
