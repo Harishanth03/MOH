@@ -2,6 +2,7 @@ import validator from 'validator'
 import bcrypt from 'bcrypt'
 import { v2 as cloudinary } from "cloudinary";
 import doctorModel from '../Models/DoctorModel.js';
+import jwt from 'jsonwebtoken'
 
 //================================================ Add Doctor Function ===================================================
 
@@ -70,4 +71,48 @@ const addDoctor = async(req , res) => {
     }
 }
 
-export {addDoctor}
+//================================================ Admin Login Function ===================================================
+
+const adminLogin = async(req , res) => {
+
+    try 
+    {
+
+        const {email , password} = req.body;
+
+
+        if(!email || !password)
+        {
+            return res.json({success:false , message:"Please fill all the details"})
+        }
+
+        if(!validator.isEmail(email))
+        {
+            return res.json({success:false , message:"Please enter a valid email"})
+        }
+
+        if(email === process.env.ADMIN_EMAIL && password === process.env.ADMIN_PASSWORD)
+        {
+            const token = jwt.sign(email + password, process.env.JWT_SECRET)
+
+            res.json({success:true , token})
+        }
+        else
+        {
+            res.json({success:false , message:"Invalide email or Password"})
+        }
+        
+    } catch (error) 
+    {
+        
+        console.log(error)
+
+        res.json({success:false , message:error.message})
+        
+    }
+
+
+}
+
+
+export {addDoctor , adminLogin}
