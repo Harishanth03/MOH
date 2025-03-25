@@ -8,7 +8,7 @@ const doctorSchema = new mongoose.Schema({
 
     password: {type:String , required:true},
 
-    image: {type:String , required:true},
+    image: {type:String },
 
     speciality: {type:String , required:true},
 
@@ -18,7 +18,7 @@ const doctorSchema = new mongoose.Schema({
 
     about: {type:String , required:true},
 
-    available: {type:Boolean , required:true},
+    available: {type:Boolean , default:true },
 
     address: {type:Object , required:true},
 
