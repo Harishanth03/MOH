@@ -10,10 +10,12 @@ import list_icon from './list_icon.svg'
 import tick_icon from './tick_icon.svg'
 import appointments_icon from './appointments_icon.svg'
 import earning_icon from './earning_icon.svg'
+import logo from './logo.svg'
 import patients_icon from './patients_icon.svg'
 
 export const assets = {
     add_icon,
+    logo,
     admin_logo,
     appointment_icon,
     cancel_icon,

@@ -1,6 +1,7 @@
 import React, { useContext, useState } from 'react'
 import { AdminContext } from '../Context/AdminContext.jsx';
 import axios from 'axios'
+import {toast} from 'react-toastify'
 
 const Login = () => {
 
@@ -27,11 +28,14 @@ const Login = () => {
 
                 if(data.success)
                 {
-                    console.log(data.atoken)
+                    localStorage.setItem('aToken' , data.aToken)
+                    setAToken(data.aToken)
+                    toast.success("Login Success")
+
                 }
                 else
                 {
-                    console.log(data.message)
+                    toast.error(data.message)
                 }
             }
             else
@@ -70,7 +74,7 @@ const Login = () => {
 
             </div>
 
-            <button className='bg-blue-500 text-white w-full py-2 rounded-md text-base'>Login</button>
+            <button className='bg-blue-500 cursor-pointer text-white w-full py-2 rounded-md text-base'>Login</button>
 
             {
                 state === 'Admin' ? 
