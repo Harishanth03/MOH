@@ -29,6 +29,7 @@ const Login = () => {
                 if(data.success)
                 {
                     localStorage.setItem('aToken' , data.aToken)
+                    setAToken(data.aToken)
                     toast.success("Login Success")
 
                 }
