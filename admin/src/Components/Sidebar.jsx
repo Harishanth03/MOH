@@ -8,12 +8,12 @@ const Sidebar = () => {
   const {aToken} = useContext(AdminContext);
 
   return (
-    <div>
+    <div className='min-h-screen bg-white border-r border-r-gray-300'>
       
       {
-        aToken && <ul>
+        aToken && <ul className='text-[#515151] mt-5'>
 
-          <NavLink to={'/admin-dashboard'}>
+          <NavLink className={({isActive}) => `flex items-center gap-3 py-3.5 px-3 md:px-9 md:min-w-72 cursor-pointer ${isActive ? 'bg-[#F2F3FF] border-r-4 border-blue-500' : ''}`} to={'/admin-dashboard'}>
 
             <img src={assets.home_icon} />
 
@@ -21,7 +21,7 @@ const Sidebar = () => {
 
           </NavLink>
 
-          <NavLink to={'/all-appointment'}>
+          <NavLink className={({isActive}) => `flex items-center gap-3 py-3.5 px-3 md:px-9 md:min-w-72 cursor-pointer ${isActive ? 'bg-[#F2F3FF] border-r-4 border-blue-500' : ''}`} to={'/all-appointment'}>
 
             <img src={assets.appointment_icon} />
 
@@ -29,7 +29,7 @@ const Sidebar = () => {
 
           </NavLink>
 
-          <NavLink to={'/add-doctor'}>
+          <NavLink className={({isActive}) => `flex items-center gap-3 py-3.5 px-3 md:px-9 md:min-w-72 cursor-pointer ${isActive ? 'bg-[#F2F3FF] border-r-4 border-blue-500' : ''}`} to={'/add-doctor'}>
 
             <img src={assets.add_icon} />
 
@@ -37,7 +37,7 @@ const Sidebar = () => {
 
           </NavLink>
 
-          <NavLink to={'/doctor-list'}>
+          <NavLink className={({isActive}) => `flex items-center gap-3 py-3.5 px-3 md:px-9 md:min-w-72 cursor-pointer ${isActive ? 'bg-[#F2F3FF] border-r-4 border-blue-500' : ''}`} to={'/doctor-list'}>
 
             <img src={assets.people_icon} />
 
