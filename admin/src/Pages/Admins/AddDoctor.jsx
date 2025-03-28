@@ -79,6 +79,8 @@ const AddDoctor = () => {
           <p>About</p>
           <textarea rows={5} placeholder="Write about doctor"></textarea>
         </div>
+
+        <button>Add Doctor</button>
       </div>
     </div>
   </form>
