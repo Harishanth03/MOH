@@ -13,10 +13,13 @@ import Appointment from './Pages/Appointment'
 import VoiceCommand from './Components/VoiceCommand'
 import MedicalReport from './Pages/MedicalReport'
 import BedAllocation from './Pages/BedAllocation'
+import { ToastContainer, toast } from 'react-toastify';
 
 const App = () => {
   return (
     <div className='mx-4 sm:mx-[10%]'>
+
+      <ToastContainer/>
 
       <Navbar/>
 
