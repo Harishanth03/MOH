@@ -6,6 +6,8 @@ const userSchema = new mongoose.Schema({
 
     email: {type:String , required:true , unique:true},
 
+    password: {type:String , required:true},
+
     dob: {type:String , redefault:'Not Selected'},
 
     gender: {type:String , default:'Not Selected'},
@@ -14,10 +16,10 @@ const userSchema = new mongoose.Schema({
 
     address: {type:Object , default:{line1:'' , line2:''}},
 
-    phone_number: {type:Number , required:true , unique:true}
+    phone_number: {type:String , default:'000000000'}
 
 } , {minimize:false});
 
-const patientModel = mongoose.models.patient || mongoose.model('doctor' , userSchema);
+const patientModel = mongoose.models.patient || mongoose.model('user' , userSchema);
 
 export default patientModel;
