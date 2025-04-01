@@ -33,7 +33,7 @@ const DoctorsList = () => {
                 <p className='text-neutral-800 text-lg font-medium'>{doctor.name}</p>
                 <p className='text-zinc-600 text-sm'>{doctor.speciality}</p>
 
-                <div className='mt-2 flex items-center gap-1 text-sm'>
+                <div className='mt-2 flex w-12 items-center gap-1 text-sm'>
 
                   <input type="checkbox" checked={doctor.available}/>
 
