@@ -4,6 +4,7 @@ import 'dotenv/config';
 import connectDatabase from './config/mongodb.js'
 import connectCloudinary from './config/Cloudinary.js'
 import adminRouter from './Routes/AdminRoute.js';
+import doctorRouter from './Routes/DoctorRoute.js';
 
 //=============================================== App Config ========================================================
 
@@ -19,7 +20,8 @@ app.use(cors());
 
 //=============================================== API End Point =====================================================
 
-app.use('/api/admin', adminRouter)
+app.use('/api/admin', adminRouter);
+app.use('/api/doctor' , doctorRouter)
 
 //=============================================== Server Start =====================================================
 

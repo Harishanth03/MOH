@@ -14,12 +14,12 @@ const AppContextProvider = (props) => {
         try 
         {
 
-            const {data} = await axios.get(backendUrl + '/api/admin/list')
+            const {data} = await axios.get('http://localhost:4000/api/doctor/list')
 
             if(data.success)
             {
                 setDoctors(data.doctors)
-                
+                console.log(doctors)
             }
             
         } catch (error) 
