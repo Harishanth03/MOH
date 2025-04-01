@@ -30,4 +30,4 @@ const bowData = processedData.map(item => ({
 
 // Save BoW dataset
 fs.writeFileSync("BoWData.json", JSON.stringify(bowData, null, 2));
-console.log("✅ BoW Conversion Complete! Data saved to 'BoWData.json'.");
+console.log("BoW Conversion Complete! Data saved to 'BoWData.json'.");

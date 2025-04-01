@@ -24,8 +24,8 @@ const VoiceCommand = () => {
 
       // Matching Commands to Routes
       const commands = {
-        "home": "/",
-        "doctors": "/doctors",
+        "go to home": "/",
+        "go to doctor": "/doctors",
         "go to login": "/login",
         "go to about": "/about",
         "go to contact": "/contact",
