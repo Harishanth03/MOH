@@ -1,5 +1,9 @@
-import React, { useState } from 'react'
+import React, { useContext, useEffect, useState } from 'react'
 import { assets } from '../assets/assets'
+import { AppContext } from '../Context/AppContext';
+import axios from 'axios';
+import {toast} from 'react-toastify'
+import {useNavigate } from "react-router-dom";
 
 const Login = () => {
 
@@ -11,18 +15,78 @@ const Login = () => {
 
   const [state , setState] = useState('Sign in');
 
+  const {token , setToken , backendUrl} = useContext(AppContext);
+
+  const navigate = useNavigate();
+
+
   //====================== Onsubmit Handler ===============================
 
-  const onSubmitHandler = (event) => {
+  const onSubmitHandler = async (event) => {
 
     event.preventDefault();
+
+    try 
+    {
+
+      if(state === 'Sign up')
+      {
+        const {data} = await axios.post(backendUrl + '/api/user/register' , {name , password , email})
+
+        if(data.success)
+        {
+          localStorage.setItem('token' , data.token);
+
+          setToken(data.token)
+
+          toast.success("User Registered Success")
+
+          navigate('/')
+        }
+        else
+        {
+          toast.error(data.message);
+        }
+      }
+      else
+      {
+
+        const {data} = await axios.post(backendUrl + '/api/user/login' , {password , email})
+
+        if(data.success)
+        {
+          localStorage.setItem('token' , data.token);
+
+          setToken(data.token)
+
+          navigate('/')
+        }
+        else
+        {
+          toast.error(data.message);
+        }
+
+      }
+      
+    } catch (error) 
+    {
+      console.log(error);
+    }
   }
+
+  useEffect(() => {
+
+    if(token)
+    {
+      navigate('/')
+    }
+  },[token])
 
   
   return (
-    <section className='w-full min-h-screen flex flex-col justify-center items-center'>
+    <section className='w-full min-h-[70%] flex flex-col justify-center items-center'>
 
-      <form className='w-full sm:w-3/4 flex flex-col sm:flex-row gap-6 justify-center rounded-lg p-4 shadow-lg'>
+      <form onSubmit={onSubmitHandler} className='w-full sm:w-3/4 flex flex-col sm:flex-row gap-6 justify-center rounded-lg p-4 shadow-lg'>
             
         {/* =================== left side ====================== */}
         <div className='w-full sm:w-1/2'>
@@ -59,7 +123,7 @@ const Login = () => {
               <input onChange={(e) => setPassword(e.target.value)} value={password}  className='w-full p-2 border border-gray-300 rounded-md focus:outline-none focus:border-[#0D6EFD]' id='Password' type="password" />
             </div>
 
-            <button className='bg-[#0D6EFD] p-3 font-medium rounded-md cursor-pointer text-white'>{state === "Sign in" ? "Sign In" : "Create Account"}</button>
+            <button type='submit' className='bg-[#0D6EFD] p-3 font-medium rounded-md cursor-pointer text-white'>{state === "Sign in" ? "Sign In" : "Create Account"}</button>
 
             { 
               state === 'Sign in' ? <p className='text-gray-500'>Create an new account? <a className='cursor-pointer text-[#0D6EFD] underline text-sm' onClick={() => setState("Sign up")}>Click Here</a></p> : <p className='text-gray-500'>Already have an account? <a className='cursor-pointer text-[#0D6EFD] underline text-sm' onClick={() => setState("Sign in")}>Click Here</a></p>
