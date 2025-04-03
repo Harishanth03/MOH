@@ -2,6 +2,7 @@ import validator from 'validator'
 import bcrypt from 'bcrypt'
 import patientModel from '../Models/PatientModel.js';
 import jwt from 'jsonwebtoken'
+import {v2 as cloudinary} from 'cloudinary'
 //====================================== Register User ==================================================
 
 const registerUser = async(req , res) => {
@@ -110,6 +111,47 @@ const getProfile = async(req  , res) =>
         const userData = await patientModel.findById(userId).select('-password')
 
         res.json({success:true , userData});
+        
+    } catch (error) 
+    {
+
+        console.log(error);
+
+        res.json({success:false , message : error.message});
+        
+    }
+}
+
+//============================================== Update User Profile ====================================================
+
+const updateUserProfile = async(req , res) => 
+{
+    try 
+    {
+
+       const {userID , name , dob , gender , address , phone_number } = req.body;
+
+       const imageFile = req.file;
+
+        if(!name || !dob || !gender || !address || !phone_number)
+        {    
+            return res.json({success:false , message: "Data missing"})
+        }
+
+        await patientModel.findByIdAndUpdate(userID , {name , phone_number , address:JSON.parse(address) , dob , gender});
+
+        if(imageFile)
+        {
+            //upload image to cloudinary
+            const imageUpload = await cloudinary.uploader.upload(imageFile.path, {resource_type:'image'})
+
+            const imageURL = imageUpload.secure_url;
+
+            await patientModel.findByIdAndUpdate(userID , {image:imageURL})
+        }
+
+        res.json({success:true  , message:"Profile Updated"});
+
         
     } catch (error) 
     {
