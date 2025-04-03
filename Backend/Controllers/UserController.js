@@ -124,43 +124,34 @@ const getProfile = async(req  , res) =>
 
 //============================================== Update User Profile ====================================================
 
-const updateUserProfile = async(req , res) => 
-{
-    try 
-    {
+const updateUserProfile = async (req, res) => {
+    try {
+        const { userId, name, dob, gender, address, phone_number } = req.body;
+        const imageFile = req.file;
 
-       const {userID , name , dob , gender , address , phone_number } = req.body;
-
-       const imageFile = req.file;
-
-        if(!name || !dob || !gender || !address || !phone_number)
-        {    
-            return res.json({success:false , message: "Data missing"})
+        if (!name || !dob || !gender || !phone_number) {
+            return res.json({ success: false, message: "Data missing" });
         }
 
-        await patientModel.findByIdAndUpdate(userID , {name , phone_number , address:JSON.parse(address) , dob , gender});
+        const updatedUser = await patientModel.findByIdAndUpdate(
+            userId,
+            { name, phone_number, address: JSON.parse(address), dob, gender },
+            { new: true }
+        );
 
-        if(imageFile)
-        {
-            //upload image to cloudinary
-            const imageUpload = await cloudinary.uploader.upload(imageFile.path, {resource_type:'image'})
-
+        if (imageFile) {
+            const imageUpload = await cloudinary.uploader.upload(imageFile.path, { resource_type: 'image' });
             const imageURL = imageUpload.secure_url;
-
-            await patientModel.findByIdAndUpdate(userID , {image:imageURL})
+            await patientModel.findByIdAndUpdate(userId, { image: imageURL }, { new: true });
         }
 
-        res.json({success:true  , message:"Profile Updated"});
+        res.json({ success: true, message: "Profile Updated", updatedUser });
 
-        
-    } catch (error) 
-    {
-
+    } catch (error) {
         console.log(error);
-
-        res.json({success:false , message : error.message});
-        
+        res.json({ success: false, message: error.message });
     }
-}
+};
 
-export {registerUser , loginUser , getProfile}
+
+export {registerUser , loginUser , getProfile  , updateUserProfile}
