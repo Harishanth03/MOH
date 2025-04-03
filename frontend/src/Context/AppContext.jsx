@@ -6,8 +6,9 @@ export const AppContext = createContext();
 
 const AppContextProvider = (props) => {
 
-    const backendUrl = import.meta.env.VITE_BACKEND_URL
+    const backendUrl = 'http://localhost:4000'
     const [doctors , setDoctors] = useState([]);
+    const [token , setToken] = useState('');
 
     const getDoctorsData = async() => {
 
@@ -38,7 +39,10 @@ const AppContextProvider = (props) => {
     
 
     const value = {
-        doctors
+        doctors,
+        token,
+        setToken,
+        backendUrl
 
     }
 
