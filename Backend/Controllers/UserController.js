@@ -2,6 +2,7 @@ import validator from 'validator'
 import bcrypt from 'bcrypt'
 import patientModel from '../Models/PatientModel.js';
 import jwt from 'jsonwebtoken'
+import {v2 as cloudinary} from 'cloudinary'
 //====================================== Register User ==================================================
 
 const registerUser = async(req , res) => {
@@ -98,4 +99,59 @@ const loginUser = async(req , res) => {
     }
 }
 
-export {registerUser , loginUser}
+//===================================================== My Profile ============================================================
+
+const getProfile = async(req  , res) => 
+{
+    try 
+    {
+
+        const {userId} = req.body;
+
+        const userData = await patientModel.findById(userId).select('-password')
+
+        res.json({success:true , userData});
+        
+    } catch (error) 
+    {
+
+        console.log(error);
+
+        res.json({success:false , message : error.message});
+        
+    }
+}
+
+//============================================== Update User Profile ====================================================
+
+const updateUserProfile = async (req, res) => {
+    try {
+        const { userId, name, dob, gender, address, phone_number } = req.body;
+        const imageFile = req.file;
+
+        if (!name || !dob || !gender || !phone_number) {
+            return res.json({ success: false, message: "Data missing" });
+        }
+
+        const updatedUser = await patientModel.findByIdAndUpdate(
+            userId,
+            { name, phone_number, address: JSON.parse(address), dob, gender },
+            { new: true }
+        );
+
+        if (imageFile) {
+            const imageUpload = await cloudinary.uploader.upload(imageFile.path, { resource_type: 'image' });
+            const imageURL = imageUpload.secure_url;
+            await patientModel.findByIdAndUpdate(userId, { image: imageURL }, { new: true });
+        }
+
+        res.json({ success: true, message: "Profile Updated", updatedUser });
+
+    } catch (error) {
+        console.log(error);
+        res.json({ success: false, message: error.message });
+    }
+};
+
+
+export {registerUser , loginUser , getProfile  , updateUserProfile}
