@@ -1,13 +1,15 @@
 import React, { useContext, useEffect, useState } from 'react'
-import { useParams } from 'react-router-dom'
+import { useNavigate, useParams } from 'react-router-dom'
 import { AppContext } from '../Context/AppContext';
 import { assets } from '../assets/assets';
+import { toast } from 'react-toastify';
+import axios from 'axios';
 
 const Appointment = () => {
 
     const {docId} = useParams(); //get the selected doctorId using UseParams
 
-    const {doctors} = useContext(AppContext);
+    const {doctors , backendUrl , token , getDoctorsData} = useContext(AppContext);
 
     const daysOfWeek = ['SUN' , 'MON' , 'TUE' , 'WED' , 'THU' , 'FRI' , 'SAT']
 
@@ -18,6 +20,8 @@ const Appointment = () => {
     const [slotIndex , setSlotIndex] = useState(0); //slotIndex
 
     const [slotTime , setSlotTime] = useState(''); //store Date
+
+    const navigate = useNavigate()
     
 
     //Create the function for slots of times 
@@ -91,6 +95,43 @@ const Appointment = () => {
         setDocInfo(docInfo);
 
     }
+
+    //================================================== Book Appointment ============================================
+
+
+    const bookAppointment = async () => {
+        if (!token) {
+          toast.warn("Please Login to Book your appointment");
+          return navigate('/login');
+        }
+      
+        try {
+          const date = docSlots[slotIndex][0].datetime;
+          let day = date.getDate();
+          let month = date.getMonth() + 1;
+          let year = date.getFullYear();
+          const slotDate = `${day}_${month}_${year}`;
+      
+          const { data } = await axios.post(
+            backendUrl + '/api/user/book-appointment',
+            { docId, slotDate, slotTime },
+            { headers: { token } }
+          );
+      
+          if (data.success) {
+            toast.success(data.message); // ✅ green success toast
+            getDoctorsData();
+            navigate('/my-appointment');
+          } else {
+            toast.error(data.message); // only triggered if success is false
+          }
+      
+        } catch (error) {
+          console.log(error);
+          toast.error(error.message);
+        }
+      };
+      
 
     useEffect(() => {
 
@@ -192,7 +233,7 @@ const Appointment = () => {
 
             </div>
 
-            <button className='w-full mt-5 bg-[#0D6EFD] cursor-pointer text-white py-2.5 rounded-full'>Book an Appointment</button>
+            <button onClick={bookAppointment} className='w-full mt-5 bg-[#0D6EFD] cursor-pointer text-white py-2.5 rounded-full'>Book an Appointment</button>
 
         </div>
 
