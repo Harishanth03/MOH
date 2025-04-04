@@ -1,5 +1,5 @@
 import React from 'react'
-import {Route , Routes} from 'react-router-dom'
+import {Route , Routes, useLocation} from 'react-router-dom'
 import Home from './Pages/Home'
 import Doctors from './Pages/Doctors'
 import Login from './Pages/Login'
@@ -16,6 +16,10 @@ import BedAllocation from './Pages/BedAllocation'
 import { ToastContainer, toast } from 'react-toastify';
 
 const App = () => {
+
+  const location = useLocation();
+  const hideFooterRoutes = ['/login'];
+
   return (
     <div className='mx-4 sm:mx-[10%]'>
 
@@ -41,7 +45,8 @@ const App = () => {
 
       
       
-      <Footer/>
+      {/* Conditionally render Footer */}
+      {!hideFooterRoutes.includes(location.pathname) && <Footer />}
       
     </div>
   )

@@ -8,7 +8,7 @@ const AppContextProvider = (props) => {
 
     const backendUrl = 'http://localhost:4000'
     const [doctors , setDoctors] = useState([]);
-    const [token , setToken] = useState('');
+    const [token , setToken] = useState(localStorage.getItem('token')? localStorage.getItem('token') : false);
 
     const getDoctorsData = async() => {
 
