@@ -114,5 +114,47 @@ const adminLogin = async(req , res) => {
 
 }
 
+//================================================ Get all doctors ===================================================
 
-export {addDoctor , adminLogin}
+const allDoctors = async(req , res) => {
+   
+    try 
+    {
+        
+        const doctors = (await doctorModel.find({}).select('-password')); //find all doctors
+
+        res.json({success:true , doctors});
+
+    } catch (error) 
+    {
+
+        console.log(error)
+
+        res.json({success:false , message:error.message})
+        
+    }
+    
+}
+
+//================================================= List All Doctors ==================================================
+
+const listDoctors = async(req  , res) => {
+
+    try 
+    {
+        const doctors = await doctorModel.find({}).select(['-password', '-email'])
+
+        res.json({success:true , doctors});
+        
+    } catch (error) 
+    {
+
+        console.log(error)
+
+        res.json({success:false , message:error.message})
+        
+    }
+}
+
+
+export {addDoctor , adminLogin , allDoctors  ,listDoctors}
