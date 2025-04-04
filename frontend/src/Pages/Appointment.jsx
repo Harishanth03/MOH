@@ -99,54 +99,39 @@ const Appointment = () => {
     //================================================== Book Appointment ============================================
 
 
-    const bookAppointment = async() => {
-
-        if(!token)
-        {
-            toast.warn("Please Login to Book your appointment");
-
-            return navigate('/login')
+    const bookAppointment = async () => {
+        if (!token) {
+          toast.warn("Please Login to Book your appointment");
+          return navigate('/login');
         }
-
-        try 
-        {
-
-            const date = docSlots[slotIndex][0].datetime
-
-            let day = date.getDate();
-
-            let month = date.getMonth() + 1;
-
-            let year = date.getFullYear();
-
-            const slotDate = day + "_" + month + "_" + year
-
-            const {data} = await axios.post(backendUrl+'/api/user/book-appointment' , {docId , slotDate , slotTime} , {headers:{token}});
-
-            if(data.succcess)
-            {
-                toast.success(data.message);
-
-                getDoctorsData();
-
-                navigate('/my-appointment')
-            }
-            else
-            {
-                toast.error(data.message)
-            }
-            
-        } catch (error) 
-        {
-
-            console.log(error)
-
-            toast.error(error.message);
-            
+      
+        try {
+          const date = docSlots[slotIndex][0].datetime;
+          let day = date.getDate();
+          let month = date.getMonth() + 1;
+          let year = date.getFullYear();
+          const slotDate = `${day}_${month}_${year}`;
+      
+          const { data } = await axios.post(
+            backendUrl + '/api/user/book-appointment',
+            { docId, slotDate, slotTime },
+            { headers: { token } }
+          );
+      
+          if (data.success) {
+            toast.success(data.message); // ✅ green success toast
+            getDoctorsData();
+            navigate('/my-appointment');
+          } else {
+            toast.error(data.message); // only triggered if success is false
+          }
+      
+        } catch (error) {
+          console.log(error);
+          toast.error(error.message);
         }
-
-
-    }
+      };
+      
 
     useEffect(() => {
 
