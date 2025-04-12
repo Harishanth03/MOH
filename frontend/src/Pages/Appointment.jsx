@@ -68,15 +68,33 @@ const Appointment = () => {
           while (currentDate < endTime) 
           {
             let formattedTime = currentDate.toLocaleTimeString([], {hour: '2-digit', minute: '2-digit'});
+
+            let day = currentDate.getDate();
+
+            let month = currentDate.getMonth() + 1;
+
+            let year = currentDate.getFullYear();
+
+            const slotDate = day + "_" + month + "_" + year; // Format the date as "DD_MM_YYYY"
+
+            const slotTime = formattedTime // Convert time to lowercase
+
+            const isSlotsAvailable = docInfo.slots_booked[slotDate] && docInfo.slots_booked[slotDate].includes(slotTime) ? false : true; // Check if the slot is booked
+
+            if(isSlotsAvailable)
+            {
+
+              timeSlots.push({
     
-            timeSlots.push({
+                datetime: new Date(currentDate),
+      
+                time: formattedTime
+      
+              });
+
+            }
     
-              datetime: new Date(currentDate),
-    
-              time: formattedTime
-    
-            });
-    
+          
             currentDate.setMinutes(currentDate.getMinutes() + 30); // Add 30 minutes
     
           }
