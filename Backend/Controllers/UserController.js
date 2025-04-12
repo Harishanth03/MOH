@@ -215,6 +215,29 @@ const bookAppointment = async (req, res) => {
       res.json({ success: false, message: error.message });
     }
   };
+
+  //============================================ Get User Appointments ====================================================
+
+  const listAppointment = async (req, res) => {
+
+    try 
+    {
+
+        const { userId } = req.body;
+
+        const appointments = await appointmentModel.find({userId});
+
+        res.json({success:true , appointments});
+        
+    } catch (error) 
+    {
+
+        console.error("Appointment booking error:", error);
+        res.json({ success: false, message: error.message });
+
+    }
+
+  }
   
 
-export {registerUser , loginUser , getProfile  , updateUserProfile , bookAppointment}
+export {registerUser , loginUser , getProfile  , updateUserProfile , bookAppointment , listAppointment}
