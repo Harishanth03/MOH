@@ -15,7 +15,35 @@ const DonationSuccess = () => {
 
     useEffect(() => {
         toast.success("Thank you! Your donation was successful.", { autoClose: 3000 });
-    }, []);
+      
+        const saveDonation = async () => {
+          try {
+            const response = await fetch("http://localhost:4000/api/donation/record", {
+              method: "POST",
+              headers: {
+                "Content-Type": "application/json",
+                token: localStorage.getItem("token"), 
+              },
+              body: JSON.stringify({
+                userId: localStorage.getItem("userId"),
+                amount,
+                email,
+                message
+              })
+            });
+      
+            const result = await response.json();
+            if (!result.success) {
+              toast.error("Donation was not saved to the database!");
+            }
+          } catch (error) {
+            console.error("Saving donation failed:", error);
+            toast.error("Server error while saving donation.");
+          }
+        };
+      
+        saveDonation();
+      }, []);
 
     const downloadReceipt = () => {
         const doc = new jsPDF();
