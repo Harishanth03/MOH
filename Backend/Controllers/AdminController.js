@@ -5,6 +5,7 @@ import doctorModel from '../Models/DoctorModel.js';
 import jwt from 'jsonwebtoken'
 import appointmentModel from '../Models/AppointmentModel.js';
 import patientModel from '../Models/PatientModel.js';
+import donationModel from '../Models/DonationModel.js';
 
 //================================================ Add Doctor Function ===================================================
 
@@ -240,11 +241,16 @@ const AppointmentCancle = async (req, res) =>
 
             const appointments = await appointmentModel.find({});
 
+            const donations = await donationModel.find({} ,'amount');
+
+            const totalDonations = donations.reduce((sum, donations) => sum + donations.amount, 0);
+
             const dashData = {
                 doctors: doctors.length,
                 users: users.length,
                 appointments: appointments.length,
-                latestAppointments: appointments.reverse().slice(0, 5)
+                latestAppointments: appointments.reverse().slice(0, 5),
+                totaldonations: totalDonations,
             }
 
             res.json({success:true , dashData})
