@@ -3,7 +3,7 @@ import mongoose from "mongoose";
 const donationSchema = new mongoose.Schema({
   userId: {
     type: mongoose.Schema.Types.ObjectId,
-    ref: 'user', // <-- this should match your PatientModel's name
+    ref: 'user', 
     required: true
   },
   amount: {
