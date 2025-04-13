@@ -15,6 +15,7 @@ import MedicalReport from './Pages/MedicalReport'
 import BedAllocation from './Pages/BedAllocation'
 import { ToastContainer, toast } from 'react-toastify';
 import Donation from './Pages/Donation'
+import DonationSuccess from './Pages/DonationSuccess'
 
 const App = () => {
 
@@ -39,6 +40,7 @@ const App = () => {
         <Route path='/report' element = {<MedicalReport/>}/>
         <Route path='/bed' element = {<BedAllocation/>}/>
         <Route path='/donation' element = {<Donation/>}/>
+        <Route path='/donation-success' element = {<DonationSuccess/>}/>
         <Route path='/contact' element = {<Contact/>}/>
         <Route path='/my-profile' element = {<MyProfile/>}/>
         <Route path='/my-appointment' element = {<MyAppointment/>}/>
