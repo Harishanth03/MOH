@@ -165,7 +165,14 @@ const appointmentAdmin = async (req , res) => {
 
         const appointments = await appointmentModel.find({})
 
-        res.json({success:true , appointments})
+        if(appointments.length > 0)
+        {
+            res.json({success:true , appointments})
+        }
+        else
+        {
+            return res.json({success:false , message:"No Appointments available"})
+        }
         
     } catch (error) 
     {
