@@ -5,7 +5,7 @@ import { toast } from 'react-toastify';
 
 const MyAppointment = () => {
 
-  const {doctors , backendUrl , token} = useContext(AppContext);
+  const {doctors , backendUrl , token ,  getDoctorsData} = useContext(AppContext);
 
   const [appointments , setAppointments] = useState([]); //create an state array fpr save the data of book
 
@@ -56,6 +56,7 @@ const MyAppointment = () => {
       {
         toast.success(data.message)
         getUserAppointments()
+        getDoctorsData()
       }
       else
       {
@@ -82,7 +83,7 @@ const MyAppointment = () => {
 
     <div>
 
-      <p className='text-2xl font-bold text-start border-b pb-3 text-zinc-700 border-gray-300 sm:text-4xl'>MyAppointment</p>
+      <p className='text-2xl my-3 font-bold text-start border-b pb-3 text-zinc-700 border-gray-300 sm:text-4xl'>MyAppointment</p>
 
       <div>
 
@@ -115,7 +116,18 @@ const MyAppointment = () => {
               <div className=' flex flex-col gap-2 justify-center'>
 
                 <button className='text-sm text-stone-500 text-center sm:min-w-48 py-2 border rounded hover:bg-[#fcdb35] hover:text-white cursor-pointer transaction-all duration-300'>Rate Doctor</button>
-                <button onClick={() => cancleAppointment(item._id)} className='text-sm text-stone-500 text-center sm:min-w-48 py-2 border rounded hover:bg-[#0D6EFD] hover:text-white cursor-pointer transaction-all duration-300'>Cancle Doctor</button>
+                <button
+                  onClick={() => cancleAppointment(item._id)}
+                  disabled={item.cancelled}
+                  className={`text-sm text-center sm:min-w-48 py-2 border rounded cursor-pointer transition-all duration-300 ${
+                  item.cancelled 
+                  ? 'bg-gray-300 text-red-500 cursor-not-allowed' 
+                  : 'text-stone-500 hover:bg-[#0D6EFD] hover:text-white'
+                  }`}
+                  >
+                  {item.cancelled ? 'Cancelled' : 'Cancel Doctor'}
+                </button>
+
 
               </div>
 
