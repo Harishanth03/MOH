@@ -50,7 +50,17 @@ const MyAppointment = () => {
     try 
     {
 
-      console.log(appointmentId)
+      const {data} = await axios.post(backendUrl+'/api/user/cancel-appointment' , {appointmentId} , {headers:{token}})
+
+      if(data.success)
+      {
+        toast.success(data.message)
+        getUserAppointments()
+      }
+      else
+      {
+        toast.error(data.message)
+      }
       
     } catch (error) 
     {
