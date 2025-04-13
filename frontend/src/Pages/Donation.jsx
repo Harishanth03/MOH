@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { useStripe, useElements, CardElement } from '@stripe/react-stripe-js';
 import axios from 'axios';
 import { toast } from 'react-toastify';
@@ -12,56 +12,53 @@ const Donation = () => {
   const stripe = useStripe();
   const elements = useElements();
 
-  const donationOptions = [10, 25, 50, 100];
+  const donationOptions = [200, 250, 300, 350];
   const isPresetSelected = donationOptions.includes(selectedAmount);
 
   const handleDonate = async () => {
-    if (!stripe || !elements || !selectedAmount) return;
-
+    if (!selectedAmount) return;
+  
     try {
-      const cardElement = elements.getElement(CardElement);
-
-      const { paymentMethod, error } = await stripe.createPaymentMethod({
-        type: 'card',
-        card: cardElement
-      });
-
-      if (error) {
-        toast.error(error.message);
-        return;
-      }
-
-      const { data } = await axios.post(
-        'http://localhost:4000/api/donation/add-donation',
-        {
-          amount: selectedAmount,
-          email,
-          message,
-          paymentMethodId: paymentMethod.id
-        },
-        {
-          headers: {
-            token: localStorage.getItem('token') // or use from context
-          }
+      const { data } = await axios.post('http://localhost:4000/api/donation/create-checkout-session', {
+        amount: selectedAmount,
+        email,
+        message,
+      }, {
+        headers: {
+          token: localStorage.getItem('token'),
         }
-      );
-
+      });
+  
       if (data.success) {
-        toast.success(data.message);
-        setTotalDonations(prev => prev + selectedAmount);
-        setSelectedAmount(null);
-        setEmail('');
-        setMessage('');
-        cardElement.clear();
+        window.location.href = data.url; // 🔁 Redirect to Stripe Checkout
       } else {
         toast.error(data.message);
       }
-
+  
     } catch (err) {
-        console.error("Donation error:", err); // ✅ this prints the real reason
-        toast.error("Donation failed. Try again.");
+      console.error("Checkout redirect error:", err);
+      toast.error("Something went wrong.");
     }
   };
+  
+  
+
+  const backendUrl = "http://localhost:4000"; 
+
+  useEffect(() => {
+    const fetchTotalDonations = async () => {
+      try {
+        const { data } = await axios.get(`${backendUrl}/api/donation/total`);
+        if (data.success) {
+          setTotalDonations(data.total);
+        }
+      } catch (err) {
+        console.error("Error fetching total:", err);
+      }
+    };
+
+    fetchTotalDonations();
+  }, []);
 
   return (
     <div className="max-w-lg mx-auto mt-8 p-4 bg-white shadow-xl rounded-2xl border border-gray-200">
