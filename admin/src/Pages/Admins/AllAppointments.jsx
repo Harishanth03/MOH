@@ -7,7 +7,7 @@ import { assets } from '../../assets/assets';
 
 const AllAppointments = () => {
 
-  const {aToken , appointments , getAllAppoinments} = useContext(AdminContext);
+  const {aToken , appointments , getAllAppoinments , cancleAppointment} = useContext(AdminContext);
 
   const {calculateAge , slotDateFormat} = useContext(AppContext);
 
@@ -68,8 +68,8 @@ const AllAppointments = () => {
                 {item.cancelled ? "Cancelled" : "Scheduled"}
               </p>
 
-              <img className='w-5' src={assets.delete_icon} alt="" />
-              
+              <img onClick={() => cancleAppointment(item._id)} className='w-5' src={assets.delete_icon} alt="" />
+
             </div>
           ))
         }
