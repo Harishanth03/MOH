@@ -1,9 +1,17 @@
-import React, { useState } from 'react'
+import React, { useState } from 'react';
+import { useStripe, useElements, CardElement } from '@stripe/react-stripe-js';
+import axios from 'axios';
+import { toast } from 'react-toastify';
 
 const Donation = () => {
+  const [selectedAmount, setSelectedAmount] = useState(null);
+  const [totalDonations, setTotalDonations] = useState(0);
+  const [email, setEmail] = useState('');          // ✅ Added
+  const [message, setMessage] = useState('');      // ✅ Added
 
-    const [selectedAmount, setSelectedAmount] = useState(null);
-  const [totalDonations, setTotalDonations] = useState(0); // 💡 New state
+  const stripe = useStripe();
+  const elements = useElements();
+
   const donationOptions = [10, 25, 50, 100];
   const isPresetSelected = donationOptions.includes(selectedAmount);
 
@@ -33,7 +41,7 @@ const Donation = () => {
         },
         {
           headers: {
-            token: localStorage.getItem('token') // or use context
+            token: localStorage.getItem('token') // or use from context
           }
         }
       );
@@ -50,8 +58,8 @@ const Donation = () => {
       }
 
     } catch (err) {
-      console.error(err);
-      toast.error("Donation failed");
+        console.error("Donation error:", err); // ✅ this prints the real reason
+        toast.error("Donation failed. Try again.");
     }
   };
 
@@ -62,10 +70,12 @@ const Donation = () => {
         Your donation helps patients battling cancer and other critical illnesses to get the treatment and care they need.
       </p>
 
+      {/* Live Donations Tracker */}
       <div className="text-center text-green-700 font-semibold text-xl bg-green-50 border border-green-200 py-2 rounded-lg mb-4">
         Total Donations: රු {totalDonations}
       </div>
 
+      {/* Preset Amount Buttons */}
       <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 mb-5">
         {donationOptions.map((amount) => (
           <button
@@ -82,6 +92,7 @@ const Donation = () => {
         ))}
       </div>
 
+      {/* Custom Amount */}
       <div className="mb-5">
         <label htmlFor="customAmount" className="block text-sm font-medium text-gray-700 mb-1">
           Or enter custom amount:
@@ -101,6 +112,7 @@ const Donation = () => {
         />
       </div>
 
+      {/* Email */}
       <div className="mb-5">
         <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-1">
           Your Email (optional):
@@ -108,13 +120,14 @@ const Donation = () => {
         <input
           type="email"
           id="email"
+          placeholder="you@example.com"
           value={email}
           onChange={(e) => setEmail(e.target.value)}
-          placeholder="you@example.com"
           className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-0"
         />
       </div>
 
+      {/* Message */}
       <div className="mb-5">
         <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-1">
           Leave a message (optional):
@@ -122,9 +135,9 @@ const Donation = () => {
         <textarea
           id="message"
           rows="3"
+          placeholder="Your kind words..."
           value={message}
           onChange={(e) => setMessage(e.target.value)}
-          placeholder="Your kind words..."
           className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-0"
         ></textarea>
       </div>
@@ -137,6 +150,7 @@ const Donation = () => {
         </div>
       </div>
 
+      {/* Submit Button */}
       <button
         onClick={handleDonate}
         disabled={!selectedAmount}
@@ -147,7 +161,7 @@ const Donation = () => {
         Donate රු {selectedAmount || '0'}
       </button>
     </div>
-  )
-}
+  );
+};
 
-export default Donation
+export default Donation;
