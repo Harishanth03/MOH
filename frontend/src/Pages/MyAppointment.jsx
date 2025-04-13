@@ -1,6 +1,7 @@
 import React, { useContext, useEffect, useState } from 'react'
 import { AppContext } from '../Context/AppContext.jsx'
 import axios from 'axios';
+import { toast } from 'react-toastify';
 
 const MyAppointment = () => {
 
@@ -14,6 +15,9 @@ const MyAppointment = () => {
     const dateArray = slotDate.split('_');
     return dateArray[0]+" "+months[Number(dateArray[1])]+" "+dateArray[2]
   }
+
+
+  //============================================ Get User Appointments ====================================================
 
   const getUserAppointments = async() => {
 
@@ -33,9 +37,26 @@ const MyAppointment = () => {
       }
 
     } catch (error) {
-      
+      console.log(error)
+      toast.error(error.message)
     }
 
+  }
+
+  //============================================ Cancle the appointment ====================================================
+
+  const cancleAppointment = async(appointmentId) => 
+  {
+    try 
+    {
+
+      console.log(appointmentId)
+      
+    } catch (error) 
+    {
+      console.log(error)
+      toast.error(error.message)
+    }
   }
 
   useEffect(() => {
@@ -84,7 +105,7 @@ const MyAppointment = () => {
               <div className=' flex flex-col gap-2 justify-center'>
 
                 <button className='text-sm text-stone-500 text-center sm:min-w-48 py-2 border rounded hover:bg-[#fcdb35] hover:text-white cursor-pointer transaction-all duration-300'>Rate Doctor</button>
-                <button className='text-sm text-stone-500 text-center sm:min-w-48 py-2 border rounded hover:bg-[#0D6EFD] hover:text-white cursor-pointer transaction-all duration-300'>Cancle Doctor</button>
+                <button onClick={() => cancleAppointment(item._id)} className='text-sm text-stone-500 text-center sm:min-w-48 py-2 border rounded hover:bg-[#0D6EFD] hover:text-white cursor-pointer transaction-all duration-300'>Cancle Doctor</button>
 
               </div>
 

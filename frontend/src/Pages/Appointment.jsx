@@ -24,89 +24,61 @@ const Appointment = () => {
     const navigate = useNavigate()
     
 
-    //Create the function for slots of times 
+      //Create the function for slots of times 
 
-    const getAvailableSlots = async() => {
-
+      const getAvailableSlots = async () => {
+        if (!docInfo) return; // or handle this case accordingly
+      
         setDocSlots([]); // Clear previous slots
-    
         let today = new Date(); // Get the current date
-    
+      
         // Loop to calculate the next 7 days of slots
         for (let i = 0; i < 7; i++) {
-    
           let currentDate = new Date(today);
-    
           currentDate.setDate(today.getDate() + i); // Increment the date
-    
-    
+      
           let endTime = new Date();
-    
           endTime.setDate(today.getDate() + i);
-    
           endTime.setHours(21, 0, 0, 0); // Set end time to 9:00 PM
-    
-    
-          if(today.getDate() === currentDate.getDate()) {
-    
+      
+          if (today.getDate() === currentDate.getDate()) {
             currentDate.setHours(currentDate.getHours() > 10 ? currentDate.getHours() + 1 : 10);
-    
             currentDate.setMinutes(currentDate.getMinutes() > 30 ? 30 : 0);
-    
-          } 
-          else 
-          {
-    
+          } else {
             currentDate.setHours(10);
-    
             currentDate.setMinutes(0);
-    
           }
-    
+      
           let timeSlots = [];
-    
-          while (currentDate < endTime) 
-          {
-            let formattedTime = currentDate.toLocaleTimeString([], {hour: '2-digit', minute: '2-digit'});
-
+          while (currentDate < endTime) {
+            let formattedTime = currentDate.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' });
             let day = currentDate.getDate();
-
             let month = currentDate.getMonth() + 1;
-
             let year = currentDate.getFullYear();
-
             const slotDate = day + "_" + month + "_" + year; // Format the date as "DD_MM_YYYY"
-
-            const slotTime = formattedTime // Convert time to lowercase
-
-            const isSlotsAvailable = docInfo.slots_booked[slotDate] && docInfo.slots_booked[slotDate].includes(slotTime) ? false : true; // Check if the slot is booked
-
-            if(isSlotsAvailable)
-            {
-
+            const slotTime = formattedTime;
+      
+            // Safely check if slot is booked
+            const isSlotsAvailable = docInfo.slots_booked?.[slotDate] && docInfo.slots_booked[slotDate].includes(slotTime)
+              ? false
+              : true;
+      
+            if (isSlotsAvailable) {
               timeSlots.push({
-    
                 datetime: new Date(currentDate),
-      
-                time: formattedTime
-      
+                time: formattedTime,
               });
-
             }
-    
-          
+      
             currentDate.setMinutes(currentDate.getMinutes() + 30); // Add 30 minutes
-    
           }
-    
           setDocSlots(prev => ([...prev, timeSlots]));
-    
         }
-    
-      }
+      };
+      
 
 
-    const fetchDocInfo = () => {
+      const fetchDocInfo = () => {
  
         const docInfo = doctors.find(doc => doc._id === docId); //destractre the doctor data from AppConec
 
@@ -157,6 +129,12 @@ const Appointment = () => {
 
     }, [doctors , docId]) // run the fetch doctor function when doctors and docId is change
 
+    useEffect(() => {
+      if (docInfo) {
+        getAvailableSlots();
+      }
+    }, [docInfo]);
+    
 
     useEffect(() => {
 
