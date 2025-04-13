@@ -101,7 +101,8 @@ const AdminContextProvider = (props) => {
         getAllDoctors,
         changeAvailablity,
         setAppointments,
-        getAllAppoinments
+        getAllAppoinments,
+        appointments
     }
 
     return(
