@@ -13,6 +13,8 @@ import earning_icon from './earning_icon.svg'
 import logo from './logo.svg'
 import patients_icon from './patients_icon.svg'
 import delete_icon from './Delete_Icon.png'
+import donation_icon from './donation_icon.png'
+import total_beds from './total_beds.svg'
 
 export const assets = {
     add_icon,
@@ -29,5 +31,7 @@ export const assets = {
     tick_icon,
     appointments_icon,
     earning_icon,
-    delete_icon
+    delete_icon,
+    donation_icon,
+    total_beds
 }

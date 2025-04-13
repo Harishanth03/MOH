@@ -4,6 +4,8 @@ import { v2 as cloudinary } from "cloudinary";
 import doctorModel from '../Models/DoctorModel.js';
 import jwt from 'jsonwebtoken'
 import appointmentModel from '../Models/AppointmentModel.js';
+import patientModel from '../Models/PatientModel.js';
+import donationModel from '../Models/DonationModel.js';
 
 //================================================ Add Doctor Function ===================================================
 
@@ -223,7 +225,46 @@ const AppointmentCancle = async (req, res) =>
           res.json({ success: false, message: error.message });
           
       }
+
+    }
+
+    //================================================== Dashboard Data for admin panel ===========================================
+
+    const adminDashboard = async (req , res) => 
+    {
+        try 
+        {
+
+            const doctors = await doctorModel.find({});
+
+            const users = await patientModel.find({});
+
+            const appointments = await appointmentModel.find({});
+
+            const donations = await donationModel.find({} ,'amount');
+
+            const totalDonations = donations.reduce((sum, donations) => sum + donations.amount, 0);
+
+            const dashData = {
+                doctors: doctors.length,
+                users: users.length,
+                appointments: appointments.length,
+                latestAppointments: appointments.reverse().slice(0, 5),
+                totaldonations: totalDonations,
+            }
+
+            res.json({success:true , dashData})
+
+
+            
+        } catch (error) 
+        {
+
+            console.error("Appointment booking error:", error);
+            res.json({ success: false, message: error.message });
+            
+        }
     }
 
 
-export {addDoctor , adminLogin , allDoctors  ,listDoctors , appointmentAdmin  , AppointmentCancle}
+export {addDoctor , adminLogin , allDoctors  ,listDoctors , appointmentAdmin  , AppointmentCancle , adminDashboard}
