@@ -215,6 +215,78 @@ const bookAppointment = async (req, res) => {
       res.json({ success: false, message: error.message });
     }
   };
+
+  //============================================ Get User Appointments ====================================================
+
+  const listAppointment = async (req, res) => {
+
+    try 
+    {
+
+        const { userId } = req.body;
+
+        const appointments = await appointmentModel.find({userId});
+
+        res.json({success:true , appointments});
+        
+    } catch (error) 
+    {
+
+        console.error("Appointment booking error:", error);
+        res.json({ success: false, message: error.message });
+
+    }
+
+  }
+
+  //============================================ Cancle the appointment ====================================================
+
+  const cancleAppointment = async (req, res) => 
+  {
+    try 
+    {
+
+        const {userId , appointmentId} = req.body;
+
+        const appointmentData = await appointmentModel.findById(appointmentId);
+
+        //verify appointment User
+        if(appointmentData.userId != userId)
+        {
+            return res.json({success:false , message:"Unauthorized User"})
+        }
+
+        await appointmentModel.findByIdAndUpdate(appointmentId , {cancelled:true});
+
+
+        //relese doctor slots
+        const { docId, slotDate, slotTime } = appointmentData;
+
+    const doctorData = await doctorModel.findById(docId);
+    if (!doctorData) 
+    {
+        return res.json({ success: false, message: "Doctor not found" });
+    }
+
+    let slots_booked = doctorData.slots_booked || {};
+
+    if (slots_booked[slotDate]) 
+    {
+        slots_booked[slotDate] = slots_booked[slotDate].filter(e => e !== slotTime);
+    }
+
+    await doctorModel.findByIdAndUpdate(docId, { slots_booked });
+
+    res.json({ success: true, message: "Appointment Cancelled" });
+  
+    } catch (error) 
+    {
+
+        console.error("Appointment booking error:", error);
+        res.json({ success: false, message: error.message });
+        
+    }
+  }
   
 
-export {registerUser , loginUser , getProfile  , updateUserProfile , bookAppointment}
+export {registerUser , loginUser , getProfile  , updateUserProfile , bookAppointment , listAppointment , cancleAppointment}
