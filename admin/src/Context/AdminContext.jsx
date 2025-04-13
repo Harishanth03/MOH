@@ -13,6 +13,8 @@ const AdminContextProvider = (props) => {
 
     const [doctors , setDoctors] = useState([]);
 
+    const [appointments , setAppointments] = useState([]);
+
     //============================================== Get All Doctors ============================================
 
     const getAllDoctors = async(req  , res) => {
@@ -66,13 +68,69 @@ const AdminContextProvider = (props) => {
         }
     }
 
+    //============================================= Get All appointments ===============================================
+
+    const getAllAppoinments = async() => {
+
+        try 
+        {
+
+            const {data} = await axios.get(backendURL + '/api/admin/appointments' , {headers:{aToken}});
+
+            if(data.success)
+            {
+                setAppointments(data.appointments);
+                console.log(data.appointments)
+            }
+            else
+            {
+                toast.error(data.message);
+            }
+            
+        } catch (error) 
+        {
+            toast.error(error.message);
+        }
+    }
+
+    //============================================= Cancle Appointment ====================================================
+
+    const cancleAppointment = async(appointmentId) => 
+    {
+        try 
+        {
+
+            const {data} = await axios.post(backendURL + '/api/admin/cancle-appointment' , {appointmentId} , {headers:{aToken}});
+
+            if(data.success)
+            {
+                toast.success(data.message);
+                getAllAppoinments()
+            }
+            else
+            {
+                toast.error(data.message);
+            }
+            
+        } catch (error) 
+        {
+
+            toast.error(error.message);
+            
+        }
+    }
+
     const value = {
         aToken,
         setAToken,
         backendURL,
         doctors,
         getAllDoctors,
-        changeAvailablity
+        changeAvailablity,
+        setAppointments,
+        getAllAppoinments,
+        appointments,
+        cancleAppointment
     }
 
     return(
