@@ -74,6 +74,13 @@ const Navbar = () => {
                 >
                   Bed Allocation
                 </p>
+
+                <p
+                  onClick={() => navigate("/donation")}
+                  className="hover:text-black cursor-pointer"
+                >
+                  Donation
+                </p>
                 <p
                   onClick={logout}
                   className="hover:text-black cursor-pointer"

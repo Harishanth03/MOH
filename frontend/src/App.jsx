@@ -14,6 +14,7 @@ import VoiceCommand from './Components/VoiceCommand'
 import MedicalReport from './Pages/MedicalReport'
 import BedAllocation from './Pages/BedAllocation'
 import { ToastContainer, toast } from 'react-toastify';
+import Donation from './Pages/Donation'
 
 const App = () => {
 
@@ -37,6 +38,7 @@ const App = () => {
         <Route path='/about' element = {<About/>}/>
         <Route path='/report' element = {<MedicalReport/>}/>
         <Route path='/bed' element = {<BedAllocation/>}/>
+        <Route path='/donation' element = {<Donation/>}/>
         <Route path='/contact' element = {<Contact/>}/>
         <Route path='/my-profile' element = {<MyProfile/>}/>
         <Route path='/my-appointment' element = {<MyAppointment/>}/>
