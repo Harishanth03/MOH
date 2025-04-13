@@ -1,25 +1,25 @@
 import React, { useEffect, useState } from 'react';
-import { useStripe, useElements, CardElement } from '@stripe/react-stripe-js';
+import { useStripe } from '@stripe/react-stripe-js';
 import axios from 'axios';
 import { toast } from 'react-toastify';
 
 const Donation = () => {
   const [selectedAmount, setSelectedAmount] = useState(null);
   const [totalDonations, setTotalDonations] = useState(0);
-  const [email, setEmail] = useState('');          // ✅ Added
-  const [message, setMessage] = useState('');      // ✅ Added
+  const [email, setEmail] = useState('');
+  const [message, setMessage] = useState('');
 
   const stripe = useStripe();
-  const elements = useElements();
+  const backendUrl = "http://localhost:4000";
 
   const donationOptions = [200, 250, 300, 350];
   const isPresetSelected = donationOptions.includes(selectedAmount);
 
   const handleDonate = async () => {
     if (!selectedAmount) return;
-  
+
     try {
-      const { data } = await axios.post('http://localhost:4000/api/donation/create-checkout-session', {
+      const { data } = await axios.post(`${backendUrl}/api/donation/create-checkout-session`, {
         amount: selectedAmount,
         email,
         message,
@@ -28,22 +28,18 @@ const Donation = () => {
           token: localStorage.getItem('token'),
         }
       });
-  
+
       if (data.success) {
-        window.location.href = data.url; // 🔁 Redirect to Stripe Checkout
+        window.location.href = data.url; // Redirect to Stripe Checkout
       } else {
         toast.error(data.message);
       }
-  
+
     } catch (err) {
       console.error("Checkout redirect error:", err);
       toast.error("Something went wrong.");
     }
   };
-  
-  
-
-  const backendUrl = "http://localhost:4000"; 
 
   useEffect(() => {
     const fetchTotalDonations = async () => {
@@ -137,14 +133,6 @@ const Donation = () => {
           onChange={(e) => setMessage(e.target.value)}
           className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-0"
         ></textarea>
-      </div>
-
-      {/* Stripe Card Element */}
-      <div className="mb-5">
-        <label className="block text-sm font-medium text-gray-700 mb-1">Card Details:</label>
-        <div className="p-3 border border-gray-300 rounded-lg">
-          <CardElement options={{ style: { base: { fontSize: '16px' } } }} />
-        </div>
       </div>
 
       {/* Submit Button */}

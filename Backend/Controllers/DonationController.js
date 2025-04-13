@@ -10,9 +10,11 @@ const createCheckoutSession = async (req, res) => {
       const { amount, email, message } = req.body;
       const userId = req.body.userId;
   
-      //  Fetch user name securely from DB
+      // Fetch user name from DB
       const user = await patientModel.findById(userId).select('name');
       const userName = user?.name || 'Anonymous';
+  
+      const successURL = `http://localhost:5173/donation-success?name=${encodeURIComponent(userName)}&amount=${amount}&email=${email}&message=${encodeURIComponent(message || '')}`;
   
       const stripeSession = await stripe.checkout.sessions.create({
         payment_method_types: ['card'],
@@ -31,7 +33,7 @@ const createCheckoutSession = async (req, res) => {
           },
         ],
         customer_email: email,
-        success_url: 'http://localhost:5173/donation-success',
+        success_url: successURL, // ✅ Now used properly
         cancel_url: 'http://localhost:5173/donation-cancelled',
         metadata: {
           userId,
@@ -48,7 +50,8 @@ const createCheckoutSession = async (req, res) => {
       console.error("Stripe checkout error:", error.message);
       res.status(500).json({ success: false, message: error.message });
     }
-  };
+};
+  
   
   
 
