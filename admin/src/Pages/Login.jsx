@@ -2,12 +2,19 @@ import React, { useContext, useState } from 'react'
 import { AdminContext } from '../Context/AdminContext.jsx';
 import axios from 'axios'
 import {toast} from 'react-toastify'
+import { DoctorContext } from '../Context/DoctorContext.jsx';
+import { useNavigate } from 'react-router-dom';
+
 
 const Login = () => {
+
+    const navigate = useNavigate();
 
     const [state , setState] = useState('Admin');
 
     const {setAToken} = useContext(AdminContext); //get the atoken from res and set it
+
+    const {setDToken} = useContext(DoctorContext); //get the dtoken from res and set it
 
     const backendURL = 'http://localhost:4000';
 
@@ -31,6 +38,7 @@ const Login = () => {
                     localStorage.setItem('aToken' , data.aToken)
                     setAToken(data.aToken)
                     toast.success("Login Success")
+                    navigate('/admin-dashboard');
 
                 }
                 else
@@ -40,7 +48,19 @@ const Login = () => {
             }
             else
             {
-                
+                const {data} = await axios.post(`${backendURL}/api/doctor/login` , {email , password})
+
+                if(data.success)
+                {
+                    localStorage.setItem('dToken' , data.token)
+                    setAToken(data.token)
+                    toast.success("Login Success")
+
+                }
+                else
+                {
+                    toast.error(data.message)
+                }
             }
             
         } catch (error) 
