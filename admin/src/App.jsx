@@ -9,12 +9,15 @@ import Dashboard from './Pages/Admins/Dashboard'
 import AllAppointments from './Pages/Admins/AllAppointments'
 import AddDoctor from './Pages/Admins/AddDoctor'
 import DoctorsList from './Pages/Admins/DoctorsList'
+import {Navigate} from 'react-router-dom'
+import { DoctorContext } from './Context/DoctorContext'
 
 const App = () => {
 
   const{aToken} = useContext(AdminContext)
+  const{dToken} = useContext(DoctorContext)
 
-  return aToken ? (
+  return aToken || dToken ? (
     
     <div className='bg-[#F8F9FD]'>
 
@@ -27,7 +30,7 @@ const App = () => {
 
         <Routes>
 
-          <Route path='/' element={<></>}/>
+          <Route path='/' element={<Navigate to="/admin-dashboard" />} />
 
           <Route path='/admin-dashboard' element={<Dashboard/>}/>
 

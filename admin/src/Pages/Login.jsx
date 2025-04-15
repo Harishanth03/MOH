@@ -3,8 +3,12 @@ import { AdminContext } from '../Context/AdminContext.jsx';
 import axios from 'axios'
 import {toast} from 'react-toastify'
 import { DoctorContext } from '../Context/DoctorContext.jsx';
+import { useNavigate } from 'react-router-dom';
+
 
 const Login = () => {
+
+    const navigate = useNavigate();
 
     const [state , setState] = useState('Admin');
 
@@ -34,6 +38,7 @@ const Login = () => {
                     localStorage.setItem('aToken' , data.aToken)
                     setAToken(data.aToken)
                     toast.success("Login Success")
+                    navigate('/admin-dashboard');
 
                 }
                 else
