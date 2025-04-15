@@ -2,12 +2,14 @@ import React, { useContext, useState } from 'react'
 import { AdminContext } from '../Context/AdminContext.jsx';
 import axios from 'axios'
 import {toast} from 'react-toastify'
+import { DoctorContext } from '../Context/DoctorContext.jsx';
 
 const Login = () => {
 
     const [state , setState] = useState('Admin');
 
     const {setAToken} = useContext(AdminContext); //get the atoken from res and set it
+
 
     const backendURL = 'http://localhost:4000';
 
