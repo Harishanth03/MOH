@@ -10,6 +10,7 @@ const Login = () => {
 
     const {setAToken} = useContext(AdminContext); //get the atoken from res and set it
 
+    const {setDToken} = useContext(DoctorContext); //get the dtoken from res and set it
 
     const backendURL = 'http://localhost:4000';
 
@@ -42,7 +43,19 @@ const Login = () => {
             }
             else
             {
-                
+                const {data} = await axios.post(`${backendURL}/api/doctor/login` , {email , password})
+
+                if(data.success)
+                {
+                    localStorage.setItem('dToken' , data.token)
+                    setAToken(data.token)
+                    toast.success("Login Success")
+
+                }
+                else
+                {
+                    toast.error(data.message)
+                }
             }
             
         } catch (error) 
