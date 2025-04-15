@@ -79,4 +79,7 @@ const loginDoctor = async(req , res) =>
     }
 }
 
+
+//================================================ Doctor appointments ===================================================
+
 export{changeAvailablity , loginDoctor}
