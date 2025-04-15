@@ -11,6 +11,9 @@ import AddDoctor from './Pages/Admins/AddDoctor'
 import DoctorsList from './Pages/Admins/DoctorsList'
 import {Navigate} from 'react-router-dom'
 import { DoctorContext } from './Context/DoctorContext'
+import DoctorDashboard from './Pages/Doctors/DoctorDashboard'
+import DoctorAppointment from './Pages/Doctors/DoctorAppointment'
+import DoctorProfile from './Pages/Doctors/DoctorProfile'
 
 const App = () => {
 
@@ -22,6 +25,7 @@ const App = () => {
     <div className='bg-[#F8F9FD]'>
 
       <ToastContainer/>
+
       <Navbar/>
 
       <div className='flex items-start'>
@@ -30,7 +34,9 @@ const App = () => {
 
         <Routes>
 
-          <Route path='/' element={<Navigate to="/admin-dashboard" />} />
+          {/*Admin Route*/}
+
+          {aToken ? <Route path='/' element={<Navigate to="/admin-dashboard" />} /> : <Route path='/doctor' element={<Navigate to="/doctor-dashboard" />} />}
 
           <Route path='/admin-dashboard' element={<Dashboard/>}/>
 
@@ -39,6 +45,14 @@ const App = () => {
           <Route path='/add-doctor' element={<AddDoctor/>}/>
 
           <Route path='/doctor-list' element={<DoctorsList/>}/>
+
+          {/*Admin Route*/}
+          <Route path='/doctor' element={<Navigate to="/doctor-dashboard" />} />
+          <Route path='/doctor-dashboard' element={<DoctorDashboard/>}/>
+          <Route path='/doctor-appointment' element={<DoctorAppointment/>}/>
+          <Route path='/doctor-profile' element={<DoctorProfile/>}/>
+
+          <Route />
 
         </Routes>
 
