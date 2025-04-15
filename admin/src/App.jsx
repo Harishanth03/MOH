@@ -36,7 +36,12 @@ const App = () => {
 
           {/*Admin Route*/}
 
-          {aToken ? <Route path='/' element={<Navigate to="/admin-dashboard" />} /> : <Route path='/doctor' element={<Navigate to="/doctor-dashboard" />} />}
+          <Route path='/' element={
+            aToken ? <Navigate to="/admin-dashboard" /> :
+            dToken ? <Navigate to="/doctor-dashboard" /> :
+            <Navigate to="/" />
+          } />
+
 
           <Route path='/admin-dashboard' element={<Dashboard/>}/>
 

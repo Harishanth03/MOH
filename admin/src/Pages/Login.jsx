@@ -52,9 +52,10 @@ const Login = () => {
 
                 if(data.success)
                 {
-                    localStorage.setItem('dToken' , data.token)
-                    setAToken(data.token)
-                    toast.success("Login Success")
+                    localStorage.setItem('dToken' , data.token); 
+                    setDToken(data.token);                       
+                    toast.success("Login Success");
+                    navigate('/doctor-dashboard');  
 
                 }
                 else
