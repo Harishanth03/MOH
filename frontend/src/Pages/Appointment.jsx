@@ -27,54 +27,62 @@ const Appointment = () => {
       //Create the function for slots of times 
 
       const getAvailableSlots = async () => {
-        if (!docInfo) return; // or handle this case accordingly
+        if (!docInfo) return;
       
         setDocSlots([]); // Clear previous slots
-        let today = new Date(); // Get the current date
+        const today = new Date(); // Today’s base date
+        const allSlots = [];
       
-        // Loop to calculate the next 7 days of slots
         for (let i = 0; i < 7; i++) {
-          let currentDate = new Date(today);
-          currentDate.setDate(today.getDate() + i); // Increment the date
+          // ✅ Correctly calculate each date by always adding to the original "today"
+          let currentDate = new Date(today.getTime());
+          currentDate.setDate(today.getDate() + i);
       
-          let endTime = new Date();
-          endTime.setDate(today.getDate() + i);
-          endTime.setHours(21, 0, 0, 0); // Set end time to 9:00 PM
+          // Clone for slot start and end
+          let slotStart = new Date(currentDate.getTime());
+          let slotEnd = new Date(currentDate.getTime());
+          slotEnd.setHours(21, 0, 0, 0); // End at 9 PM
       
-          if (today.getDate() === currentDate.getDate()) {
-            currentDate.setHours(currentDate.getHours() > 10 ? currentDate.getHours() + 1 : 10);
-            currentDate.setMinutes(currentDate.getMinutes() > 30 ? 30 : 0);
+          // Set correct start time
+          if (i === 0) {
+            const now = new Date();
+            slotStart.setHours(Math.max(now.getHours() + 1, 10)); // Start 1 hour from now or 10 AM
+            slotStart.setMinutes(now.getMinutes() > 30 ? 30 : 0);
           } else {
-            currentDate.setHours(10);
-            currentDate.setMinutes(0);
+            slotStart.setHours(10);
+            slotStart.setMinutes(0);
           }
       
-          let timeSlots = [];
-          while (currentDate < endTime) {
-            let formattedTime = currentDate.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' });
-            let day = currentDate.getDate();
-            let month = currentDate.getMonth() + 1;
-            let year = currentDate.getFullYear();
-            const slotDate = day + "_" + month + "_" + year; // Format the date as "DD_MM_YYYY"
-            const slotTime = formattedTime;
+          const slotsForDay = [];
       
-            // Safely check if slot is booked
-            const isSlotsAvailable = docInfo.slots_booked?.[slotDate] && docInfo.slots_booked[slotDate].includes(slotTime)
-              ? false
-              : true;
+          while (slotStart < slotEnd) {
+            const day = String(slotStart.getDate()).padStart(2, '0');
+            const month = String(slotStart.getMonth() + 1).padStart(2, '0');
+            const year = slotStart.getFullYear();
+            const slotDate = `${day}_${month}_${year}`;
+            const formattedTime = slotStart.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' });
       
-            if (isSlotsAvailable) {
-              timeSlots.push({
-                datetime: new Date(currentDate),
+            const isAvailable = !(docInfo.slots_booked?.[slotDate]?.includes(formattedTime));
+      
+            if (isAvailable) {
+              slotsForDay.push({
+                datetime: new Date(slotStart.getTime()), // Clone again to avoid mutation
                 time: formattedTime,
               });
             }
       
-            currentDate.setMinutes(currentDate.getMinutes() + 30); // Add 30 minutes
+            // Step forward 30 minutes
+            slotStart.setMinutes(slotStart.getMinutes() + 30);
           }
-          setDocSlots(prev => ([...prev, timeSlots]));
+      
+          allSlots.push(slotsForDay);
+    
         }
+      
+        setDocSlots(allSlots);
       };
+      
+      
       
 
 
@@ -90,36 +98,48 @@ const Appointment = () => {
 
 
     const bookAppointment = async () => {
-        if (!token) {
-          toast.warn("Please Login to Book your appointment");
-          return navigate('/login');
+      if (!token) {
+        toast.warn("Please Login to Book your appointment");
+        return navigate('/login');
+      }
+    
+      try {
+        // Find the selected slot using the selected time
+        const selectedSlot = docSlots[slotIndex].find(slot => slot.time === slotTime);
+    
+        if (!selectedSlot) {
+          toast.error("Please select a time slot");
+          return;
         }
-      
-        try {
-          const date = docSlots[slotIndex][0].datetime;
-          let day = date.getDate();
-          let month = date.getMonth() + 1;
-          let year = date.getFullYear();
-          const slotDate = `${day}_${month}_${year}`;
-      
-          const { data } = await axios.post(
-            backendUrl + '/api/user/book-appointment',
-            { docId, slotDate, slotTime },
-            { headers: { token } }
-          );
-      
-          if (data.success) {
-            toast.success(data.message); // ✅ green success toast
-            getDoctorsData();
-            navigate('/my-appointment');
-          } else {
-            toast.error(data.message); // only triggered if success is false
-          }
-      
-        } catch (error) {
-          console.log(error);
-          toast.error(error.message);
+    
+        const date = selectedSlot.datetime;
+        const time = selectedSlot.time;
+    
+        //Properly format the slotDate with padded values
+        let day = String(date.getDate()).padStart(2, '0');
+        let month = String(date.getMonth() + 1).padStart(2, '0');
+        let year = date.getFullYear();
+        const slotDate = `${day}_${month}_${year}`;
+    
+        //Send the appointment data
+        const { data } = await axios.post(
+          backendUrl + '/api/user/book-appointment',
+          { docId, slotDate, slotTime: time }, // use `time` instead of `slotTime` directly
+          { headers: { token } }
+        );
+    
+        if (data.success) {
+          toast.success(data.message);
+          getDoctorsData();
+          navigate('/my-appointment');
+        } else {
+          toast.error(data.message);
         }
+    
+      } catch (error) {
+        console.log(error);
+        toast.error(error.message);
+      }
       };
       
 

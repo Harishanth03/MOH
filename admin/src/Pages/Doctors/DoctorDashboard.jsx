@@ -5,7 +5,7 @@ import { AppContext } from "../../Context/AppContext";
 
 const DoctorDashboard = () => {
   const { dashData, setDashData, getDashData, dToken } = useContext(DoctorContext);
-    const {slotDateFormat} = useContext(AppContext);
+  const {slotDateFormat} = useContext(AppContext);
 
   useEffect(() => {
     if (dToken) {
