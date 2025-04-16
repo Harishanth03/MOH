@@ -170,4 +170,46 @@ const appointmentCancle = async(req , res) => {
 
 }
 
-export{changeAvailablity , loginDoctor , appointmentsDoctor , appointmentComplete , appointmentCancle}
+//=================================================== Dashboard Data =================================================
+
+const doctorDashboard = async(req , res) => 
+{
+    try 
+    {
+
+        const {docId} = req.body;
+
+        const appointments = await appointmentModel.find({docId});
+
+        let patients = [];
+
+        appointments.map((item) => {
+
+            if(!patients.includes(item.userId))
+            {
+                patients.push(item.userId)
+            }
+        })
+
+        
+
+        // Prepare dashboard data
+        const dashData = {
+            appointments: appointments.length,
+            patients: patients.length,
+            latestAppointments: appointments.reverse().slice(0 , 5), 
+        };
+  
+      res.json({ success: true, dashData });
+        
+    } catch (error) 
+    {
+
+        console.error(error);
+
+        res.status(500).json({ success: false, message: error.message });
+        
+    }
+}
+
+export{changeAvailablity , loginDoctor , appointmentsDoctor , appointmentComplete , appointmentCancle , doctorDashboard}
