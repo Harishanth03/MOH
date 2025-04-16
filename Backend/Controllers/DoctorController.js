@@ -113,7 +113,7 @@ const appointmentComplete = async(req , res) => {
 
         const {docId , appointmentId} = req.body;
 
-        const appointmentData = await appointmentModel.find(appointmentId);
+        const appointmentData = await appointmentModel.findById(appointmentId);
 
         if(appointmentData && appointmentData.docId === docId)
         {
@@ -146,7 +146,7 @@ const appointmentCancle = async(req , res) => {
 
         const {docId , appointmentId} = req.body;
 
-        const appointmentData = await appointmentModel.find(appointmentId);
+        const appointmentData = await appointmentModel.findById(appointmentId);
 
         if(appointmentData && appointmentData.docId === docId)
         {

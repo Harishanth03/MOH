@@ -15,7 +15,7 @@ const DoctorContextProvider = (props) => {
 
     const [appointment , setAppointment] = useState([]);
 
-    const getappointment = async(req , res) => 
+    const getappointment = async() => 
     {
         try 
         {
@@ -40,6 +40,64 @@ const DoctorContextProvider = (props) => {
         }
     }
 
+    // Complete appointment Function 
+
+    const completeAppointment = async(appointmentId) => {
+
+        try 
+        {
+
+            const {data} = await axios.post(`${backendURL}/api/doctor/complete` , {appointmentId} , {headers:{dToken}});
+
+            if(data.success)
+            {
+                toast.success(data.message);
+                getappointment()
+            }
+            else
+            {
+                toast.error(data.message)
+            }
+            
+        } catch (error) 
+        {
+
+            console.log(error);
+
+            toast.error(error.message);
+
+        }
+
+    }
+
+    const CancleAppointment = async(appointmentId) => {
+
+        try 
+        {
+
+            const {data} = await axios.post(`${backendURL}/api/doctor/cancle` , {appointmentId} , {headers:{dToken}});
+
+            if(data.success)
+            {
+                toast.success(data.message);
+                getappointment()
+            }
+            else
+            {
+                toast.error(data.message)
+            }
+            
+        } catch (error) 
+        {
+
+            console.log(error);
+
+            toast.error(error.message);
+
+        }
+
+    }
+
 
 
     const value = {
@@ -49,7 +107,9 @@ const DoctorContextProvider = (props) => {
         setDToken,
         getappointment,
         appointment,
-        setAppointment
+        setAppointment,
+        completeAppointment,
+        CancleAppointment
 
     }
 
