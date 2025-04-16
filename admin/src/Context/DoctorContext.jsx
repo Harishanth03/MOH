@@ -107,13 +107,12 @@ const DoctorContextProvider = (props) => {
         try 
         {
 
-            const {data} = await axios.get(`${backendURL}/api/doctor/dashboard` , {headers:dToken});
+            const { data } = await axios.get(`${backendURL}/api/doctor/dashboard`, {headers: { dtoken: dToken }});
 
             if(data.success)
             {
 
                 setDashData(data.dashData)
-
             }
             else
             {
