@@ -40,7 +40,7 @@ const DoctorAppointment = () => {
 
           appointment.map((item , index) => (
 
-            <div className='flex flex-wrap justify-between max-sm:gap-5 max-sm:text-base sm:grid grid-cols-[0.5fr_2fr_1.5fr_1fr_2fr_2fr_3fr] gap-1 items-center text-gray-500  py-3 px-6  border-b border-gray-300 hover:bg-blue-50' key={index}>
+            <div className='flex flex-wrap cursor-pointer justify-between max-sm:gap-5 max-sm:text-base sm:grid grid-cols-[0.5fr_2fr_1.5fr_1fr_2fr_2fr_3fr] gap-1 items-center text-gray-500  py-3 px-6  border-b border-gray-300 hover:bg-blue-50' key={index}>
 
               <p className='max-sm:hidden'>{index + 1}</p>
 
@@ -58,7 +58,7 @@ const DoctorAppointment = () => {
 
               </div>
 
-              <p>{calculateAge(item.userData.dob)}</p> 
+              <p>{!isNaN(calculateAge(item.userData.dob)) ? calculateAge(item.userData.dob) : "N/A"}</p>
 
               <p>{slotDateFormat(item.slotDate)} <span className='text-red-500'>|</span> { item.slotTime}</p>
 
