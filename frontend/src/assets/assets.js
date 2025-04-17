@@ -41,6 +41,7 @@ import user from './user-286.svg'
 import newAbout from './new.jpg'
 import contactImage from './Contact_Image1.png'
 import loginImage from './Login.svg'
+import report from './Report.pdf'
 
 
 export const assets = {
@@ -64,7 +65,8 @@ export const assets = {
     HomeImage,
     newAbout,
     contactImage,
-    loginImage
+    loginImage,
+    report
 }
 
 export const specialityData = [

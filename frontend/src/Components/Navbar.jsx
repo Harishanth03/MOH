@@ -69,7 +69,7 @@ const Navbar = () => {
                   My Medical Report
                 </p>
                 <p
-                  onClick={() => navigate("/bed-allocation")}
+                  onClick={() => navigate("/bed")}
                   className="hover:text-black cursor-pointer"
                 >
                   Bed Allocation
