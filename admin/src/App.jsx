@@ -15,6 +15,7 @@ import DoctorDashboard from './Pages/Doctors/DoctorDashboard'
 import DoctorAppointment from './Pages/Doctors/DoctorAppointment'
 import DoctorProfile from './Pages/Doctors/DoctorProfile'
 import AddWard from './Pages/Admins/AddWard'
+import BedManagement from './Pages/Admins/BedManagement'
 
 const App = () => {
 
@@ -53,6 +54,8 @@ const App = () => {
           <Route path='/doctor-list' element={<DoctorsList/>}/>
 
           <Route path='/ward' element={<AddWard/>}/>
+
+          <Route path='/bed-management' element={<BedManagement/>}/>
 
           {/*doctor Route*/}
           <Route path='/doctor' element={<Navigate to="/doctor-dashboard" />} />
