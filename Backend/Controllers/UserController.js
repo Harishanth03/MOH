@@ -73,13 +73,16 @@ const loginUser = async(req , res) => {
 
         if(!user)
         {
+
             return res.json({success:false , message:"User Does not exist"})
+
         }
 
         const isMatch = await bcrypt.compare(password , user.password);
 
         if(isMatch)
         {
+
             const token = jwt.sign({id:user._id} , process.env.JWT_SECRET);
 
             res.json({success:true , token});
@@ -87,7 +90,9 @@ const loginUser = async(req , res) => {
         }
         else
         {
+
             return res.json({success:false , message:"Please enter a Correct Password"})
+
         }
 
 
@@ -127,61 +132,98 @@ const getProfile = async(req  , res) =>
 //============================================== Update User Profile ====================================================
 
 const updateUserProfile = async (req, res) => {
+
     try {
+
         const { userId, name, dob, gender, address, phone_number } = req.body;
+
         const imageFile = req.file;
 
-        if (!name || !dob || !gender || !phone_number) {
+        if (!name || !dob || !gender || !phone_number) 
+        {
+
             return res.json({ success: false, message: "Data missing" });
+
         }
 
         const updatedUser = await patientModel.findByIdAndUpdate(
+
             userId,
+
             { name, phone_number, address: JSON.parse(address), dob, gender },
+
             { new: true }
+
         );
 
-        if (imageFile) {
+        if (imageFile) 
+        {
+
             const imageUpload = await cloudinary.uploader.upload(imageFile.path, { resource_type: 'image' });
+
             const imageURL = imageUpload.secure_url;
+
             await patientModel.findByIdAndUpdate(userId, { image: imageURL }, { new: true });
+
         }
 
         res.json({ success: true, message: "Profile Updated", updatedUser });
 
-    } catch (error) {
+    } 
+    catch (error) 
+    {
+
         console.log(error);
+
         res.json({ success: false, message: error.message });
+
     }
 };
 
 //========================================== Book Appointment ====================================================
 
 const bookAppointment = async (req, res) => {
+
     try {
+
       const { userId, docId, slotDate, slotTime } = req.body;
   
       // Fetch doctor data and remove password from response
       const docData = await doctorModel.findById(docId).select('-password');
   
-      if (!docData) {
+      if (!docData) 
+      {
+
         return res.json({ success: false, message: 'Sorry, doctor is not available.' });
+
       }
   
       // Initialize slots_booked if not already present
       let slots_booked = docData.slots_booked || {};
   
       // Check if the date exists
-      if (slots_booked[slotDate]) {
+      if (slots_booked[slotDate]) 
+    {
         // Check if the time slot is already booked
-        if (slots_booked[slotDate].includes(slotTime)) {
+        if (slots_booked[slotDate].includes(slotTime)) 
+        {
+
           return res.json({ success: false, message: 'Sorry, slot is not available.' });
-        } else {
+
+        } 
+        else 
+        {
+
           slots_booked[slotDate].push(slotTime); // Add new time slot
+
         }
-      } else {
+
+      } 
+      else 
+      {
         // Create new date entry and add the slot
         slots_booked[slotDate] = [slotTime];
+
       }
   
       // Get patient data without password
@@ -192,6 +234,7 @@ const bookAppointment = async (req, res) => {
   
       // Build appointment object
       const appointmentData = {
+
         userId,
         docId,
         userData,
@@ -199,10 +242,12 @@ const bookAppointment = async (req, res) => {
         slotTime,
         slotDate,
         date: Date.now()
+
       };
   
       // Save the appointment
       const newAppointment = new appointmentModel(appointmentData);
+
       await newAppointment.save();
   
       // Update doctor's booked slots
@@ -210,10 +255,16 @@ const bookAppointment = async (req, res) => {
   
       res.json({ success: true, message: "Appointment Booked" });
   
-    } catch (error) {
+    } 
+    catch (error) 
+    {
+
       console.error("Appointment booking error:", error);
+
       res.json({ success: false, message: error.message });
+
     }
+
   };
 
   //============================================ Get User Appointments ====================================================
@@ -228,11 +279,13 @@ const bookAppointment = async (req, res) => {
         const appointments = await appointmentModel.find({userId});
 
         res.json({success:true , appointments});
+
         
     } catch (error) 
     {
 
         console.error("Appointment booking error:", error);
+
         res.json({ success: false, message: error.message });
 
     }
@@ -243,6 +296,7 @@ const bookAppointment = async (req, res) => {
 
   const cancleAppointment = async (req, res) => 
   {
+
     try 
     {
 
@@ -263,16 +317,21 @@ const bookAppointment = async (req, res) => {
         const { docId, slotDate, slotTime } = appointmentData;
 
     const doctorData = await doctorModel.findById(docId);
+
     if (!doctorData) 
     {
+
         return res.json({ success: false, message: "Doctor not found" });
+
     }
 
     let slots_booked = doctorData.slots_booked || {};
 
     if (slots_booked[slotDate]) 
     {
+
         slots_booked[slotDate] = slots_booked[slotDate].filter(e => e !== slotTime);
+
     }
 
     await doctorModel.findByIdAndUpdate(docId, { slots_booked });
@@ -283,6 +342,7 @@ const bookAppointment = async (req, res) => {
     {
 
         console.error("Appointment booking error:", error);
+        
         res.json({ success: false, message: error.message });
         
     }
