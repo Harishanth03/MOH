@@ -1,5 +1,5 @@
 import express from 'express';
-import { addDoctor, adminDashboard, adminLogin, allDoctors, appointmentAdmin, AppointmentCancle, createWard } from '../Controllers/AdminController.js';
+import { addDoctor, adminDashboard, adminLogin, allDoctors, appointmentAdmin, AppointmentCancle, createWard, getAllocatedBedsByWard } from '../Controllers/AdminController.js';
 import upload from '../Middlewares/Multer.js';
 import authAdmin from '../Middlewares/AuthAdmin.js';
 import { changeAvailablity } from '../Controllers/DoctorController.js';
@@ -25,5 +25,7 @@ adminRouter.get('/dashboard', authAdmin , adminDashboard)
 adminRouter.post('/ward' , authAdmin , createWard)
 
 adminRouter.get('/wards' , authAdmin , getAllWards)
+
+adminRouter.get('/allocated-beds' , authAdmin , getAllocatedBedsByWard)
 
 export default adminRouter;
