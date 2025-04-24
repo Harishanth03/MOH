@@ -10,9 +10,13 @@ const BedAllocation = () => {
   const [selectedWardNumber, setSelectedWardNumber] = useState(null);
   const [selectedBedNo, setSelectedBedNo] = useState(null);
   const [loading, setLoading] = useState(false);
+  const [allocatedBeds, setAllocatedBeds] = useState([]);
+
 
   useEffect(() => {
-    if (token) {
+
+    if (token) 
+    {
       getWards();
     }
   }, [token]);
@@ -49,6 +53,57 @@ const BedAllocation = () => {
       setLoading(false);
     }
   };
+
+  useEffect(() => {
+
+    const fetchAllocatedBeds = async() => {
+
+      if(selectedWard && selectedWardNumber)
+      {
+        try 
+        {
+
+          const { data } = await axios.get(`http://localhost:4000/api/user/allocated-beds`, {
+
+            params: {
+
+              wardName: selectedWard.wardName,
+
+              wardNo: selectedWardNumber.wardNo,
+
+            },
+
+            headers: { token }
+
+          });
+
+          if(data.success)
+          {
+
+            setAllocatedBeds(data.allocatedBeds);
+
+          }
+          else
+          {
+
+            setAllocatedBeds([]);
+
+          }
+          
+        } 
+        catch (error) 
+        {
+          console.error('Failed to fetch allocated beds', error);
+
+          setAllocatedBeds([]);
+
+        }
+      }
+    }
+
+    fetchAllocatedBeds();
+
+  } ,[selectedWard, selectedWardNumber])
 
   return (
     <div className="p-6 min-h-screen sm:min-h-[80vh] border m-6 rounded-lg border-blue-500 bg-gray-50">
@@ -107,22 +162,27 @@ const BedAllocation = () => {
 
           <div className="grid grid-cols-6 gap-4 justify-items-center">
             {Array.from({ length: selectedWardNumber.beds }).map((_, index) => {
-              const bedNo = index + 1;
-              return (
-                <div
-                  key={index}
-                  onClick={() => handleBedAllocation(bedNo)}
-                  className={`w-12 h-12 flex items-center justify-center rounded text-sm font-semibold cursor-pointer shadow transition 
-                    ${
-                      loading && selectedBedNo === bedNo
-                        ? 'bg-gray-400 cursor-not-allowed'
-                        : 'bg-blue-200 hover:bg-blue-300'
-                    }`}
-                >
-                  {bedNo}
-                </div>
-              );
-            })}
+  const bedNo = index + 1;
+  const isAllocated = allocatedBeds.includes(bedNo);
+
+  return (
+    <div
+      key={index}
+      onClick={() => !isAllocated && handleBedAllocation(bedNo)}
+      className={`w-12 h-12 flex items-center justify-center rounded text-sm font-semibold shadow transition cursor-pointer
+        ${
+          isAllocated
+            ? 'bg-red-400 text-white cursor-not-allowed'
+            : (loading && selectedBedNo === bedNo)
+              ? 'bg-gray-400 cursor-wait'
+              : 'bg-green-300 hover:bg-green-400'
+        }`}
+    >
+      {bedNo}
+    </div>
+  );
+})}
+
           </div>
         </>
       )}
