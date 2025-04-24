@@ -7,6 +7,7 @@ import appointmentModel from '../Models/AppointmentModel.js';
 import patientModel from '../Models/PatientModel.js';
 import donationModel from '../Models/DonationModel.js';
 import wardModel from '../Models/WardModel.js';
+import BedAllocationModel from '../Models/BedAllocationModel.js';
 
 //================================================ Add Doctor Function ===================================================
 
@@ -299,5 +300,39 @@ const AppointmentCancle = async (req, res) =>
         }
     }
 
+    //================================================= Exporting all the functions ==============================================
 
-export {addDoctor , adminLogin , allDoctors  ,listDoctors , appointmentAdmin  , AppointmentCancle , adminDashboard , createWard}
+    const getAllocatedBedsByWard = async (req, res) =>
+    {
+
+        try 
+        {
+
+            const { wardName, wardNo } = req.query;
+
+            if (!wardName || !wardNo) 
+            {
+
+                return res.status(400).json({ success: false, message: 'wardName and wardNo are required' });
+
+            }
+
+            const beds = await BedAllocationModel.find({wardName, wardNo}).populate('userId', 'name email phone_number').sort({ allocationTime: -1 });
+
+            res.status(200).json({success: true,beds});
+            
+        }
+        catch (error) 
+        {
+
+            console.error('Error in getAllocatedBedsByWard:', error);
+            res.status(500).json({
+            success: false,
+            message: 'Server error while fetching allocated beds',
+            });
+            
+        }
+    }
+
+
+export {addDoctor , adminLogin , allDoctors  ,listDoctors , appointmentAdmin  , AppointmentCancle , adminDashboard , createWard , getAllocatedBedsByWard}
