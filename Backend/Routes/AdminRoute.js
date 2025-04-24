@@ -3,6 +3,7 @@ import { addDoctor, adminDashboard, adminLogin, allDoctors, appointmentAdmin, Ap
 import upload from '../Middlewares/Multer.js';
 import authAdmin from '../Middlewares/AuthAdmin.js';
 import { changeAvailablity } from '../Controllers/DoctorController.js';
+import { getAllWards } from '../Controllers/UserController.js';
 
 
 const adminRouter = express.Router();
@@ -22,5 +23,7 @@ adminRouter.post('/cancle-appointment' , authAdmin , AppointmentCancle);
 adminRouter.get('/dashboard', authAdmin , adminDashboard)
 
 adminRouter.post('/ward' , authAdmin , createWard)
+
+adminRouter.get('/wards' , authAdmin , getAllWards)
 
 export default adminRouter;
