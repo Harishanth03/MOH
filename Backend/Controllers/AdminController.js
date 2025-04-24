@@ -293,11 +293,11 @@ const AppointmentCancle = async (req, res) =>
         {
 
             console.error('Error creating ward:', error);
-            
+
             res.status(500).json({ message: 'Server error' });
             
         }
     }
 
 
-export {addDoctor , adminLogin , allDoctors  ,listDoctors , appointmentAdmin  , AppointmentCancle , adminDashboard}
+export {addDoctor , adminLogin , allDoctors  ,listDoctors , appointmentAdmin  , AppointmentCancle , adminDashboard , createWard}
