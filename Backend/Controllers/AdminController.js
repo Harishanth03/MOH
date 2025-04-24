@@ -6,6 +6,7 @@ import jwt from 'jsonwebtoken'
 import appointmentModel from '../Models/AppointmentModel.js';
 import patientModel from '../Models/PatientModel.js';
 import donationModel from '../Models/DonationModel.js';
+import wardModel from '../Models/WardModel.js';
 
 //================================================ Add Doctor Function ===================================================
 
@@ -262,6 +263,38 @@ const AppointmentCancle = async (req, res) =>
 
             console.error("Appointment booking error:", error);
             res.json({ success: false, message: error.message });
+            
+        }
+    }
+
+    //================================================= Add Ward Controller ==================================================
+
+    const createWard = async (req , res) => {
+
+        try 
+        {
+
+            const {wardName , wardNumbers} = req.body;
+
+            if (!wardName || !wardNumbers || !Array.isArray(wardNumbers)) 
+            {
+
+                return res.status(400).json({ message: 'Invalid input format' });
+
+            }
+
+            const newWard = new wardModel({wardName , wardNumbers});
+
+            await newWard.save();
+            
+            res.status(201).json({ message: 'Ward created successfully' });
+            
+        } catch (error) 
+        {
+
+            console.error('Error creating ward:', error);
+            
+            res.status(500).json({ message: 'Server error' });
             
         }
     }

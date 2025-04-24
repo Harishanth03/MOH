@@ -18,4 +18,6 @@ const wardSchema = new mongoose.Schema({
 
   });
 
-const appointmentModel = mongoose.models.ward || mongoose.model('ward' , wardSchema);
+const wardModel = mongoose.models.ward || mongoose.model('ward' , wardSchema);
+
+export default wardModel;
