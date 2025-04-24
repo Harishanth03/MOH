@@ -11,6 +11,7 @@ const AppContextProvider = (props) => {
     const [doctors , setDoctors] = useState([]);
     const [token , setToken] = useState(localStorage.getItem('token')? localStorage.getItem('token') : false);
     const [userData , setUserData] = useState(false);
+    const [wards, setWards] = useState([]);
 
     const getDoctorsData = async() => {
 
@@ -101,7 +102,30 @@ const AppContextProvider = (props) => {
           console.log(error);
           toast.error("Profile update failed.");
         }
+
       };
+
+      //=========================================== Get Wards ================================================
+
+      const getWards = async() => 
+      {
+
+        try 
+        {
+
+          const {data} = await axios.get(backendUrl+'/api/user/wards' , {headers:{token}});
+          
+          setWards(data);
+          
+        } catch (error) 
+        {
+
+          console.error('Failed to fetch wards:', err);
+
+          toast.error('Failed to load wards');
+          
+        }
+      }
       
 
     useEffect(() => {
@@ -109,6 +133,13 @@ const AppContextProvider = (props) => {
         getDoctorsData();
 
     } , [])
+
+    useEffect(() => {
+
+      getWards();
+      
+    }, []);
+    
 
     useEffect(() => {
 
@@ -136,7 +167,9 @@ const AppContextProvider = (props) => {
         backendUrl,
         userData,
         loadUserProfileData,
-        updateUserProfile
+        updateUserProfile,
+        wards,
+        getWards
 
     }
 
