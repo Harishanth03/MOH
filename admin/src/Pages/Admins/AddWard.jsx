@@ -1,7 +1,12 @@
-import React, { useState } from 'react'
+import React, { useContext, useState } from 'react'
 import { assets } from '../../assets/assets';
+import axios from 'axios';
+import { toast } from 'react-toastify';
+import { AdminContext } from '../../Context/AdminContext';
 
 const AddWard = () => {
+
+  const {aToken} = useContext(AdminContext);
 
   const [wardName , setWardName] = useState('');
 
@@ -31,7 +36,9 @@ const AddWard = () => {
 
   };
 
-  const saveWard = () => {
+  const handleSubmit = async(e) => {
+
+    e.preventDefault();
 
     const payload = {
 
@@ -40,10 +47,43 @@ const AddWard = () => {
       wardNumbers: rooms
 
     };
+
+    try 
+    {
+
+      const response = await axios.post('http://localhost:4000/api/admin/ward', payload, {headers:{aToken}});
+
+      if (response.status === 201) 
+      {
+
+        toast.success(response.data.message || 'Ward saved successfully!');
+  
+        // Reset form
+        setWardName('');
+
+        setRooms([{ wardNo: 1, beds: 10 }]);
+
+      } 
+      else 
+      {
+
+        toast.error(response.data.message || 'Unexpected response from server.');
+
+      }
+
+      
+    } catch (error) 
+    {
+
+      console.error('Error saving ward:', error);
+
+      toast.error(error.response?.data?.message || 'Server error. Please try again.');
+      
+    }
   }
 
   return (
-    <form action="" className='m-5 w-full'>
+    <form onSubmit={handleSubmit} className='m-5 w-full'>
 
       <p className='mb-3 text-lg font-medium'>Add Ward</p>
 
@@ -97,7 +137,7 @@ const AddWard = () => {
             ))
           }
 
-          <button  onClick={saveWard} className='w-full p-2 my-6 bg-blue-500 rounded-md text-white cursor-pointer'>Save Ward</button>
+          <button type='submit' className='w-full p-2 my-6 bg-blue-500 rounded-md text-white cursor-pointer'>Save Ward</button>
           
         </div>
 
