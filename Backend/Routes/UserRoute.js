@@ -1,5 +1,5 @@
 import express from 'express'
-import { allocateBed, bookAppointment, cancleAppointment, getAllWards, getProfile, listAppointment, loginUser, registerUser, updateUserProfile } from '../Controllers/UserController.js';
+import { allocateBed, bookAppointment, cancleAppointment, getAllocatedBeds, getAllWards, getProfile, listAppointment, loginUser, registerUser, updateUserProfile } from '../Controllers/UserController.js';
 import authUser from '../Middlewares/AuthUser.js';
 import upload from '../Middlewares/Multer.js';
 
@@ -14,6 +14,7 @@ userRouter.get('/appointments' , authUser , listAppointment);
 userRouter.post('/cancel-appointment' , authUser , cancleAppointment);
 userRouter.get('/wards' , authUser , getAllWards);
 userRouter.post('/allocate-bed' , authUser , allocateBed)
+userRouter.get('/allocated-beds' , authUser , getAllocatedBeds)
 
 
 export default userRouter;

@@ -417,7 +417,34 @@ const bookAppointment = async (req, res) => {
         res.status(500).json({ success: false, message: 'Server error while allocating bed' });
         
     }
+
+  }
+
+  //============================================ bed Allocate get ===============================================================
+
+  const getAllocatedBeds = async(req , res) => 
+  {
+
+    try 
+    {
+
+        const { wardName, wardNo } = req.query;
+
+        const beds = await BedAllocationModel.find({ wardName, wardNo }).select('bedNo -_id');
+
+        const allocatedBedNumbers = beds.map(b => b.bedNo);
+
+        res.status(200).json({ success: true, allocatedBeds: allocatedBedNumbers });
+        
+    } catch (error) 
+    {
+
+        console.error('Error fetching allocated beds:', err);
+
+        res.status(500).json({ success: false, message: 'Failed to fetch allocated beds' });
+        
+    }
   }
   
 
-export {registerUser , loginUser , getProfile  , updateUserProfile , bookAppointment , listAppointment , cancleAppointment , getAllWards , allocateBed}
+export {registerUser , loginUser , getProfile  , updateUserProfile , bookAppointment , listAppointment , cancleAppointment , getAllWards , allocateBed , getAllocatedBeds}
