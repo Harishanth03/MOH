@@ -6,6 +6,7 @@ import {v2 as cloudinary} from 'cloudinary'
 import doctorModel from '../Models/DoctorModel.js';
 import appointmentModel from '../Models/AppointmentModel.js';
 import wardModel from '../Models/WardModel.js';
+import BedAllocationModel from '../Models/BedAllocationModel.js';
 //====================================== Register User ==================================================
 
 const registerUser = async(req , res) => {
@@ -375,7 +376,48 @@ const bookAppointment = async (req, res) => {
 
   //============================================ bed Allocation ===============================================================
 
-  
+  const allocateBed = async(req , res) => 
+  {
+
+    try 
+    {
+
+        const {userId , wardName, wardNo, bedNo} = req.body;
+
+        const existingBooking = await BedAllocationModel.findOne({userId});
+
+        if (existingBooking) 
+        {
+
+            return res.status(400).json({ success: false, message: 'User already has an active bed allocation.' });
+
+        }
+
+        const existingBed = await BedAllocation.findOne({ wardName, wardNo, bedNo });
+
+        if(existingBed)
+        {
+
+            return res.status(400).json({ success: false, message: 'This bed is already allocated to another patient.' });
+
+        }
+
+        const allocation = new BedAllocationModel({ userId, wardName, wardNo, bedNo })
+
+        await allocation.save();
+
+        res.status(201).json({ success: true, message: 'Bed successfully allocated', allocation });
+        
+    } 
+    catch (error) 
+    {
+
+        console.error('Bed allocation error:', error);
+
+        res.status(500).json({ success: false, message: 'Server error while allocating bed' });
+        
+    }
+  }
   
 
-export {registerUser , loginUser , getProfile  , updateUserProfile , bookAppointment , listAppointment , cancleAppointment , getAllWards}
+export {registerUser , loginUser , getProfile  , updateUserProfile , bookAppointment , listAppointment , cancleAppointment , getAllWards , allocateBed}
