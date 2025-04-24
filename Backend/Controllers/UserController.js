@@ -5,6 +5,7 @@ import jwt from 'jsonwebtoken'
 import {v2 as cloudinary} from 'cloudinary'
 import doctorModel from '../Models/DoctorModel.js';
 import appointmentModel from '../Models/AppointmentModel.js';
+import wardModel from '../Models/WardModel.js';
 //====================================== Register User ==================================================
 
 const registerUser = async(req , res) => {
@@ -342,11 +343,34 @@ const bookAppointment = async (req, res) => {
     {
 
         console.error("Appointment booking error:", error);
-        
+
         res.json({ success: false, message: error.message });
+        
+    }
+
+  }
+
+  //============================================ get All ward Details ====================================================
+
+  const getAllWards = async(req , res) => {
+
+    try 
+    {
+
+        const wards = await wardModel.find();
+
+        res.status(200).json(wards);
+        
+    } 
+    catch (error) 
+    {
+
+        console.error('Error fetching wards:', error);
+
+        res.status(500).json({ message: 'Server error while fetching wards' });
         
     }
   }
   
 
-export {registerUser , loginUser , getProfile  , updateUserProfile , bookAppointment , listAppointment , cancleAppointment}
+export {registerUser , loginUser , getProfile  , updateUserProfile , bookAppointment , listAppointment , cancleAppointment , getAllWards}
