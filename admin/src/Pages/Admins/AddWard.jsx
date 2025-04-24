@@ -88,7 +88,7 @@ const AddWard = () => {
 
                 <button className='text-start cursor-pointer'  onClick={() => removeRoom(index)}>
 
-                  ❌
+                  <img className='w-7' src={assets.delete_icon} alt="" />
 
                 </button>
 
