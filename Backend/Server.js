@@ -7,6 +7,7 @@ import adminRouter from './Routes/AdminRoute.js';
 import doctorRouter from './Routes/DoctorRoute.js';
 import userRouter from './Routes/UserRoute.js';
 import donationRouter from './Routes/DonationRouter.js';
+import { startBedReleaseScheduler } from './utils/bedReleaseScheduler.js';
 
 //=============================================== App Config ========================================================
 
@@ -29,4 +30,7 @@ app.use('/api/donation' , donationRouter);
 
 //=============================================== Server Start =====================================================
 
-app.listen(port, () => console.log(`Server started on port ${port}`));
+app.listen(port, () => {
+    console.log(`Server started on port ${port}`);
+    startBedReleaseScheduler(); // tart background task
+  });
