@@ -370,7 +370,12 @@ const bookAppointment = async (req, res) => {
         res.status(500).json({ message: 'Server error while fetching wards' });
         
     }
+
   }
+
+  //============================================ bed Allocation ===============================================================
+
+  
   
 
 export {registerUser , loginUser , getProfile  , updateUserProfile , bookAppointment , listAppointment , cancleAppointment , getAllWards}
