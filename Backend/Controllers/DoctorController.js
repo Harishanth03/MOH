@@ -3,6 +3,8 @@ import doctorModel from "../Models/DoctorModel.js";
 import bcrypt from "bcrypt";
 import jwt from 'jsonwebtoken';
 import appointmentModel from "../Models/AppointmentModel.js";
+import { v2 as cloudinary } from 'cloudinary';
+import DoctorCertificateModel from "../Models/DoctorCertificateModel.js";
 
 //================================================ Doctor Availablity ===================================================
 const changeAvailablity = async(req , res) => {
@@ -212,4 +214,81 @@ const doctorDashboard = async(req , res) =>
     }
 }
 
-export{changeAvailablity , loginDoctor , appointmentsDoctor , appointmentComplete , appointmentCancle , doctorDashboard}
+//=================================================== Verify Doctor =================================================
+
+const verifyDoctorCertificate = async(req , res) =>
+{
+    
+    try 
+    {
+
+        const { docId, certificateId } = req.body;
+         
+        const certificateFile = req.file;
+
+        if (!certificateId) 
+        {
+            return res.status(400).json({
+
+              success: false,
+
+              message: "Certificate ID is required"
+
+            });
+
+        }
+
+        if (!certificateFile) 
+        {
+            return res.status(400).json({
+
+              success: false,
+
+              message: "Certificate file is required"
+
+            });
+
+        }
+
+        const uploaded = await cloudinary.uploader.upload(certificateFile.path , {resource_type:"auto"});
+
+        const certificateURL = uploaded.secure_url;
+
+        const record = await DoctorCertificateModel({
+
+            doctorId: docId,
+
+            certificateId,
+
+            certificateURL
+
+        });
+
+        await record.save();
+
+        res.status(201).json({
+
+            success: true,
+
+            message: "Certificate submitted successfully",
+
+            data: record
+
+        });
+
+        
+        
+    } 
+    catch (error) 
+    {
+
+        console.error("Error verifying doctor certificate:", error);
+
+        res.status(500).json({ success: false, message: "Server error during certificate verification" });
+        
+    }
+}
+
+//=================================================== Exporting Controllers =================================================
+
+export{changeAvailablity , loginDoctor , appointmentsDoctor , appointmentComplete , appointmentCancle , doctorDashboard , verifyDoctorCertificate}
