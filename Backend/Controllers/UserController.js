@@ -444,7 +444,10 @@ const bookAppointment = async (req, res) => {
         res.status(500).json({ success: false, message: 'Failed to fetch allocated beds' });
         
     }
+
   }
+
+  
   
 
 export {registerUser , loginUser , getProfile  , updateUserProfile , bookAppointment , listAppointment , cancleAppointment , getAllWards , allocateBed , getAllocatedBeds}

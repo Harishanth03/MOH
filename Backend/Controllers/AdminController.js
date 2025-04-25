@@ -334,5 +334,52 @@ const AppointmentCancle = async (req, res) =>
         }
     }
 
+    //============================================ bed Allocate confirm ===============================================================
 
-export {addDoctor , adminLogin , allDoctors  ,listDoctors , appointmentAdmin  , AppointmentCancle , adminDashboard , createWard , getAllocatedBedsByWard}
+  const confirmBedAdmission = async (req, res) => 
+    {
+      try 
+      {
+  
+          const {bedId} = req.body;
+  
+          const updated = await BedAllocationModel.findByIdAndUpdate(
+  
+              bedId,
+  
+              {isAdmitted:true},
+  
+              {new:true},
+              
+          ).populate('userId', 'name email phone_number');
+  
+          if(!updated)
+          {
+              return res.status(404).json({ success: false, message: 'Bed not found' });
+          }
+  
+          res.status(200).json({
+  
+              success: true,
+  
+              message: `Admission confirmed for ${updated.userId?.name}`,
+  
+              allocation: updated,
+  
+          });
+  
+  
+          
+      } 
+      catch (error) 
+      {
+  
+          console.error('Error confirming admission:', err);
+  
+          res.status(500).json({ success: false, message: 'Server error while confirming bed admission' });
+          
+      }
+    }
+
+
+export {addDoctor , adminLogin , allDoctors  ,listDoctors , appointmentAdmin  , AppointmentCancle , adminDashboard , createWard , getAllocatedBedsByWard , confirmBedAdmission}

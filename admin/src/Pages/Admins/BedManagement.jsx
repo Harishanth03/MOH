@@ -50,8 +50,22 @@ const BedManagement = () => {
     }
   };
 
-  const handleConfirm = (bedId) => {
-    toast.success(`Confirmed allocation for bed ID: ${bedId}`);
+  const handleConfirm = async (bedId) => {
+    try {
+      const { data } = await axios.post(`http://localhost:4000/api/admin/confirm-bed`, { bedId }, {
+        headers: { aToken }
+      });
+      toast.success(data.message);
+      fetchAllocatedBeds();
+    } catch (error) {
+      console.error('Failed to confirm bed:', error);
+      toast.error('Failed to confirm bed');
+    }
+  };
+
+  const handleDischarge = (bedId) => {
+    toast.info(`Discharged patient from bed ID: ${bedId}`);
+    // Add discharge logic here if needed
   };
 
   const handleCancel = async (bedId) => {
@@ -129,9 +143,9 @@ const BedManagement = () => {
             </h2>
 
             <div className="overflow-x-auto">
-              <table className="min-w-full bg-white border rounded">
+              <table className="min-w-full bg-white border border-gray-300 rounded">
                 <thead>
-                  <tr className="bg-gray-100 border-b">
+                  <tr className="bg-gray-100 border-b border-gray-300">
                     <th className="py-2 px-4 text-left">Bed No</th>
                     <th className="py-2 px-4 text-left">Patient Name</th>
                     <th className="py-2 px-4 text-left">Email</th>
@@ -142,19 +156,27 @@ const BedManagement = () => {
                 </thead>
                 <tbody>
                   {allocatedBeds.map((bed, idx) => (
-                    <tr key={idx} className="border-b hover:bg-gray-50">
+                    <tr key={idx} className="border-b border-gray-300 hover:bg-gray-50">
                       <td className="py-2 px-4">{bed.bedNo}</td>
                       <td className="py-2 px-4">{bed.userId?.name}</td>
                       <td className="py-2 px-4">{bed.userId?.email}</td>
                       <td className="py-2 px-4">{bed.userId?.phone_number}</td>
                       <td className="py-2 px-4">{new Date(bed.allocationTime).toLocaleString()}</td>
                       <td className="py-2 px-4 flex gap-2">
-                        <button onClick={() => handleConfirm(bed._id)} className="bg-green-500 text-white px-3 py-1 rounded hover:bg-green-600">
-                          Confirm
-                        </button>
-                        <button onClick={() => handleCancel(bed._id)} className="bg-red-500 text-white px-3 py-1 rounded hover:bg-red-600">
-                          Cancel
-                        </button>
+                        {bed.isAdmitted ? (
+                          <button onClick={() => handleDischarge(bed._id)} className="bg-blue-500 text-white px-3 py-2 cursor-pointer rounded hover:bg-blue-600">
+                            Discharge Patient
+                          </button>
+                        ) : (
+                          <>
+                            <button onClick={() => handleConfirm(bed._id)} className="bg-green-500 text-white px-3 py-1 rounded hover:bg-green-600">
+                              Confirm
+                            </button>
+                            <button onClick={() => handleCancel(bed._id)} className="bg-red-500 text-white px-3 py-1 rounded hover:bg-red-600">
+                              Cancel
+                            </button>
+                          </>
+                        )}
                       </td>
                     </tr>
                   ))}
