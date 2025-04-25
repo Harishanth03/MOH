@@ -12,7 +12,11 @@ const bedAllocationSchema = new mongoose.Schema({
 
     allocationTime: { type: Date, default: Date.now },
 
-    isAdmitted: { type: Boolean, default: false }
+    isAdmitted: { type: Boolean, default: false },
+
+    status: { type: String, enum: ['pending', 'admitted', 'discharged'], default: 'pending' },
+
+    dischargedAt: { type: Date, default: null }
 
 })
 
