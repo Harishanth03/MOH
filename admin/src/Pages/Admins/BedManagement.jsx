@@ -39,7 +39,9 @@ const BedManagement = () => {
         });
 
         if (data.success) {
-          setAllocatedBeds(data.beds);
+          // filter out discharged patients before setting
+          const activeBeds = data.beds.filter(bed => bed.status !== 'discharged');
+          setAllocatedBeds(activeBeds);
         } else {
           setAllocatedBeds([]);
         }
@@ -63,9 +65,17 @@ const BedManagement = () => {
     }
   };
 
-  const handleDischarge = (bedId) => {
-    toast.info(`Discharged patient from bed ID: ${bedId}`);
-    // Add discharge logic here if needed
+  const handleDischarge = async (bedId) => {
+    try {
+      const { data } = await axios.post(`http://localhost:4000/api/admin/discharge-bed`, { bedId }, {
+        headers: { aToken }
+      });
+      toast.success(data.message);
+      fetchAllocatedBeds();
+    } catch (error) {
+      console.error('Failed to discharge bed:', error);
+      toast.error('Failed to discharge bed');
+    }
   };
 
   const handleCancel = async (bedId) => {
@@ -163,7 +173,7 @@ const BedManagement = () => {
                       <td className="py-2 px-4">{bed.userId?.phone_number}</td>
                       <td className="py-2 px-4">{new Date(bed.allocationTime).toLocaleString()}</td>
                       <td className="py-2 px-4 flex gap-2">
-                        {bed.isAdmitted ? (
+                        {bed.status === 'discharged' ? null : bed.isAdmitted ? (
                           <button onClick={() => handleDischarge(bed._id)} className="bg-blue-500 text-white px-3 py-2 cursor-pointer rounded hover:bg-blue-600">
                             Discharge Patient
                           </button>

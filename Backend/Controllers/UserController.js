@@ -384,7 +384,12 @@ const bookAppointment = async (req, res) => {
 
         const {userId , wardName, wardNo, bedNo} = req.body;
 
-        const existingBooking = await BedAllocationModel.findOne({userId});
+        const existingBooking = await BedAllocationModel.findOne({
+            
+            userId,
+            
+            status: { $ne: 'discharged' } // Check for active bookings
+            });
 
         if (existingBooking) 
         {
@@ -430,7 +435,11 @@ const bookAppointment = async (req, res) => {
 
         const { wardName, wardNo } = req.query;
 
-        const beds = await BedAllocationModel.find({ wardName, wardNo }).select('bedNo -_id');
+        const beds = await BedAllocationModel.find({ 
+            wardName, 
+            wardNo,
+            status: { $ne: 'discharged' }
+         }).select('bedNo -_id');
 
         const allocatedBedNumbers = beds.map(b => b.bedNo);
 

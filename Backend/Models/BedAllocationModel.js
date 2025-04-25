@@ -2,7 +2,7 @@ import mongoose from "mongoose";
 
 const bedAllocationSchema = new mongoose.Schema({
 
-    userId: { type: mongoose.Schema.Types.ObjectId, ref: 'user', required: true, unique: true },
+    userId: { type: mongoose.Schema.Types.ObjectId, ref: 'user', required: true },
 
     wardName: { type: String, required: true },
 
