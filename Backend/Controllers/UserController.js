@@ -421,7 +421,14 @@ const bookAppointment = async (req, res) => {
 
             const formattedPhone = phone.startsWith("94") ? phone : `94${phone.slice(-9)}`;
 
-            const message = `Dear ${patient.name}, your bed has been successfully allocated at ${wardName}, Room ${wardNo}, Bed ${bedNo}. - MOH`;
+            const message = `Dear ${patient.name},\n\n` +
+                `Your bed has been successfully allocated.\n\n` +
+                `Ward Name: ${wardName}\n` +
+                `Room Number: Room ${wardNo}\n` +
+                `Bed Number: Bed ${bedNo}\n\n` +
+                `Please arrive within 2 hours to confirm your admission.\n\n` +
+                `– Ministory Of Health`;
+
 
             const smsResult = await sendSms(formattedPhone, message);
 
