@@ -7,6 +7,7 @@ import doctorModel from '../Models/DoctorModel.js';
 import appointmentModel from '../Models/AppointmentModel.js';
 import wardModel from '../Models/WardModel.js';
 import BedAllocationModel from '../Models/BedAllocationModel.js';
+import { sendSms } from '../utils/sendSms.js';
 //====================================== Register User ==================================================
 
 const registerUser = async(req , res) => {
@@ -410,6 +411,26 @@ const bookAppointment = async (req, res) => {
         const allocation = new BedAllocationModel({ userId, wardName, wardNo, bedNo })
 
         await allocation.save();
+
+        const patient = await patientModel.findById(userId);
+
+        if(patient && patient.phone_number)
+        {
+
+            const phone = patient.phone_number;
+
+            const formattedPhone = phone.startsWith("94") ? phone : `94${phone.slice(-9)}`;
+
+            const message = `Dear ${patient.name}, your bed has been successfully allocated at ${wardName}, Room ${wardNo}, Bed ${bedNo}. - MOH`;
+
+            const smsResult = await sendSms(formattedPhone, message);
+
+            if (!smsResult.success) {
+                
+                console.warn("SMS failed:", smsResult.message);
+              }
+
+        }
 
         res.status(201).json({ success: true, message: 'Bed successfully allocated', allocation });
         
