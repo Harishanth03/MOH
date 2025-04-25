@@ -17,6 +17,7 @@ import donation_icon from './donation_icon.png'
 import total_beds from './total_beds.svg'
 import ward from './Ward.svg'
 import bedManagement from './bed_management.svg'
+import verify from  './verified.png'
 
 export const assets = {
     add_icon,
@@ -37,5 +38,6 @@ export const assets = {
     donation_icon,
     total_beds,
     ward,
-    bedManagement
+    bedManagement,
+    verify
 }

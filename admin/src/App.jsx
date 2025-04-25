@@ -13,9 +13,9 @@ import {Navigate} from 'react-router-dom'
 import { DoctorContext } from './Context/DoctorContext'
 import DoctorDashboard from './Pages/Doctors/DoctorDashboard'
 import DoctorAppointment from './Pages/Doctors/DoctorAppointment'
-import DoctorProfile from './Pages/Doctors/DoctorProfile'
 import AddWard from './Pages/Admins/AddWard'
 import BedManagement from './Pages/Admins/BedManagement'
+import VerifyDoctor from './Pages/Doctors/VerifyDoctor'
 
 const App = () => {
 
@@ -61,7 +61,7 @@ const App = () => {
           <Route path='/doctor' element={<Navigate to="/doctor-dashboard" />} />
           <Route path='/doctor-dashboard' element={<DoctorDashboard/>}/>
           <Route path='/doctor-appointment' element={<DoctorAppointment/>}/>
-          <Route path='/doctor-profile' element={<DoctorProfile/>}/>
+          <Route path='/verify-doctor' element={<VerifyDoctor/>}/>
 
           <Route />
 
