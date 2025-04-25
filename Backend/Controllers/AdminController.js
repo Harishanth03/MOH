@@ -334,5 +334,107 @@ const AppointmentCancle = async (req, res) =>
         }
     }
 
+    //============================================ bed Allocate confirm ===============================================================
 
-export {addDoctor , adminLogin , allDoctors  ,listDoctors , appointmentAdmin  , AppointmentCancle , adminDashboard , createWard , getAllocatedBedsByWard}
+  const confirmBedAdmission = async (req, res) => 
+    {
+      try 
+      {
+  
+          const {bedId} = req.body;
+  
+          const updated = await BedAllocationModel.findByIdAndUpdate(
+  
+              bedId,
+  
+              {isAdmitted:true},
+  
+              {new:true},
+              
+          ).populate('userId', 'name email phone_number');
+  
+          if(!updated)
+          {
+              return res.status(404).json({ success: false, message: 'Bed not found' });
+          }
+  
+          res.status(200).json({
+  
+              success: true,
+  
+              message: `Admission confirmed for ${updated.userId?.name}`,
+  
+              allocation: updated,
+  
+          });
+  
+  
+          
+      } 
+      catch (error) 
+      {
+  
+          console.error('Error confirming admission:', err);
+  
+          res.status(500).json({ success: false, message: 'Server error while confirming bed admission' });
+          
+      }
+
+    }
+
+    const dischargePatient = async (req, res) => 
+    {
+
+        try 
+        {
+
+            const {bedId} = req.body;
+
+            const allocation = await BedAllocationModel.findById(bedId);
+
+            if(!allocation) 
+            {
+
+                return res.status(404).json({ success: false, message: 'Bed allocation not found' });
+
+            }
+
+            if (!allocation.isAdmitted) 
+            {
+
+                return res.status(400).json({ success: false, message: 'Patient is not admitted yet' });
+
+            }
+
+            allocation.status = 'discharged';
+
+            allocation.isAdmitted = false;
+
+            allocation.dischargedAt = new Date();
+
+            await allocation.save();
+
+            res.status(200).json({
+
+                success: true,
+                message: 'Patient discharged successfully',
+                discharged: allocation,
+
+            });
+            
+        } 
+        catch (error) 
+        {
+
+            console.error('Discharge error:', error);
+
+            res.status(500).json({ success: false, message: 'Server error while discharging patient' });
+            
+        }
+
+
+
+    }
+
+
+export {addDoctor , adminLogin , allDoctors  ,listDoctors , appointmentAdmin  , AppointmentCancle , adminDashboard , createWard , getAllocatedBedsByWard , confirmBedAdmission, dischargePatient}

@@ -6,7 +6,7 @@ const expireOldBeds = async() =>
 
     const twoHoursAgo = new Date(Date.now() - 2 * 60 * 60 * 1000);
 
-    const result = await BedAllocationModel.deleteMany({ allocationTime: { $lt: twoHoursAgo } });
+    const result = await BedAllocationModel.deleteMany({ allocationTime: { $lt: twoHoursAgo }, isAdmitted: false });
 
     console.log(`[BED CLEANUP] Freed ${result.deletedCount} expired bed(s)`);
 
