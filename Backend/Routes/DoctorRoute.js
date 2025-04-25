@@ -1,7 +1,8 @@
 import express from 'express'
 import { listDoctors } from '../Controllers/AdminController.js'
-import { appointmentCancle, appointmentComplete, appointmentsDoctor, doctorDashboard, loginDoctor } from '../Controllers/DoctorController.js';
+import { appointmentCancle, appointmentComplete, appointmentsDoctor, doctorDashboard, loginDoctor, verifyDoctorCertificate } from '../Controllers/DoctorController.js';
 import authDoctor from '../Middlewares/AuthDoctor.js';
+import upload from '../Middlewares/Multer.js';
 
 
 const doctorRouter = express.Router()
@@ -17,6 +18,8 @@ doctorRouter.post('/complete' , authDoctor , appointmentComplete);
 doctorRouter.post('/cancle' , authDoctor , appointmentCancle);
 
 doctorRouter.get('/dashboard'  , authDoctor , doctorDashboard);
+
+doctorRouter.post('/verify-certificate', upload.single('certificate'), authDoctor, verifyDoctorCertificate);
 
 
 export default doctorRouter
