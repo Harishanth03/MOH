@@ -399,7 +399,7 @@ const bookAppointment = async (req, res) => {
 
         }
 
-        const existingBed = await BedAllocationModel.findOne({ wardName, wardNo, bedNo });
+        const existingBed = await BedAllocationModel.findOne({ wardName, wardNo, bedNo, status: { $ne: 'discharged' } });
 
         if(existingBed)
         {

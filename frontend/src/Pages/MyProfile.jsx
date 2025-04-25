@@ -1,20 +1,25 @@
-import React, { useContext, useState } from 'react';
+import React, { useContext, useEffect, useState } from 'react';
 import { assets } from '../assets/assets';
 import { AppContext } from '../Context/AppContext';
 
 const MyProfile = () => {
   const [edit, setEdit] = useState(false);
-  const { userData, setUserData, token, backendUrl, loadUserProfileData, updateUserProfile } = useContext(AppContext);
-  const [image , setImage] = useState(false);
+  const [editUserData, setEditUserData] = useState(null);
+  const [image , setImage] = useState(null);
+  const { userData, token, backendUrl, loadUserProfileData, updateUserProfile } = useContext(AppContext);
 
   const handleUpdateProfile = async () => {
-    await updateUserProfile(userData, image);
+    await updateUserProfile(editUserData, image);
     await loadUserProfileData();
     setEdit(false);
   };
-  
 
-  // Show loader until userData is fetched
+  useEffect(() => {
+    if (edit && userData) {
+      setEditUserData({ ...userData });
+    }
+  }, [edit, userData]);
+
   if (!userData) return <div className="text-center py-20 text-gray-600">Loading profile...</div>;
 
   const currentDate = new Date();
@@ -44,14 +49,12 @@ const MyProfile = () => {
                       className="w-24"
                       onChange={(e) => setImage(e.target.files[0])}
                     />
-
                   ) : (
                     <img
                       className='w-24 rounded-full object-cover'
                       src={userData.image || assets.user}
                       alt="Profile"
                     />
-
                   )
                 }
 
@@ -73,14 +76,13 @@ const MyProfile = () => {
             <div className="w-full bg-white flex p-5">
               <div className="w-full flex flex-col md:grid grid-cols-4 gap-y-8 gap-4">
 
-                {/* Username */}
                 <div className="w-full flex flex-col md:col-span-2 gap-3">
                   <label className="block text-gray-600">User name:</label>
                   {
                     edit ? (
                       <input
-                        value={userData.name}
-                        onChange={(e) => setUserData(prev => ({ ...prev, name: e.target.value }))}
+                        value={editUserData?.name || ''}
+                        onChange={(e) => setEditUserData(prev => ({ ...prev, name: e.target.value }))}
                         className="w-full p-2 border border-gray-300 rounded-md focus:outline-none focus:border-[#0D6EFD]"
                         type="text"
                       />
@@ -88,14 +90,13 @@ const MyProfile = () => {
                   }
                 </div>
 
-                {/* Email */}
                 <div className="w-full flex flex-col md:col-span-2 gap-3">
                   <label className="block text-gray-600">Email:</label>
                   {
                     edit ? (
                       <input
-                        value={userData.email}
-                        onChange={(e) => setUserData(prev => ({ ...prev, email: e.target.value }))}
+                        value={editUserData?.email || ''}
+                        onChange={(e) => setEditUserData(prev => ({ ...prev, email: e.target.value }))}
                         className="w-full p-2 border border-gray-300 rounded-md focus:outline-none focus:border-[#0D6EFD]"
                         type="email"
                       />
@@ -103,14 +104,13 @@ const MyProfile = () => {
                   }
                 </div>
 
-                {/* Phone */}
                 <div className="w-full flex flex-col md:col-span-2 gap-3">
                   <label className="block text-gray-600">Phone:</label>
                   {
                     edit ? (
                       <input
-                        value={userData.phone_number || ''}
-                        onChange={(e) => setUserData(prev => ({ ...prev, phone_number: e.target.value }))}
+                        value={editUserData?.phone_number || ''}
+                        onChange={(e) => setEditUserData(prev => ({ ...prev, phone_number: e.target.value }))}
                         className="w-full p-2 border border-gray-300 rounded-md focus:outline-none focus:border-[#0D6EFD]"
                         type="text"
                       />
@@ -118,14 +118,13 @@ const MyProfile = () => {
                   }
                 </div>
 
-                {/* Gender */}
                 <div className="w-full flex flex-col md:col-span-2 gap-3">
                   <label className="block text-gray-600">Gender:</label>
                   {
                     edit ? (
                       <select
-                        value={userData.gender}
-                        onChange={(e) => setUserData(prev => ({ ...prev, gender: e.target.value }))}
+                        value={editUserData?.gender || 'Male'}
+                        onChange={(e) => setEditUserData(prev => ({ ...prev, gender: e.target.value }))}
                         className="w-full p-2 border border-gray-300 rounded-md focus:outline-none focus:border-[#0D6EFD]"
                       >
                         <option value="Male">Male</option>
@@ -135,14 +134,13 @@ const MyProfile = () => {
                   }
                 </div>
 
-                {/* Date of Birth */}
                 <div className="w-full flex flex-col md:col-span-2 gap-3">
                   <label className="block text-gray-600">Date Of Birth:</label>
                   {
                     edit ? (
                       <input
-                        value={userData.dob || ''}
-                        onChange={(e) => setUserData(prev => ({ ...prev, dob: e.target.value }))}
+                        value={editUserData?.dob || ''}
+                        onChange={(e) => setEditUserData(prev => ({ ...prev, dob: e.target.value }))}
                         className="w-full p-2 border border-gray-300 rounded-md focus:outline-none focus:border-[#0D6EFD]"
                         type="date"
                       />
@@ -150,7 +148,6 @@ const MyProfile = () => {
                   }
                 </div>
 
-                {/* Address */}
                 <div className="w-full flex flex-col md:col-span-2 gap-3">
                   <label className="block text-gray-600">Address:</label>
                   <div className="flex flex-col md:flex-row w-full gap-2">
@@ -158,8 +155,8 @@ const MyProfile = () => {
                       edit ? (
                         <>
                           <input
-                            value={userData.address?.line1 || ''}
-                            onChange={(e) => setUserData(prev => ({
+                            value={editUserData?.address?.line1 || ''}
+                            onChange={(e) => setEditUserData(prev => ({
                               ...prev,
                               address: {
                                 ...(prev.address || {}),
@@ -170,8 +167,8 @@ const MyProfile = () => {
                             type="text"
                           />
                           <input
-                            value={userData.address?.line2 || ''}
-                            onChange={(e) => setUserData(prev => ({
+                            value={editUserData?.address?.line2 || ''}
+                            onChange={(e) => setEditUserData(prev => ({
                               ...prev,
                               address: {
                                 ...(prev.address || {}),
