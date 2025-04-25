@@ -1,5 +1,6 @@
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 import { toast } from "react-toastify";
+import axios from "axios";
 
 const VerifyDoctor = () => {
   const [certificateId, setCertificateId] = useState("");
@@ -9,22 +10,38 @@ const VerifyDoctor = () => {
     setCertificateFile(e.target.files[0]);
   };
 
-  const handleCertificateSubmit = (e) => {
+  const handleCertificateSubmit = async (e) => {
     e.preventDefault();
-
+  
     if (!certificateFile || !certificateId) {
       toast.warning("Please upload a certificate and enter the Certificate ID.");
       return;
     }
-
+  
     const formData = new FormData();
     formData.append("certificate", certificateFile);
     formData.append("certificateId", certificateId);
-
-    // You can now send formData to your backend
-    console.log("Submitting Certificate:", certificateId, certificateFile);
-    // Example:
-    // axios.post('/api/doctor/verify-certificate', formData)
+  
+    try {
+      const dtoken = localStorage.getItem("dToken"); 
+  
+      const { data } = await axios.post(
+        "http://localhost:4000/api/doctor/verify-certificate",
+        formData,
+        {headers:{dtoken}}
+      );
+  
+      if (data.success) {
+        toast.success("Certificate submitted successfully.");
+        setCertificateFile(null);
+        setCertificateId("");
+      } else {
+        toast.error(data.message || "Submission failed.");
+      }
+    } catch (error) {
+      console.error("Submit Error:", error);
+      toast.error("Server error during certificate submission.");
+    }
   };
 
   return (

@@ -222,7 +222,7 @@ const verifyDoctorCertificate = async(req , res) =>
     try 
     {
 
-        const { docId, certificateId } = req.body;
+        const {certificateId } = req.body;
          
         const certificateFile = req.file;
 
@@ -256,8 +256,8 @@ const verifyDoctorCertificate = async(req , res) =>
 
         const record = await DoctorCertificateModel({
 
-            doctorId: docId,
-
+            doctorId: req.body.docId, 
+            
             certificateId,
 
             certificateURL
