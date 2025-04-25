@@ -10,7 +10,9 @@ const bedAllocationSchema = new mongoose.Schema({
 
     bedNo: { type: Number, required: true },
 
-    allocationTime: { type: Date, default: Date.now }
+    allocationTime: { type: Date, default: Date.now },
+
+    isAdmitted: { type: Boolean, default: false }
 
 })
 

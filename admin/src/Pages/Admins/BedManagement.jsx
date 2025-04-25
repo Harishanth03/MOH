@@ -50,6 +50,26 @@ const BedManagement = () => {
     }
   };
 
+  const handleConfirm = (bedId) => {
+    toast.success(`Confirmed allocation for bed ID: ${bedId}`);
+  };
+
+  const handleCancel = async (bedId) => {
+    const reason = prompt("Enter reason for cancellation:");
+    if (!reason) return;
+
+    try {
+      const { data } = await axios.post(`http://localhost:4000/api/admin/cancel-bed`, { bedId, reason }, {
+        headers: { aToken }
+      });
+      toast.success(data.message);
+      fetchAllocatedBeds();
+    } catch (error) {
+      console.error('Failed to cancel bed:', error);
+      toast.error('Failed to cancel bed');
+    }
+  };
+
   useEffect(() => {
     fetchAllocatedBeds();
   }, [selectedWard, selectedWardNumber]);
@@ -60,7 +80,6 @@ const BedManagement = () => {
 
       <div className='bg-white border p-5 border-gray-300 rounded text-sm text-gray-700 max-h-[80vh] overflow-y-scroll min-h-[60vh]'>
 
-        {/* WARD SELECTION */}
         {!selectedWard && (
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
             {wards.map((ward, idx) => (
@@ -75,7 +94,6 @@ const BedManagement = () => {
           </div>
         )}
 
-        {/* WARD NUMBER SELECTION */}
         {selectedWard && !selectedWardNumber && (
           <>
             <button onClick={() => setSelectedWard(null)} className="mb-4 text-blue-600 underline">
@@ -100,7 +118,6 @@ const BedManagement = () => {
           </>
         )}
 
-        {/* BED TABLE */}
         {selectedWard && selectedWardNumber && (
           <>
             <button onClick={() => setSelectedWardNumber(null)} className="mb-4 text-blue-600 underline">
@@ -120,6 +137,7 @@ const BedManagement = () => {
                     <th className="py-2 px-4 text-left">Email</th>
                     <th className="py-2 px-4 text-left">Phone</th>
                     <th className="py-2 px-4 text-left">Allocated At</th>
+                    <th className="py-2 px-4 text-left">Actions</th>
                   </tr>
                 </thead>
                 <tbody>
@@ -130,6 +148,14 @@ const BedManagement = () => {
                       <td className="py-2 px-4">{bed.userId?.email}</td>
                       <td className="py-2 px-4">{bed.userId?.phone_number}</td>
                       <td className="py-2 px-4">{new Date(bed.allocationTime).toLocaleString()}</td>
+                      <td className="py-2 px-4 flex gap-2">
+                        <button onClick={() => handleConfirm(bed._id)} className="bg-green-500 text-white px-3 py-1 rounded hover:bg-green-600">
+                          Confirm
+                        </button>
+                        <button onClick={() => handleCancel(bed._id)} className="bg-red-500 text-white px-3 py-1 rounded hover:bg-red-600">
+                          Cancel
+                        </button>
+                      </td>
                     </tr>
                   ))}
                 </tbody>
@@ -139,7 +165,7 @@ const BedManagement = () => {
         )}
 
       </div>
-      
+
     </div>
   );
 };
