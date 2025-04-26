@@ -5,6 +5,7 @@ import {toast} from 'react-toastify'
 
 export const AppContext = createContext();
 
+
 const AppContextProvider = (props) => {
 
     const backendUrl = 'http://localhost:4000'
@@ -12,6 +13,8 @@ const AppContextProvider = (props) => {
     const [token , setToken] = useState(localStorage.getItem('token')? localStorage.getItem('token') : false);
     const [userData , setUserData] = useState(false);
     const [wards, setWards] = useState([]);
+    const [voiceIntent, setVoiceIntent] = useState(null);
+
 
     const getDoctorsData = async() => {
 
@@ -169,7 +172,9 @@ const AppContextProvider = (props) => {
         loadUserProfileData,
         updateUserProfile,
         wards,
-        getWards
+        getWards,
+        voiceIntent,
+        setVoiceIntent
 
     }
 

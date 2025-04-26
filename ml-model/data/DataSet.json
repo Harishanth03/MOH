@@ -1247,6 +1247,71 @@
       },
       "entityType": "NA",
       "entities": []
-    }
+    },
+    {
+      "intent": "click_login_button",
+      "text": [
+        "Click login button",
+        "Login now",
+        "Submit my login",
+        "Click the login",
+        "Login immediately",
+        "Press the login button",
+        "I want to login now",
+        "Click on the sign in button",
+        "Access my login",
+        "Proceed to login",
+        "Login to my account",
+        "Click sign in",
+        "Please login now",
+        "Hit login",
+        "Start my login",
+        "Push login button",
+        "Tap login",
+        "Go ahead and login",
+        "Click the login form",
+        "Submit the login details",
+        "Login to continue",
+        "Login button press",
+        "Enter login details",
+        "Proceed with login",
+        "Make login action",
+        "Activate login",
+        "Confirm login button",
+        "Authorize login",
+        "Accept login form",
+        "Begin login process",
+        "Launch login procedure",
+        "Press the sign in button",
+        "Submit sign in",
+        "Push sign in button",
+        "Click account login button",
+        "Submit login credentials",
+        "Trigger login",
+        "Fire login action",
+        "Activate sign in button",
+        "Start the login action",
+        "Confirm and login",
+        "Complete login submission",
+        "Finalize login",
+        "Execute login command",
+        "Validate login",
+        "Initiate login",
+        "Request login",
+        "Login operation start",
+        "Start session login",
+        "Click to sign in"
+      ],
+      "responses": [
+        "Okay, submitting your login now!",
+        "Sure, processing your login!",
+        "Logging you in!",
+        "Initiating login process!",
+        "Logging you into your account!"
+      ],
+      "extension": {
+        "endpoint": ""
+      }
+    }    
   ]
 }
