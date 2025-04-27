@@ -6,23 +6,19 @@ import { toast } from 'react-toastify'
 import { useNavigate } from "react-router-dom";
 
 const Login = () => {
-
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [state, setState] = useState('Sign in');
 
   const { token, setToken, backendUrl, voiceIntent, setVoiceIntent } = useContext(AppContext);
-
   const navigate = useNavigate();
 
-  //====================== Onsubmit Handler ===============================
   const onSubmitHandler = async (event) => {
     event.preventDefault();
     try {
       if (state === 'Sign up') {
-        const { data } = await axios.post(backendUrl + '/api/user/register', { name, password, email })
-
+        const { data } = await axios.post(backendUrl + '/api/user/register', { name, password, email });
         if (data.success) {
           localStorage.setItem('token', data.token);
           setToken(data.token);
@@ -32,8 +28,7 @@ const Login = () => {
           toast.error(data.message);
         }
       } else {
-        const { data } = await axios.post(backendUrl + '/api/user/login', { password, email })
-
+        const { data } = await axios.post(backendUrl + '/api/user/login', { password, email });
         if (data.success) {
           localStorage.setItem('token', data.token);
           setToken(data.token);
@@ -45,35 +40,39 @@ const Login = () => {
     } catch (error) {
       console.log(error);
     }
-  }
+  };
 
-  // ====================== Voice Intent Effect ==========================
+  // 🔥 Voice Button Click Logic
   useEffect(() => {
+    if (!voiceIntent) return;
+
+    console.log("Voice Intent Detected:", voiceIntent);
+
     if (voiceIntent === "click_login_button") {
-      console.log("🎯 Voice Intent Detected: Submitting Login Form...");
-      const fakeEvent = { preventDefault: () => {} };  // Fake event to call submit
+      const fakeEvent = { preventDefault: () => {} };
       onSubmitHandler(fakeEvent);
-      setVoiceIntent(null); // Reset after handling
     }
+
+    // 🛡️ Reset voiceIntent after using
+    setVoiceIntent(null);
   }, [voiceIntent]);
 
   useEffect(() => {
     if (token) {
-      navigate('/')
+      navigate('/');
     }
-  }, [token])
+  }, [token]);
 
   return (
     <section className='w-full min-h-[70%] flex flex-col justify-center items-center'>
-
       <form onSubmit={onSubmitHandler} className='w-full sm:w-3/4 flex flex-col sm:flex-row gap-6 justify-center rounded-lg p-4 shadow-lg'>
 
-        {/* =================== left side ====================== */}
+        {/* Left Side */}
         <div className='w-full sm:w-1/2'>
           <img className='rounded-bl-lg rounded-tl-lg w-full' src={assets.loginImage} alt="" />
         </div>
 
-        {/* =================== right side ==================== */}
+        {/* Right Side */}
         <div className='w-full sm:w-1/2 pl-6 flex justify-start my-auto'>
           <div className='flex w-full flex-col gap-6'>
 
@@ -83,23 +82,45 @@ const Login = () => {
             </div>
 
             {state === "Sign up" && (
-              <div className='flex text-gray-700 text-base flex-col gap-1 w-full'>
+              <div className='flex flex-col gap-1 w-full'>
                 <label className='block text-gray-600' htmlFor="userName">User name</label>
-                <input onChange={(e) => setName(e.target.value)} value={name} className='w-full p-2 border border-gray-300 rounded-md focus:outline-none focus:border-[#0D6EFD]' id='userName' type="text" />
+                <input
+                  onChange={(e) => setName(e.target.value)}
+                  value={name}
+                  className='w-full p-2 border border-gray-300 rounded-md focus:outline-none focus:border-[#0D6EFD]'
+                  id='userName'
+                  type="text"
+                />
               </div>
             )}
 
             <div className='flex flex-col gap-1 w-full'>
               <label className='block text-gray-600' htmlFor="Email">Email</label>
-              <input onChange={(e) => setEmail(e.target.value)} value={email} className='w-full p-2 border border-gray-300 rounded-md focus:outline-none focus:border-[#0D6EFD]' id='Email' type="email" />
+              <input
+                onChange={(e) => setEmail(e.target.value)}
+                value={email}
+                className='w-full p-2 border border-gray-300 rounded-md focus:outline-none focus:border-[#0D6EFD]'
+                id='Email'
+                type="email"
+              />
             </div>
 
             <div className='flex flex-col gap-1 w-full'>
               <label className='block text-gray-600' htmlFor="Password">Password</label>
-              <input onChange={(e) => setPassword(e.target.value)} value={password} className='w-full p-2 border border-gray-300 rounded-md focus:outline-none focus:border-[#0D6EFD]' id='Password' type="password" />
+              <input
+                onChange={(e) => setPassword(e.target.value)}
+                value={password}
+                className='w-full p-2 border border-gray-300 rounded-md focus:outline-none focus:border-[#0D6EFD]'
+                id='Password'
+                type="password"
+              />
             </div>
 
-            <button id="loginButton" type='submit' className='bg-[#0D6EFD] p-3 font-medium rounded-md cursor-pointer text-white'>
+            <button
+              id="loginButton"
+              type='submit'
+              className='bg-[#0D6EFD] p-3 font-medium rounded-md cursor-pointer text-white'
+            >
               {state === "Sign in" ? "Sign In" : "Create Account"}
             </button>
 
@@ -117,9 +138,8 @@ const Login = () => {
         </div>
 
       </form>
-
     </section>
-  )
-}
+  );
+};
 
-export default Login
+export default Login;

@@ -40,13 +40,15 @@ app.post('/api/voice/predict', async (req , res) => {
 
     const response = await axios.post('http://localhost:5001/predict-intent', { text });
     
-    const { response: botResponse, endpoint } = response.data;
+    const { response: botResponse, endpoint , intent} = response.data;
 
     res.json({
 
       response: botResponse,
 
-      endpoint: endpoint
+      endpoint: endpoint,
+
+      intent: intent
 
     });
     

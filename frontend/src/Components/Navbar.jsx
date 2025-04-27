@@ -5,19 +5,10 @@ import { AppContext } from "../Context/AppContext";
 
 const Navbar = () => {
   const navigate = useNavigate();
-  const { token, setToken , setVoiceIntent } = useContext(AppContext);
+  const { token, setToken, setVoiceIntent } = useContext(AppContext);
   const [showMenu, setShowMenu] = useState(false);
   const [listening, setListening] = useState(false);
   const [recognitionInstance, setRecognitionInstance] = useState(null);
-
-  // Voice Action to Button ID Mapping
-  const voiceActionMapping = {
-    "click_login_button": { buttonId: "loginButton", endpoint: "/login" },
-    "click_donation_button": { buttonId: "donationSubmitButton", endpoint: "/donation" },
-    "click_appointment_submit": { buttonId: "appointmentSubmitButton", endpoint: "/appointment" },
-    "click_contact_submit": { buttonId: "contactSubmitButton", endpoint: "/contact" }
-    // Add more if needed
-  };
 
   const logout = () => {
     setToken(false);
@@ -59,37 +50,16 @@ const Navbar = () => {
         utterance.volume = 1;
         window.speechSynthesis.speak(utterance);
 
-        //Handle Button Click by Intent
-        if (voiceActionMapping[data.intent]) {
-          const { buttonId, endpoint } = voiceActionMapping[data.intent];
-
-          const tryClickButton = () => {
-            const button = document.getElementById(buttonId);
-            if (button) {
-              const form = button.closest('form');
-              if (form) {
-                form.requestSubmit(); 
-                console.log(`Submitted form containing button: ${buttonId}`);
-              } else {
-                console.log(`Form not found for button ${buttonId}`);
-              }
-            } else {
-              console.log(`🔎 Button ${buttonId} not found, retrying...`);
-              setTimeout(tryClickButton, 500);
-            }
-          };
-          
-
-          if (endpoint && window.location.pathname !== endpoint) {
-            navigate(endpoint);
-            setTimeout(tryClickButton, 1000);
-          } else {
-            tryClickButton();
-          }
-        }
-        //Handle Normal Page Navigation
-        else if (data.endpoint) {
+        // ✅ Handle Navigation
+        if (data.endpoint) {
           navigate(data.endpoint);
+        }
+        // ✅ Handle Button Actions
+        else if (data.intent.startsWith("click_")) {
+          setVoiceIntent(data.intent);
+        }
+        else {
+          console.log("Unknown intent. No action.");
         }
 
       } catch (error) {
@@ -143,7 +113,7 @@ const Navbar = () => {
       </ul>
 
       <div className="flex items-center gap-5">
-        {/* 🎙️ Voice Mic Button (Only Icon) */}
+        {/* 🎙️ Voice Mic Button */}
         <button
           onClick={toggleListening}
           className={`w-12 h-12 rounded-full flex items-center justify-center ${
@@ -158,11 +128,7 @@ const Navbar = () => {
         {/* Login/Profile Section */}
         {token ? (
           <div className="flex items-center gap-2 cursor-pointer group relative">
-            <img
-              src={assets.user}
-              alt="User Icon"
-              className="w-10 rounded-full"
-            />
+            <img src={assets.user} alt="User Icon" className="w-10 rounded-full" />
             <img src={assets.dropdown_icon} alt="Dropdown" />
             <div className="absolute top-0 right-0 pt-15 text-balance font-medium text-gray-600 z-20 hidden group-hover:block">
               <div className="min-w-48 bg-gray-100 rounded flex flex-col gap-4 p-4">
@@ -178,7 +144,7 @@ const Navbar = () => {
         ) : (
           <button
             onClick={() => navigate("/login")}
-            className="bg-[#0D6EFD] text-white px-8 py-4 rounded-full font-medium hidden cursor-pointer md:block"
+            className="bg-[#0D6EFD] text-white px-8 py-4 rounded-full font-medium hidden md:block"
           >
             Create account
           </button>
@@ -197,10 +163,10 @@ const Navbar = () => {
             <img className="w-7" onClick={() => setShowMenu(false)} src={assets.cross_icon} alt="Cross" />
           </div>
           <ul className="flex flex-col items-center gap-2 mt-5 px-5 text-lg font-medium">
-            <NavLink onClick={() => setShowMenu(false)} className="px-4 py-2 rounded inline-block" to={'/'}>Home</NavLink>
-            <NavLink onClick={() => setShowMenu(false)} className="px-4 py-2 rounded inline-block" to={'/doctors'}>All Doctors</NavLink>
-            <NavLink onClick={() => setShowMenu(false)} className="px-4 py-2 rounded inline-block" to={'/about'}>About</NavLink>
-            <NavLink onClick={() => setShowMenu(false)} className="px-4 py-2 rounded inline-block" to={'/contact'}>Contact Us</NavLink>
+            <NavLink onClick={() => setShowMenu(false)} to="/">Home</NavLink>
+            <NavLink onClick={() => setShowMenu(false)} to="/doctors">All Doctors</NavLink>
+            <NavLink onClick={() => setShowMenu(false)} to="/about">About</NavLink>
+            <NavLink onClick={() => setShowMenu(false)} to="/contact">Contact Us</NavLink>
           </ul>
         </div>
       </div>

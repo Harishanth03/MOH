@@ -49,10 +49,15 @@ def predict_intent():
             endpoint = intent.get('extension', {}).get('endpoint', None)
             return jsonify({
                 "response": response,
-                "endpoint": endpoint
+                "endpoint": endpoint,
+                "intent": predicted_intent 
             })
 
-    return jsonify({"response": "Sorry, I didn't understand.", "endpoint": None})
+    return jsonify({
+        "response": "Sorry, I didn't understand.",
+        "endpoint": None,
+        "intent": None 
+    })
 
 if __name__ == '__main__':
     app.run(port=5001)
