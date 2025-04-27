@@ -10,7 +10,6 @@ import MyAppointment from './Pages/MyAppointment'
 import Navbar from './Components/Navbar'
 import Footer from './Components/Footer'
 import Appointment from './Pages/Appointment'
-import VoiceCommand from './Components/VoiceCommand'
 import MedicalReport from './Pages/MedicalReport'
 import BedAllocation from './Pages/BedAllocation'
 import { ToastContainer, toast } from 'react-toastify';
@@ -28,8 +27,6 @@ const App = () => {
       <ToastContainer/>
 
       <Navbar/>
-
-      <VoiceCommand/>
 
       <Routes>
         <Route path='/' element = {<Home/>}/>
