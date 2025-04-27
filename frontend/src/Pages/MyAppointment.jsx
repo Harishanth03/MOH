@@ -118,7 +118,16 @@ const MyAppointment = () => {
 
               <div className=' flex flex-col gap-2 justify-center'>
 
-                <button className='text-sm text-stone-500 text-center sm:min-w-48 py-2 border rounded hover:bg-[#fcdb35] hover:text-white cursor-pointer transaction-all duration-300'>Rate Doctor</button>
+              <button
+                disabled={item.cancelled}
+                className={`text-sm text-center sm:min-w-48 py-2 border rounded transition-all duration-300 ${
+                  item.cancelled 
+                    ? 'bg-gray-300 text-white-500 cursor-not-allowed' 
+                    : 'text-stone-500 hover:bg-[#fcdb35] hover:text-white cursor-pointer'
+                }`}
+              >
+                Rate Doctor
+              </button>
                 <button
                   onClick={() => cancleAppointment(item._id)}
                   disabled={item.cancelled}
