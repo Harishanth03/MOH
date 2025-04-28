@@ -1,8 +1,9 @@
 import express from 'express'
 import { listDoctors } from '../Controllers/AdminController.js'
-import { appointmentCancle, appointmentComplete, appointmentsDoctor, doctorDashboard, loginDoctor, verifyDoctorCertificate } from '../Controllers/DoctorController.js';
+import { appointmentCancle, appointmentComplete, appointmentsDoctor, doctorDashboard, loginDoctor, uploadMedicalReport, verifyDoctorCertificate } from '../Controllers/DoctorController.js';
 import authDoctor from '../Middlewares/AuthDoctor.js';
 import upload from '../Middlewares/Multer.js';
+import localUpload from '../Middlewares/LocalUpload.js';
 
 
 const doctorRouter = express.Router()
@@ -20,6 +21,8 @@ doctorRouter.post('/cancle' , authDoctor , appointmentCancle);
 doctorRouter.get('/dashboard'  , authDoctor , doctorDashboard);
 
 doctorRouter.post('/verify-certificate', upload.single('certificate'), authDoctor, verifyDoctorCertificate);
+
+doctorRouter.post('/upload-report' , localUpload.single('file') , authDoctor , uploadMedicalReport)
 
 
 export default doctorRouter

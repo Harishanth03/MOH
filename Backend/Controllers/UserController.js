@@ -9,6 +9,7 @@ import wardModel from '../Models/WardModel.js';
 import BedAllocationModel from '../Models/BedAllocationModel.js';
 import { sendSms } from '../utils/sendSms.js';
 import Feedback from '../Models/FeedBackModel.js';
+import ReportModel from '../Models/ReportModel.js';
 //====================================== Register User ==================================================
 
 const registerUser = async(req , res) => {
@@ -184,92 +185,90 @@ const updateUserProfile = async (req, res) => {
     }
 };
 
-//========================================== Book Appointment ====================================================
+//========================================== Book Appointment ====================================================// make sure this import is there
 
-const bookAppointment = async (req, res) => {
+const bookAppointment = async (req, res) => 
+{
 
-    try {
+  try 
+  {
 
-      const { userId, docId, slotDate, slotTime } = req.body;
-  
-      // Fetch doctor data and remove password from response
-      const docData = await doctorModel.findById(docId).select('-password');
-  
-      if (!docData) 
-      {
+    const { userId, docId, slotDate, slotTime } = req.body;
 
-        return res.json({ success: false, message: 'Sorry, doctor is not available.' });
+    // Fetch doctor data
+    const docData = await doctorModel.findById(docId).select('-password');
 
-      }
-  
-      // Initialize slots_booked if not already present
-      let slots_booked = docData.slots_booked || {};
-  
-      // Check if the date exists
-      if (slots_booked[slotDate]) 
-    {
-        // Check if the time slot is already booked
-        if (slots_booked[slotDate].includes(slotTime)) 
-        {
-
-          return res.json({ success: false, message: 'Sorry, slot is not available.' });
-
-        } 
-        else 
-        {
-
-          slots_booked[slotDate].push(slotTime); // Add new time slot
-
-        }
-
-      } 
-      else 
-      {
-        // Create new date entry and add the slot
-        slots_booked[slotDate] = [slotTime];
-
-      }
-  
-      // Get patient data without password
-      const userData = await patientModel.findById(userId).select('-password');
-  
-      // Optional: remove booked slots info before saving docData in appointment
-      const { slots_booked: _, ...docDataWithoutSlots } = docData.toObject();
-  
-      // Build appointment object
-      const appointmentData = {
-
-        userId,
-        docId,
-        userData,
-        docData: docDataWithoutSlots,
-        slotTime,
-        slotDate,
-        date: Date.now()
-
-      };
-  
-      // Save the appointment
-      const newAppointment = new appointmentModel(appointmentData);
-
-      await newAppointment.save();
-  
-      // Update doctor's booked slots
-      await doctorModel.findByIdAndUpdate(docId, { slots_booked });
-  
-      res.json({ success: true, message: "Appointment Booked" });
-  
-    } 
-    catch (error) 
+    if (!docData) 
     {
 
-      console.error("Appointment booking error:", error);
-
-      res.json({ success: false, message: error.message });
-
+      return res.json({ success: false, message: 'Sorry, doctor is not available.' });
+      
     }
 
-  };
+    // Initialize or update booked slots
+    let slots_booked = docData.slots_booked || {};
+
+    if (slots_booked[slotDate]) {
+      if (slots_booked[slotDate].includes(slotTime)) {
+        return res.json({ success: false, message: 'Sorry, slot is not available.' });
+      } else {
+        slots_booked[slotDate].push(slotTime);
+      }
+    } else {
+      slots_booked[slotDate] = [slotTime];
+    }
+
+    // Fetch user (patient) data
+    const userData = await patientModel.findById(userId).select('-password');
+    if (!userData) {
+      return res.json({ success: false, message: 'Invalid patient.' });
+    }
+
+    const { slots_booked: _, ...docDataWithoutSlots } = docData.toObject();
+
+    // Create appointment
+    const appointmentData = {
+      userId,
+      docId,
+      userData,
+      docData: docDataWithoutSlots,
+      slotTime,
+      slotDate,
+      date: Date.now()
+    };
+
+    const newAppointment = new appointmentModel(appointmentData);
+    await newAppointment.save();
+
+    // Update doctor's slots
+    await doctorModel.findByIdAndUpdate(docId, { slots_booked });
+
+    //Send SMS to the patient
+    if (userData.phone_number) {
+      try {
+        const formattedPhone = userData.phone_number.startsWith('94')
+          ? userData.phone_number
+          : `94${userData.phone_number.slice(-9)}`;
+
+        // Professional Appointment Confirmation SMS
+        const smsMessage = `Dear ${userData.name},\n\nYour appointment with ${docData.name} has been successfully booked.\n\n📅 Date: ${slotDate.replace(/_/g, '/')}  ⏰ Time: ${slotTime}\n\nPlease arrive 10 minutes early.\n\n- Ministry of Health`;
+
+        await sendSms(formattedPhone, smsMessage);
+
+        console.log(`Appointment SMS sent to ${formattedPhone}`);
+      } catch (smsError) {
+        console.error(`Failed to send SMS: ${smsError.message}`);
+      }
+    }
+
+    res.json({ success: true, message: "Appointment Booked" });
+
+  } catch (error) {
+    console.error("Appointment booking error:", error);
+    res.json({ success: false, message: error.message });
+  }
+};
+
 
   //============================================ Get User Appointments ====================================================
 
@@ -541,8 +540,40 @@ const bookAppointment = async (req, res) => {
         res.json({ success: false, message: error.message });
         
     }
+
   }
   
-  
+  //=================================================== Get my Report ====================================================
 
-export {registerUser , submitFeedback , loginUser , getProfile  , updateUserProfile , bookAppointment , listAppointment , cancleAppointment , getAllWards , allocateBed , getAllocatedBeds}
+  const getMyReport = async (req , res) =>
+  {
+
+    try 
+    {
+
+        const { userId } = req.body;
+
+        if (!userId) 
+        {
+
+            return res.json({ success: false, message: "Invalid User Access" });
+
+        }
+
+        const reports = await ReportModel.find({ userId }).sort({ date: -1 });
+
+        res.json({ success: true, reports });
+  
+    } 
+    catch (error) 
+    {
+        
+        console.error(error);
+
+        res.json({ success: false, message: error.message });
+        
+    }
+
+  }
+
+export {registerUser , getMyReport, submitFeedback , loginUser , getProfile  , updateUserProfile , bookAppointment , listAppointment , cancleAppointment , getAllWards , allocateBed , getAllocatedBeds}

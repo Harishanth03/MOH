@@ -2,6 +2,9 @@ import React, { useContext, useEffect, useState } from "react";
 import { DoctorContext } from "../../Context/DoctorContext";
 import { AppContext } from "../../Context/AppContext";
 import { assets } from "../../assets/assets";
+import axios from "axios";
+import { toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 const DoctorAppointment = () => {
   const {
@@ -40,6 +43,33 @@ const DoctorAppointment = () => {
     }
   };
 
+  const handleSubmitReport = async (e) => {
+    e.preventDefault();
+    try {
+      const formData = new FormData();
+      formData.append("appointmentId", selectedAppointmentId);
+      formData.append("title", e.target.title.value);
+      formData.append("medicines", e.target.medicines.value);
+      formData.append("file", e.target.file.files[0]);
+
+      const dtoken = localStorage.getItem('dToken');
+
+      const response = await axios.post(
+        "http://localhost:4000/api/doctor/upload-report", formData,{headers:{dtoken}});
+
+      if (response.data.success) {
+        toast.success("Report uploaded successfully!");
+        setIsReportModalOpen(false);
+        setFileName("");
+      } else {
+        toast.error("Failed to upload report: " + response.data.message);
+      }
+    } catch (error) {
+      console.error(error);
+      toast.error("Error uploading report!");
+    }
+  };
+
   return (
     <div className="w-full max-w-6xl m-5">
       <p className="mb-3 text-lg font-medium">All Appointments</p>
@@ -73,50 +103,31 @@ const DoctorAppointment = () => {
 
             <div>
               <p
-                className={`max-sm:hidden ${
-                  item.cancelled ? "text-red-500" : "text-green-500"
-                }`}
+                className={`max-sm:hidden ${item.cancelled ? "text-red-500" : "text-green-500"}`}
               >
                 {item.cancelled ? "Cancelled" : "Scheduled"}
               </p>
             </div>
 
-            <p>
-              {!isNaN(calculateAge(item.userData.dob))
-                ? calculateAge(item.userData.dob)
-                : "N/A"}
-            </p>
+            <p>{!isNaN(calculateAge(item.userData.dob)) ? calculateAge(item.userData.dob) : "N/A"}</p>
 
-            <p>
-              {slotDateFormat(item.slotDate)}{" "}
-              <span className="text-red-500">|</span> {item.slotTime}
-            </p>
+            <p>{slotDateFormat(item.slotDate)} <span className="text-red-500">|</span> {item.slotTime}</p>
 
-            <p
-              className={`max-sm:hidden ${
-                item.isCompleted ? "text-green-500" : "text-orange-500"
-              }`}
-            >
+            <p className={`max-sm:hidden ${item.isCompleted ? "text-green-500" : "text-orange-500"}`}>
               {item.isCompleted ? "Completed" : "Pending"}
             </p>
 
             <div className="flex gap-3">
               {item.cancelled ? (
                 item.isCompleted ? (
-                  <p className="text-red-500 font-medium">
-                    Appointment Cancelled by patient
-                  </p>
+                  <p className="text-red-500 font-medium">Appointment Cancelled by patient</p>
                 ) : (
-                  <p className="text-red-500 font-medium">
-                    Appointment Cancelled by doctor
-                  </p>
+                  <p className="text-red-500 font-medium">Appointment Cancelled by doctor</p>
                 )
               ) : item.isCompleted ? (
                 <button
                   className="px-4 cursor-pointer py-2 bg-blue-600 text-white rounded hover:bg-blue-700 transition"
-                  onClick={() =>
-                    handleWriteReport(item._id, item.userData.name)
-                  }
+                  onClick={() => handleWriteReport(item._id, item.userData.name)}
                 >
                   Write Report
                 </button>
@@ -149,25 +160,10 @@ const DoctorAppointment = () => {
               Write Report
             </h2>
 
-            <form
-              onSubmit={(e) => {
-                e.preventDefault();
-                const formData = new FormData();
-                formData.append("appointmentId", selectedAppointmentId);
-                formData.append("title", e.target.title.value);
-                formData.append("medicines", e.target.medicines.value);
-                formData.append("file", e.target.file.files[0]);
-
-                console.log([...formData]);
-                setIsReportModalOpen(false);
-              }}
-              className="flex flex-col gap-3"
-            >
+            <form onSubmit={handleSubmitReport} className="flex flex-col gap-3">
               {/* Patient Name */}
               <div className="w-full flex flex-col text-gray-700 text-base gap-1">
-                <label className="block" htmlFor="patient-name">
-                  Patient Name
-                </label>
+                <label className="block" htmlFor="patient-name">Patient Name</label>
                 <input
                   type="text"
                   id="patient-name"
@@ -179,9 +175,7 @@ const DoctorAppointment = () => {
 
               {/* Report Title */}
               <div className="w-full flex flex-col text-gray-700 text-base gap-1">
-                <label className="block" htmlFor="report-title">
-                  Report Title
-                </label>
+                <label className="block" htmlFor="report-title">Report Title</label>
                 <input
                   type="text"
                   name="title"
@@ -194,9 +188,7 @@ const DoctorAppointment = () => {
 
               {/* Medicine Recommendations */}
               <div className="w-full flex flex-col text-gray-700 text-base gap-1">
-                <label className="block" htmlFor="medicines">
-                  Medicine Recommendations
-                </label>
+                <label className="block" htmlFor="medicines">Medicine Recommendations</label>
                 <textarea
                   name="medicines"
                   id="medicines"
@@ -228,12 +220,10 @@ const DoctorAppointment = () => {
                     />
                   </svg>
                   <p className="mb-1 text-sm text-gray-500">
-                    <span className="font-semibold">Click to upload</span> or
-                    drag and drop
+                    <span className="font-semibold">Click to upload</span> or drag and drop
                   </p>
                   <p className="text-xs text-gray-500">PDF only (Max 5MB)</p>
                 </div>
-
                 <input
                   type="file"
                   id="report-upload"
@@ -247,25 +237,24 @@ const DoctorAppointment = () => {
 
               {/* Selected File Name */}
               {fileName && (
-                <p className="text-xs mt-1 text-green-600 text-center">
-                  {fileName} selected
-                </p>
+                <p className="text-xs mt-1 text-green-600 text-center">{fileName} selected</p>
               )}
 
               {/* Buttons */}
               <div className="flex justify-between gap-3 mt-3">
-                <button
-                  type="submit"
-                  className="w-full p-2 border-none cursor-pointer rounded-md bg-blue-500 hover:bg-blue-600 text-white text-base"
-                >
-                  Submit Report
-                </button>
                 <button
                   type="button"
                   onClick={() => setIsReportModalOpen(false)}
                   className="w-full p-2 border-none cursor-pointer rounded-md bg-gray-400 hover:bg-gray-500 text-white text-base"
                 >
                   Cancel
+                </button>
+
+                <button
+                  type="submit"
+                  className="w-full p-2 border-none cursor-pointer rounded-md bg-blue-500 hover:bg-blue-600 text-white text-base"
+                >
+                  Submit Report
                 </button>
               </div>
             </form>
