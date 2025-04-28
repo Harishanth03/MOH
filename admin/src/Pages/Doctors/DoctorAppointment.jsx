@@ -255,18 +255,20 @@ const DoctorAppointment = () => {
               {/* Buttons */}
               <div className="flex justify-between gap-3 mt-3">
                 <button
-                  type="submit"
-                  className="w-full p-2 border-none cursor-pointer rounded-md bg-blue-500 hover:bg-blue-600 text-white text-base"
-                >
-                  Submit Report
-                </button>
-                <button
                   type="button"
                   onClick={() => setIsReportModalOpen(false)}
                   className="w-full p-2 border-none cursor-pointer rounded-md bg-gray-400 hover:bg-gray-500 text-white text-base"
                 >
                   Cancel
                 </button>
+
+                <button
+                  type="submit"
+                  className="w-full p-2 border-none cursor-pointer rounded-md bg-blue-500 hover:bg-blue-600 text-white text-base"
+                >
+                  Submit Report
+                </button>
+                
               </div>
             </form>
           </div>
