@@ -361,9 +361,48 @@ const uploadMedicalReport = async (req, res) => {
       console.log(error);
       res.json({ success: false, message: error.message });
     }
+
   };
+
+  //=================================================== Get All Feedbacks =================================================
+
+  const getDoctorFeedbacks = async (req, res) => 
+  {
+
+    try 
+    {
+
+      const { docId } = req.body;
+
+
+      const feedbacks = await Feedback.find({ doctorId: docId }).populate('userId', 'name').sort({ createdAt: -1 });
+
+      const formattedFeedbacks = feedbacks.map(fb => ({
+
+        patientName: fb.anonymous ? "Anonymous" : fb.userId?.name || "Unknown",
+
+        rating: fb.rating,
+
+        comment: fb.comment || "No comment provided",
+
+        time: fb.createdAt
+
+      }));
+
+      res.json({ success: true, feedbacks: formattedFeedbacks });
+
+    } 
+    catch (error) 
+    {
+
+      console.error(error);
+
+      res.json({ success: false, message: error.message });
+      
+    }
+  }
   
 
 //=================================================== Exporting Controllers =================================================
 
-export{changeAvailablity , uploadMedicalReport , loginDoctor , appointmentsDoctor , appointmentComplete , appointmentCancle , doctorDashboard , verifyDoctorCertificate}
+export{changeAvailablity , getDoctorFeedbacks , uploadMedicalReport , loginDoctor , appointmentsDoctor , appointmentComplete , appointmentCancle , doctorDashboard , verifyDoctorCertificate}

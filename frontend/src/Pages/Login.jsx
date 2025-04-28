@@ -1,8 +1,8 @@
-import React, { useContext, useEffect, useState } from 'react'
-import { assets } from '../assets/assets'
+import React, { useContext, useEffect, useState } from 'react';
+import { assets } from '../assets/assets';
 import { AppContext } from '../Context/AppContext';
 import axios from 'axios';
-import { toast } from 'react-toastify'
+import { toast } from 'react-toastify';
 import { useNavigate } from "react-router-dom";
 
 const Login = () => {
@@ -11,7 +11,7 @@ const Login = () => {
   const [password, setPassword] = useState('');
   const [state, setState] = useState('Sign in');
 
-  const { token, setToken, backendUrl, voiceIntent, setVoiceIntent } = useContext(AppContext);
+  const { token, setToken, backendUrl, voiceIntent, setVoiceIntent, voiceField, setVoiceField } = useContext(AppContext);
   const navigate = useNavigate();
 
   const onSubmitHandler = async (event) => {
@@ -42,7 +42,7 @@ const Login = () => {
     }
   };
 
-  // 🔥 Voice Button Click Logic
+  // Voice Button Click Logic
   useEffect(() => {
     if (!voiceIntent) return;
 
@@ -53,9 +53,25 @@ const Login = () => {
       onSubmitHandler(fakeEvent);
     }
 
-    // 🛡️ Reset voiceIntent after using
-    setVoiceIntent(null);
+    setVoiceIntent(null); // Reset after use
   }, [voiceIntent]);
+
+  // Voice Field Fill Logic
+  useEffect(() => {
+    if (!voiceField) return;
+
+    console.log("Voice Field Detected:", voiceField);
+
+    if (voiceField.field === "fill_email") {
+      setEmail(voiceField.value);
+    } else if (voiceField.field === "fill_password") {
+      setPassword(voiceField.value);
+    } else if (voiceField.field === "fill_name") {
+      setName(voiceField.value);
+    }
+
+    setVoiceField(null); // Reset after use
+  }, [voiceField]);
 
   useEffect(() => {
     if (token) {
@@ -69,7 +85,7 @@ const Login = () => {
 
         {/* Left Side */}
         <div className='w-full sm:w-1/2'>
-          <img className='rounded-bl-lg rounded-tl-lg w-full' src={assets.loginImage} alt="" />
+          <img className='rounded-bl-lg rounded-tl-lg w-full' src={assets.loginImage} alt="Login Visual" />
         </div>
 
         {/* Right Side */}
