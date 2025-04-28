@@ -9,6 +9,7 @@ import wardModel from '../Models/WardModel.js';
 import BedAllocationModel from '../Models/BedAllocationModel.js';
 import { sendSms } from '../utils/sendSms.js';
 import Feedback from '../Models/FeedBackModel.js';
+import ReportModel from '../Models/ReportModel.js';
 //====================================== Register User ==================================================
 
 const registerUser = async(req , res) => {
@@ -541,8 +542,40 @@ const bookAppointment = async (req, res) => {
         res.json({ success: false, message: error.message });
         
     }
+
   }
   
+  //=================================================== Get my Report ====================================================
+
+  const getMyReport = async (req , res) =>
+  {
+
+    try 
+    {
+
+        const { userId } = req.body;
+
+        if (!userId) 
+        {
+
+            return res.json({ success: false, message: "Invalid User Access" });
+
+        }
+
+        const reports = await ReportModel.find({ userId }).sort({ date: -1 });
+
+        res.json({ success: true, reports });
   
+    } 
+    catch (error) 
+    {
+        
+        console.error(error);
+
+        res.json({ success: false, message: error.message });
+        
+    }
+    
+  }
 
 export {registerUser , submitFeedback , loginUser , getProfile  , updateUserProfile , bookAppointment , listAppointment , cancleAppointment , getAllWards , allocateBed , getAllocatedBeds}
