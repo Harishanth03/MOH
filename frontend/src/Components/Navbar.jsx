@@ -5,7 +5,7 @@ import { AppContext } from "../Context/AppContext";
 
 const Navbar = () => {
   const navigate = useNavigate();
-  const { token, setToken, setVoiceIntent } = useContext(AppContext);
+  const { token, setToken, setVoiceIntent, setVoiceField } = useContext(AppContext); 
   const [showMenu, setShowMenu] = useState(false);
   const [listening, setListening] = useState(false);
   const [recognitionInstance, setRecognitionInstance] = useState(null);
@@ -50,13 +50,23 @@ const Navbar = () => {
         utterance.volume = 1;
         window.speechSynthesis.speak(utterance);
 
-        // ✅ Handle Navigation
+        // Handle endpoint first (navigation)
         if (data.endpoint) {
           navigate(data.endpoint);
         }
-        // ✅ Handle Button Actions
-        else if (data.intent.startsWith("click_")) {
+        // Handle button clicks
+        else if (data.intent && data.intent.startsWith("click_")) {
           setVoiceIntent(data.intent);
+        }
+        // Handle field fill instructions
+        else if (data.intent && data.intent.startsWith("fill_")) {
+          // data.intent like "fill_email", "fill_password"
+          // You can send a 'value' inside response (new server version) OR parse yourself
+          const textParts = spokenText.toLowerCase().split(" as ");
+          if (textParts.length === 2) {
+            const value = textParts[1].trim();
+            setVoiceField({ field: data.intent, value: value });
+          }
         }
         else {
           console.log("Unknown intent. No action.");
@@ -98,22 +108,14 @@ const Navbar = () => {
         alt="Getwell Logo"
       />
       <ul className="hidden md:flex items-start gap-5 font-medium">
-        <NavLink to={"/"}>
-          <li className="py-1">HOME</li>
-        </NavLink>
-        <NavLink to={"/doctors"}>
-          <li className="py-1">ALL DOCTORS</li>
-        </NavLink>
-        <NavLink to={"/about"}>
-          <li className="py-1">ABOUT</li>
-        </NavLink>
-        <NavLink to={"/contact"}>
-          <li className="py-1">CONTACT</li>
-        </NavLink>
+        <NavLink to={"/"}><li className="py-1">HOME</li></NavLink>
+        <NavLink to={"/doctors"}><li className="py-1">ALL DOCTORS</li></NavLink>
+        <NavLink to={"/about"}><li className="py-1">ABOUT</li></NavLink>
+        <NavLink to={"/contact"}><li className="py-1">CONTACT</li></NavLink>
       </ul>
 
       <div className="flex items-center gap-5">
-        {/* 🎙️ Voice Mic Button */}
+        {/* Voice Mic Button */}
         <button
           onClick={toggleListening}
           className={`w-12 h-12 rounded-full flex items-center justify-center ${
@@ -144,7 +146,7 @@ const Navbar = () => {
         ) : (
           <button
             onClick={() => navigate("/login")}
-            className="bg-[#0D6EFD] text-white px-8 py-4 rounded-full font-medium hidden md:block"
+            className="bg-[#0D6EFD] cursor-pointer text-white px-8 py-4 rounded-full font-medium hidden md:block"
           >
             Create account
           </button>

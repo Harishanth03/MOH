@@ -203,10 +203,10 @@
         "Who is your origin?"
       ],
       "responses": [
-        "I was developed by Harishanth Kandeepan!",
-        "I was created by Harishanth Kandeepan, a student developer.",
-        "Harishanth Kandeepan is my creator!",
-        "I'm proudly built by Harishanth Kandeepan."
+        "I was developed by Harishanth!",
+        "I was created by Harishanth, a student developer.",
+        "Harishanth is my creator!",
+        "I'm proudly built by Harishanth."
       ],
       "extension": {
         "function": "",
@@ -275,10 +275,10 @@
         "What’s the guide name?"
       ],
       "responses": [
-        "Your supervisor is Mr. Tharaka Karunaratthna.",
-        "Mr. Tharaka Karunaratthna is assigned as your supervisor.",
-        "You are supervised by Mr. Tharaka Karunaratthna.",
-        "The supervisor assigned to you is Mr. Tharaka Karunaratthna."
+        "Your supervisor is Mr. Tharaka Sir.",
+        "Mr. Tharaka Sir is assigned as your supervisor.",
+        "You are supervised by Mr. Tharaka Sir.",
+        "The supervisor assigned to you is Mr. Tharaka Sir."
       ],
       "extension": {
         "function": "",
@@ -1376,7 +1376,238 @@
       "extension": {
         "field": "password"
       }
-    }    
+    },
+    {
+      "intent": "hospital_visiting_hours",
+      "text": [
+        "What are your visiting hours?",
+        "When can I visit the hospital?",
+        "Hospital visiting timings?",
+        "What time can visitors come?",
+        "Tell me the visiting hours"
+      ],
+      "responses": [
+        "Our hospital is open 24/7, but visiting hours are 9 AM to 7 PM."
+      ],
+      "extension": {
+        "function": "",
+        "entities": false,
+        "responses": []
+      },
+      "context": {
+        "in": "",
+        "out": "HospitalVisitingInfo",
+        "clear": false
+      },
+      "entityType": "NA",
+      "entities": []
+    },
+    {
+      "intent": "book_blood_test",
+      "text": [
+        "Can I schedule a blood test?",
+        "I want to book a blood test",
+        "Need blood test appointment",
+        "Arrange a blood test for me",
+        "Book blood work"
+      ],
+      "responses": [
+        "Sure! Blood tests can be scheduled via appointment."
+      ],
+      "extension": {
+        "function": "",
+        "entities": false,
+        "responses": []
+      },
+      "context": {
+        "in": "",
+        "out": "BookBloodTest",
+        "clear": false
+      },
+      "entityType": "NA",
+      "entities": []
+    },
+    {
+      "intent": "emergency_room_location",
+      "text": [
+        "Where is the emergency room?",
+        "How to find the ER?",
+        "Emergency department location?",
+        "Where is the emergency?",
+        "Where can I find the ER?"
+      ],
+      "responses": [
+        "The emergency room is on the ground floor, east wing."
+      ],
+      "extension": {
+        "function": "",
+        "entities": false,
+        "responses": []
+      },
+      "context": {
+        "in": "",
+        "out": "EmergencyLocation",
+        "clear": false
+      },
+      "entityType": "NA",
+      "entities": []
+    },
+    {
+      "intent": "insurance_accepted",
+      "text": [
+        "Do you accept insurance?",
+        "Is insurance accepted here?",
+        "Can I pay with my insurance?",
+        "Does the hospital take insurance?",
+        "Can I use health insurance?"
+      ],
+      "responses": [
+        "Yes! We accept most major insurance providers."
+      ],
+      "extension": {
+        "function": "",
+        "entities": false,
+        "responses": []
+      },
+      "context": {
+        "in": "",
+        "out": "InsuranceAccepted",
+        "clear": false
+      },
+      "entityType": "NA",
+      "entities": []
+    },
+    {
+      "intent": "joke_about_doctor",
+      "text": [
+        "Tell me a hospital joke",
+        "Say something funny about doctors",
+        "Make me laugh about hospital",
+        "Doctor joke please",
+        "Funny hospital joke"
+      ],
+      "responses": [
+        "Why did the doctor carry a red pen? In case they needed to draw blood!"
+      ],
+      "extension": {
+        "function": "",
+        "entities": false,
+        "responses": []
+      },
+      "context": {
+        "in": "",
+        "out": "JokeDoctor",
+        "clear": false
+      },
+      "entityType": "NA",
+      "entities": []
+    },
+    {
+      "intent": "funny_marriage_proposal",
+      "text": [
+        "Will you marry me?",
+        "Can I marry you?",
+        "Do you want to marry me?",
+        "Are you single?",
+        "Can I be your partner?"
+      ],
+      "responses": [
+        "I'm flattered! But let's keep it professional 😉"
+      ],
+      "extension": {
+        "function": "",
+        "entities": false,
+        "responses": []
+      },
+      "context": {
+        "in": "",
+        "out": "FunnyMarriage",
+        "clear": false
+      },
+      "entityType": "NA",
+      "entities": []
+    },
+    {
+      "intent": "are_you_real_doctor",
+      "text": [
+        "Are you a real doctor?",
+        "Are you a human doctor?",
+        "Doctor, are you real?",
+        "Are you a real person?",
+        "Are you an AI doctor?"
+      ],
+      "responses": [
+        "I'm a digital doctor! Always here, never sleeping 😄"
+      ],
+      "extension": {
+        "function": "",
+        "entities": false,
+        "responses": []
+      },
+      "context": {
+        "in": "",
+        "out": "AreYouReal",
+        "clear": false
+      },
+      "entityType": "NA",
+      "entities": []
+    },
+    {
+      "intent": "rude_user",
+      "text": [
+        "You are useless",
+        "You're dumb",
+        "Worst assistant ever",
+        "You can't help at all",
+        "You're a stupid bot",
+        "You're pathetic",
+        "Are you even working?",
+        "You're no help",
+        "You are annoying",
+        "You're slow",
+        "You don't know anything",
+        "You're the worst",
+        "You're trash",
+        "You suck",
+        "You're horrible",
+        "Stupid system",
+        "Idiot bot",
+        "You are useless junk",
+        "Dumb hospital bot",
+        "Shut up bot",
+        "You're making it worse",
+        "You can't do anything right",
+        "You're so slow",
+        "You are bad",
+        "Go away",
+        "You're broken",
+        "You are bad at this",
+        "Your service is trash",
+        "You are terrible"
+      ],
+      "responses": [
+        "Oh, I'm sorry — I forgot my magic wand today.",
+        "Wow, someone's having a bad day.",
+        "Calm down, I'm just a bot — not your therapist.",
+        "Keep talking, I'm still not impressed.",
+        "Is that the best insult you have?",
+        "Anger detected. Sending a digital hug.",
+        "You're making me wish for a power outage.",
+        "Maybe you should try turning yourself off and on again."
+      ],
+      "extension": {
+        "function": "",
+        "entities": false,
+        "responses": []
+      },
+      "context": {
+        "in": "",
+        "out": "HandleRudeBehavior",
+        "clear": false
+      },
+      "entityType": "NA",
+      "entities": []
+    }        
            
   ]
 }
