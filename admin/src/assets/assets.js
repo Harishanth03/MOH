@@ -17,12 +17,13 @@ import donation_icon from './donation_icon.png'
 import total_beds from './total_beds.svg'
 import ward from './Ward.svg'
 import bedManagement from './bed_management.svg'
-import verify from  './verified.png'
+import verify from  './verify.svg'
 import appointment_Cancel from './appointment_Cancled.svg'
 import appointment_completed from './appointment_completed.svg'
 import appointment_pending from './appointment_pending.svg'
 import appointment_today from './appointment_today.svg'
 import ratings from './rating.svg'
+import feedback from './chat.svg'
 
 
 export const assets = {
@@ -50,5 +51,6 @@ export const assets = {
     appointment_completed,
     appointment_pending,
     appointment_today,
-    ratings
+    ratings,
+    feedback
 }

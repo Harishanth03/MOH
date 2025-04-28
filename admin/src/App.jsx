@@ -16,6 +16,7 @@ import DoctorAppointment from './Pages/Doctors/DoctorAppointment'
 import AddWard from './Pages/Admins/AddWard'
 import BedManagement from './Pages/Admins/BedManagement'
 import VerifyDoctor from './Pages/Doctors/VerifyDoctor'
+import DoctorFeedback from './Pages/Doctors/DoctorFeedback'
 
 const App = () => {
 
@@ -62,8 +63,7 @@ const App = () => {
           <Route path='/doctor-dashboard' element={<DoctorDashboard/>}/>
           <Route path='/doctor-appointment' element={<DoctorAppointment/>}/>
           <Route path='/verify-doctor' element={<VerifyDoctor/>}/>
-
-          <Route />
+          <Route path='/feedback-doctor' element={<DoctorFeedback/>}/>
 
         </Routes>
 
