@@ -18,6 +18,7 @@ import total_beds from './total_beds.svg'
 import ward from './Ward.svg'
 import bedManagement from './bed_management.svg'
 import verify from  './verified.png'
+import appointment_Cancel from './appointment_Cancled.svg'
 
 export const assets = {
     add_icon,
@@ -39,5 +40,6 @@ export const assets = {
     total_beds,
     ward,
     bedManagement,
-    verify
+    verify,
+    appointment_Cancel
 }

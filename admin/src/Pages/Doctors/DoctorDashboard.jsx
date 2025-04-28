@@ -1,11 +1,17 @@
-import React, { useContext, useEffect } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import { DoctorContext } from "../../Context/DoctorContext";
 import { assets } from "../../assets/assets";
 import { AppContext } from "../../Context/AppContext";
 
 const DoctorDashboard = () => {
-  const { dashData, setDashData, getDashData, dToken , CancleAppointment , completeAppointment} =
-    useContext(DoctorContext);
+  const {
+    dashData,
+    setDashData,
+    getDashData,
+    dToken,
+    CancleAppointment,
+    completeAppointment,
+  } = useContext(DoctorContext);
   const { slotDateFormat } = useContext(AppContext);
 
   useEffect(() => {
@@ -18,10 +24,11 @@ const DoctorDashboard = () => {
   return (
     dashData && (
       <div className="m-5">
+        {/* Dashboard Cards */}
         <div className="flex flex-wrap gap-3">
+          {/* Total Appointments */}
           <div className="flex item-center gap-2 bg-white p-4 min-w-52 rounded border-2 border-blue-500 cursor-pointer hover:scale-105 transition-all">
             <img className="w-14" src={assets.appointments_icon} alt="" />
-
             <div>
               <p className="text-xl font-semibold text-gray-600">
                 {dashData.appointments}
@@ -30,9 +37,9 @@ const DoctorDashboard = () => {
             </div>
           </div>
 
+          {/* Total Patients */}
           <div className="flex item-center gap-2 bg-white p-4 min-w-52 rounded border-2 border-blue-500 cursor-pointer hover:scale-105 transition-all">
             <img className="w-14" src={assets.patients_icon} alt="" />
-
             <div>
               <p className="text-xl font-semibold text-gray-600">
                 {dashData.patients}
@@ -41,28 +48,67 @@ const DoctorDashboard = () => {
             </div>
           </div>
 
-          <div className="flex item-center gap-2 bg-white p-4 min-w-52 rounded border-2 border-blue-500 cursor-pointer hover:scale-105 transition-all">
-            <img className="w-14" src={assets.patients_icon} alt="" />
-
+          {/* Completed Appointments Today */}
+          <div className="flex item-center gap-2 bg-white p-4 min-w-52 rounded border-2 border-green-500 cursor-pointer hover:scale-105 transition-all">
+            <img className="w-14" src={assets.completed_icon} alt="" />
             <div>
               <p className="text-xl font-semibold text-gray-600">
-                {dashData.patients}
+                {dashData.completedAppointmentsToday}
               </p>
-              <p className="text-gray-400">Patients</p>
+              <p className="text-gray-400">Completed Today</p>
             </div>
           </div>
-          
+
+          {/* Cancelled Appointments */}
+          <div className="flex item-center gap-2 bg-white p-4 min-w-52 rounded border-2 border-red-500 cursor-pointer hover:scale-105 transition-all">
+            <img className="w-14" src={assets.appointment_Cancel} alt="" />
+            <div>
+              <p className="text-xl font-semibold text-gray-600">
+                {dashData.cancelledAppointments}
+              </p>
+              <p className="text-gray-400">Cancelled</p>
+            </div>
+          </div>
+
+          {/* Pending Appointments */}
+          <div className="flex item-center gap-2 bg-white p-4 min-w-52 rounded border-2 border-yellow-500 cursor-pointer hover:scale-105 transition-all">
+            <img className="w-14" src={assets.pending_icon} alt="" />
+            <div>
+              <p className="text-xl font-semibold text-gray-600">
+                {dashData.pendingAppointments}
+              </p>
+              <p className="text-gray-400">Pending</p>
+            </div>
+          </div>
+
+          {/* Today's Appointments */}
+          <div className="flex item-center gap-2 bg-white p-4 min-w-52 rounded border-2 border-teal-500 cursor-pointer hover:scale-105 transition-all">
+            <img className="w-14" src={assets.today_icon} alt="" />
+            <div>
+              <p className="text-xl font-semibold text-gray-600">
+                {dashData.todayAppointments}
+              </p>
+              <p className="text-gray-400">Today's Appointments</p>
+            </div>
+          </div>
+
+          {/* Average Rating */}
+          <div className="flex item-center gap-2 bg-white p-4 min-w-52 rounded border-2 border-yellow-500 cursor-pointer hover:scale-105 transition-all">
+            <img className="w-14" src={assets.star_icon} alt="" />
+            <div>
+              <p className="text-xl font-semibold text-gray-600">
+                {dashData.averageRating} / 5
+              </p>
+              <p className="text-gray-400">Average Rating</p>
+            </div>
+          </div>
         </div>
 
-        
-
-        <div className="bg-white ">
+        {/* Latest Appointments */}
+        <div className="bg-white">
           <div className="flex items-center gap-2.5 px-4 py-4 mt-10 rounded-t border border-blue-500">
             <img src={assets.list_icon} alt="" />
-
-            <p className="font-semibold text-gray-600">
-              Latest Appointment Bookings
-            </p>
+            <p className="font-semibold text-gray-600">Latest Appointment Bookings</p>
           </div>
 
           <div className="py-4 border border-blue-500 border-t-0">
@@ -71,17 +117,10 @@ const DoctorDashboard = () => {
                 key={index}
                 className="flex cursor-pointer items-center px-4 py-3 gap-3 hover:bg-blue-50"
               >
-                <img
-                  className="rounded-full w-12"
-                  src={item.userData.image}
-                  alt=""
-                />
-
+                <img className="rounded-full w-12" src={item.userData.image} alt="" />
                 <div className="flex-1 text-sm">
                   <p className="text-gray-800">{item.userData.name}</p>
-                  <p className="text-gray-500">
-                    {slotDateFormat(item.slotDate)}
-                  </p>
+                  <p className="text-gray-500">{slotDateFormat(item.slotDate)}</p>
                 </div>
 
                 {item.cancelled ? (
