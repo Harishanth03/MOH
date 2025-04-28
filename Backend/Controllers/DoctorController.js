@@ -5,6 +5,7 @@ import jwt from 'jsonwebtoken';
 import appointmentModel from "../Models/AppointmentModel.js";
 import { v2 as cloudinary } from 'cloudinary';
 import DoctorCertificateModel from "../Models/DoctorCertificateModel.js";
+import Feedback from "../Models/FeedBackModel.js";
 
 //================================================ Doctor Availablity ===================================================
 const changeAvailablity = async(req , res) => {
@@ -183,26 +184,54 @@ const doctorDashboard = async(req , res) =>
 
         const appointments = await appointmentModel.find({docId});
 
-        let patients = [];
+        const feedbacks = await Feedback.find({doctorId: docId});
 
-        appointments.map((item) => {
+        const patientSet = new Set();
+    appointments.forEach((item) => {
+      patientSet.add(item.userId);
+    });
 
-            if(!patients.includes(item.userId))
-            {
-                patients.push(item.userId)
-            }
-        })
+    // Counters
+    let totalCompleted = 0;
+    let completedToday = 0;
+    let cancelled = 0;
+    let pending = 0;
+    let todayAppointments = 0;
 
-        
+    const today = new Date();
+    const todayDay = today.getDate();
+    const todayMonth = today.getMonth() + 1; // Month is 0 indexed
+    const todayYear = today.getFullYear();
 
-        // Prepare dashboard data
-        const dashData = {
-            appointments: appointments.length,
-            patients: patients.length,
-            latestAppointments: appointments.reverse().slice(0 , 5), 
-        };
-  
-      res.json({ success: true, dashData });
+    appointments.forEach((item) => {
+      if (item.isCompleted) totalCompleted++;
+      if (item.cancelled) cancelled++;
+      if (!item.cancelled && !item.isCompleted) pending++;
+
+      const [day, month, year] = item.slotDate.split('_').map(Number);
+
+      if (day === todayDay && month === todayMonth && year === todayYear) {
+        todayAppointments++;
+
+        // If it's today and completed
+        if (item.isCompleted) completedToday++;
+      }
+    });
+
+    // Prepare dashboard data
+    const dashData = {
+      appointments: appointments.length,
+      patients: patientSet.size,
+      completedAppointmentsToday: completedToday,
+      totalCompletedAppointments: totalCompleted,
+      cancelledAppointments: cancelled,
+      pendingAppointments: pending,
+      todayAppointments: todayAppointments,
+      feedbackCount: feedbacks.length,
+      latestAppointments: appointments.reverse().slice(0, 5),
+    };
+
+    res.json({ success: true, dashData });
         
     } catch (error) 
     {
