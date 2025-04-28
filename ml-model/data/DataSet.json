@@ -1344,6 +1344,39 @@
       },
       "entityType": "NA",
       "entities": []
-    }        
+    },
+    {
+      "intent": "fill_email",
+      "text": [
+        "Fill my email as harishanth08@gmail.com",
+        "Set my email address to xyz@gmail.com",
+        "Enter email as abc@gmail.com",
+        "My email is test@gmail.com",
+        "Type email address harishanth0@gmail.com"
+      ],
+      "responses": [
+        "Okay, filling your email!"
+      ],
+      "extension": {
+        "field": "email"
+      }
+    },
+    {
+      "intent": "fill_password",
+      "text": [
+        "Fill my password as 123456",
+        "Set my password to secret123",
+        "Type password secret",
+        "My password is harish123",
+        "Enter password as abc123"
+      ],
+      "responses": [
+        "Got your password!"
+      ],
+      "extension": {
+        "field": "password"
+      }
+    }    
+           
   ]
 }
