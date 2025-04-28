@@ -6,6 +6,7 @@ import appointmentModel from "../Models/AppointmentModel.js";
 import { v2 as cloudinary } from 'cloudinary';
 import DoctorCertificateModel from "../Models/DoctorCertificateModel.js";
 import Feedback from "../Models/FeedBackModel.js";
+import ReportModel from "../Models/ReportModel.js";
 
 //================================================ Doctor Availablity ===================================================
 const changeAvailablity = async(req , res) => {
@@ -314,6 +315,80 @@ const verifyDoctorCertificate = async(req , res) =>
         console.error("Error verifying doctor certificate:", error);
 
         res.status(500).json({ success: false, message: "Server error during certificate verification" });
+        
+    }
+}
+
+//=================================================== upload medical Report =================================================
+
+const uploadMedicalReport = async (req, res) => 
+{
+
+    try 
+    {
+
+        const { appointmentId, title, medicines, docId } = req.body;
+
+        const file = req.file;
+
+        if (!appointmentId || !title || !file) 
+        {
+
+            return res.json({ success: false, message: "Please fill all required fields" });
+
+        }
+
+        const appointment = await appointmentModel.findById(appointmentId);
+
+        if (!appointment) 
+        {
+
+            return res.json({ success: false, message: "Invalid Appointment" });
+
+        }
+
+        const userId = appointment.userId;
+
+        const uploadResult = await cloudinary.uploader.upload(file.path, {
+
+            resource_type: "raw", // important for PDF
+
+            folder: "medical-reports"
+
+        });
+
+        const reportUrl = uploadResult.secure_url;
+
+        const newReport = new ReportModel({
+
+            doctorId: docId,
+
+            userId: userId,
+
+            appointmentId,
+
+            title,
+
+            medicines,
+
+            reportUrl,
+
+            date: Date.now()
+
+        });
+
+        await newReport.save();
+
+        res.json({ success: true, message: "Report uploaded successfully" });
+      
+        
+    } 
+    catch (error) 
+    {
+
+        console.log(error);
+        
+        res.json({ success: false, message: error.message });
         
     }
 }
