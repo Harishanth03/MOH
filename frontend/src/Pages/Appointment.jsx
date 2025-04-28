@@ -9,7 +9,7 @@ const Appointment = () => {
 
     const {docId} = useParams(); //get the selected doctorId using UseParams
 
-    const {doctors , backendUrl , token , getDoctorsData} = useContext(AppContext);
+    const {doctors , backendUrl , token , getDoctorsData , voiceIntent, setVoiceIntent} = useContext(AppContext);
 
     const daysOfWeek = ['SUN' , 'MON' , 'TUE' , 'WED' , 'THU' , 'FRI' , 'SAT']
 
@@ -34,7 +34,7 @@ const Appointment = () => {
         const allSlots = [];
       
         for (let i = 0; i < 7; i++) {
-          // ✅ Correctly calculate each date by always adding to the original "today"
+          // Correctly calculate each date by always adding to the original "today"
           let currentDate = new Date(today.getTime());
           currentDate.setDate(today.getDate() + i);
       
@@ -166,6 +166,23 @@ const Appointment = () => {
     useEffect(() => {
         console.log(docSlots)
     },[docSlots])
+
+    // Voice Button Click for Appointment
+    useEffect(() => {
+      if (!voiceIntent) return;
+
+        console.log("Voice Intent in Appointment:", voiceIntent);
+
+      if (voiceIntent === "click_appointment_button") 
+      {
+        console.log("Voice triggered Booking Appointment");
+
+        bookAppointment(); // Directly call your booking function
+      }
+
+      setVoiceIntent(null); // Always reset
+    }, [voiceIntent]);
+
 
   return docInfo && (
 

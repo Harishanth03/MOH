@@ -1312,6 +1312,38 @@
       "extension": {
         "endpoint": ""
       }
-    }    
+    },
+    {
+      "intent": "click_appointment_button",
+      "text": [
+        "Click appointment button",
+        "Submit my appointment",
+        "Book my appointment now",
+        "Confirm appointment",
+        "Click the appointment submit button",
+        "Send my appointment request",
+        "Make my appointment",
+        "Finalize my appointment",
+        "Save my appointment",
+        "Complete my appointment booking"
+      ],
+      "responses": [
+        "Booking your appointment!",
+        "Submitting your appointment!",
+        "Appointment request submitted!"
+      ],
+      "extension": {
+        "function": "",
+        "entities": false,
+        "responses": []
+      },
+      "context": {
+        "in": "",
+        "out": "ClickAppointmentButton",
+        "clear": false
+      },
+      "entityType": "NA",
+      "entities": []
+    }        
   ]
 }
