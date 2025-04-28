@@ -175,73 +175,73 @@ const appointmentCancle = async(req , res) => {
 
 //=================================================== Dashboard Data =================================================
 
-const doctorDashboard = async(req , res) => 
-{
-    try 
-    {
-
-        const {docId} = req.body;
-
-        const appointments = await appointmentModel.find({docId});
-
-        const feedbacks = await Feedback.find({doctorId: docId});
-
-        const patientSet = new Set();
-    appointments.forEach((item) => {
-      patientSet.add(item.userId);
-    });
-
-    // Counters
-    let totalCompleted = 0;
-    let completedToday = 0;
-    let cancelled = 0;
-    let pending = 0;
-    let todayAppointments = 0;
-
-    const today = new Date();
-    const todayDay = today.getDate();
-    const todayMonth = today.getMonth() + 1; // Month is 0 indexed
-    const todayYear = today.getFullYear();
-
-    appointments.forEach((item) => {
-      if (item.isCompleted) totalCompleted++;
-      if (item.cancelled) cancelled++;
-      if (!item.cancelled && !item.isCompleted) pending++;
-
-      const [day, month, year] = item.slotDate.split('_').map(Number);
-
-      if (day === todayDay && month === todayMonth && year === todayYear) {
-        todayAppointments++;
-
-        // If it's today and completed
-        if (item.isCompleted) completedToday++;
+const doctorDashboard = async (req, res) => {
+    try {
+      const { docId } = req.body;
+  
+      const appointments = await appointmentModel.find({ docId });
+      const feedbacks = await Feedback.find({ doctorId: docId });
+  
+      const patientSet = new Set();
+      appointments.forEach((item) => {
+        patientSet.add(item.userId);
+      });
+  
+      // Counters
+      let totalCompleted = 0;
+      let completedToday = 0;
+      let cancelled = 0;
+      let pending = 0;
+      let todayAppointments = 0;
+  
+      const today = new Date();
+      const todayDay = today.getDate();
+      const todayMonth = today.getMonth() + 1;
+      const todayYear = today.getFullYear();
+  
+      appointments.forEach((item) => {
+        if (item.isCompleted) totalCompleted++;
+        if (item.cancelled) cancelled++;
+        if (!item.cancelled && !item.isCompleted) pending++;
+  
+        const [day, month, year] = item.slotDate.split('_').map(Number);
+  
+        if (day === todayDay && month === todayMonth && year === todayYear) {
+          todayAppointments++;
+  
+          if (item.isCompleted) completedToday++;
+        }
+      });
+  
+      // Calculate Average Rating
+      let averageRating = 0;
+      if (feedbacks.length > 0) {
+        const totalRating = feedbacks.reduce((sum, feedback) => sum + feedback.rating, 0);
+        averageRating = (totalRating / feedbacks.length).toFixed(1); // 1 decimal place
       }
-    });
+  
+      // Prepare dashboard data
+      const dashData = {
+        appointments: appointments.length,
+        patients: patientSet.size,
+        completedAppointmentsToday: completedToday,
+        totalCompletedAppointments: totalCompleted,
+        cancelledAppointments: cancelled,
+        pendingAppointments: pending,
+        todayAppointments: todayAppointments,
+        averageRating: Number(averageRating), // send it as a number not string
+        latestAppointments: appointments.reverse().slice(0, 5),
+      };
 
-    // Prepare dashboard data
-    const dashData = {
-      appointments: appointments.length,
-      patients: patientSet.size,
-      completedAppointmentsToday: completedToday,
-      totalCompletedAppointments: totalCompleted,
-      cancelledAppointments: cancelled,
-      pendingAppointments: pending,
-      todayAppointments: todayAppointments,
-      feedbackCount: feedbacks.length,
-      latestAppointments: appointments.reverse().slice(0, 5),
-    };
-
-    res.json({ success: true, dashData });
-        
-    } catch (error) 
-    {
-
-        console.error(error);
-
-        res.status(500).json({ success: false, message: error.message });
-        
+      console.log(dashData);
+  
+      res.json({ success: true, dashData });
+  
+    } catch (error) {
+      console.error(error);
+      res.status(500).json({ success: false, message: error.message });
     }
-}
+  };
 
 //=================================================== Verify Doctor =================================================
 
