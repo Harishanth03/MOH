@@ -42,7 +42,7 @@ const Login = () => {
     }
   };
 
-  // 🔥 Voice Button Click Logic
+  // Voice Button Click Logic
   useEffect(() => {
     if (!voiceIntent) return;
 
@@ -53,7 +53,7 @@ const Login = () => {
       onSubmitHandler(fakeEvent);
     }
 
-    // 🛡️ Reset voiceIntent after using
+    //Reset voiceIntent after using
     setVoiceIntent(null);
   }, [voiceIntent]);
 
