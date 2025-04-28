@@ -50,7 +50,7 @@ const DoctorDashboard = () => {
 
           {/* Completed Appointments Today */}
           <div className="flex item-center gap-2 bg-white p-4 min-w-52 rounded border-2 border-green-500 cursor-pointer hover:scale-105 transition-all">
-            <img className="w-14" src={assets.completed_icon} alt="" />
+            <img className="w-14" src={assets.appointment_completed} alt="" />
             <div>
               <p className="text-xl font-semibold text-gray-600">
                 {dashData.completedAppointmentsToday}
@@ -72,7 +72,7 @@ const DoctorDashboard = () => {
 
           {/* Pending Appointments */}
           <div className="flex item-center gap-2 bg-white p-4 min-w-52 rounded border-2 border-yellow-500 cursor-pointer hover:scale-105 transition-all">
-            <img className="w-14" src={assets.pending_icon} alt="" />
+            <img className="w-14" src={assets.appointment_pending} alt="" />
             <div>
               <p className="text-xl font-semibold text-gray-600">
                 {dashData.pendingAppointments}
@@ -83,7 +83,7 @@ const DoctorDashboard = () => {
 
           {/* Today's Appointments */}
           <div className="flex item-center gap-2 bg-white p-4 min-w-52 rounded border-2 border-teal-500 cursor-pointer hover:scale-105 transition-all">
-            <img className="w-14" src={assets.today_icon} alt="" />
+            <img className="w-14" src={assets.appointment_today} alt="" />
             <div>
               <p className="text-xl font-semibold text-gray-600">
                 {dashData.todayAppointments}
@@ -94,7 +94,7 @@ const DoctorDashboard = () => {
 
           {/* Average Rating */}
           <div className="flex item-center gap-2 bg-white p-4 min-w-52 rounded border-2 border-yellow-500 cursor-pointer hover:scale-105 transition-all">
-            <img className="w-14" src={assets.star_icon} alt="" />
+            <img className="w-14" src={assets.ratings} alt="" />
             <div>
               <p className="text-xl font-semibold text-gray-600">
                 {dashData.averageRating} / 5

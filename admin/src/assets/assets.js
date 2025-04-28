@@ -19,6 +19,11 @@ import ward from './Ward.svg'
 import bedManagement from './bed_management.svg'
 import verify from  './verified.png'
 import appointment_Cancel from './appointment_Cancled.svg'
+import appointment_completed from './appointment_completed.svg'
+import appointment_pending from './appointment_pending.svg'
+import appointment_today from './appointment_today.svg'
+import ratings from './rating.svg'
+
 
 export const assets = {
     add_icon,
@@ -41,5 +46,9 @@ export const assets = {
     ward,
     bedManagement,
     verify,
-    appointment_Cancel
+    appointment_Cancel,
+    appointment_completed,
+    appointment_pending,
+    appointment_today,
+    ratings
 }
