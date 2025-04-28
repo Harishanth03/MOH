@@ -387,7 +387,7 @@ const uploadMedicalReport = async (req, res) =>
     {
 
         console.log(error);
-        
+
         res.json({ success: false, message: error.message });
         
     }
@@ -395,4 +395,4 @@ const uploadMedicalReport = async (req, res) =>
 
 //=================================================== Exporting Controllers =================================================
 
-export{changeAvailablity , loginDoctor , appointmentsDoctor , appointmentComplete , appointmentCancle , doctorDashboard , verifyDoctorCertificate}
+export{changeAvailablity , uploadMedicalReport , loginDoctor , appointmentsDoctor , appointmentComplete , appointmentCancle , doctorDashboard , verifyDoctorCertificate}
