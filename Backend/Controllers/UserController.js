@@ -575,7 +575,7 @@ const bookAppointment = async (req, res) => {
         res.json({ success: false, message: error.message });
         
     }
-    
+
   }
 
-export {registerUser , submitFeedback , loginUser , getProfile  , updateUserProfile , bookAppointment , listAppointment , cancleAppointment , getAllWards , allocateBed , getAllocatedBeds}
+export {registerUser , getMyReport, submitFeedback , loginUser , getProfile  , updateUserProfile , bookAppointment , listAppointment , cancleAppointment , getAllWards , allocateBed , getAllocatedBeds}

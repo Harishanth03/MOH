@@ -321,77 +321,48 @@ const verifyDoctorCertificate = async(req , res) =>
 
 //=================================================== upload medical Report =================================================
 
-const uploadMedicalReport = async (req, res) => 
-{
-
-    try 
-    {
-
-        const { appointmentId, title, medicines, docId } = req.body;
-
-        const file = req.file;
-
-        if (!appointmentId || !title || !file) 
-        {
-
-            return res.json({ success: false, message: "Please fill all required fields" });
-
-        }
-
-        const appointment = await appointmentModel.findById(appointmentId);
-
-        if (!appointment) 
-        {
-
-            return res.json({ success: false, message: "Invalid Appointment" });
-
-        }
-
-        const userId = appointment.userId;
-
-        const uploadResult = await cloudinary.uploader.upload(file.path, {
-
-            resource_type: "raw", // important for PDF
-
-            folder: "medical-reports"
-
-        });
-
-        const reportUrl = uploadResult.secure_url;
-
-        const newReport = new ReportModel({
-
-            doctorId: docId,
-
-            userId: userId,
-
-            appointmentId,
-
-            title,
-
-            medicines,
-
-            reportUrl,
-
-            date: Date.now()
-
-        });
-
-        await newReport.save();
-
-        res.json({ success: true, message: "Report uploaded successfully" });
-      
-        
-    } 
-    catch (error) 
-    {
-
-        console.log(error);
-
-        res.json({ success: false, message: error.message });
-        
+const uploadMedicalReport = async (req, res) => {
+    try {
+      const { appointmentId, title, medicines, docId } = req.body;
+      const file = req.file;
+  
+      if (!appointmentId || !title || !file) {
+        return res.json({ success: false, message: "Please fill all required fields" });
+      }
+  
+      const appointment = await appointmentModel.findById(appointmentId);
+  
+      if (!appointment) {
+        return res.json({ success: false, message: "Invalid Appointment" });
+      }
+  
+      const userId = appointment.userId;
+      const doctor = await doctorModel.findById(docId);
+      const doctorName = doctor ? doctor.name : "Unknown Doctor";
+  
+      // Save the local file path (relative)
+      const reportUrl = `/uploads/${file.filename}`;
+  
+      const newReport = new ReportModel({
+        doctorId: docId,
+        userId: userId,
+        appointmentId,
+        title,
+        medicines,
+        reportUrl,        // <<< Save local path here
+        doctorName: doctorName,
+        date: Date.now()
+      });
+  
+      await newReport.save();
+  
+      res.json({ success: true, message: "Report uploaded successfully" });
+    } catch (error) {
+      console.log(error);
+      res.json({ success: false, message: error.message });
     }
-}
+  };
+  
 
 //=================================================== Exporting Controllers =================================================
 

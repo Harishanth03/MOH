@@ -13,6 +13,8 @@ const reportSchema = new mongoose.Schema({
   medicines: { type: String },
   
   reportUrl: { type: String, required: true },
+
+  doctorName: { type: String, required: true },
   
   date: { type: Date, default: Date.now }
   

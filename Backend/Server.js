@@ -9,6 +9,7 @@ import userRouter from './Routes/UserRoute.js';
 import donationRouter from './Routes/DonationRouter.js';
 import { startBedReleaseScheduler } from './utils/bedReleaseScheduler.js';
 import axios from 'axios';
+import path from 'path';
 
 //=============================================== App Config ========================================================
 
@@ -21,6 +22,7 @@ connectCloudinary();
 
 app.use(express.json());
 app.use(cors());
+app.use('/uploads' , express.static(path.join(path.resolve(), 'uploads'))); // Serve static files from the uploads directory
 
 //=============================================== API End Point =====================================================
 
