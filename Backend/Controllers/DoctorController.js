@@ -5,6 +5,7 @@ import jwt from 'jsonwebtoken';
 import appointmentModel from "../Models/AppointmentModel.js";
 import { v2 as cloudinary } from 'cloudinary';
 import DoctorCertificateModel from "../Models/DoctorCertificateModel.js";
+import Feedback from "../Models/FeedBackModel.js";
 
 //================================================ Doctor Availablity ===================================================
 const changeAvailablity = async(req , res) => {
@@ -174,45 +175,73 @@ const appointmentCancle = async(req , res) => {
 
 //=================================================== Dashboard Data =================================================
 
-const doctorDashboard = async(req , res) => 
-{
-    try 
-    {
+const doctorDashboard = async (req, res) => {
+    try {
+      const { docId } = req.body;
+  
+      const appointments = await appointmentModel.find({ docId });
+      const feedbacks = await Feedback.find({ doctorId: docId });
+  
+      const patientSet = new Set();
+      appointments.forEach((item) => {
+        patientSet.add(item.userId);
+      });
+  
+      // Counters
+      let totalCompleted = 0;
+      let completedToday = 0;
+      let cancelled = 0;
+      let pending = 0;
+      let todayAppointments = 0;
+  
+      const today = new Date();
+      const todayDay = today.getDate();
+      const todayMonth = today.getMonth() + 1;
+      const todayYear = today.getFullYear();
+  
+      appointments.forEach((item) => {
+        if (item.isCompleted) totalCompleted++;
+        if (item.cancelled) cancelled++;
+        if (!item.cancelled && !item.isCompleted) pending++;
+  
+        const [day, month, year] = item.slotDate.split('_').map(Number);
+  
+        if (day === todayDay && month === todayMonth && year === todayYear) {
+          todayAppointments++;
+  
+          if (item.isCompleted) completedToday++;
+        }
+      });
+  
+      // Calculate Average Rating
+      let averageRating = 0;
+      if (feedbacks.length > 0) {
+        const totalRating = feedbacks.reduce((sum, feedback) => sum + feedback.rating, 0);
+        averageRating = (totalRating / feedbacks.length).toFixed(1); // 1 decimal place
+      }
+  
+      // Prepare dashboard data
+      const dashData = {
+        appointments: appointments.length,
+        patients: patientSet.size,
+        completedAppointmentsToday: completedToday,
+        totalCompletedAppointments: totalCompleted,
+        cancelledAppointments: cancelled,
+        pendingAppointments: pending,
+        todayAppointments: todayAppointments,
+        averageRating: Number(averageRating), // send it as a number not string
+        latestAppointments: appointments.reverse().slice(0, 5),
+      };
 
-        const {docId} = req.body;
-
-        const appointments = await appointmentModel.find({docId});
-
-        let patients = [];
-
-        appointments.map((item) => {
-
-            if(!patients.includes(item.userId))
-            {
-                patients.push(item.userId)
-            }
-        })
-
-        
-
-        // Prepare dashboard data
-        const dashData = {
-            appointments: appointments.length,
-            patients: patients.length,
-            latestAppointments: appointments.reverse().slice(0 , 5), 
-        };
+      console.log(dashData);
   
       res.json({ success: true, dashData });
-        
-    } catch (error) 
-    {
-
-        console.error(error);
-
-        res.status(500).json({ success: false, message: error.message });
-        
+  
+    } catch (error) {
+      console.error(error);
+      res.status(500).json({ success: false, message: error.message });
     }
-}
+  };
 
 //=================================================== Verify Doctor =================================================
 

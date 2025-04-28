@@ -8,6 +8,7 @@ import appointmentModel from '../Models/AppointmentModel.js';
 import wardModel from '../Models/WardModel.js';
 import BedAllocationModel from '../Models/BedAllocationModel.js';
 import { sendSms } from '../utils/sendSms.js';
+import Feedback from '../Models/FeedBackModel.js';
 //====================================== Register User ==================================================
 
 const registerUser = async(req , res) => {
@@ -484,7 +485,64 @@ const bookAppointment = async (req, res) => {
 
   }
 
+  //=========================================== Feedback Code ===============================================================
+
+  const submitFeedback = async (req  ,  res) => 
+  {
+
+    try 
+    {
+
+        const { doctorId, appointmentId, rating, comment, anonymous } = req.body;
+
+        if (!doctorId || !appointmentId || !rating) 
+        {
+
+            return res.json({ success: false, message: "Required fields are missing" });
+
+        }
+
+        const existingFeedback = await Feedback.findOne({appointmentId});
+
+        if (existingFeedback) 
+        {
+
+            return res.json({ success: false, message: "Feedback already submitted for this appointment" });
+
+        }
+
+        const newFeedback = await Feedback.create({
+
+            userId: req.body.userId, 
+            doctorId,
+            appointmentId,
+            rating,
+            comment,
+            anonymous: anonymous || false,
+
+        });
+
+        res.json({
+
+            success: true,
+
+            message: "Feedback submitted successfully",
+
+            feedback: newFeedback,
+
+        })
+        
+    } 
+    catch (error) 
+    {
+
+        console.log(error);
+
+        res.json({ success: false, message: error.message });
+        
+    }
+  }
   
   
 
-export {registerUser , loginUser , getProfile  , updateUserProfile , bookAppointment , listAppointment , cancleAppointment , getAllWards , allocateBed , getAllocatedBeds}
+export {registerUser , submitFeedback , loginUser , getProfile  , updateUserProfile , bookAppointment , listAppointment , cancleAppointment , getAllWards , allocateBed , getAllocatedBeds}
