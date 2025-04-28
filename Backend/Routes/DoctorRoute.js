@@ -21,7 +21,7 @@ doctorRouter.get('/dashboard'  , authDoctor , doctorDashboard);
 
 doctorRouter.post('/verify-certificate', upload.single('certificate'), authDoctor, verifyDoctorCertificate);
 
-doctorRouter.post('/upload-report' , authDoctor , upload.single('file') , uploadMedicalReport)
+doctorRouter.post('/upload-report' , upload.single('file') , authDoctor , uploadMedicalReport)
 
 
 export default doctorRouter
