@@ -1,18 +1,20 @@
-import re
 import numpy as np
 import pickle
 import json
+import re
+import random
+import matplotlib.pyplot as plt
 from tensorflow.keras.models import load_model
 from sklearn.feature_extraction.text import CountVectorizer
+from sklearn.metrics import accuracy_score, classification_report
 from nltk.stem import WordNetLemmatizer
 from nltk.corpus import stopwords
-import random
 
-# Initialize NLTK resources
+# Initialize NLTK
 lemmatizer = WordNetLemmatizer()
 stop_words = set(stopwords.words('english'))
 
-# Load model, tokenizer, label encoder
+# Load resources
 model = load_model('ml-model/intention_model.h5')
 
 with open('ml-model/tokenizer.pkl', 'rb') as f:
@@ -21,11 +23,10 @@ with open('ml-model/tokenizer.pkl', 'rb') as f:
 with open('ml-model/label_encoder.pkl', 'rb') as f:
     label_encoder = pickle.load(f)
 
-# Load the full intents dataset (to get responses and endpoints)
 with open('data/DataSet.json', 'r', encoding='utf-8') as f:
     intents_data = json.load(f)
 
-# Preprocessing function
+# Preprocessing
 def preprocess_text(text):
     text = text.lower().strip()
     text = re.sub(r"[^a-zA-Z\s]", "", text)
@@ -33,52 +34,44 @@ def preprocess_text(text):
     words = [lemmatizer.lemmatize(word) for word in words if word not in stop_words]
     return ' '.join(words)
 
-# Prediction function
+# Predict
 def predict_intent(text):
-    # Preprocess the input text
-    text = preprocess_text(text)
-
-    # Vectorize the input text
-    features = vectorizer.transform([text]).toarray()
-
-    # Predict using the model
+    processed = preprocess_text(text)
+    features = vectorizer.transform([processed]).toarray()
     prediction = model.predict(features)
     predicted_class = np.argmax(prediction)
-    predicted_intent = label_encoder.inverse_transform([predicted_class])[0]
+    return label_encoder.inverse_transform([predicted_class])[0]
 
-    # Find matching intent details
-    for intent in intents_data['intents']:
-        if intent['intent'] == predicted_intent:
-            response = random.choice(intent['responses']) if intent['responses'] else "No response available."
-            endpoint = intent.get('extension', {}).get('endpoint', None)
-            return predicted_intent, response, endpoint
+# Test inputs and labels
+inputs = [
+    ("Hello, how are you?", "greeting"),
+    ("Take me to the home page", "navigate_homepage"),
+    ("Show me the list of doctors", "navigate_doctors"),
+    ("Please log me into the system", "navigate_login")
+]
 
-    # If no match found (very rare)
-    return predicted_intent, "Sorry, I didn't understand that.", None
+y_true = [label for _, label in inputs]
+y_pred = [predict_intent(text) for text, _ in inputs]
 
-# Main
-if __name__ == "__main__":
-    inputs = [
-        "I want an appointment",
-        "Can I schedule an appointment?",
-        "Please log me into my account",
-        "Show me the dashboard",
-        "I want appointments",
-        "Please show me the contact page",
-        "I want to see the about page",
-        "Take me to the login page",
-        "Show me the doctors available",
-        "Log me out",
-        "I need to book a consultation",
-        "Access my medical records",
-        "I need to see my profile",
-        "I want to donate",
-        "Can you show me bed availability?"
-    ]
+# Evaluate
+accuracy = accuracy_score(y_true, y_pred)
+report = classification_report(y_true, y_pred, output_dict=True, zero_division=0)
 
-    for text in inputs:
-        intent, response, endpoint = predict_intent(text)
-        print(f"\nInput: '{text}'")
-        print(f"Predicted Intent: {intent}")
-        print(f"Bot Response: {response}")
-        print(f"Navigate to Endpoint: {endpoint if endpoint else 'No navigation needed'}")
+# Metrics
+metrics = {
+    'Accuracy': accuracy,
+    'Precision': report['weighted avg']['precision'],
+    'Recall': report['weighted avg']['recall']
+}
+
+# Print Results
+for key, value in metrics.items():
+    print(f"{key}: {value:.2f}")
+
+# Plot
+plt.bar(metrics.keys(), metrics.values(), color=['green', 'blue', 'orange'])
+plt.title("Experimental Metrics of Intent Recognition")
+plt.ylabel("Score")
+plt.ylim(0, 1.0)
+plt.grid(axis='y')
+plt.show()

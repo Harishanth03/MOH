@@ -33,7 +33,7 @@ const createCheckoutSession = async (req, res) => {
           },
         ],
         customer_email: email,
-        success_url: successURL, // ✅ Now used properly
+        success_url: successURL, //Now used properly
         cancel_url: 'http://localhost:5173/donation-cancelled',
         metadata: {
           userId,
